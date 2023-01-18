@@ -18,8 +18,7 @@ export function before(m) {
 
 *.profile* Untuk Mengecek
 *.lb* Untuk Mengecek LB
-*.gcbot* Untuk Join GC RPG
-	`.trim())
+*.gcbot* Untuk Join GC RPG`.trim())
     }
     
    /* let looh = `*${before}* -> *${user.level}*`
