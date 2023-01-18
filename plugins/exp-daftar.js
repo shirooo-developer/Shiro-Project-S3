@@ -50,7 +50,11 @@ const listMessage = {
 *🔐 Data Terlindungi*
 
 *Wajib Bergabung:*
+*🍀 Grup Official F-Room (Conditional Free)*
 *_https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa_*
+
+*🍀 Grup Official F-Club (NSFW Free Disini)*
+*_https://chat.whatsapp.com/EggiK9aee8JBbzBQseuSZT_*
 `
   let buttonMessage= {
 'document':{'url':sgc},
