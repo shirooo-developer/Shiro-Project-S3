@@ -14,10 +14,11 @@ export function before(m) {
 
 *📊 Anda Telah Naik Level*
 *${before}* ➣ *${user.level}*
-*• Role: ${user.role}
+*• Role: ${user.role}*
 
 *.profile* Untuk Mengecek
 *.lb* Untuk Mengecek LB
+*.gcbot* Untuk Join GC RPG
 	`.trim())
     }
     
