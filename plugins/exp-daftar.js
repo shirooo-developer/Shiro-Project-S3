@@ -32,8 +32,8 @@ const listMessage = {
   if (!name) throw '*Nama Tidak Boleh Kosong (Alphanumeric)*'
   if (!age) throw '*Umur Tidak Boleh Kosong (Angka)*'
   age = parseInt(age)
-  if (age > 20) throw '*Umur Haruslah Asli*'
-  if (age < 12) throw '*Umur Haruslah Asli*'
+  if (age > 19) throw '*Tidak Sesuai Dengan Umur Wajar Manusia, Jangan-Jangan Kamu Bukan Manusia*'
+  if (age < 12) throw '*Tidak Sesuai Dengan Umur Wajar Manusia, Jangan-Jangan Kamu Bukan Manusia*'
   user.name = name.trim()
   user.age = age
   user.regTime = + new Date
@@ -50,7 +50,7 @@ const listMessage = {
 *🔐 Data Terlindungi*
 
 *Wajib Bergabung:*
-*🍀 Grup Official F-Room (Conditional Free)*
+*🍀 Grup Official F-Room (Free)*
 *_https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa_*
 
 *🍀 Grup Official F-Club (NSFW Free Disini)*

@@ -7,7 +7,7 @@ let name = await conn.getName(who)
 
   
  const ini = await conn.sendContactArray(m.chat, [
-    [`${nomorown}`, `${await conn.getName(nomorown+'@s.whatsapp.net')}`, `Developer Bot 👑`, `📞 Dont Call Me`, `⁨ajaalam13@gmail.com`, `🇯🇵 Japan`, `https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa`, `Need Partner`],
+    [`${nomorown}`, `${await conn.getName(nomorown+'@s.whatsapp.net')}`, `Developer Bot 👑`, `📞 Dont Call Me`, `⁨ajaalam13@gmail.com`, `🇺🇲 USA`, `https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa`, `Need Partner`],
     [`${nomorown2}`, `${await conn.getName(nomorown2+'@s.whatsapp.net')}`, `Owner Bot 👑`, `📞 Dont Call Me`, `⁨Nothing`, `🇮🇩 Indonesia`, `-`, `Nothing`],
     [`${conn.user.jid.split('@')[0]}`, `${await conn.getName(conn.user.jid)}`, `Bot Whatsapp 🤖`, `📞 Dont Spam/Call Me`, `Nothing`, `🇮🇩 Indonesia`, `-`, `Dont Forget To Donate`]
   ], fkontak)

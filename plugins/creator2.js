@@ -22,7 +22,7 @@ let ppown2 = await conn.profilePictureUrl(nomorown2 + '@s.whatsapp.net', 'image'
 let teksbio2 = `${htki} *BIODATA OWN* ${htka}
 *💬 Nama:* Avri
 *✉️ Nama RL:* Dika F.A
-*⚧ Gender:* Lakik
+*⚧ Gender:* Male
 *📿 Agama:* Islam
 *📆 Ultah:* 13 Mei
 *🗒️ Umur:* 15
@@ -43,13 +43,13 @@ let ppown = await conn.profilePictureUrl(nomorown + '@s.whatsapp.net', 'image').
 let teksbio = `${htki} *BIODATA DEV* ${htka}
 *💬 Nama:* Kitsune
 *✉️ Nama RL:* Private
-*⚧ Gender:* Private
+*⚧ Gender:* Female
 *📿 Agama:* Islam
 *📆 Ultah:* 12 September
 *🗒️ Umur:* 17
 *🏫 Kelas:* XI
-*❤️ Hobby:* Coding + Anime
-*☁️ Sifat:* Pendiam + Pemalu
+*❤️ Hobby:* Coding + Anime + Motor
+*☁️ Sifat:* Introvert
 *🗺️ Tinggal:* Kaltim
 *♀️ Waifu:* Private
 

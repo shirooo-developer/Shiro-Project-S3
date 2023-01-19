@@ -8,7 +8,7 @@ if (db.data.chats[m.chat].nsfw == false && m.isGroup) return conn.sendButton(m.c
     conn.sendButton(m.chat,` \`\`\`➩ Random Nsfw Rule34 ${text ? text.capitalize() : false}\`\`\` `, wm.date, res,['𝗡𝗘𝗫𝗧', `.${command} ${text}`], m)
 }
 handler.help = ['rule34 <character>']
-handler.tags = ['nsfw']
+handler.tags = ['nsfw','premium']
 handler.command = ['rule34']
 
 handler.premium = true

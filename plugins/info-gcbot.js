@@ -4,7 +4,7 @@ import fetch from 'node-fetch'
 
          let pp = fs.readFileSync('./thumbnail.jpg')
          let gc1 = 'https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa'
-         let caption = `𝗙𝗲𝗹𝗶𝗰𝗶𝗮 𝗕𝗼𝘁 𝗙𝗮𝗻 𝗖𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆\n*https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa*\n`
+         let caption = `*🍀 FELICIA ROOM*\n*_https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa_*\n\n*🍀 FELICIA CLUB*\n*_https://chat.whatsapp.com/EggiK9aee8JBbzBQseuSZT_*`
          await conn.sendButtonDoc(m.chat, caption, wm, '𝗢𝗪𝗡𝗘𝗥', '.owner', m, { contextInfo: { 
              externalAdReply: {
                sourceUrl: `${gc1}`,
@@ -14,7 +14,7 @@ import fetch from 'node-fetch'
              } 
          }})
          }
- handler.help = ['gcbot','gc']
-handler.tags = ['info']
-handler.command = /^gcbot|gc$/i
+ handler.help = ['gcbot']
+handler.tags = ['info','main']
+handler.command = /^gcbot$/i
 export default handler
