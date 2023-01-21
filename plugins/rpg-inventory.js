@@ -9,6 +9,8 @@ const inventory = {
     money: true,
     exp: true,
     limit: true,
+    diperkosa: true,
+    memperkosa: true,
     level: true,
   },
   items: {

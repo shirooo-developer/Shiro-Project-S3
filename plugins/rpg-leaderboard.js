@@ -18,6 +18,8 @@ const leaderboards = [
   'uncommon',
   'mythic',
   'legendary',
+  'diperkosa',
+  'memperkosa',
   'pet'
 ]
 let handler = async (m, { conn, args, participants, usedPrefix, command }) => {

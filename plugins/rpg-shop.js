@@ -3,6 +3,9 @@ const items = {
         limit: {
             money: 4599
         },
+        osr: {
+            money: 90000
+        },
         potion: {
             money: 10000
         },
