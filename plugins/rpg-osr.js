@@ -10,7 +10,7 @@ let buff = (buf == 0 ? '5' : '' || buf == 1 ? '10' : '' || buf == 2 ? '15' : '' 
     let count = Math.max(1, Math.min(Number.MAX_SAFE_INTEGER, (isNumber(args[0]) && parseInt(args[0]) || Math.round((100 - user.os) / heal)))) * 1
     if (user.osr < count) return m.reply(`
 Tersisa *${user.osr}* 💦O/S Restorer
-Ketik *${usedPrefix}buy potion ${count - user.osr}* Untuk Membeli 💦O/S Restorer
+Ketik *${usedPrefix}buy osr ${count - user.osr}* Untuk Membeli 💦O/S Restorer
 `.trim())
     user.osr -= count * 1
     user.os += heal * count

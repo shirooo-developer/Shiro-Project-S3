@@ -47,49 +47,49 @@ Bayaran:
 
             setTimeout(() => {
 
-                   m.reply(`*Dia menyewa kamu selama ${pickRandom(['1 Menit', '10 Menit', '1 Jam', '10 Jam', '1 Hari', '1 Minggu', '1 Bulan', '1 Tahun', '5 Jam', '10 Hari','kamu masih belum tobat','kamu masih bernafas'])} ⏳*`)
+                   m.reply(`*Dia Menyewa Kamu Selama ${pickRandom(['1 Menit', '10 Menit', '1 Jam', '10 Jam', '1 Hari', '1 Minggu', '1 Bulan', '1 Tahun', '5 Jam', '10 Hari','Kamu Masih Belum Tobat','Kamu Masih Bernafas'])} ⏳*`)
 
                   }, 70000)
 
             setTimeout(() => {
 
-                   m.reply(`*@${who.split`@`[0]} Akan jadi pelanggan kamu*`)
+                   m.reply(`*@${who.split`@`[0]} Akan Jadi Pelangganmu*`)
 
                   }, 62000)
 
              setTimeout(() => {
 
-                   m.reply('*Kamu mandi dulu sebelum open bo*')
+                   m.reply('*Kamu Menunju Ke Tempat Pertunjukan*')
 
                   }, 1000)
 
              setTimeout(() => {
 
-                   m.reply('*Mencari pelanggan 🔎*')
+                   m.reply('*Menunggu Pelanggan ⌚*')
 
                   }, 15000)
 
              setTimeout(() => {
 
-                   m.reply('*Berhasil menemukan pelanggan 🔍*')
+                   m.reply('*Mendapatkan Pelanggan 🔍*')
 
                   }, 60000)
 
              setTimeout(() => {
 
-                   m.reply('*Operasi open bo akan dimulai*')
+                   m.reply('*Sudah Dimulai...*')
 
                   }, 80000)
 
               setTimeout(() => {
 
-                   m.reply(`*Kamu melakukan gaya ${pickRandom(['woman on top', 'doggy style', 'duduk mendekap', 'misionaris', 'spooning', 'woman on Top', 'the rider', 'the seduction', 'the close-up', 'magic bullet','sexy spoons','the rider','woman on Top'])} sampai clot*`)
+                   m.reply(`*Gaya ${pickRandom(['Woman On Top', 'Doggy Style', 'Duduk Mendekap', 'Misionaris', 'Spooning', 'Woman On Top', 'The Rider', 'The Seduction', 'The Close-up', 'Magic Bullet','sexy Spoons','the Rider','Woman On Top'])} Sampai Keluar...*`)
 
                   }, 240000)
 
              setTimeout(() => {
 
-                   m.reply('*Kamu sudah sampai dipertengahan waktu ⏳*')
+                   m.reply('*Sudah Mulai Kehabisan Tenaga ⏳*')
 
                   }, 300000)
 
@@ -97,13 +97,13 @@ Bayaran:
 
              setTimeout(() => {
 
-                   m.reply('*Bentar lagi selesai kak😌*')
+                   m.reply('*Sudah...*')
 
                   }, 480000)
 
              setTimeout(() => {
 
-                   m.reply(`*Bayaran kamu kurang karena kamu ${pickRandom(['kurang montok', 'kurang pink', 'tidak sesuai selera', 'kena gigi', 'longgar', 'ngegay', 'ngelwsby', 'orang yang suka pakai emoji "🤓"'])}*`)
+                   m.reply(`*Rating Dari Pelanggan: ${pickRandom(['Tidak Memberi Rating', '⭐', '⭐⭐', '⭐⭐⭐', '⭐⭐⭐⭐', '⭐⭐⭐⭐⭐'])}*\n*Ulasan Pelanggan: ${pickRandom(['Tidak Memberi Ulasan', 'Longgar', 'Terlalu Kecil', 'Sempit Sih Tapi Ireng', 'Kntlnya Bau Bet', 'Bengkok Tolol','Tidak Sesuai Pict','Lumayan','Besttt','Next Time Sama Kamu Lagi','Lain Kali Giginya Dijaga','Desahannya kek desahan kuda','ya bolehlah','jelek Anjir','Biarkan bintang yng berbicara',',Tobat kak'])}*`)
 
                   }, 570000)
 

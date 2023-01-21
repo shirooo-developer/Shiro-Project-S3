@@ -1,7 +1,7 @@
 const items = {
     buy: {
         limit: {
-            money: 4599
+            money: 7777
         },
         osr: {
             money: 90000
@@ -35,9 +35,6 @@ const items = {
         },
         legendary: {
             money: 12599            
-        },
-        premium1hari: {
-            money: 5000000            
         }
     },
     sell: {
@@ -93,7 +90,7 @@ ${Object.keys(listItems).map((v) => {
     if (!listItems[item]) return m.reply(info)
     if (command.toLowerCase() == 'buy') {
         let paymentMethod = Object.keys(listItems[item]).find(v => v in user)
-        if (user[paymentMethod] < listItems[item][paymentMethod] * total) return m.reply(`*Money Tidak Cukup*\n\n*- Kamu Membutuhkan ${(listItems[item][paymentMethod] * total) - user[paymentMethod]} Money💵_*`)
+        if (user[paymentMethod] < listItems[item][paymentMethod] * total) return m.reply(`*Money Tidak Cukup*\n\n*- Kamu Membutuhkan ${(listItems[item][paymentMethod] * total)} Money💵_*`)
         user[paymentMethod] -= listItems[item][paymentMethod] * total
         user[item] += total
         return m.reply(`Kamu Membeli *${total} ${global.rpg.emoticon(item)}${item}*`)

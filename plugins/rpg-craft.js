@@ -91,7 +91,7 @@ const listMessage = {
             m.reply("*_Sukses membuat 1 sword 🗡️_*")
             break
           case 'fishingrod':
-          if (user.fishingrod > 0) return m.reply('*_Kamu Sudah Memilik Ini_*')
+          if (user.fishingrod > 3) return m.reply('*_Kamu Sudah Memilik Ini_*')
             if(user.wood < 40 || user.iron < 8 || user.string < 80) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_40 Kayu🪵_*\n*_8 Iron⛓_*\n*_80 String🕸️_*`)
             global.db.data.users[m.sender].wood -= 40
             global.db.data.users[m.sender].iron -= 8

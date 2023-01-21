@@ -33,7 +33,7 @@ let handler = async (m, { conn, participants, usedPrefix, owner }) => {
             
 *PEMBEGALAN 🔪*\n\nKamu Berhasil Membegalnya
 
-MP Kamu Berkuras ${health * 1}%
+Health Kamu Berkurang ${health * 1}❤️
 
 Rampasan:
  - Money ${uang} 💵
@@ -50,49 +50,49 @@ Rampasan:
 
             setTimeout(() => {
 
-                   m.reply(`*Target melakukan perlawanan dan pertarungan badass pun terjadi selama ${pickRandom(['1 Menit', '10 Menit', '1 Jam', '10 Jam', '1 Hari', '1 Minggu', '1 Bulan', '1 Tahun', '5 Jam', '10 Hari','entah','kamu masih bernafas'])} ⏳*`)
+                   m.reply(`*Kamu Dan Target Bertarung Selama ${pickRandom(['1 Menit', '10 Menit', '1 Jam', '10 Jam', '1 Hari', '1 Minggu', '1 Bulan', '1 Tahun', '5 Jam', '10 Hari','Kamu Menyerah','Target Menyerah'])} ⏳*`)
 
                   }, 70000)
 
             setTimeout(() => {
 
-                   m.reply(`*@${who.split`@`[0]} akan kamu begal*`)
+                   m.reply(`*@${who.split`@`[0]} Akan Kamu Begal*`)
 
                   }, 62000)
 
              setTimeout(() => {
 
-                   m.reply(`*Kamu minjam ${pickRandom(['sabit', 'pisau', 'katana', 'pedang', 'golok', 'bambu runcing', 'tsar bomba', 'bom termobarik','senapan mesin','gas air mata','zangetsu','excalibur'])} ke orang random*`)
+                   m.reply(`*Kamu Menggunakan ${pickRandom(['Sabit', 'Pisau', 'Katana', 'Pedang', 'Golok', 'Bambu Runcing', 'Tsar Bomba', 'Bom Termobarik','Senapan Mesin','Gas Air Mata','Zangetsu','Excalibur'])} Untuk Membegal*`)
 
                   }, 1000)
 
              setTimeout(() => {
 
-                   m.reply('*Mencari target begal 🔎*')
+                   m.reply('*Mencari Target Begal 🔎*')
 
                   }, 15000)
 
              setTimeout(() => {
 
-                   m.reply('*Berhasil menemukan target 🔍*')
+                   m.reply('*Berhasil Menemukan Target 🔍*')
 
                   }, 60000)
 
              setTimeout(() => {
 
-                   m.reply('*Kamu hampir menang*')
+                   m.reply('*Kamu Akan Menang*')
 
                   }, 80000)
 
               setTimeout(() => {
 
-                   m.reply(`*Kamu menyewa ${pickRandom(['polisi', 'tni', 'pembegal lain', 'teman', 'adek', 'mantan', 'kekuatan anime', 'wibu', 'anak epep', 'akuto','sakura','kobeni','akatsuki'])} untuk membantumu karena kamu hampir kalah*`)
+                   m.reply(`*Kamu Mendapatkan Bantuan Dari ${pickRandom(['Polisi', 'TNI', 'Pembegal Lain', 'Teman', 'Adik', 'Mantan', 'Kekuatan Anime', 'Wibu', 'Anak EPEP', 'Akuto','Sakura','Kobeni','Akatsuki','Nazi','PKI'])}*`)
 
                   }, 240000)
 
              setTimeout(() => {
 
-                   m.reply('*Target hampir tumbang...*')
+                   m.reply('*Target Akan Kalah...*')
 
                   }, 300000)
 
@@ -100,13 +100,13 @@ Rampasan:
 
              setTimeout(() => {
 
-                   m.reply('*Sudah keliatan siapa yang win 🙂*')
+                   m.reply('*Perbedaan Kekuatan Terlihat...*')
 
                   }, 480000)
 
              setTimeout(() => {
 
-                   m.reply(`*Kamu winnnnn karena kamu ${pickRandom(['lagi hokinya', 'dapat bantuan', 'user bot felicia', '....'])}*`)
+                   m.reply(`*Pemenangnya Adalah Kamu Karena ${pickRandom(['Lagi Hokinya', 'Dapat Bantuan', 'User Bot Felicia', '....','MC'])}*`)
 
                   }, 570000)
 
