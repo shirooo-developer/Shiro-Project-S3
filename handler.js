@@ -122,8 +122,6 @@ export async function handler(chatUpdate) {
 
                     user.registered = false
 
-if (!isNumber(user.title)) 
-                    user.title = 0
 
                 if (!user.registered) {
 
@@ -483,6 +481,8 @@ if (!isNumber(user.title))
                     name: m.name,
 
                     pasangan: '',
+                    
+                    title: '',
 
                     age: -1,
 
@@ -1164,7 +1164,7 @@ if (!isNumber(user.title))
 
                 if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
 
-                    this.reply(m.chat, `*Limit Kamu Tidak Cukup 🎟️*\n*Silahkan Beli Melalui:\n*${usedPrefix}buy limit*\n\n*_🌟 Atau Beli Premium Untuk Dapatkan Unlimited Limit_*`, m)
+                    this.reply(m.chat, `*Dibutuhkan ${plugin.limit}, Tapi Limit Kamu Kurang 🎟️*\n*Silahkan Beli Melalui:*\n*${usedPrefix}buy limit*\n\n*_🌟 Atau Beli Premium Untuk Dapatkan Unlimited Limit_*`, m)
 
                     continue // Limit habis
 

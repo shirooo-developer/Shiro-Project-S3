@@ -39,7 +39,7 @@ const readMore = more.repeat(4001)
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ NO OWNER ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 
 global.owner = [
-['6281328834429'],
+['18459214155'],
 ['6285163083750'],
 ['6282253479547'],
 ['18459214155', '么 Kitsuneee', true]
@@ -49,7 +49,7 @@ global.prems = ['18459214155']
 global.nomorbot = '6282253479547'
 global.nomorown = '18459214155'
 global.nomorown1 = '18459214155'
-global.nomorown2 = '6281328834429'
+global.nomorown2 = '18459214155'
 global.nomorwa = '0'
 
 
@@ -203,6 +203,7 @@ global.rpg = {
       memperkosa: '🔞',
       diperkosa: '🤰',
       osr: '💦',
+      os: '💧',
       premium1hari: '⭐'
     }
     let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
