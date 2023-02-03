@@ -200,6 +200,14 @@ export async function handler(chatUpdate) {
                     user.bijih = 0
                 if (!isNumber(user.emas))
                     user.emas = 0
+                if (!isNumber(user.gems))
+                    user.gems = 0
+                if (!isNumber(user.boosta))
+                    user.boosta = 0
+                if (!isNumber(user.boostb))
+                    user.boostb = 0
+                if (!isNumber(user.boosts))
+                    user.boosts = 0
 
 
 
@@ -571,6 +579,10 @@ export async function handler(chatUpdate) {
                     batu: 0,
                     bijih: 0,
                     emas: 0,
+                    gems: 0,
+                    boosta: 0,
+                    boostb: 0,
+                    boosts: 0,
 
                     emerald: 0,
 

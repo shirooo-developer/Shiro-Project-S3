@@ -42,13 +42,13 @@ global.owner = [
 ['6281328834429'],
 ['6285163083750'],
 ['6282253479547'],
-['18459214155', '么 Kitsuneee', true]
+['17788127066', '么 Christina', true]
 ]
 global.mods = []
-global.prems = ['18459214155']
+global.prems = ['17788127066']
 global.nomorbot = '6282253479547'
-global.nomorown = '18459214155'
-global.nomorown1 = '18459214155'
+global.nomorown = '17788127066'
+global.nomorown1 = '17788127066'
 global.nomorown2 = '6281328834429'
 global.nomorwa = '0'
 
@@ -207,7 +207,7 @@ global.rpg = {
       diperkosa: '🤰',
       osr: '💦',
       os: '💧',
-      premium1hari: '⭐'
+      gems: '💠'
     }
     let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
     if (!results.length) return ''
