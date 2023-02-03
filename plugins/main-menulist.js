@@ -95,12 +95,13 @@ let tags
 let emot = ` ${pickRandom(['⎔', '◈▻', '✦', '⭑', 'ᯬ', '⭔', '◉', '⬟', '᭻', '»', '〆', '々', '⛥', '✗', '⛊', '⚜', '⚝', '⚚', '♪'])}`
 let rndom = `${pickRandom(['defaultMenu', 'defmenu1'])}`
 let teks = `${args[0]}`.toLowerCase()
-let arrayMenu = ['all', 'anime', 'update', 'maker', 'berita', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database','quran', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
+let arrayMenu = ['all', 'anime', 'update', 'maker', 'lm', 'berita', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database','quran', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
 if (!arrayMenu.includes(teks)) teks = '404'
 if (teks == 'all') tags = {
 'main': 'Main',
 'game': 'Game',
 'rpg': 'RPG Games',
+'lm': 'Emperor Games',
 'xp': 'Exp & Limit',
 'sticker': 'Sticker',
 'kerang': 'Kerang Ajaib',
@@ -139,6 +140,9 @@ if (teks == 'nsfw') tags = {
 }
 if (teks == 'rpg') tags = {
 'rpg': 'Rpg'
+}
+if (teks == 'lm') tags = {
+'lm': 'Lm'
 }
 if (teks == 'edukasi') tags = {
 'edukasi': 'Edukasi'
@@ -269,6 +273,7 @@ rows: [
 {title: `👑 • 𝗢𝘄𝗻𝗲𝗿 𝗠𝗲𝗻𝘂`, rowId: ".? owner", description: "ᴍᴇɴᴜ ᴛᴇʀᴜɴᴛᴜᴋ ᴘᴇɴɢᴇᴍʙᴀɴɢ ᴅᴀɴ ᴘᴇᴍɪʟɪᴋ"},
 {title: `⚔️ • 𝗥𝗣𝗚 𝗠𝗲𝗻𝘂`, rowId: ".? rpg", description: "ᴘᴇʀᴍᴀɪɴᴀɴ ᴘᴇʀᴀɴ ᴄʟᴏsᴇ ᴡᴏʀʟᴅ"},
 {title: `✨ • 𝗘𝗫𝗣 𝗠𝗲𝗻𝘂`, rowId: ".? xp", description: "ᴘᴇɴᴅᴜᴋᴜɴɢ ʀᴘɢ"},
+{title: `🤴 •𝗧𝗛𝗘 𝗪𝗔𝗥: 𝗘𝗺𝗽𝗲𝗿𝗼𝗿`, rowId: ".? lm", description: "ᴍᴇᴍᴘᴇʀᴇʙᴜᴛᴋᴀɴ ᴛᴇᴍᴘᴀᴛ ᴋᴀɪsᴀʀ"},
 {title: `🎮 • 𝗚𝗮𝗺𝗲 𝗠𝗲𝗻𝘂`, rowId: ".? game", description: "ᴘᴇʀᴍᴀɪɴᴀɴ ᴅᴀʀɪ ʙᴏᴛ"},
 {title: `🎢 • 𝗙𝘂𝗻 𝗠𝗲𝗻𝘂`, rowId: ".? fun", description: "ʙᴇʀsᴇɴᴀɴɢ-sᴇɴᴀɴɢ ᴅɪᴡʜᴀᴛsᴀᴘᴘ"},
 {title: `🐚 • 𝗞𝗲𝗿𝗮𝗻𝗴 𝗠𝗲𝗻𝘂`, rowId: ".? kerangajaib", description: "ᴋᴇʀᴀɴɢ ᴅᴀʀɪ sᴘᴏɴɢᴇʙᴏʙ"},
@@ -352,7 +357,7 @@ let tett = `╭────────────⬣
 ╰────────────⬣
 ╭────────────⬣
 │ 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 𝗙𝗕𝗠
-╰╮ *wa.me/18459214155*
+╰╮ *https://t.me/Christina_OWN*
    ╰⬣
 `
 let fot = `*_NOTE: Menemukan Error? Ketik #report_*
@@ -522,9 +527,9 @@ let almenu = `
 ┊╰─┬──────────────⬣
 ┊╭─╯        *BOT INFO*
 ┊│ *ᴛᴏᴛᴀʟ:* ${totalf} ғɪᴛᴜʀ
-┊│ *ᴠᴇʀsɪᴏɴ:* V.44
+┊│ *ᴠᴇʀsɪᴏɴ:* V.46
 ┊│ *ʀᴇʟᴇᴀsᴇ:* 25 ɴᴏᴠᴇᴍʙᴇʀ 2021
-┊│ *ᴏᴡɴᴇʀ:* ${ownernya}
+┊│ *ᴏᴡɴᴇʀ:* https://t.me/Christina_OWN
 ┊│ *ᴍᴏᴅᴇ:* ${mode}
 ┊│ *ᴘʟᴀᴛғᴏʀᴍ:* ${platform}
 ┊│ *ᴛʏᴘᴇ:* Nodejs 

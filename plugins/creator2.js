@@ -9,8 +9,8 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   let nowner2 = `${nomorown2.split`@`[0]}@s.whatsapp.net`
   let teksnomor = `${htki} *DEV & OWN* ${htka}
 
-*Dev Kitsune*
-@${nomorown.split`@`[0]}
+*Dev Christina*
+https://t.me/Christina_OWN
 
 *Own Avri*
 @${nomorown2.split`@`[0]}
@@ -41,17 +41,17 @@ let teksbio2 = `${htki} *BIODATA OWN* ${htka}
 //------------ BIO
 let ppown = await conn.profilePictureUrl(nomorown + '@s.whatsapp.net', 'image').catch(_ => hwaifu[1]) 
 let teksbio = `${htki} *BIODATA DEV* ${htka}
-*💬 Nama:* Kitsune
-*✉️ Nama RL:* Private
+*💬 Nama:* Christina
+*✉️ Nama RL:* Christina
 *⚧ Gender:* Female
 *📿 Agama:* Islam
-*📆 Ultah:* 12 September
-*🗒️ Umur:* 17
-*🏫 Kelas:* XI
-*❤️ Hobby:* Coding + Anime + Motor
+*📆 Ultah:* 20 September
+*🗒️ Umur:* 13
+*🏫 Kelas:* VII
+*❤️ Hobby:* -
 *☁️ Sifat:* Introvert
 *🗺️ Tinggal:* Kaltim
-*♀️ Waifu:* Private
+*♂️ Husbu:* Kyouma
 
 *📷 Instagram:* -
 *▶️ You Tube:* -
