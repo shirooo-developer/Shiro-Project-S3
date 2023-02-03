@@ -14,5 +14,5 @@ handler.help = ['infoupdate']
 handler.tags = ['main','rpg']
 handler.command = /^infoupdate$/i
 handler.register = true
-handler.premiun = false
+handler.premium = false
 export default handler

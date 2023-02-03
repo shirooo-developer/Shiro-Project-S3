@@ -26,6 +26,7 @@ let handler = async (m, { conn, participants, usedPrefix, owner }) => {
             let _health = `${Math.floor(Math.random() * 199)}`.trim()
             let health = (_health * 1)
             let uang = `${Math.floor(Math.random() * 200000)}`.trim() 
+            let berlian = `${Math.floor(Math.random() * 2)}`.trim() 
             let str = `
 
             
@@ -35,7 +36,7 @@ Stamina Kamu Berkuras ${health * 1}%
 
 Bayaran:
  - Money ${uang} 💵
-
+ - Gems ${berlian} 💠
 `.trim()          
 
             setTimeout(() => {
@@ -111,6 +112,7 @@ Bayaran:
 
             global.db.data.users[m.sender].health -= health * 1
             global.db.data.users[m.sender].money += uang * 1
+            global.db.data.users[m.sender].gems += berlian * 1
             global.db.data.users[m.sender].lastob = new Date * 1
             } else conn.reply(m.chat, `Anda Sudah Open Bo Dan Kelelahan, Silahkan Tunggu Selama *${timers}*`, m)
         } else conn.reply(m.chat, 'Minimal 100 Health Untuk Bisa Open Bo, Silahkan Beli Dan Gunakan Potion Untuk Menambah Health Dengan Cara\n\nMembeli\n • *' + usedPrefix + 'buy potion jumlah*\nMenggunakan\n • ' + usedPrefix + 'heal', m)

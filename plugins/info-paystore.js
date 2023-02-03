@@ -66,7 +66,7 @@ import fetch from 'node-fetch'
 
 
 Ingin Sewa Bot / Premium? Hub.
-*wa.me/18459214155*
+*https://t.me/Christina_OWN*
 
 
 *_#Trusted But Not Famous_*

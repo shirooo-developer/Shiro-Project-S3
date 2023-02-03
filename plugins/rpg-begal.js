@@ -1,7 +1,8 @@
 import MessageType from '@adiwajshing/baileys'
 
 let handler = async (m, { conn, participants, usedPrefix, owner }) => { 
-
+let buf1 = user.boostb
+let buff1 = (buf1 == 0 ? '0' : '' || buf1 == 1 ? '2' : '' || buf1 == 2 ? '3' : '' || buf1 == 3 ? '4' : '' || buf1 == 4 ? '5' : '' || buf1 == 5 ? '6' : '' || buf1 == 6 ? '35' : '' || buf1 == 7 ? '40' : '' || buf1 == 8 ? '45' : '' || buf1 == 9 ? '50' : '' || buf1 == 10 ? '100' : '')
     try { 
 
     	let who
@@ -26,8 +27,9 @@ let handler = async (m, { conn, participants, usedPrefix, owner }) => {
             let _health = `${Math.floor(Math.random() * 199)}`.trim()
             let health = (_health * 1)
             let uang = `${Math.floor(Math.random() * 200000)}`.trim()
-            let exp = `${Math.floor(Math.random() * 100000)}`.trim()  
-            let limit = `${Math.floor(Math.random() * 10)}`.trim() 
+            let xp = `${Math.floor(Math.random() * 100000)}`.trim()  
+            let batas = `${Math.floor(Math.random() * 10)}`.trim() 
+            let berlian = `${Math.floor(Math.random() * 2)}`.trim() 
             let str = `
 
             
@@ -37,8 +39,9 @@ Health Kamu Berkurang ${health * 1}❤️
 
 Rampasan:
  - Money ${uang} 💵
- - Exp ${exp} ✨
- - Limit ${limit} 🎟️
+ - Exp ${xp} ✨
+ - Limit ${batas} 🎟️
+ - Gems ${berlian} 💠
 `.trim()          
 
             setTimeout(() => {
@@ -114,6 +117,9 @@ Rampasan:
 
             global.db.data.users[m.sender].health -= health * 1
             global.db.data.users[m.sender].money += uang * 1
+            global.db.data.users[m.sender].limit += batas * buff1
+            global.db.data.users[m.sender].exp += xp * 1
+            global.db.data.users[m.sender].gems += berlian * 1
             global.db.data.users[m.sender].lastbegal = new Date * 1
             } else conn.reply(m.chat, `Anda Sudah Membegal Dan Kelelahan, Silahkan Tunggu Selama *${timers}*`, m)
         } else conn.reply(m.chat, 'Minimal 100 Health Untuk Bisa Membegal, Silahkan Beli Dan Gunakan Potion Untuk Menambah Health Dengan Cara\n\nMembeli\n • *' + usedPrefix + 'buy potion jumlah*\nMenggunakan\n • ' + usedPrefix + 'heal', m)

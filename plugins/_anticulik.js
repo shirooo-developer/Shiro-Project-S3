@@ -13,7 +13,7 @@ handler.all = async function (m, { isBlocked }) {
 • 90 Hari IDR 35,000
 
 Jika Berminat Hubungi:
-*wa.me/18459214155*
+*https://t.me/Christina_OWN*
 
 *_#Real100%_*
 *_#Mahal?Ditawar_*

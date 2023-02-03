@@ -1,7 +1,7 @@
 const items = {
     buy: {
         limit: {
-            money: 7777
+            money: 7777 - buff1
         },
         osr: {
             money: 90000
@@ -70,6 +70,8 @@ const items = {
 
 let handler = async (m, { command, usedPrefix, args }) => {
     let user = global.db.data.users[m.sender]
+    let buf1 = user.boosts
+    let buff1 = (buf1 == 0 ? '0' : '' || buf1 == 1 ? '156' : '' || buf1 == 2 ? '312' : '' || buf1 == 3 ? '467' : '' || buf1 == 4 ? '623' : '' || buf1 == 5 ? '778' : '' || buf1 == 6 ? '35' : '' || buf1 == 7 ? '40' : '' || buf1 == 8 ? '45' : '' || buf1 == 9 ? '50' : '' || buf1 == 10 ? '100' : '')
     const listItems = Object.fromEntries(Object.entries(items[command.toLowerCase()]).filter(([v]) => v && v in user))
     const info = `
 *「 ITEM SHOP 」*
