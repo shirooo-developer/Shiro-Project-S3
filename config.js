@@ -59,9 +59,9 @@ global.ct1 = '6287730576939'
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ WM ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 
 global.readMore = readMore
-global.author = '𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 𝗞𝗶𝘁𝘀𝘂𝗻𝗲'
+global.author = '𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 𝗖𝗵𝗿𝗶𝘀𝘁𝗶𝗻𝗮'
 global.namebot = '⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗'
-global.wm = '© 𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 𝗞𝗶𝘁𝘀𝘂𝗻𝗲'
+global.wm = '© 𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 𝗖𝗵𝗿𝗶𝘀𝘁𝗶𝗻𝗮'
 global.media = 'https://telegra.ph/file/4b9c029e5366ad3301d09.jpg'
 global.watermark = wm
 global.wm2 = '⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗 '
@@ -70,7 +70,7 @@ global.packname = wm
 global.bottime = `𝗧 𝗜 𝗠 𝗘: ${wktuwib}`
 global.titlebot = `𝗙𝗘𝗟𝗜𝗖𝗜𝗔 𝗩𝟰𝟯`
 global.stickpack = ''
-global.stickauth = `🖍️ 𝗦𝘁𝗶𝗰𝗸𝗲𝗿𝘀 𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 𝗕𝗼𝘁 ⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗\n\n• 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 么 𝗞𝗶𝘁𝘀𝘂𝗻𝗲𝗲𝗲\n• 𝗕𝗼𝘁 𝗡𝘂𝗺𝗯𝗲𝗿 𝟬𝟴𝟮𝟮-𝟱𝟯𝟰𝟳-𝟵𝟱𝟰𝟳\n• 𝗕𝗼𝘁 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 𝗩𝟰𝟰`
+global.stickauth = `🖍️ 𝗦𝘁𝗶𝗰𝗸𝗲𝗿𝘀 𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 𝗕𝗼𝘁 ⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗\n\n• 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 么 𝗖𝗵𝗿𝗶𝘀𝘁𝗶𝗻𝗮\n• 𝗕𝗼𝘁 𝗡𝘂𝗺𝗯𝗲𝗿 𝟬𝟴𝟱𝟭-𝟲𝟯𝟬𝟴-𝟯𝟳𝟱𝟬\n• 𝗕𝗼𝘁 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 𝟰𝟲`
 global.week = `${week} ${date}`
 global.wibb = `${wktuwib}`
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ OWNER INFO ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺

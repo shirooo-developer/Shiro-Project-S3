@@ -168,6 +168,39 @@ export async function handler(chatUpdate) {
 
                     user.autolevelup = true
 
+                if (!isNumber(user.skinkastil))
+                    user.skinkastil = 0
+                if (!isNumber(user.csm))
+                    user.csm = 0
+                if (!isNumber(user.oc))
+                    user.oc = 0
+                if (!isNumber(user.zc))
+                    user.zc = 0
+                if (!isNumber(user.nc))
+                    user.nc = 0
+                if (!isNumber(user.vc))
+                    user.vc = 0
+                if (!isNumber(user.pc))
+                    user.pc = 0
+                if (!isNumber(user.ac))
+                    user.ac = 0
+                if (!isNumber(user.chealth))
+                    user.chealth = 0
+                if (!isNumber(user.might))
+                    user.might = 0
+               if (!('cnama' in user))
+                    user.cnama = ''
+               if (!isNumber(user.padi))
+                    user.padi = 0
+                if (!isNumber(user.kayu))
+                    user.kayu = 0
+                if (!isNumber(user.batu))
+                    user.batu = 0
+                if (!isNumber(user.bijih))
+                    user.bijih = 0
+                if (!isNumber(user.emas))
+                    user.emas = 0
+
 
 
                 if (!isNumber(user.money))
@@ -521,8 +554,23 @@ export async function handler(chatUpdate) {
                     rock: 0,
 
                     string: 0,
-
-
+                                       
+                    skinkastil: 0,
+                    csm: 0,
+                    oc: 0,
+                    zc: 0,
+                    nc: 0,
+                    vc: 0,
+                    pc: 0,
+                    ac: 0,
+                    chealth: 1000,
+                    might: 0,
+                    cnama: '',
+                    padi: 0,
+                    kayu: 0,
+                    batu: 0,
+                    bijih: 0,
+                    emas: 0,
 
                     emerald: 0,
 
@@ -707,6 +755,9 @@ export async function handler(chatUpdate) {
                 if (!('nsfw' in chat))
 
                     chat.nsfw = false
+                    
+                    if (!('updateAnime' in chat))
+                    chat.updateAnime = false
 
                 if (!('premnsfw' in chat))
 
@@ -747,6 +798,8 @@ export async function handler(chatUpdate) {
                     expired: 0,
 
                     nsfw: false,
+                    
+                    updateAnime: false,
 
                     premnsfw: false,
 
