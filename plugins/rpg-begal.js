@@ -1,6 +1,7 @@
 import MessageType from '@adiwajshing/baileys'
 
 let handler = async (m, { conn, participants, usedPrefix, owner }) => { 
+let user = global.db.data.users[m.sender]
 let buf1 = user.boostb
 let buff1 = (buf1 == 0 ? '0' : '' || buf1 == 1 ? '2' : '' || buf1 == 2 ? '3' : '' || buf1 == 3 ? '4' : '' || buf1 == 4 ? '5' : '' || buf1 == 5 ? '6' : '' || buf1 == 6 ? '35' : '' || buf1 == 7 ? '40' : '' || buf1 == 8 ? '45' : '' || buf1 == 9 ? '50' : '' || buf1 == 10 ? '100' : '')
     try { 

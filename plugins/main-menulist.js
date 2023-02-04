@@ -547,7 +547,7 @@ let d3= 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
 let d4 = 'application/pdf'
 let d5 = 'text/rtf'
 let td = `${pickRandom([d1,d2,d3,d4,d5])}`
-let ᴛᴇs = `*_Powered By @${nomorwa.split`@`[0]}_*\n*_Creator Bot @${nomorown1.split`@`[0]}_*\n𝗗𝗔𝗧𝗘: ${week} ${date}\n𝗧𝗜𝗠𝗘: ${wktuwib}`
+let ᴛᴇs = `*_Powered By @${nomorwa.split`@`[0]}_*\n*_Creator Bot https://t.me/Christina_OWN_*\n𝗗𝗔𝗧𝗘: ${week} ${date}\n𝗧𝗜𝗠𝗘: ${wktuwib}`
 let thummb = fs.readFileSync('./thumbnail.jpg')
 
 conn.send2ButtonDoc(m.chat, almenu, readMore + text + `${ᴛᴇs}` + readMore, '𝗦𝗘𝗪𝗔 𝗕𝗢𝗧', '.sewa', '𝗢𝗪𝗡𝗘𝗥', '.owner', m, { contextInfo: { forwardingScore: fsizedoc, externalAdReply: { body: 'Tes', containsAutoReply: true, mediaType: 1, mediaUrl: hwaifu.getRandom(),  renderLargerThumbnail: true, showAdAttribution: true, sourceId: 'Tes', sourceType: 'PDF', previewType: 'PDF', sourceUrl: sgc, thumbnail: fs.readFileSync('./thumbnail.jpg'), thumbnailUrl: sgc, title: 'Jᴏɪɴ Mʏ Gᴄ Oғғɪᴄɪᴀʟ'}}})

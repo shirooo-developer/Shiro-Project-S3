@@ -22,7 +22,7 @@ Fitur Berpetualang Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
     text += '\n\n*_Dan Kamu Mendapatkan_*'
     for (const rewardItem in rewards.reward) if (rewardItem in user) {
         const total = rewards.reward[rewardItem].getRandom()
-        user[rewardItem] += total * 1
+        user[rewardItem] += total * buff1
         if (total) text += `\n*${global.rpg.emoticon(rewardItem)}${rewardItem}:* ${total}`
     }
     m.reply(text.trim())
@@ -41,7 +41,7 @@ export default handler
 function reward(user = {}) {
     let rewards = {
         reward: {
-            money: 100000 * buff1,
+            money: 100000,
             exp: 50000,
             trash: 50,
             potion: 4,

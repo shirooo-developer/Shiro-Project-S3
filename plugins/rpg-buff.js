@@ -27,7 +27,7 @@ Your Booster Level 📊
   
 Booster List:
 Adventure
- + 100% Money Per-Level
+ + 100% All Item Per-Level
     Maks 5 Level
 
 Begal
@@ -66,10 +66,10 @@ const listMessage = {
         switch (type) {
           case 'adventure':
           if (user.boosta > 4) return m.reply('*_Level Boost Kamu Sudah Max_*')
-            if(user.money < 59 * buff1 || user.gems < 39999 * buff1) return m.reply(`*Kamu Membutuhkan*\n• Gems ${59 * buff1} 💠\n• Money ${39999 * buff1} 💵`)
+            if(user.money < 89 * buff1 || user.gems < 59999 * buff1) return m.reply(`*Kamu Membutuhkan*\n• Gems ${89 * buff1} 💠\n• Money ${59999 * buff1} 💵`)
             global.db.data.users[m.sender].boosta += 1
-            global.db.data.users[m.sender].gems -= 59 * buff1
-            global.db.data.users[m.sender].money -= 39999 * buff1
+            global.db.data.users[m.sender].gems -= 89 * buff1
+            global.db.data.users[m.sender].money -= 59999 * buff1
             m.reply("*_Sukses Meningkatkan Booster Adventure ⚡_*")
             break
           case 'adventure':
