@@ -10,10 +10,8 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   let teksnomor = `${htki} *DEV & OWN* ${htka}
 
 *Dev Christina*
-https://t.me/Christina_OWN
+@${nomorown.split`@`[0]}
 
-*Own Avri*
-@${nomorown2.split`@`[0]}
 
 `
 
@@ -41,13 +39,13 @@ let teksbio2 = `${htki} *BIODATA OWN* ${htka}
 //------------ BIO
 let ppown = await conn.profilePictureUrl(nomorown + '@s.whatsapp.net', 'image').catch(_ => hwaifu[1]) 
 let teksbio = `${htki} *BIODATA DEV* ${htka}
-*💬 Nama:* Christina
-*✉️ Nama RL:* Christina
+*💬 Nama:* Kei
+*✉️ Nama RL:* Keizha
 *⚧ Gender:* Female
 *📿 Agama:* Islam
-*📆 Ultah:* 20 September
-*🗒️ Umur:* 13
-*🏫 Kelas:* VII
+*📆 Ultah:* 12 September
+*🗒️ Umur:* 17
+*🏫 Kelas:* XI
 *❤️ Hobby:* -
 *☁️ Sifat:* Introvert
 *🗺️ Tinggal:* Kaltim
@@ -64,9 +62,8 @@ const sections = [
    {
 	title: `OWNER –––––––––·•`,
 	rows: [
-	{title: "𝗡𝗼𝗺𝗼𝗿 𝗗𝗲𝘃 & 𝗢𝘄𝗻", rowId: ".owner2"},
+	{title: "𝗡𝗼𝗺𝗼𝗿 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿", rowId: ".owner2"},
 	{title: "𝗕𝗶𝗼𝗱𝗮𝘁𝗮 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿", rowId: ".owner bio"},
-	{title: "𝗕𝗶𝗼𝗱𝗮𝘁𝗮 𝗢𝘄𝗻𝗲𝗿", rowId: ".owner bio2"},
 	]
   }
 ]
