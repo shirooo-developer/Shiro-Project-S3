@@ -1,5 +1,5 @@
 let handler = async (m, { conn, command }) => {
-m.reply('么 Kitsuneee')
+m.reply('么 Keizha')
 let audio = `https://raw.githubusercontent.com/saipulanuar/Api-Github/main/audio/${command}.mp3`
 await conn.sendFile(m.chat, audio, 'error.mp3', null, m, true)
 }
@@ -78,4 +78,5 @@ handler.command = handler.help = [
 ]
 handler.tags = ['audio']
 handler.owner = false
+handler.register = true
 export default handler

@@ -28,5 +28,6 @@ m.reply(`*🖼️ RESOLUTION: ${width} x ${height}*
 handler.help = ['cekresolution <reply | caption>', 'cekreso <reply | caption>']
 handler.tags = ['tools']
 handler.command = /^(cekreso(lution)?)$/i
-
+handler.limit = 1
+handler.register = true
 export default handler

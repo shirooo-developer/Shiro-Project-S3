@@ -1016,7 +1016,8 @@ conn.sendButton(m.chat, `Random *${command}*`, author, res, [['𝗡𝗘𝗫𝗧'
 handler.command = /^(makerapimeme)$/i
 handler.tags = ['internet','maker']
 handler.help = ['makerapimeme']
-handler.limit = true
+handler.limit = 1
+handler.register = true
 handler.group = true
 
 export default handler

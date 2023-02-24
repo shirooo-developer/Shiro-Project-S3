@@ -23,6 +23,6 @@ handler.help = ['tovideo']
 handler.tags = ['sticker']
 handler.register = true
 handler.limit = 1
-handler.command = ['tovideo','tovid']
+handler.command = ['tovideo','tovid','tovidio']
 
 export default handler

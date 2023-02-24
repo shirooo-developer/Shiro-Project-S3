@@ -25,7 +25,7 @@ Zodiak : ${zodiac}
 handler.help = ['zodiac *2002 02 25*']
 handler.tags = ['tools']
 handler.command = /^zodia[kc]$/i
-
+handler.register = true
 export default handler
 
 const zodiak = [

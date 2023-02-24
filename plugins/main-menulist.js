@@ -100,6 +100,7 @@ if (!arrayMenu.includes(teks)) teks = '404'
 if (teks == 'all') tags = {
 'main': 'Main',
 'game': 'Game',
+'openaimenu': 'Open AI Menu',
 'rpg': 'RPG Games',
 'lm': 'Emperor Games',
 'xp': 'Exp & Limit',
@@ -131,6 +132,9 @@ if (teks == 'all') tags = {
 }
 if (teks == 'game') tags = {
 'game': 'Game'
+}
+if (teks == 'openaimenu') tags = {
+'openaimenu': 'Open AI Menu'
 }
 if (teks == 'anime') tags = {
 'anime': 'Anime'
@@ -272,6 +276,7 @@ title: `𝗟𝗜𝗦𝗧 𝗠𝗘𝗡𝗨 ${namebot}`,
 rows: [
 {title: `👑 • 𝗢𝘄𝗻𝗲𝗿 𝗠𝗲𝗻𝘂`, rowId: ".? owner", description: "ᴍᴇɴᴜ ᴛᴇʀᴜɴᴛᴜᴋ ᴘᴇɴɢᴇᴍʙᴀɴɢ ᴅᴀɴ ᴘᴇᴍɪʟɪᴋ"},
 {title: `⚔️ • 𝗥𝗣𝗚 𝗠𝗲𝗻𝘂`, rowId: ".? rpg", description: "ᴘᴇʀᴍᴀɪɴᴀɴ ᴘᴇʀᴀɴ ᴄʟᴏsᴇ ᴡᴏʀʟᴅ"},
+{title: `🤖 • 𝗢𝗣𝗘𝗡 𝗔𝗜`, rowId: ".? openaimenu", description: "ᴋᴇᴄᴇʀᴅᴀsᴀɴ ʙᴜᴀᴛᴀɴ"},
 {title: `✨ • 𝗘𝗫𝗣 𝗠𝗲𝗻𝘂`, rowId: ".? xp", description: "ᴘᴇɴᴅᴜᴋᴜɴɢ ʀᴘɢ"},
 {title: `🤴 •𝗧𝗛𝗘 𝗪𝗔𝗥: 𝗘𝗺𝗽𝗲𝗿𝗼𝗿`, rowId: ".? lm", description: "ᴍᴇᴍᴘᴇʀᴇʙᴜᴛᴋᴀɴ ᴛᴇᴍᴘᴀᴛ ᴋᴀɪsᴀʀ"},
 {title: `🎮 • 𝗚𝗮𝗺𝗲 𝗠𝗲𝗻𝘂`, rowId: ".? game", description: "ᴘᴇʀᴍᴀɪɴᴀɴ ᴅᴀʀɪ ʙᴏᴛ"},
@@ -527,9 +532,9 @@ let almenu = `
 ┊╰─┬──────────────⬣
 ┊╭─╯        *BOT INFO*
 ┊│ *ᴛᴏᴛᴀʟ:* ${totalf} ғɪᴛᴜʀ
-┊│ *ᴠᴇʀsɪᴏɴ:* V.46
+┊│ *ᴠᴇʀsɪᴏɴ:* V.48
 ┊│ *ʀᴇʟᴇᴀsᴇ:* 25 ɴᴏᴠᴇᴍʙᴇʀ 2021
-┊│ *ᴏᴡɴᴇʀ:* https://t.me/Christina_OWN
+┊│ *ᴏᴡɴᴇʀ:* @${nomorown2.split`@`[0]}
 ┊│ *ᴍᴏᴅᴇ:* ${mode}
 ┊│ *ᴘʟᴀᴛғᴏʀᴍ:* ${platform}
 ┊│ *ᴛʏᴘᴇ:* Nodejs 
@@ -540,14 +545,14 @@ let almenu = `
 ╰─────────────────⬣
 `
 let nomorwa = '0'
-let nomorowm1 = '6281361281833'
+let nomorowm1 = '6281249122429'
 let d1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
 let d2 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 let d3= 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
 let d4 = 'application/pdf'
 let d5 = 'text/rtf'
 let td = `${pickRandom([d1,d2,d3,d4,d5])}`
-let ᴛᴇs = `*_Powered By @${nomorwa.split`@`[0]}_*\n*_Creator Bot https://t.me/Christina_OWN_*\n𝗗𝗔𝗧𝗘: ${week} ${date}\n𝗧𝗜𝗠𝗘: ${wktuwib}`
+let ᴛᴇs = `*_Powered By @${nomorwa.split`@`[0]}_*\n*_Creator Bot @${nomorowm1.split`@`[0]}_*\n𝗗𝗔𝗧𝗘: ${week} ${date}\n𝗧𝗜𝗠𝗘: ${wktuwib}`
 let thummb = fs.readFileSync('./thumbnail.jpg')
 
 conn.send2ButtonDoc(m.chat, almenu, readMore + text + `${ᴛᴇs}` + readMore, '𝗦𝗘𝗪𝗔 𝗕𝗢𝗧', '.sewa', '𝗢𝗪𝗡𝗘𝗥', '.owner', m, { contextInfo: { forwardingScore: fsizedoc, externalAdReply: { body: 'Tes', containsAutoReply: true, mediaType: 1, mediaUrl: hwaifu.getRandom(),  renderLargerThumbnail: true, showAdAttribution: true, sourceId: 'Tes', sourceType: 'PDF', previewType: 'PDF', sourceUrl: sgc, thumbnail: fs.readFileSync('./thumbnail.jpg'), thumbnailUrl: sgc, title: 'Jᴏɪɴ Mʏ Gᴄ Oғғɪᴄɪᴀʟ'}}})

@@ -61,7 +61,7 @@ Tier *${user.role}*
 }
 
 handler.help = ['levelup']
-handler.tags = ['xp']
+handler.tags = ['xp','rpg']
 handler.register = true
 handler.command = /^level(|up)$/i
 

@@ -5,5 +5,7 @@ async function handler(m) {
     await q.quoted.copyNForward(m.chat, true)
 }
 handler.command = /^q$/i
+handler.tags = ['tools']
+handler.help = ['q']
 handler.register = true
 export default handler

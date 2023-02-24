@@ -16,6 +16,7 @@ let handler = async (m, { conn }) => {
 handler.help = ['ocr', 'totext']
 handler.tags = ['tools']
 handler.command = /^(ocr|totext)$/i
-handler.limit = true
+handler.limit = 1
+handler.register = true
 
 export default handler

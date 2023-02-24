@@ -10,6 +10,7 @@ const inventory = {
     exp: true,
     limit: true,
     os: true,
+    gems: true,
     diperkosa: true,
     memperkosa: true,
     level: true,

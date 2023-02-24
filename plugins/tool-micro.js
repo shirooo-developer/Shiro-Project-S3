@@ -27,7 +27,8 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 handler.help = ['micro <lang> <teks>']
 handler.tags = ['tools']
 handler.command = /^micro$/i
-handler.limit = true
+handler.limit = 1
+handler.register = true
 
 export default handler
 

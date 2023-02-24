@@ -14,5 +14,5 @@ handler.help = ['npmsearch']
 handler.tags = ['tools']
 handler.command = /^npm(js|search)?$/i
 handler.register = true
-handler.limit = 1
+handler.limit = 2
 export default handler

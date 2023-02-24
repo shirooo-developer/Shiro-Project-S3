@@ -29,5 +29,5 @@ handler.help = ['zoom <pass>']
 handler.tags = ['tools']
 handler.command = /^(zoom|zoomgen)$/i
 handler.register = true
-handler.limit = true
+handler.limit = 1
 export default handler

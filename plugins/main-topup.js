@@ -1,5 +1,5 @@
 let handler = async m => m.reply(`
-*Mau Top Up? Bisa Hubungi https://t.me/Christina_OWN Karena Price List Belum Dibuat.*
+*Mau Top Up? Bisa Hubungi wa.me/6281249122429 Karena Price List Belum Dibuat.*
 `.trim()) // Tambah sendiri kalo mau
 
 

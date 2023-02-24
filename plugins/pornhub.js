@@ -7,7 +7,7 @@ let response = args.join(' ').split('|')
   conn.sendFile(m.chat, res, 'pornhub.jpg', `*Done*`, m, false)
 }
 handler.help = ['pornhub'].map(v => v + ' <text1>|<teks2>')
-handler.tags = ['maker']
+handler.tags = ['maker','premium']
 handler.command = /^(pornhub)$/i
 handler.register = true
 

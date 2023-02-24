@@ -15,4 +15,5 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 }
 handler.command = /^(apk(info|detail))$/i
 handler.register = true
+handler.limit = 1
 export default handler

@@ -8,7 +8,7 @@ let stiker = await sticker(null, global.API(`${pickRandom(stikerhuuu)}`), global
     
 }
 
-handler.customPrefix = /^(nyimak|hai|hay|hi)$/i
+handler.customPrefix = /^(nyimak|hai|hay|hi|hii|hiii|hayy|hayyy|haii|haiii|halo|hello|hallo)$/i
 handler.command = new RegExp
 
 export default handler
@@ -17,5 +17,5 @@ function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())]
 }
 let stikerhuuu = [
- "https://telegra.ph/file/604ec147874c87be5fb4a.mp4",
+ "https://telegra.ph/file/2617fdf1a2452fe7a5479.jpg",
 ]

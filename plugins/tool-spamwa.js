@@ -13,7 +13,7 @@ for (let i = fixedJumlah; i > 1; i--) {
 if (i !== 0) conn.reply(fixedNumber, pesan.trim(), m)
 }}
 handler.help = ['spamwa <number>|<mesage>|<no of messages>']
-handler.tags = ['tools']
+handler.tags = ['tools','premium']
 handler.command = /^spam(wa)?$/i
 handler.group = false
 handler.premium = true

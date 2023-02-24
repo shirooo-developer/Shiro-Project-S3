@@ -13,7 +13,7 @@ conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
 
 }
 handler.help = ['emojimix'].map(v => v + ' emot1|emot2>')
-handler.tags = ['misc']
+handler.tags = ['sticker']
 handler.command = /^(emojimix)$/i
 export default handler
 handler.register = true

@@ -300,9 +300,9 @@ sourceUrl: sgc
 }
 
 handler.help = ['semoji']
-handler.tags = ['sticker']
+handler.tags = ['sticker','premium']
 handler.command = /^(semoji|stickeremoji)$/i
-handler.limit = true
+handler.premium = true
 handler.register = true
 export default handler 
 function pickRandom(list) {

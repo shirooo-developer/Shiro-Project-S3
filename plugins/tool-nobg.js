@@ -14,5 +14,5 @@ handler.help = ['removebg']
 handler.tags = ['tools']
 handler.command = /^(no|remove)bg$/i
 handler.register = true
-handler.limit = 1
+handler.limit = 2
 export default handler

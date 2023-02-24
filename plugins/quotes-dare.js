@@ -19,7 +19,7 @@ conn.send2ButtonImg(m.chat, `${pickRandom(flaaa2)}` + `${ucapan()} ` + `${name}`
     mediaUrl: 'https://facebook.com/',
     mediaType: 2, 
     description: sgc,
-    title: "么 Kitsuneee",
+    title: "么 Keizha",
     body: wm,
     thumbnail: fs.readFileSync('./thumbnail.jpg'),
     sourceUrl: sgc

@@ -25,7 +25,7 @@ let ssn = `👤 Dari: *${name}*\n✉️ Pesan: *${pesan}*\n\n*_Ingin Balas Menfe
     mediaUrl: 'https://instagram.com/',
     mediaType: 2, 
     description: sgc,
-    title: "么 Kitsuneee",
+    title: "么 Keizha",
     body: wm,
     thumbnail: fs.readFileSync('./media/menfess.jpg'),
     sourceUrl: sgc
@@ -34,7 +34,7 @@ let ssn = `👤 Dari: *${name}*\n✉️ Pesan: *${pesan}*\n\n*_Ingin Balas Menfe
     mediaUrl: 'https://facebook.com/',
     mediaType: 2, 
     description: sgc,
-    title: "么 Kitsuneee",
+    title: "么 Keizha",
     body: wm,
     thumbnail: fs.readFileSync('./media/menfess.jpg'),
     sourceUrl: sgc
@@ -57,6 +57,7 @@ handler.command = /^(menfess|menfes)$/i
 handler.private = true
 handler.register = true
 handler.limit = 1
+handler.premium = true
 export default handler
 
 /* Made By FokusDotId (Fokus ID)

@@ -18,7 +18,7 @@ ${res.description}
   m.reply(caption)
 }
 handler.help = ['igstalk']
-handler.tags = ['tool']
+handler.tags = ['tools']
 handler.alias = ['igstalk', 'stalkig']
 handler.command = /^(igstalk|stalkig)$/i
 

@@ -57,5 +57,5 @@ let handler = async m => m.reply(`
 handler.help = ['kodebahasa']
 handler.tags = ['internet','tools']
 handler.command = /^kodebahasa$/i
-
+handler.register = true
 export default handler

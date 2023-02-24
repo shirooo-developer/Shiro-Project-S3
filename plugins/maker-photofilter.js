@@ -71,7 +71,7 @@ handler.help = ['phfilter'].map(v => v + ' <caption|reply>')
 handler.tags = ['maker']
 handler.command = /^(phfilter)$/i
  handler.register = true
-handler.limit = true
+handler.limit = 1
 export default handler
 
 const isUrl = (text) => {
