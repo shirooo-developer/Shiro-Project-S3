@@ -49,4 +49,4 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
     return !0
 }
 
-export const disable = true
+export const disable = false

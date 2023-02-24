@@ -6,14 +6,17 @@ handler.all = async function (m, { isBlocked }) {
     // ketika ada yang invite/kirim link grup di chat pribadi
     if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('Undangan untuk bergabung') || m.text.startsWith('Invitation to join') || m.text.startsWith('Buka tautan ini')) && !m.isBaileys && !m.isGroup) {
     let teks = `*INVITE GROUP*
-• 3 Hari IDR 0,000
-• 7 Hari IDR 5,000
-• 15 Hari IDR 10,000
-• 30 Hari IDR 15,000
-• 90 Hari IDR 35,000
+    
+• 3 Hari: 4K/Grup
+• 7 Hari: 7K/Grup
+• 15 Hari: 13K/Grup
+• 30 Hari: 23K/Grup
+• 90 Hari: 43K/Grup
+
+Mau Free? Chat Owner.
 
 Jika Berminat Hubungi:
-*https://t.me/Christina_OWN*
+*wa.me/6281249122429*
 
 *_#Real100%_*
 *_#Mahal?Ditawar_*

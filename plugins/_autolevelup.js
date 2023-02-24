@@ -16,9 +16,7 @@ export function before(m) {
 *${before}* ➣ *${user.level}*
 *• Role: ${user.role}*
 
-*.profile* Untuk Mengecek
-*.lb* Untuk Mengecek LB
-*.gcbot* Untuk Join GC RPG`.trim())
+*.gcbot - Untuk Join Grup RPG*`.trim())
     }
     
    /* let looh = `*${before}* -> *${user.level}*`
