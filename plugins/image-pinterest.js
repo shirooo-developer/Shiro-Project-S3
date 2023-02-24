@@ -1,7 +1,7 @@
 import { pinterest } from '@bochilteam/scraper'
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
-  if (!text) throw `*Fitur Searching Foto Dari APK Pinterest*\n\n*_Contoh: ${usedPrefix + command} Kayes_*`
+  if (!text) throw `*Fitur Searching Foto Dari App Pinterest*\n\n*_Contoh: ${usedPrefix + command} Kayes_*`
   const json = await pinterest(text)
   conn.sendFile(m.chat, json.getRandom(), 'pinterest.jpg', `
 *PINTEREST SEARCH*

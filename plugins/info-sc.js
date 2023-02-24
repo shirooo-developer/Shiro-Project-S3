@@ -32,8 +32,8 @@ let handler = async (m, { conn, args, command }) => {
        let tag = `@${m.sender.replace(/@.+/, '')}`
   let mentionedJid = [m.sender]
 let scnya = `*SCRIPT LANGUAGE*`
-    let footerny = `\n*_https://github.com/KitsuneOfficial/Felicia-MD-V41_*`
- conn.send3ButtonImg(m.chat, `https://telegra.ph/file/ce1872fe74099ff8502c9.jpg`, scnya, footerny, '𝗠𝗘𝗡𝗨', '.menu', '𝗢𝗪𝗡𝗘𝗥', '.owner', '𝗖𝗥𝗘𝗗𝗜𝗧', '.credit', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+    let footerny = `\n*_https://github.com/KeizhaOfficial/Felicia-MD-V48_*`
+ conn.send3ButtonImg(m.chat, `https://telegra.ph/file/2f45a18efc09676dffe95.jpg`, scnya, footerny, '𝗠𝗘𝗡𝗨', '.menu', '𝗢𝗪𝗡𝗘𝗥', '.owner', '𝗖𝗥𝗘𝗗𝗜𝗧', '.credit', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
     mediaUrl: 'bit.ly/3tqDwMO',
     mediaType: 2, 
     description: sgc,

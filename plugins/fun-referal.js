@@ -55,10 +55,10 @@ ${Object.entries(xp_bonus).map(([count, xp]) => `${count} Orang = Bonus ${xp} XP
   }
 }
 handler.help = ['ref']
-handler.tags = ['fun']
+handler.tags = ['rpg']
 
 handler.command = ['ref']
-
+handler.limit = 2
 handler.register = true
 
 export default handler

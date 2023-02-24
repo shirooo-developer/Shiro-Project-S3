@@ -12,7 +12,7 @@ let handler = async (m, { conn }) => {
   m.reply(`*📑 DASHBOARD ${conn.user.name}*\n\n${txt}`)
 }
 handler.help = ['dashboard']
-handler.tags = ['main','fun','info']
+handler.tags = ['main','info']
 handler.command = /^dashboard$/i
 handler.register = true
 handler.limit = 1

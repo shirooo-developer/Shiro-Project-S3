@@ -19,5 +19,6 @@ let handler = async (m, { conn, text, command }) => {
 handler.help = ['getbio <@tag/reply>']
 handler.tags = ['group']
 handler.command = /^(getb?io)$/i
-handler.limit = true
+handler.limit = 1
+handler.register = true
 export default handler

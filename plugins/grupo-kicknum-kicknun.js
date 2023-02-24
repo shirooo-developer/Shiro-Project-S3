@@ -34,4 +34,8 @@ break
 handler.command = /^(listanum|kicknum)$/i
 handler.group = handler.botAdmin = handler.admin = true
 handler.fail = null
+handler.tags = ['premium']
+handler.help = ['kicknum','listanum']
+handler.register = true
+handler.premium = true
 export default handler

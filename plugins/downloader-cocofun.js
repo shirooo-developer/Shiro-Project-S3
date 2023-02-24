@@ -6,7 +6,7 @@ let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
 if (!args[0]) throw `*Fitur Untuk Mengunduh Video Cocofun*\n\n*_Contoh: ${usedPrefix}${command} http://i.coco.fun/short/1513tui/_*`
 if (!args[1]) return conn.sendButton(m.chat, htki + ' COCOFUN ' + htka, null, null, [['𝗡𝗢 𝗪𝗠', `.cocofun ${args[0]} nowm`],['𝗪𝗜𝗧𝗛 𝗪𝗠', `.cocofun ${args[0]} withwm`]],m)
-let res = await fetch(`https://api.lolhuman.xyz/api/cocofun?apikey=MyWeaBotMD&url=${args[0]}`)
+let res = await fetch(`https://api.lolhuman.xyz/api/cocofun?apikey=Shirooo&url=${args[0]}`)
     let x = await res.json()
   if (args[1] == 'withwm') {
     conn.sendButton(m.chat, x.result.withwm, `*${htki} COCOFUN ${htka}*
@@ -34,7 +34,7 @@ let res = await fetch(`https://api.lolhuman.xyz/api/cocofun?apikey=MyWeaBotMD&ur
 handler.help = ['cocofun'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 handler.register = true
-handler.limit = true
+handler.limit = 1
 handler.command = /^c(oco(fun(d(own(load(er)?)?|l))?|d(own(load(er)?)?|l))|cfun(d(own(load(er)?)?|l))?)$/i
 
 export default handler

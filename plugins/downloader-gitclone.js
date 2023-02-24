@@ -14,7 +14,7 @@ title: 'Repositori Sedang Diunduh...',
 body: wm, 
 thumbnail: fs.readFileSync("./thumbnail.jpg"),
 mediaType:1,
-mediaUrl: "https://telegra.ph/file/1216a636cb2add65a34ae.jpg",
+mediaUrl: "https://telegra.ph/file/6d2890ba6b98259c3b7a5.jpg",
 sourceUrl: sgc
 }}})
    await conn.sendFile(m.chat, url, filename, null, m)
@@ -24,6 +24,5 @@ handler.tags = ['downloader']
 handler.command = /gitclone/i
 handler.register = true
 handler.limit = 1
-handler.limit = true
 
 export default handler

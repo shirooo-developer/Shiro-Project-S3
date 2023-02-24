@@ -31,5 +31,5 @@ handler.help = ['githubstalk'].map(v => v + ' <query>')
 handler.tags = ['tools']
 handler.command = /^(githubstalk|ghstalk)$/i
 handler.register = true
-handler.limit = true
+handler.limit = 1
 export default handler

@@ -12,6 +12,7 @@ let handler = async m => m.reply(`
 • *_https://m.vidio.com/_*
 • *_https://genflix.co.id/_*
 • *_https://www.bilibili.tv/id_*
+• *_https://otakudesu.bid/_*
 
 *ILEGAL*
 • *_https://185.224.82.193/_*
@@ -19,7 +20,6 @@ let handler = async m => m.reply(`
 • *_https://riie.one/_*
 • *_https://animeisme.online/_*
 • *_https://65.108.132.145/#_*
-• *_https://otakudesu.bid/_*
 • *_https://m.imdb.com/list/ls021260570/_*
 • *_https://194.163.183.129/_*
 • *_https://anibatch.anibatch.moe/_*
@@ -37,5 +37,5 @@ handler.help = ['animelink']
 handler.tags = ['anime']
 handler.command = /^animelink$/i
 handler.register = true
-handler.limit = 2
+handler.limit = 1
 export default handler 

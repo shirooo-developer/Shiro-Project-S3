@@ -38,7 +38,7 @@ conn.send3ButtonImg(m.chat, `${pickRandom(flaaa2)}` + `${ucapan()} ` + `${name}`
     title: "么 Kitsuneee",
     body: wm,
     thumbnail: fs.readFileSync('./media/qr.png'),
-    sourceUrl: 'https://wa.me/18459214155',
+    sourceUrl: 'https://wa.me/6281249122429',
      }}
   })
 }

@@ -12,9 +12,9 @@ let handler = function (m) {
  conn.sendMessage(m.chat, { delete: key })
 }
 handler.help = ['delete']
-handler.tags = ['info']
+handler.tags = ['group']
 handler.command = /^(del|delete|unsend?)$/i
-handler.limit = false
+handler.limit = 1
 handler.admin = true
 handler.register = true
 export default handler

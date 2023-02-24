@@ -497,7 +497,7 @@ handler.tags = ['nsfw']
 handler.command = /^(kodenuklir)$/i
 
 handler.fail = null
-handler.limit = true
+handler.limit = 1
 handler.register = true
 handler.premium = true
 

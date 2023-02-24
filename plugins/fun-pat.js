@@ -12,7 +12,7 @@ let stiker = await sticker(null, url, `+${m.sender.split('@')[0]} patted on ${m.
 conn.sendFile(m.chat, stiker, null, { asSticker: true })
 } catch (e) { }}
 handler.command = /^(pat)$/i
-handler.tags = ['anime','sticker']
+handler.tags = ['anime']
 handler.help = ['pat']
 handler.register = true
 handler.limit = 1

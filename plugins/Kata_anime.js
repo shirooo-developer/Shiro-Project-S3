@@ -8,7 +8,7 @@ let handler = async(m, { conn, text }) => {
 m.reply(`*${indo}*\n\n*Character:* ${character}\n*Anime:* ${anime}`)
 }
 handler.help = ['katanime']
-handler.tags = ['internet']
+handler.tags = ['anime']
 handler.command = /^(katanime|kataanime)$/i
 handler.register = true
 handler.limit = 1

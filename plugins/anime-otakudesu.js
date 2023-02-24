@@ -31,7 +31,7 @@ await conn.sendButtonImg(m.chat, datathumb, otaku, wm, '𝗠𝗘𝗡𝗨', '.men
 
 handler.help = ['otaku-desu'].map(v => v + ' <title>')
 handler.tags = ['anime']
-handler.command = /^(otaku-desu)$/i
+handler.command = /^(otaku-desu|od|otakudesu)$/i
 handler.register = true
-handler.limit = 2
+handler.limit = 1
 export default handler

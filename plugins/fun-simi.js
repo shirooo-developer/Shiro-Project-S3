@@ -15,6 +15,6 @@ m.reply(`${json.success.replace('simsimi', 'simsimi').replace('Simsimi', 'Simsim
 handler.help = ['simi <text>?']
 handler.tags = ['kerang']
 handler.command = /^simi$/i
-
+handler.register = true
 export default handler
 

@@ -21,5 +21,6 @@ handler.tags = 'anonymous'
 handler.command = /^(sendkontak)$/i
 handler.private = true
 handler.register = true
+handler.limit = 1
 
 export default handler

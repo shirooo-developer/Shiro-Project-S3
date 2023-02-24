@@ -11,8 +11,8 @@ const sections = [
 {
 title: "𝗦𝗬𝗔𝗥𝗔𝗧 & 𝗞𝗘𝗧𝗘𝗡𝗧𝗨𝗡 𝗕𝗢𝗧",
 rows: 
-[{title: "Cara Daftar Sudah Ada Diatas", rowId: '.w1'},
-{title: "Jangan Memilih 2 Pilihan Ini", rowId: '.w2'}
+[{title: "Cara Daftar Sudah Ada Diatas", rowId: '.apadh'},
+{title: "Jangan Memilih 2 Pilihan Ini", rowId: '.begitukah'}
 ]
 }
 ]

@@ -42,7 +42,7 @@ handler.tags = ['tag']
 handler.command = /^(stickertag|sticktag)$/i
 export default handler
 handler.register = true
-handler.limit = 1
+handler.limit = 2
 
 const isUrl = (text) => {
   return text.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)(jpe?g|gif|png)/, 'gi'))

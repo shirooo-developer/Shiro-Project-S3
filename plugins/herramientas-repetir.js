@@ -1,6 +1,6 @@
 let handler = async (m, { conn, text }) => {
 	
-    if (!text) return conn.reply(m.chat, '*Example: #repeat Felicia*', m)
+    if (!text) return conn.reply(m.chat, '*Contoh: #repeat Felicia*', m)
 	
   conn.reply(m.chat, `
 ${text}
@@ -1018,6 +1018,6 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.limit = true
- 
+handler.limit = 1
+ handler.register = true
 export default handler

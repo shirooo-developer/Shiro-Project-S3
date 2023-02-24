@@ -23,4 +23,5 @@ command
 handler.command = handler.help = ['alkitab']
 handler.tags = ['internet']
 handler.register = true
+handler.limit = 1
 export default handler

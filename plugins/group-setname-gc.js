@@ -6,7 +6,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   
   handler.help = ['setnamagroup <text>']
   handler.tags = ['group']
-  handler.command = /^setnamagroup$/i
+  handler.command = /^setnamagroup|setnamagc|setnamagrup|setgrupnama$/i
   handler.owner = false
   handler.mods = false
   handler.premium = false

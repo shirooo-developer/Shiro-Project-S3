@@ -39,7 +39,7 @@ import fetch from 'node-fetch'
 ┃
 ┠━━━━━━━━━━━━━⎔
 ┃ *PAYMENT:*
-┃ *Dana, OVO, Gopay, Pulsa,
+┃ *Dana, OVO, Gopay, Pulsa,*
 ┃ *& All Type Bank*
 ╰━━━━━━━━━━━━━⎔
 
@@ -59,17 +59,20 @@ import fetch from 'node-fetch'
     - .stickersearch
     - .pack1
     - .hentai
+    - .kicknum
+    - .listanum
    Dan Lebih Banyak Lagi.
    
 *Kelebihan Unlock NSFW?*
  • Membuka Semua NSFW Digrupmu
 
+Diskon 20% Untuk Pembelian Pertama
 
 Ingin Sewa Bot / Premium? Hub.
-*https://t.me/Christina_OWN*
+*wa.me/6281249122429*
 
 
-*_#Trusted But Not Famous_*
+*_#TrustedButNotFamous_*
 `
          await conn.sendButtonDoc(m.chat, caption, wm, '𝗢𝗪𝗡𝗘𝗥', '.owner', m, { contextInfo: { 
              externalAdReply: {
@@ -81,6 +84,6 @@ Ingin Sewa Bot / Premium? Hub.
          }})
          }
  handler.help = ['sewa','sewagc','sewapremium','sewagrup','sewabot']
-handler.tags = ['info']
+handler.tags = ['info','main']
 handler.command = /^sewabot|sewa|sewapremium|sewagrup|sewagc$/i
 export default handler

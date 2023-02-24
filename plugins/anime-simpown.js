@@ -2,13 +2,13 @@ import fetch from 'node-fetch'
 
 let handler = async (m, { conn }) => {
 	let url = gamanaufal[Math.floor(Math.random() * gamanaufal.length)]
-	conn.sendButton(m.chat, ' *Ini Simpenan Owner 🤫*', wm, url, [['𝗡𝗘𝗫𝗧', '.simpown']], m)
+	conn.sendButton(m.chat, ' *Ini Punya Owner 😋*', wm, url, [['𝗡𝗘𝗫𝗧', '.simpown']], m)
 }
 handler.command = /^(simpown)$/i
 handler.tags = ['anime']
 handler.help = ['simpown']
 export default handler
-handler.limit = 2
+handler.limit = 1
 handler.register = true
 
 global.gamanaufal = [

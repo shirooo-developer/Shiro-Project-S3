@@ -39,7 +39,7 @@ let handler  = async (m, { conn, text }) => {
   conn.reply(m.chat, `Mengirim Broadcast Ke ${chats.length} Chat ${chats.length} `, m)
 
   for (let id of chats) {
-let bcbg = `${pickRandom(['https://telegra.ph/file/e9a1717a64d674bee18f1.jpg', 'https://telegra.ph/file/9e0a2f056a6e2609be3d1.jpg','https://telegra.ph/file/b5fd44a77c2b57b0ed28e.jpg','https://telegra.ph/file/738d2068f73732ea3d4ea.jpg','https://telegra.ph/file/025c1bb10fb463604c1f9.jpg','https://telegra.ph/file/3d3daed71fa0e53cf8f01.jpg','https://telegra.ph/file/5ef6dd1cf109b755ee91b.jpg','https://telegra.ph/file/572778c2b0f04b49d3ae3.jpg','https://telegra.ph/file/35afa61c9dca22a73254f.jpg'])}`
+let bcbg = `${pickRandom(['https://telegra.ph/file/af4b4ad2756d48f3686ab.jpg', 'https://telegra.ph/file/93c9028a76a5ea2e2e82c.jpg','https://telegra.ph/file/55bc36e6f52972dd20208.jpg','https://telegra.ph/file/9a7f21daca76d337a0d19.jpg','https://telegra.ph/file/1b393cdb15989f5e19c5a.jpg','https://telegra.ph/file/6d2890ba6b98259c3b7a5.jpg','https://telegra.ph/file/df5ea20c4d1c9ab1db475.jpg','https://telegra.ph/file/2f45a18efc09676dffe95.jpg','https://telegra.ph/file/359dc2bd6f603d002b6d3.jpg'])}`
 
        await conn.delay(1500)
 

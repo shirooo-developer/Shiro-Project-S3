@@ -13,7 +13,7 @@ conn.reply(m.chat, `
 }
 
 handler.help = ['rate']
-handler.tags = ['kerang']
+handler.tags = ['kerang','fun']
 
 handler.command = /^rate$/i
 handler.register = true

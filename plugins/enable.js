@@ -4,7 +4,6 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 	title: `𝗦𝗘𝗧𝗧𝗜𝗡𝗚𝗦 𝗟𝗜𝗦𝗧`,
 	rows: [
 	{title: "Welcome", rowId: `${usedPrefix + command} welcome`},
-	{title: "AutoUpmine", rowId: `${usedPrefix + command} autoupnime`},
     {title: "Delete", rowId: `${usedPrefix + command} delete`},
     {title: "Auto Delete VN", rowId: `${usedPrefix + command} autodelvn`},
     {title: "Public", rowId: `${usedPrefix + command} public`},
@@ -54,13 +53,6 @@ const listMessage = {
         throw false
       }
       chat.welcome = isEnable
-      break
-     case 'autoupnime':
-        if (!isROwner) {
-          global.dfail('rowner', m, conn)
-          throw false
-        }
-      chat.autoupnime = isEnable
       break
      case 'detect':
        if (!m.isGroup) {
@@ -136,6 +128,14 @@ const listMessage = {
           throw false
         }
       chat.simi = isEnable
+      break
+case 'updateAnime':
+        if (m.isGroup) {
+        if (!(isAdmin || isOwner)) {
+          global.dfail('admin', m, conn)
+          throw false
+        }}
+      chat.updateAnime = isEnable
       break
       case 'nsfw':
         if (m.isGroup) {

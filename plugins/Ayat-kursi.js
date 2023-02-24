@@ -19,5 +19,5 @@ handler.help = ['ayatkursi']
 handler.tags = ['quran']
 handler.command = /^(ayatkursi)$/i
 handler.register = true
-
+handler.limit = 1
 export default handler

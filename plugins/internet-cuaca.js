@@ -7,7 +7,7 @@ let handler = async (m, { text, usedPrefix, command }) => {
         units: 'metric',
         appid: '060a6bcfa19809c2cd4d97a212b19273'
     }))
-    if (!res.ok) throw 'lokasi tidak ditemukan'
+    if (!res.ok) throw 'Lokasi Tidak Ditemukan'
     let json = await res.json()
     if (json.cod != 200) throw json
     m.reply(`*CHECK THE WEATHER*
@@ -27,5 +27,5 @@ handler.help = ['cuaca']
 handler.tags = ['internet']
 handler.command = /^(cuaca|weather)$/i
 handler.register = true
-handler.limit = 1
+handler.limit = 2
 export default handler

@@ -44,5 +44,5 @@ handler.help = ['ssweb']
 handler.tags = ['internet']
 handler.command = /^ss(web)?|scre?e?nshu?o?t|sswebdown$/i
 handler.register = true
-handler.limit = true
+handler.limit = 1
 export default handler

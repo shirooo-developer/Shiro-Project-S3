@@ -35,12 +35,12 @@ conn.send3ButtonImg(m.chat, `${pickRandom(flaaa2)}` + `${ucapan()} ` + `${name}`
     title: "么 Kitsuneee",
     body: wm,
     thumbnail: fs.readFileSync('./media/qr.png'),
-    sourceUrl: 'https://wa.me/6281347927862',
+    sourceUrl: 'https://wa.me/6281249122429',
      }}
   })
 }
 handler.help = ['faq']
-handler.tags = ['info']
+handler.tags = ['info','main']
 handler.command = /^(faq)$/i
 handler.register = false
 export default handler

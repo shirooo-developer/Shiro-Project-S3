@@ -8,5 +8,5 @@ let handler = async (m, { conn, command, text }) => conn.reply(m.chat, `
 handler.help = ['', 'kah'].map(v => 'kapan' + v + ' <text>?')
 handler.tags = ['kerang', 'fun']
 handler.command = /^kapan(kah)?$/i
-
+handler.register = true
 export default handler

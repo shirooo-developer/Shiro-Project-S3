@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 import fs from 'fs'
 let handler = async (m, { conn, text }) => {
-  if (!text) return conn.reply(m.chat, 'Harap masukan kanji nya', m)
+  if (!text) return conn.reply(m.chat, 'Harap Masukan Kanjinya', m)
   let res = await fetch(`https://kanjiapi.dev/v1/kanji/${encodeURIComponent(text)}`)
   let json = await res.json()
   let { kanji, grade, stroke_count, meanings, kun_readings, on_readings, name_readings, jlpt, unicode, heisig_en } = json

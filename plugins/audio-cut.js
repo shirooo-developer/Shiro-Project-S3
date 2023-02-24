@@ -28,5 +28,5 @@ handler.help = ['cut'].map(v => v + ' <text>')
 handler.tags = ['audio']
 handler.command = /^(potong(audio|mp3)|cut(audio|mp3))$/i
 handler.register = true
-handler.limit = true
+handler.limit = 2
 export default handler

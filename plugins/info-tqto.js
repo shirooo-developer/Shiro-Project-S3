@@ -32,7 +32,7 @@ let handler = async (m, { conn, args, command }) => {
        let tag = `@${m.sender.replace(/@.+/, '')}`
   let mentionedJid = [m.sender]
 let scnya = `*T Q T O*`
-    let footerny = `\n*Recode By:* 么 Kitsuneee
+    let footerny = `\n*Recode By:* 么 Keizha
 *Wa Owner:* 6281347927862
 
 *THANK YOU SO MUCH*
@@ -62,7 +62,7 @@ let scnya = `*T Q T O*`
 *_• Christian ID_*
 *_• Elaina_*
 `
- conn.send3ButtonImg(m.chat, `https://telegra.ph/file/ce1872fe74099ff8502c9.jpg`, scnya, footerny, '𝗠𝗘𝗡𝗨', '.menu', '𝗢𝗪𝗡𝗘𝗥', '.owner', '𝗖𝗥𝗘𝗗𝗜𝗧', '.credit', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+ conn.send3ButtonImg(m.chat, `https://telegra.ph/file/2f45a18efc09676dffe95.jpg`, scnya, footerny, '𝗠𝗘𝗡𝗨', '.menu', '𝗢𝗪𝗡𝗘𝗥', '.owner', '𝗖𝗥𝗘𝗗𝗜𝗧', '.credit', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
     mediaUrl: 'bit.ly/3tqDwMO',
     mediaType: 2, 
     description: sgc,

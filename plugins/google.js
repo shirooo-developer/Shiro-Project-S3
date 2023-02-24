@@ -12,7 +12,7 @@ let handler = async (m, { conn, command, args }) => {
         url,
         description
     }) => {
-        return `*GOOGLE SEARCH*\n\n*${title}*\n_${url}_\n_${description}_`
+        return `\n\n*${title}*\n_${url}_\n_${description}_`
     }).join('\n\n')
     try {
         let ss = await (await fetch(global.API('nrtm', '/api/ssweb', { delay: 1000, url, full }))).arrayBuffer()

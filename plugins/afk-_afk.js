@@ -4,7 +4,7 @@ export function before(m) {
         conn.sendButtonDoc(m.chat,`
   Kamu Berhenti AFK${user.afkReason ? ' Setelah ' + user.afkReason : ''}
   Selama ${(new Date - user.afk).toTimeString()}
-  `,wm,'\nCuman bot yg tau kalau aq selingkuh...','Ya',m,fakeig)
+  `,wm,'\nYng baca chat ini kek kontol','Ya',m,fakeig)
         user.afk = -1
         user.afkReason = ''
     }
@@ -21,7 +21,7 @@ export function before(m) {
         conn.sendButtonDoc(m.chat,`
   Dia Sedang AFK ${reason ? 'Dengan Alasan ' + reason : 'Tanpa Alasan'}
   Selama ${(new Date - afkTime).toTimeString()}
-  `,wm,'\nJoin sini guysss https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa','Ya',m,fakeig)
+  `,wm,'\nIzin promosi\n\nhttps://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa','Ya',m,fakeig)
     }
     return true
 }

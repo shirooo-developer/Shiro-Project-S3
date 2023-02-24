@@ -6,7 +6,7 @@ export async function before(m) {
 	let mf = Object.values(this.menfess).find(v => v.status === false && v.penerima == m.sender)
 	if (!mf) return !0
 	console.log({ text: m.text, type: m.quoted?.mtype })
-	if ((m.text === 'BALAS PESAN' || m.text === '') && m.quoted.mtype == 'buttonsMessage') return m.reply("*Ketik #balasmenfess balasannya*\nUntuk Membalas Pesan Menfess.");
+	if ((m.text === 'BALAS PESAN' || m.text === '') && m.quoted.mtype == 'buttonsMessage') return m.reply("*Silahkan Ketik Pesan Balasanmu.");
 	else {
 		let imgr = fla.getRandom()
 		let txt = `𝗛𝗮𝗶𝗶𝗶 *@${mf.dari.split('@')[0]}*\nKamu Menerima Pesan Balasan.\n\nPesan Yang Kamu Kirim Sebelumnya:\n*${mf.pesan}*\n\nPesan Balasannya:\n*${m.text}*\n`.trim();

@@ -9,6 +9,6 @@ await conn.sendButtonImg(m.chat, await (await fetch(url.image)).buffer(), '*MEME
 handler.command = /^(meme)$/i
 handler.tags = ['internet']
 handler.help = ['meme']
-handler.limit = true
+handler.limit = 1
 handler.register = true
 export default handler

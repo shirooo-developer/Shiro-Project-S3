@@ -37,7 +37,7 @@ Unknown = Tidak Diketahui/Kosong
 *Thank You...*
 
 
-❣️ From Kitsune
+❣️ From Keizha
 `.trim()) // Tambah sendiri kalo mau
 
 

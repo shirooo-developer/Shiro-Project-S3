@@ -27,7 +27,7 @@ handler.command = /^(dm|dailymotion)?$/i
 
 handler.exp = 0
 handler.register = true
-handler.limit = true
+handler.limit = 1
 
 
 export default handler

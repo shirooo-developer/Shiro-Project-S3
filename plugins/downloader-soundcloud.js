@@ -49,7 +49,7 @@ handler.command = /^s(oundcloud(d(own|l))?|cd(own|l))$/i
 
 handler.exp = 0
 handler.register = true
-handler.limit = true
+handler.limit = 1
 
 
 export default handler

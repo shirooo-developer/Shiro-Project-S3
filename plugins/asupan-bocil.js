@@ -9,8 +9,8 @@ await m.reply(`*Dasar Pedo*`)
   conn.sendButtonVid(m.chat, json.url, command, wm, command, `${usedPrefix} command`, m)
 }
 handler.help = ['asupan-bocil']
-handler.tags = ['premium']
-handler.limit = true
+handler.tags = ['nsfw']
+handler.limit = 1
 handler.register = true
 handler.command = /^(asupan-bocil)$/i
 //MADE IN ERPAN 1140 BERKOLABORASI DENGAN BTS

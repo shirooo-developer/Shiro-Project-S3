@@ -25,7 +25,7 @@ handler.help = ['instagramstory'].map(v => v + ' <username>')
 handler.tags = ['downloader']
 handler.command = /^((igs|instagrams)(tory)?(dl)?(downloa?d(er)?)?)$/i
 handler.register = true
-handler.limit = true
+handler.limit = 1
 
 export default handler
 

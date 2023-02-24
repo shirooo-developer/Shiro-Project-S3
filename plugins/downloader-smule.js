@@ -6,7 +6,7 @@ let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
 if (!args[0]) throw `*_Contoh: ${usedPrefix}${command} http://i.coco.fun/short/1513tui/_*`
 if (!args[1]) return conn.sendButton(m.chat, htki + ' 𝗦𝗠𝗨𝗟𝗘 ' + htka, null, null, [['𝗩𝗜𝗗𝗘𝗢', `.smule ${args[0]} video`],['𝗔𝗨𝗗𝗜𝗢', `.smule ${args[0]} audio`]],m)
-let res = await fetch(`https://api.lolhuman.xyz/api/smule?apikey=MyWeaBotMD&url=${args[1]}`)
+let res = await fetch(`https://api.lolhuman.xyz/api/smule?apikey=Shirooo&url=${args[1]}`)
     let x = await res.json()
   if (args[1] == 'video') {
     await conn.sendButtonVid(m.chat, x.result.video, `*${htki} SMULE ${htka}*

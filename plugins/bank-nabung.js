@@ -17,4 +17,5 @@ handler.help = ['nabung <jumlah>']
 handler.tags = ['rpg']
 handler.command = /^nabung([0-9]+)|nabung|nabungall$/i
 handler.register = true
+handler.limit = 1
 export default handler

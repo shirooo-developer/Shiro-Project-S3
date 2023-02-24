@@ -121,7 +121,7 @@ const listMessage = {
 }
 
 handler.help = ['owner', 'creator','pengembang']
-handler.tags = ['main', 'info']
+handler.tags = ['main']
 handler.command = /^(owner|creator|pengembang)/i
-
+handler.register = true
 export default handler

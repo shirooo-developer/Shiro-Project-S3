@@ -5,7 +5,7 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
 let name = await conn.getName(who)
     if (!args[0]) throw `*_Contoh: ${usedPrefix}${command} https://sharechat.com/video/pDExqga_*`
-        let res = await fetch(`https://api.lolhuman.xyz/api/sharechat?apikey=MyWeaBotMD&url=${args[0]}`)
+        let res = await fetch(`https://api.lolhuman.xyz/api/sharechat?apikey=Shirooo&url=${args[0]}`)
     let x = await res.json()
   conn.sendButtonVid(m.chat, x.result.link_dl, `*${htki} SHARECHAT DL ${htka}*
 \n*💬 Title:* ${x.result.title}
