@@ -48,8 +48,8 @@ global.mods = []
 global.prems = ['6281249122429','17059004393']
 global.nomorbot = '6285163083750'
 global.nomorown = '6281249122429'
-global.nomorown1 = '6281249122429'
-global.nomorown2 = '6281229153877'
+global.nomorown1 = '6281229153877'
+global.nomorown2 = '6281249122429'
 global.nomorwa = '0'
 
 global.tc = '6287777544597'
@@ -62,22 +62,22 @@ global.readMore = readMore
 global.author = '𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 𝗞𝗲𝗶𝘇𝗵𝗮'
 global.namebot = '⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗'
 global.wm = '© 𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 𝗞𝗲𝗶𝘇𝗵𝗮'
-global.media = 'https://telegra.ph/file/4b9c029e5366ad3301d09.jpg'
+global.media = 'https://telegra.ph/file/0fbf9fcbc81bdd0f2d9e8.jpg'
 global.watermark = wm
 global.wm2 = '⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗 '
 global.botdate = `𝗗𝗔𝗧𝗘: ${week} ${date}\n𝗧𝗜𝗠𝗘: ${wktuwib}`
 global.packname = wm
 global.bottime = `𝗧 𝗜 𝗠 𝗘: ${wktuwib}`
-global.titlebot = `𝗙𝗘𝗟𝗜𝗖𝗜𝗔 𝗩𝟰𝟲`
+global.titlebot = `𝗙𝗘𝗟𝗜𝗖𝗜𝗔 𝗩𝟰𝟴`
 global.stickpack = ''
-global.stickauth = `🖍️ 𝗦𝘁𝗶𝗰𝗸𝗲𝗿𝘀 𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 𝗕𝗼𝘁 ⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗\n\n• 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 么 𝗞𝗲𝗶𝘇𝗵𝗮\n• 𝗕𝗼𝘁 𝗡𝘂𝗺𝗯𝗲𝗿 𝟬𝟴𝟱𝟭-𝟲𝟯𝟬𝟴-𝟯𝟳𝟱𝟬\n• 𝗕𝗼𝘁 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 𝟰𝟲`
+global.stickauth = `🖍️ 𝗦𝘁𝗶𝗰𝗸𝗲𝗿𝘀 𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 𝗕𝗼𝘁 ⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗\n\n• 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 么 𝗞𝗲𝗶𝘇𝗵𝗮\n• 𝗕𝗼𝘁 𝗡𝘂𝗺𝗯𝗲𝗿 𝟬𝟴𝟱𝟭-𝟲𝟯𝟬𝟴-𝟯𝟳𝟱𝟬\n• 𝗕𝗼𝘁 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 𝟰𝟴`
 global.wmpack = ''
 global.wmauth = `\n\n\n\n\n\n\n\n\n𝗣𝘂𝗻𝘆𝗮 ᴋᴇɪᴢʜᴀ >>>\n🪀 𝟲𝟮𝟴𝟭𝟮𝟰𝟵𝟭𝟮𝟮𝟰𝟮𝟵\n\n\n\n\n\n\n\n\n`
 global.week = `${week} ${date}`
 global.wibb = `${wktuwib}`
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ OWNER INFO ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 global.nameown1= 'Keizha'
-global.nameown2 = 'Avri'
+global.nameown2 = 'Keizha'
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ MEDIA LINK ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 global.Linkgc = '*Mohon Tunggu*'
 global.lynk = '-'
@@ -221,6 +221,7 @@ global.rpg = {
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ WEBSITE APIKEY ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 global.zenzkey = 'b8040941f7'
 global.lolkey = 'Shirooo' // PUNYA WAHID 357d3c85079c4e0818731e6b
+global.openaikey = "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"
 global.APIs = { // API Prefix
   // name: 'https://website'
   bear: 'https://saipulanuar.ga',
@@ -279,10 +280,10 @@ global.drtf = 'text/rtf'
 //OPTIONS
 global.optsnsfw = true // Untuk mematikan Dan Menyalakan Nsfw
 global.premnsfw = true // Nsfw Mode Premium?
-global.thumb = 'https://telegra.ph/file/04089af09353d33a005b2.jpg' //Main Thumbnail
-global.imagebot = 'https://telegra.ph/file/04089af09353d33a005b2.jpg'
+global.thumb = 'https://telegra.ph/file/abaf8ae07b7902db53b76.jpg' //Main Thumbnail
+global.imagebot = 'https://telegra.ph/file/0fbf9fcbc81bdd0f2d9e8.jpg'
 global.giflogo = 'https://telegra.ph/file/a46ab7fa39338b1f54d5a.mp4'
-global.thumbs = ['https://telegra.ph/file/04089af09353d33a005b2.jpg']
+global.thumbs = ['https://telegra.ph/file/685a803f6fd2f16695023.jpg']
 global.thumbnailUrl = [
   'https://telegra.ph/file/81260a8b9e8cff26d2b48.jpg', 'https://telegra.ph/file/ac4928f0824a2a0492737.jpg',
   'https://telegra.ph/file/6359b013bc7e52c3b346f.jpg', 'https://telegra.ph/file/d43c89a5d2da72875ec05.jpg',
@@ -290,8 +291,8 @@ global.thumbnailUrl = [
   'https://telegra.ph/file/55e5af5f33fbd57104187.jpg', 'https://telegra.ph/file/af236598456b95884bd15.jpg',
   'https://telegra.ph/file/de92ed4a729887ffc974c.jpg', 'https://telegra.ph/file/00ce42a193b1dbbf907d4.jpg'
 ]
-global.fotonya1 = 'https://telegra.ph/file/e4a2f4339da8a32ad20a1.jpg' //ganti jadi foto bot mu
-global.fotonya2 = 'https://telegra.ph/file/e72de2cbba03f58eba7d1.jpg' //ini juga ganti 
+global.fotonya1 = 'https://telegra.ph/file/daf059ddd21a1a057df18.jpg' //ganti jadi foto bot mu
+global.fotonya2 = 'https://telegra.ph/file/b5cecbda87fb6f0151db9.jpg' //ini juga ganti 
 global.flaaa2 = [
  "https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=",
  "https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&text=",
@@ -324,12 +325,12 @@ global.urlnya = "https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa"
 global.dtc = '𝗖𝗔𝗟𝗟 𝗢𝗪𝗡𝗘𝗥'
 global.phn = '0813 4792 7862'
 
-global.thumbdoc = 'https://telegra.ph/file/6e45318d7c76f57e4a8bd.jpg'
+global.thumbdoc = 'https://telegra.ph/file/685a803f6fd2f16695023.jpg'
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ JNGN DI UBAH ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 
 global.fsizedoc = '99999999999999'
 global.fpagedoc = '999'
-global.thumbdoc = 'https://telegra.ph/file/6e45318d7c76f57e4a8bd.jpg'
+global.thumbdoc = 'https://telegra.ph/file/b5cecbda87fb6f0151db9.jpg'
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {

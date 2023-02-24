@@ -486,6 +486,10 @@ export async function handler(chatUpdate) {
                   if (!isNumber(user.lastbegal))
 
                     user.lastbegal = 0
+                    
+                    if (!isNumber(user.akinator))
+
+                    user.akinator = 0
 
                     
                 if (!isNumber(user.aksespremium1hari))
@@ -616,6 +620,7 @@ export async function handler(chatUpdate) {
                     lastmerkosa: 0,
                     memperkosa: 0,
                     diperkosa: 0,
+                    akinator: 0,
 
                     horseexp: 0,
 
