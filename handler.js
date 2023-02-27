@@ -208,6 +208,8 @@ export async function handler(chatUpdate) {
                     user.boostb = 0
                 if (!isNumber(user.boosts))
                     user.boosts = 0
+                if (!isNumber(user.lastlk))
+                    user.lastlk = 0
 
 
 
@@ -486,10 +488,6 @@ export async function handler(chatUpdate) {
                   if (!isNumber(user.lastbegal))
 
                     user.lastbegal = 0
-                    
-                    if (!isNumber(user.akinator))
-
-                    user.akinator = 0
 
                     
                 if (!isNumber(user.aksespremium1hari))
@@ -587,6 +585,7 @@ export async function handler(chatUpdate) {
                     boosta: 0,
                     boostb: 0,
                     boosts: 0,
+                    lastlk: 0,
 
                     emerald: 0,
 
@@ -620,7 +619,6 @@ export async function handler(chatUpdate) {
                     lastmerkosa: 0,
                     memperkosa: 0,
                     diperkosa: 0,
-                    akinator: 0,
 
                     horseexp: 0,
 
@@ -819,9 +817,41 @@ export async function handler(chatUpdate) {
                     updateAnime: false,
 
                     premnsfw: false,
-
                 }
-
+                let akinator = global.db.data.users[m.sender].akinator
+			if (typeof akinator !== 'object')
+				global.db.data.users[m.sender].akinator = {}
+			if (akinator) {
+				if (!('sesi' in akinator))
+					akinator.sesi = false
+				if (!('server' in akinator))
+					akinator.server = null
+				if (!('frontaddr' in akinator))
+					akinator.frontaddr = null
+				if (!('session' in akinator))
+					akinator.session = null
+				if (!('signature' in akinator))
+					akinator.signature = null
+				if (!('question' in akinator))
+					akinator.question = null
+				if (!('progression' in akinator))
+					akinator.progression = null
+				if (!('step' in akinator))
+					akinator.step = null
+				if (!('soal' in akinator))
+					akinator.soal = null
+			} else
+				global.db.data.users[m.sender].akinator = {
+					sesi: false,
+					server: null,
+					frontaddr: null,
+					session: null,
+					signature: null,
+					question: null,
+					progression: null,
+					step: null, 
+					soal: null
+				}
             let settings = global.db.data.settings[this.user.jid]
 
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
@@ -1234,7 +1264,7 @@ export async function handler(chatUpdate) {
 
                 if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
 
-                    this.reply(m.chat, `*Dibutuhkan ${plugin.limit}, Tapi Limit Kamu Kurang 🎟️*\n*Silahkan Beli Melalui:*\n*${usedPrefix}buy limit*\n\n*_🌟 Atau Beli Premium Untuk Dapatkan Unlimited Limit_*`, m)
+                    this.reply(m.chat, `*Dibutuhkan ${plugin.limit} Limit 🎟️*\n*Silahkan Beli Melalui:*\n - *${usedPrefix}buy limit 10*\n\n*Dapatkan Limit Harian Di #limitku Atau Beli Premium Agar Unlimited Limit.*`, m)
 
                     continue // Limit habis
 
