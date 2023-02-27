@@ -19,6 +19,7 @@ let handler = async (m, { text, usedPrefix }) => {
             global.db.data.users[m.sender].money += 10000
             m.reply(`Hasil: *Kamu Menang +10K*\n\n- Kamu: ${text}\n- Bot: ${astro}`)
         } else {
+        	global.db.data.users[m.sender].money -= 10000
             m.reply(`Hasil: *Kamu Kalah*\n- Kamu: ${text}\n- Bot: ${astro}`)
         }
     } else if (text == 'gunting') {
@@ -26,6 +27,7 @@ let handler = async (m, { text, usedPrefix }) => {
             global.db.data.users[m.sender].money += 10000
             m.reply(`Hasil: *Kamu Menang +10K*\n\n- Kamu: ${text}\n- Bot: ${astro}`)
         } else {
+        	global.db.data.users[m.sender].money -= 10000
             m.reply(`Hasil: *Kamu Kalah*\n- Kamu: ${text}\n- Bot: ${astro}`)
         }
     } else if (text == 'kertas') {
@@ -33,6 +35,7 @@ let handler = async (m, { text, usedPrefix }) => {
             global.db.data.users[m.sender].money += 10000
             m.reply(`Hasil: *Kamu Menang +10K*\n\n- Kamu: ${text}\n- Bot: ${astro}`)
         } else {
+        	global.db.data.users[m.sender].money -= 10000
             m.reply(`Hasil: *Kamu Kalah*\n- Kamu: ${text}\n- Bot: ${astro}`)
         }
     } else {
