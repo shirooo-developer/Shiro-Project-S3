@@ -27,10 +27,10 @@ let buff1 = (buf1 == 0 ? '0' : '' || buf1 == 1 ? '2' : '' || buf1 == 2 ? '3' : '
 
             let _health = `${Math.floor(Math.random() * 199)}`.trim()
             let health = (_health * 1)
-            let uang = `${Math.floor(Math.random() * 200000)}`.trim()
-            let xp = `${Math.floor(Math.random() * 100000)}`.trim()  
-            let batas = `${Math.floor(Math.random() * 10)}`.trim() 
-            let berlian = `${Math.floor(Math.random() * 2)}`.trim() 
+            let uang = `${Math.floor(Math.random() * 400000)}`.trim()
+            let xp = `${Math.floor(Math.random() * 200000)}`.trim()  
+            let batas = `${Math.floor(Math.random() * 20)}`.trim() 
+            let berlian = `${Math.floor(Math.random() * 4)}`.trim() 
             let str = `
 
             

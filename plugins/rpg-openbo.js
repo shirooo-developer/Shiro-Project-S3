@@ -27,6 +27,8 @@ let handler = async (m, { conn, participants, usedPrefix, owner }) => {
             let health = (_health * 1)
             let uang = `${Math.floor(Math.random() * 200000)}`.trim() 
             let berlian = `${Math.floor(Math.random() * 2)}`.trim() 
+            let moon = `${Math.floor(Math.random() * 2)}`.trim() 
+            let star = `${Math.floor(Math.random() * 2)}`.trim() 
             let str = `
 
             
@@ -37,6 +39,8 @@ Stamina Kamu Berkuras ${health * 1}%
 Bayaran:
  - Money ${uang} 💵
  - Gems ${berlian} 💠
+ - Moon Card ${moon} 🌙
+ - Star Card ${star} ⭐
 `.trim()          
 
             setTimeout(() => {
@@ -112,6 +116,8 @@ Bayaran:
 
             global.db.data.users[m.sender].health -= health * 1
             global.db.data.users[m.sender].money += uang * 1
+            global.db.data.users[m.sender].mooncard -= moon * 1
+            global.db.data.users[m.sender].starcard += star * 1
             global.db.data.users[m.sender].gems += berlian * 1
             global.db.data.users[m.sender].lastob = new Date * 1
             } else conn.reply(m.chat, `Anda Sudah Open Bo Dan Kelelahan, Silahkan Tunggu Selama *${timers}*`, m)

@@ -1,111 +1,81 @@
 const items = {
-    buy: {
+    event1: {
         limit: {
-            money: 6221
-        },
-        osr: {
-            money: 54000
-        },
-        potion: {
-            money: 10000
-        },
-        trash: {
-            money: 102
-        },
-        wood: {
-            money: 3150
-        },
-        rock: {
-            money: 3600
-        },
-        string: {
-            money: 2250
-        },
-        iron: { 
-        	money: 3600
-        },
-        common: {
-            money: 5000
-        },
-        uncommon: {
-            money: 7000
-        },
-        mythic: {
-            money: 9000
+            mooncard: 1
         },
         legendary: {
-            money: 11399
-        },
-        bibitapel: { 
-        	money: 99
-        },
-        bibitmangga: {
-            money: 99
-        },
-        bibitjeruk: {
-            money: 99
-        },
-        bibitpisang: {
-            money: 99
-        },
-        bibitanggur: {
-            money: 99          
+            mooncard: 3
         },
         manar: {
-            money: 19000     
-        }
-    },
-    sell: {
-        potion: {
-            money: 900
-        },
-        trash: {
-            money: 8
-        },
-        wood: {
-            money: 700
-        },
-        rock: {
-            money: 700
-        },
-        string: {
-            money: 4900
-        },
-        iron: {
-            money: 4900
-        },
-        gold: {
-            money: 7900
+            mooncard: 1
         },
         diamond: {
-            money: 7900
+            starcard: 3
         },
         emerald: {
-            money: 9000
+            starcard: 3
+        },
+        gold: {
+            starcard: 2
+        },
+        iron: {
+            mooncard: 2
+        },
+        mythic: {
+            mooncard: 2
+        }
+    },
+    none1: {
+        potion: {
+            money: 1000
+        },
+        trash: {
+            money: 9
+        },
+        wood: {
+            money: 800
+        },
+        rock: {
+            money: 800
+        },
+        string: {
+            money: 5000
+        },
+        iron: {
+            money: 5000
+        },
+        gold: {
+            money: 8000
+        },
+        diamond: {
+            money: 8000
+        },
+        emerald: {
+            money: 10000
         },
         apel: { 
-        	money: 100
+        	money: 200
         },
         mangga: {
-            money: 100
+            money: 200
         },
         jeruk: {
-            money: 100
+            money: 200
         },
         pisang: {
-            money: 100
+            money: 200
         },
         anggur: {
-            money: 100 
+            money: 200 
         },
         kaleng: {
-            money: 100
+            money: 140
         },
         botol: {
-            money: 100
+            money: 155
         },
         kardus: {
-            money: 100
+            money: 150 
         }
     }
 }
@@ -116,10 +86,10 @@ let handler = async (m, { command, usedPrefix, args }) => {
     let buff1 = (buf1 == 0 ? '0' : '' || buf1 == 1 ? '156' : '' || buf1 == 2 ? '312' : '' || buf1 == 3 ? '467' : '' || buf1 == 4 ? '623' : '' || buf1 == 5 ? '778' : '' || buf1 == 6 ? '35' : '' || buf1 == 7 ? '40' : '' || buf1 == 8 ? '45' : '' || buf1 == 9 ? '50' : '' || buf1 == 10 ? '100' : '')
     const listItems = Object.fromEntries(Object.entries(items[command.toLowerCase()]).filter(([v]) => v && v in user))
     const info = `
-*「 ITEM SHOP 」*
+*「 SPECIAL SHOP 」*
 
-*_Format: ${usedPrefix}${command} <crate> <count>_*
-*_Contoh: ${usedPrefix}${command} potion 10_*
+*_Format: ${usedPrefix}${command} <item> <count>_*
+*_Contoh: ${usedPrefix}${command} limit 1_*
 ╭───────⬣  
 │ *Item List*
 ├───────⬣
@@ -132,12 +102,12 @@ ${Object.keys(listItems).map((v) => {
     const item = (args[0] || '').toLowerCase()
     const total = Math.floor(isNumber(args[1]) ? Math.min(Math.max(parseInt(args[1]), 1), Number.MAX_SAFE_INTEGER) : 1) * 1
     if (!listItems[item]) return m.reply(info)
-    if (command.toLowerCase() == 'buy') {
+    if (command.toLowerCase() == 'event1') {
         let paymentMethod = Object.keys(listItems[item]).find(v => v in user)
-        if (user[paymentMethod] < listItems[item][paymentMethod] * total) return m.reply(`*Money Tidak Cukup*\n\n*- Kamu Membutuhkan ${(listItems[item][paymentMethod] * total)} Money💵_*`)
+        if (user[paymentMethod] < listItems[item][paymentMethod] * total) return m.reply(`*Card Tidak Cukup*\n\n*- Kamu Membutuhkan ${(listItems[item][paymentMethod] * total)} Card 🀄_*`)
         user[paymentMethod] -= listItems[item][paymentMethod] * total - buff1
         user[item] += total
-        return m.reply(`Kamu Membeli *${total} ${global.rpg.emoticon(item)}${item}*`)
+        return m.reply(`Kamu Menukarkan *${total} ${global.rpg.emoticon(item)}${item}*`)
     } else {
         if (user[item] < total) return m.reply(`Kamu Tidak Mempunyai Cukup *${global.rpg.emoticon(item)}${item}* Untuk Dijual, Kamu Hanya Mempunya *${user[item]}* Item`)
         user[item] -= total
@@ -146,9 +116,9 @@ ${Object.keys(listItems).map((v) => {
     }
 }
 
-handler.help = ['buy', 'sell'].map(v => v + ' [item] [count]')
+handler.help = ['event1'].map(v => v + ' [item] [count]')
 handler.tags = ['rpg']
-handler.command = /^(buy|sell)$/i
+handler.command = /^(event1)$/i
 handler.register = true
 handler.disabled = false
 

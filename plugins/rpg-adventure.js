@@ -1,8 +1,6 @@
 const cooldown = 3600000
 let handler = async (m, { usedPrefix }) => {
     let user = global.db.data.users[m.sender]
-    let buf1 = user.boosta
-    let buff1 = (buf1 == 0 ? '0' : '' || buf1 == 1 ? '2' : '' || buf1 == 2 ? '3' : '' || buf1 == 3 ? '4' : '' || buf1 == 4 ? '5' : '' || buf1 == 5 ? '6' : '' || buf1 == 6 ? '35' : '' || buf1 == 7 ? '40' : '' || buf1 == 8 ? '45' : '' || buf1 == 9 ? '50' : '' || buf1 == 10 ? '100' : '')
     let timers = (cooldown - (new Date - user.lastadventure))
     if (user.health < 80) return m.reply(`
 *Dibutuhkan Setidaknya 80HP ❤️ Untuk Berpetualang*
@@ -22,7 +20,7 @@ Fitur Berpetualang Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
     text += '\n\n*_Dan Kamu Mendapatkan_*'
     for (const rewardItem in rewards.reward) if (rewardItem in user) {
         const total = rewards.reward[rewardItem].getRandom()
-        user[rewardItem] += total * buff1
+        user[rewardItem] += total * 1
         if (total) text += `\n*${global.rpg.emoticon(rewardItem)}${rewardItem}:* ${total}`
     }
     m.reply(text.trim())
@@ -41,14 +39,15 @@ export default handler
 function reward(user = {}) {
     let rewards = {
         reward: {
-            money: 100000,
-            exp: 50000,
-            trash: 50,
-            potion: 4,
-            rock: 4,
-            wood: 4,
-            string: 4,
-            gems: 2,
+            money: 200000,
+            exp: 100000,
+            trash: 100,
+            potion: 8,
+            rock: 8,
+            mooncard: 2,
+            starcard: 1,
+            wood: 8,
+            string: 8,
             common: 2 * (user.dog && (user.dog > 2 ? 2 : user.dog) * 1.2 || 1),
             uncommon: [0, 0, 0, 1, 2].concat(
                 new Array(5 - (

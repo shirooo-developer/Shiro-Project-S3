@@ -9,11 +9,21 @@ const inventory = {
     money: true,
     exp: true,
     limit: true,
+    nickname: true,
     os: true,
     gems: true,
     diperkosa: true,
     memperkosa: true,
     level: true,
+    skill: true,
+    ras: true,
+    husbu: true,
+    waifu: true,
+    misi: true,
+    mana: true,
+    crystal: true,
+    mooncard: true,
+    starcard: true,
   },
   items: {
     osr: true,
@@ -28,6 +38,68 @@ const inventory = {
     iron: true,
     upgrader: true,
     pet: true,
+    botol: true,
+    kaleng: true,
+    kardus: true,
+    ramuan: true,
+    weapon: true,
+    anakpancingan: true,
+  },
+  fruit: {
+    pisang: true,
+    anggur: true,
+    apel: true,
+    mangga: true,
+    jeruk: true,
+    bibitpisang: true,
+    bibitanggur: true,
+    bibitapel: true,
+    bibitmangga: true,
+    bibirjeruk: true,
+  },
+  food: {
+    ayambakar: true,
+                    gulaiayam: true,
+                    rendang: true,
+                    ayamgoreng: true,
+                    oporayam: true,
+                    steak: true,
+                    babipanggang: true,
+                    ikanbakar: true,
+                    lelebakar: true,
+                    nilabakar: true,
+                    bawalbakar: true,
+                    udangbakar: true,
+                    pausbakar: true,
+                    kepitingbakar: true,      
+  },
+  animal: {
+    panda: true,
+    kambing: true,
+    harimau: true,
+    gajah: true,
+    banteng: true,
+    babihutan: true,
+    monyet: true,
+    kerbau: true,
+    sapi: true,
+    buaya: true,
+    babi: true,
+    ayam: true,
+},
+  fish: {
+    paus: true,      
+                    kepiting: true,
+                    gurita: true,      
+                    lobster: true,
+                    lumba: true,
+                    dory: true,
+                    buntal: true,
+                    cumi: true,
+                    orca: true,
+                    ikan: true,      
+                    udang: true,
+                    hiu: true, 
   },
   durabi: {
     sworddurability: true,
@@ -116,6 +188,10 @@ let handler = async (m, { conn }) => {
   let user = global.db.data.users[m.sender]
   const tools = Object.keys(inventory.tools).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${typeof inventory.tools[v] === 'object' ? inventory.tools[v][user[v]?.toString()] : `Level(s) ${user[v]}`}`).filter(v => v).join('\n').trim()
   const items = Object.keys(inventory.items).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
+  const fruit = Object.keys(inventory.fruit).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
+  const food = Object.keys(inventory.food).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
+  const animal = Object.keys(inventory.animal).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
+  const fish = Object.keys(inventory.fish).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
   const dura = Object.keys(inventory.durabi).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
   const crates = Object.keys(inventory.crates).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
   const pets = Object.keys(inventory.pets).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v] >= inventory.pets[v] ? 'Max Levels' : `Level(s) ${user[v]}`}`).filter(v => v).join('\n').trim()
@@ -134,8 +210,23 @@ ${dura}` : ''}${items ? `
 
 *ITEMS*
 ${items}
-*Total Items:* ${Object.keys(inventory.items).map(v => user[v]).reduce((a, b) => a + b, 0)} Items` : ''}${crates ? `
+*Total Items:* ${Object.keys(inventory.items).map(v => user[v]).reduce((a, b) => a + b, 0)} Items` : ''}${fruit ? `
 
+*FRUIT*
+${fruit}
+*Total Fruit:* ${Object.keys(inventory.fruit).map(v => user[v]).reduce((a, b) => a + b, 0)} Fruit` : ''}${food ? `
+
+*FOOD*
+${food}
+*Total Food:* ${Object.keys(inventory.food).map(v => user[v]).reduce((a, b) => a + b, 0)} Food` : ''}${animal ? `
+
+*ANIMAL*
+${animal}
+*Total Animal:* ${Object.keys(inventory.animal).map(v => user[v]).reduce((a, b) => a + b, 0)} Tail` : ''}${fish ? `
+
+*FISH*
+${fish}
+*Total Fish:* ${Object.keys(inventory.fish).map(v => user[v]).reduce((a, b) => a + b, 0)} Fish` : ''}${crates ? `
 
 *CRATES*
 ${crates}

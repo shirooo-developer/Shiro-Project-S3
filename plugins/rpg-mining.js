@@ -32,6 +32,7 @@ handler.tags = ['rpg']
 handler.command = /^(mining)$/i
 handler.register = true
 handler.cooldown = cooldown
+handler.limit = 10
 handler.disabled = false
 
 export default handler
@@ -39,14 +40,17 @@ export default handler
 function reward(user = {}) {
     let rewards = {
         reward: {
-            exp: 79999,
-            trash: 404,
-            string: 25,
-            rock: 20,
-            iron: 25,
-            diamond: 10,
-            emerald: 4,
-            gems: 2,
+            exp: 149999,
+            trash: 804,
+            string: 50,
+            rock: 40,
+            iron: 50,
+            starcard: 1,
+            mooncard: 2,
+            diamond: 20,
+            coal: 20,
+            emerald: 8,
+            gems: 4,
             common: 2 * (user.dog && (user.dog > 2 ? 2 : user.dog) * 1.2 || 1),
             uncommon: [0, 0, 0, 1, 2].concat(
                 new Array(5 - (

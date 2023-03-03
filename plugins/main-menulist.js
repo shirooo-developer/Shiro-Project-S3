@@ -95,7 +95,7 @@ let tags
 let emot = ` ${pickRandom(['⎔', '◈▻', '✦', '⭑', 'ᯬ', '⭔', '◉', '⬟', '᭻', '»', '〆', '々', '⛥', '✗', '⛊', '⚜', '⚝', '⚚', '♪'])}`
 let rndom = `${pickRandom(['defaultMenu', 'defmenu1'])}`
 let teks = `${args[0]}`.toLowerCase()
-let arrayMenu = ['all', 'anime', 'update', 'maker', 'lm', 'berita', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database','quran', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
+let arrayMenu = ['all', 'anime', 'openaimenu', 'update', 'maker', 'lm', 'berita', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database','quran', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
 if (!arrayMenu.includes(teks)) teks = '404'
 if (teks == 'all') tags = {
 'main': 'Main',
@@ -532,7 +532,7 @@ let almenu = `
 ┊╰─┬──────────────⬣
 ┊╭─╯        *BOT INFO*
 ┊│ *ᴛᴏᴛᴀʟ:* ${totalf} ғɪᴛᴜʀ
-┊│ *ᴠᴇʀsɪᴏɴ:* V.48
+┊│ *ᴠᴇʀsɪᴏɴ:* V.49
 ┊│ *ʀᴇʟᴇᴀsᴇ:* 25 ɴᴏᴠᴇᴍʙᴇʀ 2021
 ┊│ *ᴏᴡɴᴇʀ:* @${nomorown2.split`@`[0]}
 ┊│ *ᴍᴏᴅᴇ:* ${mode}

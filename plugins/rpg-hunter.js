@@ -59,8 +59,8 @@ let handler = async (m, { conn, text }) => {
   if (new Date - global.db.data.users[m.sender].lasthunt > 1200000) {
   // if (global.db.data.users[m.sender].health > 99) {
 //   if (global.db.data.users[m.sender].sword > 9) {
-    let coins = parseInt(Math.floor(Math.random() * 100000))
-    let exp = parseInt(Math.floor(Math.random() * 10000))
+    let coins = parseInt(Math.floor(Math.random() * 200000))
+    let exp = parseInt(Math.floor(Math.random() * 20000))
     let _healing = `${Math.floor(Math.random() * 100)}`.trim()
     let healing = (_healing * 1)
     
