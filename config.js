@@ -68,9 +68,9 @@ global.wm2 = '⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗 '
 global.botdate = `𝗗𝗔𝗧𝗘: ${week} ${date}\n𝗧𝗜𝗠𝗘: ${wktuwib}`
 global.packname = wm
 global.bottime = `𝗧 𝗜 𝗠 𝗘: ${wktuwib}`
-global.titlebot = `𝗙𝗘𝗟𝗜𝗖𝗜𝗔 𝗩𝟰𝟴`
+global.titlebot = `𝗙𝗘𝗟𝗜𝗖𝗜𝗔 𝗩𝟰𝟵`
 global.stickpack = ''
-global.stickauth = `🖍️ 𝗦𝘁𝗶𝗰𝗸𝗲𝗿𝘀 𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 𝗕𝗼𝘁 ⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗\n\n• 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 么 𝗞𝗲𝗶𝘇𝗵𝗮\n• 𝗕𝗼𝘁 𝗡𝘂𝗺𝗯𝗲𝗿 𝟬𝟴𝟱𝟭-𝟲𝟯𝟬𝟴-𝟯𝟳𝟱𝟬\n• 𝗕𝗼𝘁 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 𝟰𝟴`
+global.stickauth = `🖍️ 𝗦𝘁𝗶𝗰𝗸𝗲𝗿𝘀 𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 𝗕𝗼𝘁 ⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗\n\n• 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 么 𝗞𝗲𝗶𝘇𝗵𝗮\n• 𝗕𝗼𝘁 𝗡𝘂𝗺𝗯𝗲𝗿 𝟬𝟴𝟱𝟭-𝟲𝟯𝟬𝟴-𝟯𝟳𝟱𝟬\n• 𝗕𝗼𝘁 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 𝟰𝟵`
 global.wmpack = ''
 global.wmauth = `\n\n\n\n\n\n\n\n\n𝗣𝘂𝗻𝘆𝗮 ᴋᴇɪᴢʜᴀ >>>\n🪀 𝟲𝟮𝟴𝟭𝟮𝟰𝟵𝟭𝟮𝟮𝟰𝟮𝟵\n\n\n\n\n\n\n\n\n`
 global.week = `${week} ${date}`
@@ -210,6 +210,67 @@ global.rpg = {
       osr: '💦',
       os: '💧',
       gems: '💠'
+      panda: '🐼',
+      kambing: '🐐',
+      harimau: '🐅',
+      gajah: '🐘',
+      banteng: '🐂',
+      babihutan: '🐗',
+      monyet: '🐒',
+      kerbau: '🐃',
+      sapi: '🐄',
+      buaya: '🐊',
+      babi: '🐷',
+      ayam: ' 🐓',
+      anggur: '🍇',
+      apel: '🍎',
+      mangga: '🍐',
+      jeruk: '🍊',
+      pisang: '🍌',
+      coal: '🌑',
+      ayambakar: '🍖',
+      gulaiayam: '🍗',
+      rendang: '🥓',
+      ayamgoreng: '🍗',
+      oporayam: '🍖',
+      steak: '🥓',
+      babipanggang: '🍖',
+      ikanbakar: '🍣',
+      lelebakar: '🍣',
+      nilabakar: '🍣',
+      bawalbakar: '🍣',
+      udangbakar: '🍣',
+      pausbakar: '🍣',
+      kepitingbakar: '🍣',      
+      paus: '🐋',      
+      kepiting: '🦀',
+      gurita: '🍣',      
+      lobster: '🍣',
+      lumba: '🐬',
+      dory: '🐠',
+      buntal: '🐡',
+      cumi: '🦑',
+      orca: '🐳',
+      ikan: '🐟',      
+      udang: '🦐',
+      hiu: '🦈',      
+      manar: '🔌',      
+      botol: '🍶',
+      kaleng: '🥫',      
+      kardus: '📦',
+      ramuan: '🧙‍♂️',      
+      weapon: '🔫',
+      anakpancingan: '🎣',
+      misi: '📰',
+      mana: '⚡',      
+      crystal: '🔮',
+      skill: '⚔️',
+      husbu: '♂️',
+      waifu: '♀️',
+      mooncard: '🌙',
+      starcard: '⭐',
+      nickname: '📛',
+      ras: '⚜️'
     }
     let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
     if (!results.length) return ''

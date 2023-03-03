@@ -170,6 +170,8 @@ export async function handler(chatUpdate) {
 
                 if (!isNumber(user.skinkastil))
                     user.skinkastil = 0
+                if (!isNumber(user.stamina))
+                    user.stamina = 100
                 if (!isNumber(user.csm))
                     user.csm = 0
                 if (!isNumber(user.oc))
@@ -210,7 +212,167 @@ export async function handler(chatUpdate) {
                     user.boosts = 0
                 if (!isNumber(user.lastlk))
                     user.lastlk = 0
-
+                if (!isNumber(user.lastbansos))
+                    user.lastbansos = 0
+                if (!isNumber(user.boostk))
+                    user.boostk = 0
+                if (!isNumber(user.banteng))
+                    user.banteng = 0
+                if (!isNumber(user.harimau))
+                    user.harimau = 0
+                if (!isNumber(user.gajah))
+                    user.gajah = 0
+                if (!isNumber(user.panda))
+                    user.panda = 0
+                if (!isNumber(user.kambing))
+                    user.kambing = 0
+                if (!isNumber(user.kerbau))
+                    user.kerbau = 0
+                if (!isNumber(user.buaya))
+                    user.buaya = 0
+                if (!isNumber(user.sapi))
+                    user.sapi = 0
+                if (!isNumber(user.monyet))
+                    user.monyet = 0
+                 if (!isNumber(user.babihutan))
+                    user.babihutan = 0
+                if (!isNumber(user.babi))
+                    user.babi = 0
+                if (!isNumber(user.ayam))
+                    user.ayam = 0
+                if (!isNumber(user.lastberburu))
+                    user.lastberburu = 0
+                if (!isNumber(user.apel))
+                    user.apel = 0
+                if (!isNumber(user.bibitapel))
+                    user.bibitapel = 0
+                if (!isNumber(user.mangga))
+                    user.mangga = 0
+                if (!isNumber(user.bibitmangga))
+                    user.bibitmangga = 0
+                if (!isNumber(user.jeruk))
+                    user.jeruk = 0
+                if (!isNumber(user.bibitjeruk))
+                    user.bibitjeruk = 0
+                if (!isNumber(user.pisang))
+                    user.pisang = 0
+                 if (!isNumber(user.bibitpisang))
+                    user.bibitpisang = 0
+                if (!isNumber(user.anggur))
+                    user.anggur = 0
+                if (!isNumber(user.bibitanggur))
+                    user.bibitanggur = 0
+                if (!isNumber(user.lastberkebun))
+                    user.lastberkebun = 0                    
+                 if (!isNumber(user.coal))
+                    user.coal = 0
+                if (!isNumber(user.ayambakar))
+                    user.ayambakar = 0
+                if (!isNumber(user.ayam))
+                    user.ayam = 0
+                if (!isNumber(user.gulaiayam))
+                    user.gulaiayam = 0
+                if (!isNumber(user.rendang))
+                    user.rendang = 0
+                if (!isNumber(user.ayamgoreng))
+                    user.ayamgoreng = 0
+                if (!isNumber(user.oporayam))
+                    user.oporayam = 0
+                if (!isNumber(user.steak))
+                    user.steak = 0
+                if (!isNumber(user.babipanggang))
+                    user.babipanggang = 0
+                if (!isNumber(user.ikanbakar))
+                    user.ikanbakar = 0
+                if (!isNumber(user.lelebakar))
+                    user.lelebakar = 0
+                 if (!isNumber(user.nilabakar))
+                    user.nilabakar = 0
+                if (!isNumber(user.bawalbakar))
+                    user.bawalbakar = 0
+                if (!isNumber(user.pausbakar))
+                    user.pausbakar = 0
+                if (!isNumber(user.kepitingbakar))
+                    user.kepitingbakar = 0                            
+                if (!isNumber(user.lastduel))
+                    user.lastduel = 0 
+                if (!isNumber(user.fightnaga))
+                    user.fightnaga = 0                            
+                if (!isNumber(user.centaur))
+                    user.centaur = 0           
+                 if (!isNumber(user.lastjb))
+                    user.lastjb = 0
+                if (!isNumber(user.lastkerja))
+                    user.lastkerja = 0
+                 if (!isNumber(user.ojek))
+                    user.ojek = 0
+                if (!isNumber(user.pedagang))
+                    user.pedagang = 0
+                if (!isNumber(user.dokter))
+                    user.dokter = 0
+                if (!isNumber(user.petani))
+                    user.petani = 0                            
+                if (!isNumber(user.montir))
+                    user.montit = 0 
+                if (!isNumber(user.kuli))
+                    user.kuli = 0            
+                if (!isNumber(user.paus))
+                    user.paus = 0
+                if (!isNumber(user.kepiting))
+                    user.kepiting = 0
+                 if (!isNumber(user.gurita))
+                    user.gurita = 0
+                if (!isNumber(user.cumi))
+                    user.cumi = 0
+                if (!isNumber(user.buntal))
+                    user.buntal = 0
+                if (!isNumber(user.dory))
+                    user.dory = 0                            
+                if (!isNumber(user.lumba))
+                    user.lumba = 0 
+                if (!isNumber(user.lobster))
+                    user.lobster = 0  
+                if (!isNumber(user.hiu))
+                    user.hiu = 0
+                if (!isNumber(user.udang))
+                    user.udang = 0
+                 if (!isNumber(user.ikan))
+                    user.ikan = 0
+                if (!isNumber(user.orca))
+                    user.orca = 0
+                if (!isNumber(user.botol))
+                    user.botol = 0
+                if (!isNumber(user.kaleng))
+                    user.kaleng = 0
+                 if (!isNumber(user.kardus))
+                    user.kardus = 0
+                if (!isNumber(user.lastmulung))
+                    user.lastmulung = 0
+                if (!isNumber(user.ramuan))
+                    user.ramuan = 0  
+                if (!isNumber(user.lastramuanclaim))
+                    user.lastramuanclaim = 0
+                if (!isNumber(user.potion))
+                    user.potion = 0
+                 if (!isNumber(user.lastpotionclaim))
+                    user.lastpotionclaim = 0
+                if (!isNumber(user.lastswordclaim))
+                    user.lastswordclaim = 0
+                if (!isNumber(user.weapon))
+                    user.weapon = 0
+                if (!isNumber(user.lastweaponclaim))
+                    user.lastweaponclaim = 0
+                 if (!isNumber(user.anakpancingan))
+                    user.anakpancingan = 0
+                if (!isNumber(user.lastmancingclaim))
+                    user.lastmancingclaim = 0
+                  if (!isNumber(user.lastmisi))
+                    user.lastmisi = 0
+                 if (!isNumber(user.mana))
+                    user.mana = 0
+                if (!isNumber(user.misi))
+                    user.misi = 0
+                    
 
 
                 if (!isNumber(user.money))
@@ -366,6 +528,18 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.roboxp))
 
                     user.roboxp = 0
+                    
+                if (!isNumber(user.lastngojek))
+
+                    user.lastngojek = 0
+
+                if (!isNumber(user.ojekk))
+
+                    user.ojekk = 0
+                    
+                       if (!isNumber(user.lastpolisi))
+
+                    user.lastpolisi = 0
 
 
 
@@ -419,6 +593,10 @@ export async function handler(chatUpdate) {
 
                     user.fishingroddurability = 0
                     
+                    if (!isNumber(user.manar))
+
+                    user.manar = 0
+                    
                 if (!isNumber(user.premium1hari))
 
                     user.premium1hari = 0
@@ -440,6 +618,9 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.lastdungeon))
 
                     user.lastdungeon = 0
+                if (!isNumber(user.lastlumber))
+                    
+                    user.lastlumber = 0
 
                 if (!isNumber(user.lastduel))
 
@@ -456,10 +637,22 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.lastweekly))
 
                     user.lastweekly = 0
+                    
+                if (!isNumber(user.lastngewe))
+
+                    user.lastngewe = 0
 
                 if (!isNumber(user.lastmonthly))
 
                     user.lastmonthly = 0
+                    
+                if (!isNumber(user.mooncard))
+
+                    user.mooncard = 0
+
+                if (!isNumber(user.starcard))
+
+                    user.starcard = 0
 
                 if (!isNumber(user.lastbunga))
 
@@ -508,6 +701,16 @@ export async function handler(chatUpdate) {
                     
                     if (!('title' in user))
               user.title = ''
+              if (!('nickname' in user))
+              user.nickname = ''
+              if (!('skill' in user))
+              user.skill = ''
+              if (!('ras' in user))
+              user.ras = ''
+              if (!('waifu' in user))
+              user.waifu = ''
+              if (!('husbu' in user))
+              user.husbu = ''
 
             } else
 
@@ -516,6 +719,7 @@ export async function handler(chatUpdate) {
                     exp: 0,
 
                     limit: 40,
+                    stamina: 100,
 
                     lastclaim: 0,
 
@@ -526,6 +730,7 @@ export async function handler(chatUpdate) {
                     pasangan: '',
                     
                     title: '',
+                    nickname: '',
 
                     age: -1,
 
@@ -586,7 +791,99 @@ export async function handler(chatUpdate) {
                     boostb: 0,
                     boosts: 0,
                     lastlk: 0,
-
+                    lastbansos: 0,
+                    boostk: 0,
+                    panda: 0,
+                    kambing: 0,
+                    harimau: 0,
+                    gajah: 0,
+                    banteng: 0,
+                    babihutan: 0,
+                    monyet: 0,
+                    kerbau: 0,
+                    sapi: 0,
+                    buaya: 0,
+                    babi: 0,
+                    ayam: 0,
+                    lastberburu: 0,
+                    anggur: 0,
+                    bibitanggur: 0,
+                    apel: 0,
+                    bibitapel: 0,
+                    mangga: 0,
+                    bibitmangga: 0,
+                    bibitpisang: 0,
+                    bibitjeruk: 0,
+                    lastngewe: 0,
+                    jeruk: 0,
+                    pisang: 0,
+                    lastberkebun: 0,                  
+                    coal: 0,
+                    ayambakar: 0,
+                    gulaiayam: 0,
+                    rendang: 0,
+                    ayamgoreng: 0,
+                    oporayam: 0,
+                    steak: 0,
+                    babipanggang: 0,
+                    ikanbakar: 0,
+                    lelebakar: 0,
+                    nilabakar: 0,
+                    bawalbakar: 0,
+                    udangbakar: 0,
+                    pausbakar: 0,
+                    kepitingbakar: 0,      
+                    lastpolisi: 0,      
+                    lastduel: 0,
+                    centaur: 0,      
+                    fightnaga: 0,
+                    lastjb: 0,
+                    lastkerja: 0,
+                    dokter: 0,
+                    petani: 0,
+                    montir: 0,
+                    kuli: 0,      
+                    ojek: 0,
+                    lastngojek: 0,      
+                    ojekk: 0,
+                    pedagang: 0,      
+                    paus: 0,      
+                    kepiting: 0,
+                    gurita: 0,      
+                    lobster: 0,
+                    lumba: 0,
+                    dory: 0,
+                    buntal: 0,
+                    cumi: 0,
+                    orca: 0,
+                    ikan: 0,      
+                    udang: 0,
+                    hiu: 0,      
+                    manar: 0,      
+                    botol: 0,
+                    kaleng: 0,      
+                    kardus: 0,
+                    lastmulung: 0,      
+                    ramuan: 0,      
+                    lastramuanclaim: 0,
+                    potion: 0,      
+                    lastpotionclaim: 0,
+                    lastswordclaim: 0,      
+                    weapon: 0,
+                    lastweaponclaim: 0,      
+                    anakpancingan: 0,
+                    lastmancingclaim: 0,     
+                    lastmisi: 0,      
+                    misi: 0,
+                    mana: 100,      
+                    crystal: 0,
+                    skill: "",
+                    husbu: "",
+                    waifu: "",
+                    ras: "",
+                    mooncard: 0,
+                    starcard: 0,      
+                    
                     emerald: 0,
 
                     diamond: 0,
@@ -663,6 +960,7 @@ export async function handler(chatUpdate) {
                     fishingroddurability: 0,
                     
                     premium1hari: 0,
+                    lastlumber: 0,
 
 
 
