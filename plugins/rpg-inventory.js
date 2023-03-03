@@ -9,7 +9,6 @@ const inventory = {
     money: true,
     exp: true,
     limit: true,
-    nickname: true,
     os: true,
     gems: true,
     diperkosa: true,
@@ -20,6 +19,7 @@ const inventory = {
     husbu: true,
     waifu: true,
     misi: true,
+    stamina: true,
     mana: true,
     crystal: true,
     mooncard: true,
@@ -200,6 +200,7 @@ let handler = async (m, { conn }) => {
 *👤 Name:* ${conn.getName(m.sender)}
 *🎖️ Tier:* ${user.role}
 *👑 Title:* ${user.title}
+*📛 Nick Name:* ${user.nickname}
 ${Object.keys(inventory.others).map(v => user[v] && `*${global.rpg.emoticon(v)} ${v}:* ${user[v]}`).filter(v => v).join('\n')}${tools ? `
 
 *TOOLS*
