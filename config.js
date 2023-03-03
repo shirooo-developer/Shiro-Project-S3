@@ -209,7 +209,7 @@ global.rpg = {
       diperkosa: '🤰',
       osr: '💦',
       os: '💧',
-      gems: '💠'
+      gems: '💠',
       panda: '🐼',
       kambing: '🐐',
       harimau: '🐅',
