@@ -14,9 +14,9 @@ Leaderboard Dicatat:
 `.trim()) // Tambah sendiri kalo mau
 
 
-handler.help = ['event3']
+handler.help = ['event4']
 handler.tags = ['rpg']
-handler.command = /^event3$/i
+handler.command = /^event4$/i
 handler.register = true
 handler.premium = false
 export default handler

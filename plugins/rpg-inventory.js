@@ -200,7 +200,6 @@ let handler = async (m, { conn }) => {
 *👤 Name:* ${conn.getName(m.sender)}
 *🎖️ Tier:* ${user.role}
 *👑 Title:* ${user.title}
-*📛 Nick Name:* ${user.nickname}
 ${Object.keys(inventory.others).map(v => user[v] && `*${global.rpg.emoticon(v)} ${v}:* ${user[v]}`).filter(v => v).join('\n')}${tools ? `
 
 *TOOLS*
@@ -241,6 +240,26 @@ ${pets ? pets + '\n' : ''}${user.petFood ? '🍖 Peetfood: ' + user.petFood : ''
 ${cooldowns}` : ''}
 *• Dungeon:* ${user.lastdungeon == 0 ? '✅': '❌'}
 *• Mining:* ${user.lastmining == 0 ? '✅': '❌'}
+*• Begal:* ${user.lastbegal == 0 ? '✅': '❌'}
+*• Open Bo:* ${user.lastob == 0 ? '✅': '❌'}
+*• Hunter:* ${user.lasthunt == 0 ? '✅': '❌'}
+*• Merkosa:* ${user.lastmerkosa == 0 ? '✅': '❌'}
+*• Mulung:* ${user.lastmulung == 0 ? '✅': '❌'}
+*• Ngojek:* ${user.lastngojek == 0 ? '✅': '❌'}
+*• Berkebun:* ${user.lastberkebun == 0 ? '✅': '❌'}
+*• Ngewe:* ${user.lastngewe == 0 ? '✅': '❌'}
+*• Berburu:* ${user.lastberburu == 0 ? '✅': '❌'}
+*• Korupsi:* ${user.lastbansos == 0 ? '✅': '❌'}
+*• Membunuh:* ${user.lastbunuhi == 0 ? '✅': '❌'}
+*• Merampok:* ${user.lastrob == 0 ? '✅': '❌'}
+*• Misi:* ${user.lastmisi == 0 ? '✅': '❌'}
+*• Limitku:* ${user.lastlk == 0 ? '✅': '❌'}
+
+*Indicator:*
+✅ - Tidak Cooldown
+❌ - Sedang Cooldown
+
+*🌙 Nickname:* ${user.nickname}
 `.trim()
   conn.sendButton(m.chat, `*${htki} INVENTORY ${htka}*`, caption, null, [[`${user.health < 60 ? '𝗥𝗘𝗖𝗔𝗟': '𝗔𝗗𝗩𝗘𝗡𝗧𝗨𝗥𝗘'}`,`${user.health < 60 ? '.heal': '.adventure'}`],['𝗣𝗥𝗢𝗙𝗜𝗟𝗘','.pp']],m)
 }

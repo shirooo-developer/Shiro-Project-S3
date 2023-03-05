@@ -10,13 +10,17 @@ export function before(m) {
     if (before !== user.level) {
     
         m.reply(`
-*CONGRATULATIONS*
+*Selamat Sayangku, Kamu Naik Level*
 
-*📊 Anda Telah Naik Level*
+*📊 Kamu Telah Naik Level*
 *${before}* ➣ *${user.level}*
 *• Role: ${user.role}*
 
-*.gcbot - Untuk Join Grup RPG*`.trim())
+*.lb level - Untuk Lihat Top LB*
+*.lb - Untuk Melihat Leaderboard*
+
+⭐ Tips:
+*"Mainkan Fitur RPG Untuk Naik Level"*`.trim())
     }
     
    /* let looh = `*${before}* -> *${user.level}*`
