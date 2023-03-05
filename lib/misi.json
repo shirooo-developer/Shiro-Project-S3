@@ -7,7 +7,7 @@
     "healt": 100,
     "stamina": 120,
     "crystal": 37,
-    "nickname": "Penakluk raja iblis",
+    "nickname": " Penakluk raja iblis •",
     "point": 28,
     "gems": 10
   },
@@ -19,7 +19,7 @@
     "stamina": 60,
     "exp": 1072,
     "crystal": 3,
-    "nickname": "crystal hunter",
+    "nickname": " Crystal Hunter •",
     "point": 0,
     "gems": 0
   },
@@ -31,19 +31,19 @@
     "healt": 90,
     "stamina": 90,
     "crystal": 24,
-    "nickname": "Sang Penakluk Naga Everest",
+    "nickname": "Sang Penakluk Naga Everest • ",
     "point": 12,
     "gems": 9
   },
   {
     "index": 4,
     "rank": "B+",
-    "misii": "Memusnahkan Desa Goblin",
+    "misii": "Memusnahkan Desa Goblin • ",
     "exp": 5647,
     "healt": 40,
     "stamina": 80,
     "crystal": 9,
-    "nickname": "Musuh Para Goblin",
+    "nickname": "Musuh Para Goblin • ",
     "point": 3,
     "gems": 1
   },
@@ -55,7 +55,7 @@
     "healt": 74,
     "stamina": 86,
     "crystal": 7,
-    "nickname": "spider monster killer",
+    "nickname": "Spider Monster Killer • ",
     "point": 2,
     "gems": 1
   },
@@ -67,19 +67,67 @@
     "stamina": 79,
     "exp": 26829,
     "crystal": 15,
-    "nickname": "Alkemis Ramuan Hebat",
+    "nickname": "Alkemis Ramuan Hebat • ",
     "point": 10,
     "gems": 2
   },
- {
+  {
     "index": 7,
+    "rank": "F",
+    "misii": "Mengumpulkan Foto Erotis",
+    "healt": 0,
+    "stamina": 60,
+    "exp": 1072,
+    "crystal": 3,
+    "nickname": " Mesum •",
+    "point": 0,
+    "gems": 0
+  },
+  {
+    "index": 8,
+    "rank": "SS+",
+    "misii": "Memperkosa Tuan Putri",
+    "exp": 86938,
+    "healt": 90,
+    "stamina": 90,
+    "crystal": 24,
+    "nickname": "Sangean • ",
+    "point": 12,
+    "gems": 9
+  },
+  {
+    "index": 9,
+    "rank": "SSSR+",
+    "misii": "Membersihkan Dunia Dari Iblis • ",
+    "exp": 398947,
+    "healt": 1837,
+    "stamina": 1286,
+    "crystal": 28,
+    "nickname": "Musuh Para Goblin • ",
+    "point": 3,
+    "gems": 34
+  },
+  {
+    "index": 10,
+    "rank": "SR+",
+    "misii": "Membunuh Raja Midgar",
+    "exp": 92738,
+    "healt": 129,
+    "stamina": 28,
+    "crystal": 7,
+    "nickname": "Pembunuh Raja • ",
+    "point": 2,
+    "gems": 1
+  },
+ {
+    "index": 11,
     "rank": "E+",
     "misii": "Memungut kristal di dungeon",
     "exp": 3000,
     "healt": 3,
     "stamina": 50,
     "crystal": 5,
-    "nickname": "crystal picker",
+    "nickname": "Crystal Picker • ",
     "point": 0
   }
 ]
