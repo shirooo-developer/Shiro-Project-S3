@@ -28,12 +28,12 @@ let handler = async (m, { conn, args, participants, usedPrefix, command }) => {
   })
   let leaderboard = leaderboards.filter(v => v && users.filter(user => user && user[v]).length)
   let type = (args[0] || '').toLowerCase()
-  const getPage = (item) => Math.ceil((users.filter(user => user && user[item]).length) / 20)
+  const getPage = (item) => Math.ceil((users.filter(user => user && user[item]).length) / 100)
   let wrong = `
 *VIEWING THE LEADERBOARD S2*
 
-*_Format: ${usedPrefix}${command} <type> <page>_*
-*_Contoh: ${usedPrefix}${command} money 1_*
+*_Format: ${usedPrefix}${command} <type>_*
+*_Contoh: ${usedPrefix}${command} money_*
 
 *Tipe-Tipe Leaderboard*
 ${leaderboard.map(v => `
@@ -41,7 +41,7 @@ ${rpg.emoticon(v)}${v}
 `.trim()).join('\n')}
 `.trim()
   if (!leaderboard.includes(type)) return m.reply(wrong)
-  let page = isNumber(args[1]) ? Math.min(Math.max(parseInt(args[1]), 0), getPage(type)) : 0
+  let page = 0
   let sortedItem = users.map(toNumber(type)).sort(sort(type))
   let userItem = sortedItem.map(enumGetKey)
   // let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 5)) : Math.min(5, sortedExp.length)
@@ -51,11 +51,11 @@ ${rpg.emoticon(v)}${v}
 │ *📑 Page:* ${page} of ${getPage(type)}
 │ *👤You:* *${userItem.indexOf(m.sender) + 1}* of *${userItem.length}*
 ╰────────────·····
-${sortedItem.slice(page * 20, page * 20 + 20).map((user, i) => '╭────────────·····\n' + `│ *${i + 1} - ${participants.some(p => areJidsSameUser(user.jid, p.id)) ? `(${conn.getName(user.jid)}) wa.me/` : '@'}${user.jid.split`@`[0]}*\n│ *_${user[type]} ${type}${rpg.emoticon(type)}`).join`_*\n╰────────────·····\n\n`}
+${sortedItem.slice(page * 100, page * 100 + 100).map((user, i) => '╭────────────·····\n' + `│ *${i + 1} - ${participants.some(p => areJidsSameUser(user.jid, p.id)) ? `(${conn.getName(user.jid)}) wa.me/` : '@'}${user.jid.split`@`[0]}*\n│ *_${user[type]} ${type}${rpg.emoticon(type)}`).join`_*\n╰────────────·····\n\n`}
 ╰────────────·····
 `.trim()
   return m.reply(text, null, {
-    mentions: [...userItem.slice(page * 20, page * 20 + 20)].filter(v => !participants.some(p => areJidsSameUser(v, p.id)))
+    mentions: [...userItem.slice(page * 100, page * 100 + 100)].filter(v => !participants.some(p => areJidsSameUser(v, p.id)))
   })
 }
 handler.help = ['leaderboard [jumlah user]', 'lb [jumlah user]']

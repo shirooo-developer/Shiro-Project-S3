@@ -26,7 +26,8 @@ handler.help = ['math <mode>']
 handler.tags = ['game']
 handler.command = /^math/i
 handler.register = true
-handler.limit = 3
+handler.limit = 1
+handler.intelligence = 333333
 
 let modes = {
     noob: [-3, 3, -3, 3, '+-', 15000, 1000],

@@ -7,6 +7,8 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   global.db.data.users[m.sender].pickaxe = global.db.data.users[m.sender].pickaxe || 0
   global.db.data.users[m.sender].pedang = global.db.data.users[m.sender].pedang || 0
   global.db.data.users[m.sender].fishingrod = global.db.data.users[m.sender].fishingrod || 0
+  let buf = user.atm
+  let buff = (buf == 0 ? '1' : '' || buf == 1 ? '2' : '' || buf == 2 ? '3' : '' || buf == 3 ? '4' : '' || buf == 4 ? '5' : '' || buf == 5 ? '6' : '' || buf == 6 ? '7' : '' || buf == 7 ? '8' : '' || buf == 8 ? '9' : '' || buf == 9 ? '10' : '' || buf == 10 ? '11' : '' || buf == 11 ? '12' : '') 
   let botol = global.botwm
 
 let lgocraft = `
@@ -111,11 +113,11 @@ const listMessage = {
             m.reply("*_Sukses Membuat 1 Armor 🥼_*")
             break
             case 'atm':
-          if (user.atm > 10) return m.reply('*_Level Max_*')
-            if(user.emerald < 12 || user.money < 40000 || user.diamond < 24) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_40K Money 💵_*\n*_12 Emerald ❇️_*\n*_24 Diamond 💎_*`)
-            global.db.data.users[m.sender].emerald -= 12
-            global.db.data.users[m.sender].money -= 40000
-            global.db.data.users[m.sender].diamond -= 24
+          if (user.atm > 9) return m.reply('*_Level Max_*')
+            if(user.emerald < 12 * buff || user.money < 40000 * buff || user.diamond < 24 * buff) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_${40000 * buff} Money 💵_*\n*_${12 * buff} Emerald ❇️_*\n*_${24 * buff} Diamond 💎_*`)
+            global.db.data.users[m.sender].emerald -= 12 * buff
+            global.db.data.users[m.sender].money -= 40000 * buff
+            global.db.data.users[m.sender].diamond -= 24 * buff
             global.db.data.users[m.sender].atm += 1
             global.db.data.users[m.sender].fullatm += 5000000
             m.reply("*_Sukses Membuat 1 ATM 💳_*")

@@ -11,6 +11,8 @@ let handler = async m => m.reply(`
 #tomoney2 - 5,00/10
 #tomoney1 - 10,00/10
 
+*Fitur Untuk Mengkonversi/Menjadikan Exp Sebagai Money*
+
 *_Semakin Tinggi Rate_*
 *_Semakin Kecil Juga Pajak:)_*
 `.trim()) // Tambah sendiri kalo mau

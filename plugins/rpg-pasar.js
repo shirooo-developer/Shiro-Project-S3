@@ -1,31 +1,31 @@
 
-const Skepiting = 100
-const Slobster = 100
-const Sudang = 100
-const Scumi = 100
-const Sgurita = 100
-const Sbuntal = 100
-const Sdory = 100
-const Sorca = 100
-const Slumba = 100
-const Spaus = 100
-const Sikan = 100
-const Shiu = 100
-const Sbanteng = 200
-const Sharimau = 200
-const Sgajah = 200
-const Skambing = 200
-const Spanda = 200
-const Sbuaya = 200
+const Skepiting = 250
+const Slobster = 250
+const Sudang = 250
+const Scumi = 250
+const Sgurita = 250
+const Sbuntal = 250
+const Sdory = 250
+const Sorca = 250
+const Slumba = 250
+const Spaus = 250
+const Sikan = 250
+const Shiu = 250
+const Sbanteng = 400
+const Sharimau = 400
+const Sgajah = 400
+const Skambing = 400
+const Spanda = 400
+const Sbuaya = 400
 const Skerbau = 150
-const Ssapi= 200
+const Ssapi= 400
 const Smonyet = 120
-const Sbabihutan = 200
-const Sbabi = 200
-const Sayam = 200
+const Sbabihutan = 400
+const Sbabi = 400
+const Sayam = 400
 let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
     const _armor = global.db.data.users[m.sender].armor
-    const armor = (_armor == 0 ? 20000 : '' || _armor == 1 ? 49999 : '' || _armor == 2 ? 99999 : '' || _armor == 3 ? 149999 : '' || _armor == 4 ? 299999 : '')
+    const armor = (_armor == 0 ? 40000 : '' || _armor == 1 ? 49999 : '' || _armor == 2 ? 99999 : '' || _armor == 3 ? 149999 : '' || _armor == 4 ? 299999 : '')
     let type = (args[0] || '').toLowerCase()
     let _type = (args[1] || '').toLowerCase()
     let jualbeli = (args[0] || '').toLowerCase()

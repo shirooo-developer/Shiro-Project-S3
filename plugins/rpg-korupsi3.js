@@ -15,16 +15,16 @@ let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
     let mbansos = 'https://telegra.ph/file/d31fcc46b09ce7bf236a7.jpg'
     let botol = global.wm
     let __timers = (new Date - global.db.data.users[m.sender].lastbansos)
-    let _timers = (72000000 - __timers) 
+    let _timers = (604800000 - __timers) 
     let timers = clockString(_timers)
-    if (new Date - global.db.data.users[m.sender].lastbansos > 72000000) {
+    if (new Date - global.db.data.users[m.sender].lastbansos > 604800000) {
       if (Aku > Kamu) {
-        conn.sendFile( m.chat, kbansos, 'b.jpg', `*Kamu Tertangkap Karena Korupsi Dan Kamu Didenda Sebesar 9000000 💵*`, m)
+        conn.sendFile( m.chat, kbansos, 'b.jpg', `*Kamu Tertangkap Karena Korupsi Dan Kamu Didenda Sebesar 18000000 💵*`, m)
         user.money -= 18000000
         global.db.data.users[m.sender].lastbansos = new Date * 1
       } else if (Aku < Kamu) {
         user.money += 18000000
-        conn.sendFile( m.chat, mbansos, 'b.jpg', `*Kamu Berhasil Korupsi Dan Kamu Mendapatkan Money Sebesar 9000000 💵*`, m)
+        conn.sendFile( m.chat, mbansos, 'b.jpg', `*Kamu Berhasil Korupsi Dan Kamu Mendapatkan Money Sebesar 18000000 💵*`, m)
         global.db.data.users[m.sender].lastbansos = new Date * 1
       } else {
         conn.sendButton( m.chat, `*Kamu Korupsi Tapi Gagal Dan Berhasil Melarikan Diri Tanpa Hasil*`, `${botol}`, null, [[`𝗠𝗘𝗡𝗨`, `${usedPrefix}menu`]], m)

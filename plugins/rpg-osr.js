@@ -23,7 +23,7 @@ handler.help = ['osr']
 handler.tags = ['rpg']
 handler.command = /^(osr)$/i
 handler.register = true
-handler.limit = 25
+handler.limit = 3
 export default handler
 
 function isNumber(number) {

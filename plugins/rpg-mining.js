@@ -1,4 +1,4 @@
-const cooldown = 3600000
+const cooldown = 10800000
 let handler = async (m, { usedPrefix }) => {
     let user = global.db.data.users[m.sender]
     let timers = (cooldown - (new Date - user.lastmining))

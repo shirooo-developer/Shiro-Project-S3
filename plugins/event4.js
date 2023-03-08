@@ -1,13 +1,13 @@
 let handler = async m => m.reply(`
 *EVENT LEADERBOARD 📋*
 
-*Capai Top 5 Money Untuk Mendapatkan Prize*
+*Capai Top 5 Rank Untuk Mendapatkan Prize*
 
-Top 1 - 10M Money
-Top 2 - 5M Money
-Top 3 - 2,5M Money
-Top 4 - 1,25M Money
-Top 5 - 625K Money
+Top 1 - 10M Money + 200 Limit
+Top 2 - Title Custom + 1000 U-Crate 
+Top 3 - 5M Money + 500 L-Crate
+Top 4 - 200 Limit
+Top 5 - 1M Exp
 
 Leaderboard Dicatat:
 23:59 23/04/2023

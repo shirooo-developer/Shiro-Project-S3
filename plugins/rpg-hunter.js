@@ -48,7 +48,7 @@ let handler = async (m, { conn, text }) => {
  // let cd1 = Math.ceil(01 - cdm)
   // let cd2 = Math.ceil(60 - cds)
  let __timers = (new Date - global.db.data.users[m.sender].lasthunt)
- let _timers = (1200000 - __timers) 
+ let _timers = (3600000 - __timers) 
  let timers = clockString(_timers)
 
   let area_monsters = monsters[Math.floor(Math.random() * monsters.length)]
@@ -56,7 +56,7 @@ let handler = async (m, { conn, text }) => {
   area_monsters = area_monsters.area
   let monsterName = monster.toUpperCase()
 
-  if (new Date - global.db.data.users[m.sender].lasthunt > 1200000) {
+  if (new Date - global.db.data.users[m.sender].lasthunt > 3600000) {
   // if (global.db.data.users[m.sender].health > 99) {
 //   if (global.db.data.users[m.sender].sword > 9) {
     let coins = parseInt(Math.floor(Math.random() * 200000))
@@ -75,10 +75,10 @@ let handler = async (m, { conn, text }) => {
       let msg = `*@${pengirim}* Anda Mati Di Bunuh Oleh ${monsterName}`
       if (player.level > 0) {
       if (player.sword > 0) {
-        player.level -= 1
+        player.exp -= 100000
         player.sword -= 5
         player.exp -= exp * 1
-        msg += `\nLevel Anda Turun 1 Karena Mati Saat Berburu!\nSword Anda Berkurang 5 Karena Mati Saat Berburu!`
+        msg += `\nEXP Anda Berkurang 100K Karena Mati Saat Berburu!\nSword Anda Berkurang 5 Karena Mati Saat Berburu!`
       }
       }
       player.health = 100

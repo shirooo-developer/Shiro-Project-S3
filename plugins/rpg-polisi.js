@@ -90,6 +90,7 @@ setTimeout(() => {
     } else conn.sendButton(m.chat, `Sepertinya Anda Sudah Kecapekan Silahkan Istirahat Dulu Sekitar\n🕔 ${timers}`, wm, [['INVENTORY', '.inv']], m )
 }
 handler.tags = ['rpg']
+handler.help = ['polisi']
 handler.command = /^(polisi)$/i
 handler.register = true
 

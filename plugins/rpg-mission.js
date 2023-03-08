@@ -7,7 +7,7 @@ async function handler(m, { conn, args, text , usedPrefix, command }) {
 
   try {
     let json = misi[Math.floor(Math.random() * misi.length)] //get misi
-    const cooldown = 5 * (1000 * 60) //coldown timer second
+    const cooldown = 30 * (1000 * 60) //coldown timer second
     let user = global.db.data.users[m.sender] //Get db user
     
     if (user.health == 0 || user.stamina == 0 || user.mana == 0) return m.reply(`*Minimal Stamina/Mana/Health Kamu 100*`)
@@ -57,7 +57,7 @@ handler.before = async m => {
   if(m.isBaileys) return
 
   let { timeout, json } = conn.mission[m.sender]
-  const cooldown = 5 * (1000 * 60) //coldown timer second
+  const cooldown = 30 * (1000 * 60) //coldown timer second
   let user = global.db.data.users[m.sender] //Get db user
 
   let txt = (m.msg && m.msg.selectedDisplayText ? m.msg.selectedDisplayText : m.text ? m.text : '').toLowerCase()
@@ -86,6 +86,8 @@ handler.before = async m => {
         m.reply(`${json.nickname ? `You Got A Nickname ${json.nickname}`: ""}`)
         m.reply(cpt)
         user.exp += json.exp
+        user.health -= json.health
+        user.stamina -= json.stamina
         user.crystal += json.crystal
         user.nickname += json.nickname
         user.misi += json.misii
@@ -97,6 +99,8 @@ handler.before = async m => {
         m.reply(`${json.nickname ? `You got a nickname ${json.nickname}`: ""}`)
         m.reply(cpe)
         user.exp += json.exp
+        user.health -= json.health
+        user.stamina -= json.stamina
         user.crystal += json.crystal
         user.nickname += json.nickname
         user.misi += json.misii
@@ -129,7 +133,7 @@ handler.before = async m => {
 handler.help = ['mission']
 handler.tags = ['rpg']
 handler.command = /^(m(isi)?(ission)?)$/i
-
+handler.limit = 10
 export default handler
 
 

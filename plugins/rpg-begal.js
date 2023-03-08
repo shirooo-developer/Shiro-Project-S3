@@ -16,13 +16,13 @@ let buff1 = (buf1 == 0 ? '0' : '' || buf1 == 1 ? '2' : '' || buf1 == 2 ? '3' : '
     }
         let __timers = (new Date - global.db.data.users[m.sender].lastbegal)
 
-        let _timers = (3600000 - __timers) 
+        let _timers = (7200000 - __timers) 
 
         let timers = clockString(_timers)
 
         if (global.db.data.users[m.sender].health > 99) {
 
-            if (new Date - global.db.data.users[m.sender].lastbegal > 3600000) {
+            if (new Date - global.db.data.users[m.sender].lastbegal > 7200000) {
 
 
             let _health = `${Math.floor(Math.random() * 199)}`.trim()
