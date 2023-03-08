@@ -370,8 +370,11 @@ export async function handler(chatUpdate) {
                     user.lastmisi = 0
                  if (!isNumber(user.mana))
                     user.mana = 0
-                if (!isNumber(user.misi))
-                    user.misi = 0
+                 if (!isNumber(user.intelligence))
+                    user.intelligence = 100
+                 if (!isNumber(user.lastrobint))
+                    user.lastrobint = 0
+      
                     
 
 
@@ -711,6 +714,7 @@ export async function handler(chatUpdate) {
               user.waifu = ''
               if (!('husbu' in user))
               user.husbu = ''
+              if (!("misi" in user)) user.misi = ""
 
             } else
 
@@ -874,7 +878,7 @@ export async function handler(chatUpdate) {
                     anakpancingan: 0,
                     lastmancingclaim: 0,     
                     lastmisi: 0,      
-                    misi: 0,
+                    misi: "",
                     mana: 100,      
                     crystal: 0,
                     skill: "",
@@ -883,6 +887,8 @@ export async function handler(chatUpdate) {
                     ras: "",
                     mooncard: 0,
                     starcard: 0,      
+                    intelligence: 100,      
+                    lastrobint: 0,      
                     
                     emerald: 0,
 
@@ -1573,6 +1579,14 @@ export async function handler(chatUpdate) {
                     this.reply(m.chat, `*Level Kamu Tidak Cukup 📊*\n\nDiperlukan Level ${plugin.level} Untuk Menggunakan Perintah Ini\n*Level Kamu: ${_user.level} 📊*`, m)
 
                     continue // If the level has not been reached
+                 
+                 }
+
+                 if (plugin.intelligence > _user.intelligence) {
+
+                    this.reply(m.chat, `*Intelligence Kamu Tidak Cukup 🧠*\n\nDiperlukan Intelligence ${plugin.intelligence} Untuk Menggunakan Perintah Ini\n*Intelligence Kamu: ${_user.intelligence} 🧠*\n\n⭐Tips:\n*Dapatkan Info Tentang Intelligence Di #inte*`, m)
+
+                    continue // If the intelligence has not been reached
 
                 }
 

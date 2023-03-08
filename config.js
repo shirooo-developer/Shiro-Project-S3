@@ -54,6 +54,7 @@ global.nomorwa = '0'
 
 global.tc = '6287777544597'
 global.ct1 = '6287730576939'
+global.ct2 = '6289671817600'
 
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ WM ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
@@ -140,7 +141,7 @@ global.dikit = "*Sedikit Lagi*"
 
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ RPG GAME ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
-global.multiplier = 29 // The higher, The harder levelup
+global.multiplier = 31 // The higher, The harder levelup
 global.rpg = {
   emoticon(string) {
     string = string.toLowerCase()
@@ -270,6 +271,7 @@ global.rpg = {
       mooncard: '🌙',
       starcard: '⭐',
       nickname: '📛',
+      intelligence: '🧠',
       ras: '⚜️'
     }
     let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
