@@ -10,6 +10,7 @@ const inventory = {
     exp: true,
     limit: true,
     intelligence: true,
+    rune: true,
     os: true,
     gems: true,
     diperkosa: true,
@@ -23,7 +24,7 @@ const inventory = {
     mana: true,
     crystal: true,
     mooncard: true,
-    starcard: true,
+    starcard: true
   },
   items: {
     osr: true,

@@ -1,6 +1,7 @@
 let handler = async m => m.reply(`
 *Update 12:00 - 8/03/2023*
 
+_> Sekarang Player Tidak Bisa Merampok Player Lain Jika Rune Mereka Melebihi Kapasitas Maksimal Dan Player Lain Bisa Merampok Player Yang Memiliki Sedikit Rune_
 
 _> Sekarang Level Maks ATM 10, Dan Sekarang Setiap Peningkatan Level ATM Sumber Daya Dibutuhkan Sesuai Level ATM_
 
@@ -22,11 +23,15 @@ _> Keseluruhan Rank/Role Diganti, Bisa Dicek Di #role_
 
 _> Harga Jual Hewan Dipasar Naik Dari 100 Ke 250_
 
+_> Cooldown Merampok Sekarang Hanya 3 Menit_
+
 _> Inventory Sekarang Menampilkan Jumlah Coal_
 
 _> Fitur Merkosa Sekarang Hanya Butuh 2 Limit_
 
 _> Kini Leaderboard Hanya 1 Page 100 Orang_
+
+_> Jumlah Rune Ditampilkan Di Inventory_
 
 _> Fitur OSR Kini Hanya Butuh 3 Limit_
 
