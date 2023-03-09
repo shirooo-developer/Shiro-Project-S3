@@ -374,6 +374,8 @@ export async function handler(chatUpdate) {
                     user.intelligence = 100000
                  if (!isNumber(user.lastrobint))
                     user.lastrobint = 0
+                 if (!isNumber(user.rune))
+                    user.rune = 0
       
                     
 
@@ -889,6 +891,7 @@ export async function handler(chatUpdate) {
                     starcard: 0,      
                     intelligence: 100000,      
                     lastrobint: 0,      
+                    rune: 0,      
                     
                     emerald: 0,
 
