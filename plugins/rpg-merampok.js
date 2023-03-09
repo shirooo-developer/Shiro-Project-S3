@@ -15,7 +15,7 @@ let nomors = m.sender
   let users = global.db.data.users
   if (new Date - global.db.data.users[m.sender].lastrob > 180000){
   if (200000 > users[who].money) throw '*Money Target Dibawah Batas Minimal*'
-  if (100 > users[who].rune) throw '*Rune Target Melebihi Kapasitas Maksimal*'
+  if (100 < users[who].rune) throw '*Rune Target Melebihi Kapasitas Maksimal*'
   users[who].money -= dapat * 1
   users[who].rune += runee * 1
   users[m.sender].money += dapat * 1

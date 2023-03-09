@@ -7,7 +7,7 @@ let handler = async (m, { conn, command, args }) => {
   if (global.db.data.users[m.sender].exp >= xpperlimit * count) {
     global.db.data.users[m.sender].exp -= xpperlimit * count
     global.db.data.users[m.sender].money += count / 7
-    conn.reply(m.chat, `*CONVERSION 🔁*\n\n*${count} Exp To ${count} Money*\n\n*• Rate 1,42/10*`, m)
+    conn.reply(m.chat, `*CONVERSION 🔁*\n\n*${count} Exp To ${count / 7} Money*\n\n*• Rate 1,42/10*`, m)
   } else conn.reply(m.chat, `*Exp Anda Kurang Dari ${count}*`, m)
 }
 handler.help = ['tomoney7 <jumlah>']

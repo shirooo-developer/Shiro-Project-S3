@@ -16,7 +16,7 @@ export function before(m) {
 *${before}* ➣ *${user.level}*
 *• Role: ${user.role}*
 
-*.lb level - Untuk Lihat Top LB*
+*.cekrank - Untuk Lihat Progress*
 *.lb - Untuk Melihat Leaderboard*
 
 ⭐ Tips:
