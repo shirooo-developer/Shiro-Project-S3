@@ -1066,9 +1066,9 @@ export async function handler(chatUpdate) {
 
                     chat.viewonce = false
 
-                if (!('antiBadword' in chat)) 
+                if (!('antiToxic' in chat)) 
 
-                    chat.antiBadword = false
+                    chat.antiToxic = false
 
                 if (!('simi' in chat))
 
@@ -1113,7 +1113,7 @@ export async function handler(chatUpdate) {
 
                     viewonce: false,
 
-                    antiBadword: true,
+                    antiToxic: true,
 
                     simi: false,
 
