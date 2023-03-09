@@ -188,7 +188,7 @@ const inventory = {
 }
 let handler = async (m, { conn }) => {
   let user = global.db.data.users[m.sender]
-  const tools = Object.keys(inventory.tools).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${typeof inventory.tools[v] === 'object' ? inventory.tools[v][user[v]?.toString()] : `Level(s) ${user[v]}`}`).filter(v => v).join('\n').trim()
+  const tools = Object.keys(inventory.tools).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${typeof inventory.tools[v] >= 'object' ? inventory.tools[v][user[v]?.toString()] : `Level(s) ${user[v]}`}`).filter(v => v).join('\n').trim()
   const items = Object.keys(inventory.items).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
   const fruit = Object.keys(inventory.fruit).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
   const food = Object.keys(inventory.food).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
@@ -199,75 +199,62 @@ let handler = async (m, { conn }) => {
   const pets = Object.keys(inventory.pets).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v] >= inventory.pets[v] ? 'Max Levels' : `Level(s) ${user[v]}`}`).filter(v => v).join('\n').trim()
   const cooldowns = Object.entries(inventory.cooldowns).map(([cd, { name, time }]) => cd in user && `*• ${name}*: ${new Date() - user[cd] >= time ? '✅' : '❌'}`).filter(v => v).join('\n').trim()
   const caption = `
-*👤 Name:* ${conn.getName(m.sender)}
-*🎖️ Tier:* ${user.role}
-*👑 Title:* ${user.title}
-${Object.keys(inventory.others).map(v => user[v] && `*${global.rpg.emoticon(v)} ${v}:* ${user[v]}`).filter(v => v).join('\n')}${tools ? `
 
-*TOOLS*
-${tools}` : ''}${dura ? `
+🏅 Your Rank: *${user.role}*
 
-${dura}` : ''}${items ? `
+Traveler I > ${user.level > 0 ? '*Done ✅*': '*Not finished yet*'}
+Traveler II > ${user.level > 40 ? '*Done ✅*': '*Not finished yet*'}
+Traveler III > ${user.level > 80 ? '*Done ✅*': '*Not finished yet*'}
+Traveler IV > ${user.level > 120 ? '*Done ✅*': '*Not finished yet*'}
+Traveler V > ${user.level > 160 ? '*Done ✅*': '*Not finished yet*'}
+Adventurer I > ${user.level > 200 ? '*Done ✅*': '*Not finished yet*'}
+Adventurer II > ${user.level > 240 ? '*Done ✅*': '*Not finished yet*'}
+Adventurer III > ${user.level > 280 ? '*Done ✅*': '*Not finished yet*'}
+Adventurer IV > ${user.level > 320 ? '*Done ✅*': '*Not finished yet*'}
+Adventurer V > ${user.level > 360 ? '*Done ✅*': '*Not finished yet*'}
+Wanderer I > ${user.level > 400 ? '*Done ✅*': '*Not finished yet*'}
+Wanderer II > ${user.level > 440 ? '*Done ✅*': '*Not finished yet*'}
+Wanderer III > ${user.level > 480 ? '*Done ✅*': '*Not finished yet*'}
+Wanderer IV > ${user.level > 520 ? '*Done ✅*': '*Not finished yet*'}
+Wanderer V > ${user.level > 560 ? '*Done ✅*': '*Not finished yet*'}
+Apollo I > ${user.level > 600 ? '*Done ✅*': '*Not finished yet*'}
+Apollo II > ${user.level > 640 ? '*Done ✅*': '*Not finished yet*'}
+Apollo III > ${user.level > 680 ? '*Done ✅*': '*Not finished yet*'}
+Apollo IV > ${user.level > 720 ? '*Done ✅*': '*Not finished yet*'}
+Apollo V > ${user.level > 760 ? '*Done ✅*': '*Not finished yet*'}
+Wayfarer I > ${user.level > 800 ? '*Done ✅*': '*Not finished yet*'}
+Wayfarer II > ${user.level > 840 ? '*Done ✅*': '*Not finished yet*'}
+Wayfarer III > ${user.level > 880 ? '*Done ✅*': '*Not finished yet*'}
+Wayfarer IV > ${user.level > 920 ? '*Done ✅*': '*Not finished yet*'}
+Wayfarer V > ${user.level > 960 ? '*Done ✅*': '*Not finished yet*'}
+Paladins I > ${user.level > 1000 ? '*Done ✅*': '*Not finished yet*'}
+Paladins II > ${user.level > 1040 ? '*Done ✅*': '*Not finished yet*'}
+Paladins III > ${user.level > 1080 ? '*Done ✅*': '*Not finished yet*'}
+Paladins IV > ${user.level > 1200 ? '*Done ✅*': '*Not finished yet*'}
+Paladins V > ${user.level > 1240 ? '*Done ✅*': '*Not finished yet*'}
+Omega I > ${user.level > 1280 ? '*Done ✅*': '*Not finished yet*'}
+Omega II > ${user.level > 1320 ? '*Done ✅*': '*Not finished yet*'}
+Omega III > ${user.level > 1360 ? '*Done ✅*': '*Not finished yet*'}
+Omega IV > ${user.level > 1400 ? '*Done ✅*': '*Not finished yet*'}
+Omega V > ${user.level > 1440 ? '*Done ✅*': '*Not finished yet*'}
+Pathfinder I > ${user.level > 1480 ? '*Done ✅*': '*Not finished yet*'}
+Pathfinder II > ${user.level > 1520 ? '*Done ✅*': '*Not finished yet*'}
+Pathfinder III > ${user.level > 1560 ? '*Done ✅*': '*Not finished yet*'}
+Pathfinder IV > ${user.level > 1600 ? '*Done ✅*': '*Not finished yet*'}
+Pathfinder V > ${user.level > 1640 ? '*Done ✅*': '*Not finished yet*'}
+Stallion I > ${user.level > 1680 ? '*Done ✅*': '*Not finished yet*'}
+Stallion II > ${user.level > 1720 ? '*Done ✅*': '*Not finished yet*'}
+Stallion III > ${user.level > 1760 ? '*Done ✅*': '*Not finished yet*'}
+Stallion IV > ${user.level > 1800 ? '*Done ✅*': '*Not finished yet*'}
+Stallion V > ${user.level > 1850 ? '*Done ✅*': '*Not finished yet*'}
+VOYAGER > ${user.level > 2000 ? '*Done ✅*': '*Not finished yet*'}
 
-
-*ITEMS*
-${items}
-*Total Items:* ${Object.keys(inventory.items).map(v => user[v]).reduce((a, b) => a + b, 0)} Items` : ''}${fruit ? `
-
-*FRUIT*
-${fruit}
-*Total Fruit:* ${Object.keys(inventory.fruit).map(v => user[v]).reduce((a, b) => a + b, 0)} Fruit` : ''}${food ? `
-
-*FOOD*
-${food}
-*Total Food:* ${Object.keys(inventory.food).map(v => user[v]).reduce((a, b) => a + b, 0)} Food` : ''}${animal ? `
-
-*ANIMAL*
-${animal}
-*Total Animal:* ${Object.keys(inventory.animal).map(v => user[v]).reduce((a, b) => a + b, 0)} Tail` : ''}${fish ? `
-
-*FISH*
-${fish}
-*Total Fish:* ${Object.keys(inventory.fish).map(v => user[v]).reduce((a, b) => a + b, 0)} Fish` : ''}${crates ? `
-
-*CRATES*
-${crates}
-*Total Crates:* ${Object.keys(inventory.crates).map(v => user[v]).reduce((a, b) => a + b, 0)} Crates` : ''}${pets || user.petFood ? `
-
-
-*PETS*
-${pets ? pets + '\n' : ''}${user.petFood ? '🍖 Peetfood: ' + user.petFood : ''}` : ''}${cooldowns ? `
-
-*COOLDOWN*
-${cooldowns}` : ''}
-*• Dungeon:* ${user.lastdungeon == 0 ? '✅': '❌'}
-*• Mining:* ${user.lastmining == 0 ? '✅': '❌'}
-*• Begal:* ${user.lastbegal == 0 ? '✅': '❌'}
-*• Open Bo:* ${user.lastob == 0 ? '✅': '❌'}
-*• Hunter:* ${user.lasthunt == 0 ? '✅': '❌'}
-*• Merkosa:* ${user.lastmerkosa == 0 ? '✅': '❌'}
-*• Mulung:* ${user.lastmulung == 0 ? '✅': '❌'}
-*• Ngojek:* ${user.lastngojek == 0 ? '✅': '❌'}
-*• Berkebun:* ${user.lastberkebun == 0 ? '✅': '❌'}
-*• Ngewe:* ${user.lastngewe == 0 ? '✅': '❌'}
-*• Berburu:* ${user.lastberburu == 0 ? '✅': '❌'}
-*• Korupsi:* ${user.lastbansos == 0 ? '✅': '❌'}
-*• Membunuh:* ${user.lastbunuhi == 0 ? '✅': '❌'}
-*• Merampok:* ${user.lastrob == 0 ? '✅': '❌'}
-*• Misi:* ${user.lastmisi == 0 ? '✅': '❌'}
-*• Limitku:* ${user.lastlk == 0 ? '✅': '❌'}
-
-*Indicator:*
-✅ - Tidak Cooldown
-❌ - Sedang Cooldown
-
-*🌙 Nickname:* ${user.nickname}
 `.trim()
-  conn.sendButton(m.chat, `*${htki} INVENTORY ${htka}*`, caption, null, [[`${user.health < 60 ? '𝗥𝗘𝗖𝗔𝗟 ♥️': '𝗔𝗗𝗩𝗘𝗡𝗧𝗨𝗥𝗘 👣'}`,`${user.health < 60 ? '.heal': '.adventure'}`],['𝗖𝗘𝗞 𝗥𝗔𝗡𝗞 🏅','.cekrank']],m)
+  conn.sendButton(m.chat, `*${htki} RANK PROGRESS ${htka}*`, caption, null, [[`${user.health < 60 ? '𝗥𝗘𝗖𝗔𝗟': '𝗔𝗗𝗩𝗘𝗡𝗧𝗨𝗥𝗘'}`,`${user.health < 60 ? '.heal': '.adventure'}`],['𝗣𝗥𝗢𝗙𝗜𝗟𝗘','.pp']],m)
 }
-handler.help = ['inventory', 'inv']
+handler.help = ['cekrank', 'inv']
 handler.tags = ['rpg']
-handler.command = /^(inv(entory)?|bal(ance)?|money|e?xp)$/i
+handler.command = /^cekrank$/i
 
 handler.register = true
 export default handler
