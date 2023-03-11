@@ -7,7 +7,7 @@ async function handler(m, { conn, args, text , usedPrefix, command }) {
 
   try {
     let json = misi[Math.floor(Math.random() * misi.length)] //get misi
-    const cooldown = 30 * (1000 * 60) //coldown timer second
+    const cooldown = 60 * (1000 * 60) //coldown timer second
     let user = global.db.data.users[m.sender] //Get db user
     
     if (user.health == 0 || user.stamina == 0 || user.mana == 0) return m.reply(`*Minimal Stamina/Mana/Health Kamu 100*`)
@@ -89,6 +89,7 @@ handler.before = async m => {
         user.health -= json.health
         user.stamina -= json.stamina
         user.crystal += json.crystal
+        user.gems += json.gems
         user.nickname += json.nickname
         user.misi += json.misii
       } else if(Aku < Kamu) {
@@ -102,6 +103,7 @@ handler.before = async m => {
         user.health -= json.health
         user.stamina -= json.stamina
         user.crystal += json.crystal
+        user.gems += json.gems
         user.nickname += json.nickname
         user.misi += json.misii
       }

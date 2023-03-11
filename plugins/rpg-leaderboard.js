@@ -21,7 +21,7 @@ const leaderboards = [
   'diperkosa',
   'memperkosa',
   'rune',
-  'pengeluaran','
+  'pengeluaran',
   'pet'
 ]
 let handler = async (m, { conn, args, participants, usedPrefix, command }) => {
