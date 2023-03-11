@@ -12,7 +12,7 @@ async function handler(m, { conn, args, usedPrefix, command }) {
     let lol = `*TRANSFER ITEMS*
 
 *_Format: ${usedPrefix}${command} <type> <value> <number>_*
-*_Contoh: ${usedPrefix}${command} money 9999 @621927237001_*
+*_Contoh: ${usedPrefix}${command} money 9999 @⁨+62 192 7237001⁩_*
 
 *Transferable Items*
 ${item.map(v => `*_${rpg.emoticon(v)}${v}`.trim()).join('_*\n')}_*

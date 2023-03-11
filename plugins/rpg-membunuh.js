@@ -37,7 +37,7 @@ let nomors = m.sender
    if (300000 > users[who].money) throw '*Money Target Dibawah Batas Minimal*'
    
    if (100 < users[who].rune) throw '*Rune Target Melebihi Kapasitas Maksimal*'
-
+   if (-500 > users[m.sender].rune) throw '*Rune Kamu Terlalu Rendah*'
   users[who].health -= healtu * 1
   users[who].rune += runee * 1
   users[who].money -= dapat * 1
