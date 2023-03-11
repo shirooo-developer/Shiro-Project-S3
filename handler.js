@@ -186,6 +186,8 @@ export async function handler(chatUpdate) {
                     user.pc = 0
                 if (!isNumber(user.ac))
                     user.ac = 0
+                if (!isNumber(user.pengeluaran))
+                    user.pengeluaran = 0
                 if (!isNumber(user.chealth))
                     user.chealth = 0
                 if (!isNumber(user.might))
@@ -864,6 +866,7 @@ export async function handler(chatUpdate) {
                     orca: 0,
                     ikan: 0,      
                     udang: 0,
+                    pengeluaran: 0,
                     hiu: 0,      
                     manar: 0,      
                     botol: 0,
