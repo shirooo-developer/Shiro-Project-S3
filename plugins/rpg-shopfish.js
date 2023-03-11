@@ -76,6 +76,7 @@ Kepiting: ${Skepiting}
                             if (global.db.data.users[m.sender].money >= Bhiu * count) {
                                 global.db.data.users[m.sender].hiu += count * 1
                                 global.db.data.users[m.sender].money -= Bhiu * count
+                                global.db.data.users[m.sender].pengeluaran += Bhiu * count
                                 conn.reply(m.chat, `Succes membeli ${count} Hiu dengan harga ${Bhiu * count} money`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Hiu dengan harga ${Bhiu * count} money`.trim(), m)
                         
@@ -84,6 +85,7 @@ Kepiting: ${Skepiting}
                             if (global.db.data.users[m.sender].money >= Bikan * count) {
                                 global.db.data.users[m.sender].ikan += count * 1
                                 global.db.data.users[m.sender].money -= Bikan * count
+                                global.db.data.users[m.sender].pengeluaran += Bikan * count
                                 conn.reply(m.chat, `Succes membeli ${count} Ikan dengan harga ${Bikan * count} money`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} ikan dengan harga ${Bikan * count} money`.trim(), m)
                         
@@ -92,6 +94,7 @@ Kepiting: ${Skepiting}
                             if (global.db.data.users[m.sender].money >= Bdory * count) {
                                 global.db.data.users[m.sender].dory += count * 1
                                 global.db.data.users[m.sender].money -= Bdory * count
+                                global.db.data.users[m.sender].pengeluaran += Bdory * count
                                 conn.reply(m.chat, `Succes membeli ${count} Dory dengan harga ${Bdory * count} money`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Dory dengan harga ${Bdory * count} money`.trim(), m)
                         
@@ -100,6 +103,7 @@ Kepiting: ${Skepiting}
                             if (global.db.data.users[m.sender].money >= Borca * count) {
                                 global.db.data.users[m.sender].orca += count * 1
                                 global.db.data.users[m.sender].money -= Borca * count
+                                global.db.data.users[m.sender].pengeluaran += Borca * count
                                 conn.reply(m.chat, `Succes membeli ${count} Orca dengan harga ${Borca * count} money`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} orca dengan harga ${Borca * count} money`.trim(), m)
                         
@@ -108,6 +112,7 @@ Kepiting: ${Skepiting}
                             if (global.db.data.users[m.sender].money >= Bpaus * count) {
                                 global.db.data.users[m.sender].paus += count * 1
                                 global.db.data.users[m.sender].money -= Bpaus * count
+                                global.db.data.users[m.sender].pengeluaran += Bpaus * count
                                 conn.reply(m.chat, `Succes membeli ${count} Paus dengan harga ${Bpaus * count} money`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Paus dengan harga ${Bpaus * count} money`.trim(), m)
                         
@@ -116,6 +121,7 @@ Kepiting: ${Skepiting}
                             if (global.db.data.users[m.sender].money >= Bcumi * count) {
                                 global.db.data.users[m.sender].cumi += count * 1
                                 global.db.data.users[m.sender].money -= Bcumi * count
+                                global.db.data.users[m.sender].pengeluaran += Bcumi * count
                                 conn.reply(m.chat, `Succes membeli ${count} Cumi dengan harga ${Bcumi * count} money`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Cumi dengan harga ${Bcumi * count} money`.trim(), m)
                         
@@ -124,6 +130,7 @@ Kepiting: ${Skepiting}
                             if (global.db.data.users[m.sender].money >= Bgurita * count) {
                                 global.db.data.users[m.sender].gurita += count * 1
                                 global.db.data.users[m.sender].money -= Bgurita * count
+                                global.db.data.users[m.sender].pengeluaran += Bgurita * count
                                 conn.reply(m.chat, `Succes membeli ${count} Gurita dengan harga ${Bgurita * count} money`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Gurita dengan harga ${Bgurita * count} money`.trim(), m)
                         
@@ -132,6 +139,7 @@ Kepiting: ${Skepiting}
                             if (global.db.data.users[m.sender].money >= Bbuntal * count) {
                                 global.db.data.users[m.sender].buntal += count * 1
                                 global.db.data.users[m.sender].money -= Bbuntal * count
+                                global.db.data.users[m.sender].pengeluaran += Bbuntal * count
                                 conn.reply(m.chat, `Succes membeli ${count} Buntal dengan harga ${Bbuntal * count} money`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Buntal dengan harga ${Bbuntal * count} money`.trim(), m)
                         
@@ -140,6 +148,7 @@ Kepiting: ${Skepiting}
                             if (global.db.data.users[m.sender].money >= Budang * count) {
                                 global.db.data.users[m.sender].udang += count * 1
                                 global.db.data.users[m.sender].money -= Budang * count
+                                global.db.data.users[m.sender].pengeluaran += Budang * count
                                 conn.reply(m.chat, `Succes membeli ${count} Udang dengan harga ${Budang * count} money`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Udang dengan harga ${Budang * count} money`.trim(), m)
                         
@@ -148,6 +157,7 @@ Kepiting: ${Skepiting}
                             if (global.db.data.users[m.sender].money >= Blumba * count) {
                                 global.db.data.users[m.sender].lumba += count * 1
                                 global.db.data.users[m.sender].money -= Blumba * count
+                                global.db.data.users[m.sender].pengeluaran += Blumba * count
                                 conn.reply(m.chat, `Succes membeli ${count} Lumba² dengan harga ${Blumba * count} money`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Lumba² dengan harga ${Blumba * count} money`.trim(), m)
                         
@@ -156,6 +166,7 @@ Kepiting: ${Skepiting}
                             if (global.db.data.users[m.sender].money >= Blobster * count) {
                                 global.db.data.users[m.sender].lobster += count * 1
                                 global.db.data.users[m.sender].money -= Blobster * count
+                                global.db.data.users[m.sender].pengeluaran += Blobster * count
                                 conn.reply(m.chat, `Succes membeli ${count} Lobster dengan harga ${Blobster * count} money`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Lobster dengan harga ${Blobster * count} money`.trim(), m)
                         
@@ -164,6 +175,7 @@ Kepiting: ${Skepiting}
                             if (global.db.data.users[m.sender].money >= Bkepiting * count) {
                                 global.db.data.users[m.sender].kepiting += count * 1
                                 global.db.data.users[m.sender].money -= Bkepiting * count
+                                global.db.data.users[m.sender].pengeluaran += Bkepiting * count
                                 conn.reply(m.chat, `Succes membeli ${count} Kepiting dengan harga ${Bkepiting * count} money`, m)
                             } else conn.reply(m.chat, `Uang anda tidak cukup untuk membeli ${count} Kepiting dengan harga ${Bkepiting * count} money`.trim(), m)
                         

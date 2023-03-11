@@ -7,6 +7,7 @@ const inventory = {
   others: {
     health: true,
     money: true,
+    pengeluaran: true,
     exp: true,
     limit: true,
     intelligence: true,

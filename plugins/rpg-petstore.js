@@ -86,6 +86,7 @@ const listMessage = {
           if (global.db.data.users[m.sender].money >= hpetfood * count) {
             global.db.data.users[m.sender].petFood += count * 1
             global.db.data.users[m.sender].money -= hpetfood * count
+            global.db.data.users[m.sender].pengeluaran += hpetfood * count
             conn.sendButton(m.chat, `*${htki} BUYING ${htka}*`, `Sukses Membeli *${count}* Makanan Pet, Dengan Harga *${hpetfood * count}* Money 💵`,null, [['𝗜𝗡𝗩𝗘𝗡𝗧𝗢𝗥𝗬', '.inv']], m)
           } else conn.reply(m.chat, `*_Money Kamu Tidak Cukup_*`, m) 
             break

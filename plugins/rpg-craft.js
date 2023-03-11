@@ -117,6 +117,7 @@ const listMessage = {
             if(user.emerald < 12 * buff || user.money < 40000 * buff || user.diamond < 24 * buff) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_${40000 * buff} Money 💵_*\n*_${12 * buff} Emerald ❇️_*\n*_${24 * buff} Diamond 💎_*`)
             global.db.data.users[m.sender].emerald -= 12 * buff
             global.db.data.users[m.sender].money -= 40000 * buff
+            global.db.data.users[m.sender].pengeluaran += 40000 * buff
             global.db.data.users[m.sender].diamond -= 24 * buff
             global.db.data.users[m.sender].atm += 1
             global.db.data.users[m.sender].fullatm += 5000000

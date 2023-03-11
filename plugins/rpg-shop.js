@@ -137,6 +137,7 @@ ${Object.keys(listItems).map((v) => {
         if (user[paymentMethod] < listItems[item][paymentMethod] * total) return m.reply(`*Money Tidak Cukup*\n\n*- Kamu Membutuhkan ${(listItems[item][paymentMethod] * total)} Money💵_*`)
         user[paymentMethod] -= listItems[item][paymentMethod] * total - buff1
         user[item] += total
+        user.pengeluaran += listItems[item][paymentMethod] * total - buff1
         return m.reply(`Kamu Membeli *${total} ${global.rpg.emoticon(item)}${item}*`)
     } else {
         if (user[item] < total) return m.reply(`Kamu Tidak Mempunyai Cukup *${global.rpg.emoticon(item)}${item}* Untuk Dijual, Kamu Hanya Mempunya *${user[item]}* Item`)
