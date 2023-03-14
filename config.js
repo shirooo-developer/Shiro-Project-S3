@@ -274,6 +274,14 @@ global.rpg = {
       intelligence: '🧠',
       rune: '🌀',
       pengeluaran: '💶',
+      drink: '🍹',
+      pisanggoreng: '🍌',
+      jusmangga: '🍸',
+      minyak: '🛢️',
+      susu: '🥛',
+      plastikpvc: '⬜',
+      semikonduktor: '💽',
+      ax: '🛶',
       ras: '⚜️'
     }
     let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))

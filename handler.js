@@ -378,6 +378,42 @@ export async function handler(chatUpdate) {
                     user.lastrobint = 0
                  if (!isNumber(user.rune))
                     user.rune = 0
+                  if (!isNumber(user.drink))
+                    user.drink = 0
+                      if (!isNumber(user.skillsport))
+                    user.skillsport = 0
+                 if (!isNumber(user.lastsport))
+                    user.lastsport = 0   
+                 if (!isNumber(user.skilladventure))
+                    user.skilladventure = 0   
+                   if (!isNumber(user.pisanggoreng))
+                    user.pisanggoreng = 0
+                 if (!isNumber(user.minyak))
+                    user.minyak = 0   
+                 if (!isNumber(user.susu))
+                    user.susu = 0   
+                if (!isNumber(user.jusmangga))
+                    user.jusmangga = 0   
+                if (!isNumber(user.skillgardening))
+                    user.skillgardening = 0   
+                 if (!isNumber(user.semikonduktor))
+                    user.semikonduktor = 0   
+                if (!isNumber(user.plastikpvc))
+                    user.plastikpvc = 0   
+               if (!isNumber(user.lastperisai))
+                    user.lastperisai = 0   
+               if (!isNumber(user.skillfishing))
+                    user.skillfishing = 0   
+               if (!isNumber(user.ax))
+                    user.ax = 0   
+               if (!isNumber(user.axdurability))
+                    user.axdurability = 0   
+              if (!isNumber(user.hargadiri))
+                    user.hargadiri = 0   
+               if (!isNumber(user.lastsex))
+                    user.lastsex = 0   
+                  
+                    
       
                     
 
@@ -453,6 +489,10 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.common))
 
                     user.common = 0
+                    
+                    if (!isNumber(user.lastnebang))
+
+                    user.lastnebang = 0
 
                 if (!isNumber(user.uncommon))
 
@@ -895,6 +935,23 @@ export async function handler(chatUpdate) {
                     intelligence: 100000,      
                     lastrobint: 0,      
                     rune: 0,      
+                    drink: 0,      
+                    skillsport :0,
+                    lastsport :0,
+                    skilladventure: 0,
+                    pisanggoreng :0,
+                    minyak :0,
+                    susu: 0,
+                    jusmangga: 0,
+                    skillgardening: 0,
+                    semikonduktor: 0,
+                    plastikpvc: 0,
+                    skillfishing: 0,
+                    lastperisai: 0,
+                    ax: 0,
+                    axdurability: 0,
+                    hargadiri: 0,
+                    lastsex: 0,
                     
                     emerald: 0,
 
@@ -1001,6 +1058,8 @@ export async function handler(chatUpdate) {
                     note: 0,
                     
                     lasthunt: 0,
+                    
+                    lastnebang: 0,
                     
                     lastob: 0,
                     
@@ -1591,6 +1650,14 @@ export async function handler(chatUpdate) {
                  if (plugin.intelligence > _user.intelligence) {
 
                     this.reply(m.chat, `*Intelligence Kamu Tidak Cukup 🧠*\n\nDiperlukan Intelligence ${plugin.intelligence} Untuk Menggunakan Perintah Ini\n*Intelligence Kamu: ${_user.intelligence} 🧠*\n\n⭐Tips:\n*Dapatkan Info Tentang Intelligence Di #inte*`, m)
+
+                    continue // If the intelligence has not been reached
+            
+}
+
+                  if (plugin.skillsport > _user.skillsport) {
+
+                    this.reply(m.chat, `*Sports Ability Kamu Tidak Cukup 🎽*\n\nDiperlukan Sports Ability ${plugin.skillsport} Untuk Menggunakan Perintah Ini\n*Sports Ability Kamu: ${_user.skillsport} 🎽*\n\n⭐Tips:\n*Dapatkan Sports Ability Di Library*`, m)
 
                     continue // If the intelligence has not been reached
 
