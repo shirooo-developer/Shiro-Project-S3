@@ -52,7 +52,7 @@ const items = {
             money: 99          
         },
         drink: {
-            money: 99          
+            money: 10000          
         },
         manar: {
             money: 19000     
