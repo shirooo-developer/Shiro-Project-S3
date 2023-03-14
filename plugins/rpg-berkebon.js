@@ -7,28 +7,28 @@ const timeout = 10800000
                                      let pisangu = global.db.data.users[m.sender].bibitpisang
                                      let jeruku = global.db.data.users[m.sender].bibitjeruk 
 	                                 let time = global.db.data.users[m.sender].lastberkebun + 10800000
-                                     if (apelu == 0 || angguru == 0 || manggau == 0 || pisangu == 0 || jeruku == 0) return m.reply(`*Pastikan Kamu Memiliki Semua Bibit*\n*Seperti Bibit Apel, Bibit Mangga, Bibit Jeruk, Bibit Pisang, Bibit Anggur*\n\nKetik :\n${usedPrefix}buy bibitmangga 500\n\n*List*\n- Bibitmangga\n- Bibitanggur\n- Bibitpisang\n- Bibitjeruk\n- Bibitapel`)
-                                     if (new Date - global.db.data.users[m.sender].lastberkebun< 10800000) throw `Anda Sudah Menanam\nMohon Tunggu Hasil Panenmu\nTunggu Selama ${msToTime(time - new Date())} Lagi`
-                                     if (global.db.data.users[m.sender].bibitmangga > 499) {
-                                 	if (global.db.data.users[m.sender].bibitapel > 499) {
-                                 	if (global.db.data.users[m.sender].bibitpisang > 499) {
-                                 	if (global.db.data.users[m.sender].bibitjeruk > 499) {
-                                 	if (global.db.data.users[m.sender].bibitanggur > 499) {
-                                     let pisangpoin = `${Math.floor(Math.random() * 500)}`.trim()
-                                     let anggurpoin = `${Math.floor(Math.random() * 500)}`.trim()
-                                     let manggapoin = `${Math.floor(Math.random() * 500)}`.trim()
-                                     let jerukpoin = `${Math.floor(Math.random() * 500)}`.trim()
-                                     let apelpoin = `${Math.floor(Math.random() * 500)}`.trim()
+                                     if (apelu == 0 || angguru == 0 || manggau == 0 || pisangu == 0 || jeruku == 0) return m.reply(`*Kamu Harus Memiliki Bibit Apel, Bibit Mangga, Bibit Jeruk, Bibit Pisang, & Bibit Anggur Minimal 100 Bibit*\n\nKetik :\n${usedPrefix}buy bibitmangga 100\n`)
+                                     if (new Date - global.db.data.users[m.sender].lastberkebun< 10800000) throw `*Anda Sudah Menanam*\n*Mohon Tunggu Hasil Panenmu*\nTunggu Selama ${msToTime(time - new Date())} Lagi`
+                                     if (global.db.data.users[m.sender].bibitmangga > 99) {
+                                 	if (global.db.data.users[m.sender].bibitapel > 99) {
+                                 	if (global.db.data.users[m.sender].bibitpisang > 99) {
+                                 	if (global.db.data.users[m.sender].bibitjeruk > 99) {
+                                 	if (global.db.data.users[m.sender].bibitanggur > 99) {
+                                     let pisangpoin = `${Math.floor(Math.random() * 100)}`.trim()
+                                     let anggurpoin = `${Math.floor(Math.random() * 100)}`.trim()
+                                     let manggapoin = `${Math.floor(Math.random() * 100)}`.trim()
+                                     let jerukpoin = `${Math.floor(Math.random() * 100)}`.trim()
+                                     let apelpoin = `${Math.floor(Math.random() * 100)}`.trim()
                                      global.db.data.users[m.sender].pisang += pisangpoin * 1
                                      global.db.data.users[m.sender].anggur += anggurpoin * 1
                                      global.db.data.users[m.sender].mangga += manggapoin * 1
                                      global.db.data.users[m.sender].jeruk += jerukpoin * 1
                                      global.db.data.users[m.sender].apel += apelpoin * 1                                 
-                                     global.db.data.users[m.sender].bibitpisang -= 500
-                                     global.db.data.users[m.sender].bibitanggur -= 500
-                                     global.db.data.users[m.sender].bibitmangga -= 500
-                                     global.db.data.users[m.sender].bibitjeruk -= 500
-                                     global.db.data.users[m.sender].bibitapel -= 500
+                                     global.db.data.users[m.sender].bibitpisang -= 100
+                                     global.db.data.users[m.sender].bibitanggur -= 100
+                                     global.db.data.users[m.sender].bibitmangga -= 100
+                                     global.db.data.users[m.sender].bibitjeruk -= 100
+                                     global.db.data.users[m.sender].bibitapel -= 100
                                      global.db.data.users[m.sender].lastberkebun = new Date * 1
                                      let hsl = `Selamat ${conn.getName(m.sender)}, Kamu Mendapatkan : \n+${pisangpoin} Pisang 🍌\n+${manggapoin} Mangga 🍋\n+${anggurpoin} Anggur 🍇\n+${jerukpoin} Jeruk 🍊\n+${apelpoin} Apel 🍎`
                                      conn.sendHydrated(m.chat, hsl, botdate, null, null, null, null, null, [
@@ -37,15 +37,15 @@ const timeout = 10800000
                                      setTimeout(() => {
 					                      conn.reply(m.chat, `*Saatnya Berkebun Lagi.*`, m)
 					                  }, timeout)
-                                  } else m.reply(`Pastikan Bibit Anggur Kamu *500* Untuk Bisa Berkebun`)
-                              } else m.reply(`Pastikan Bibit Jeruk Kamu *500* Untuk Bisa Berkebun`)
-                          } else m.reply(`Pastikan Bibit Pisang Kamu *500* Untuk Bisa Berkebun`)
-                      } else m.reply(`Pastikan Bibit Apel Kamu *500* Untuk Bisa Berkebun`)
-                  } else m.reply(`Pastikan Bibit Mangga Kamu *500* Untuk Bisa Berkebun`)
+                                  } else m.reply(`Pastikan Bibit Anggur Kamu *100* Untuk Bisa Berkebun`)
+                              } else m.reply(`Pastikan Bibit Jeruk Kamu *100* Untuk Bisa Berkebun`)
+                          } else m.reply(`Pastikan Bibit Pisang Kamu *100* Untuk Bisa Berkebun`)
+                      } else m.reply(`Pastikan Bibit Apel Kamu *100* Untuk Bisa Berkebun`)
+                  } else m.reply(`Pastikan Bibit Mangga Kamu *100* Untuk Bisa Berkebun`)
               }
-handler.help = ['berkebun']
+handler.help = ['kebun1']
 handler.tags = ['rpg']
-handler.command = /^(berkebun)/i
+handler.command = /^(kebun1)/i
 handler.group = true
 handler.limit = 1
 handler.register = true

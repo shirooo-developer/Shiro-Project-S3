@@ -37,7 +37,7 @@ const items = {
             money: 11399
         },
         bibitapel: { 
-        	money: 99
+        	money: 100
         },
         bibitmangga: {
             money: 99
@@ -51,8 +51,23 @@ const items = {
         bibitanggur: {
             money: 99          
         },
+        drink: {
+            money: 99          
+        },
         manar: {
             money: 19000     
+        },
+        susu: {
+            money: 10000     
+        },
+        minyak: {
+            money: 34000     
+            },
+        plastikpvc: {
+            money: 16000     
+            },
+        semikonduktor: {
+            money: 150000     
         }
     },
     sell: {
@@ -84,19 +99,19 @@ const items = {
             money: 9000
         },
         apel: { 
-        	money: 100
+        	money: 300
         },
         mangga: {
-            money: 100
+            money: 300
         },
         jeruk: {
-            money: 100
+            money: 250
         },
         pisang: {
-            money: 100
+            money: 200
         },
         anggur: {
-            money: 100 
+            money: 250 
         },
         kaleng: {
             money: 100

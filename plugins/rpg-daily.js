@@ -1,6 +1,6 @@
 const rewards = {
-  exp: 20000,
-  money: 20000,
+  exp: 10000,
+  money: 10000,
   potion: 10,
   mooncard: 2,
   starcard: 1,

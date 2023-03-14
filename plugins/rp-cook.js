@@ -40,7 +40,15 @@ let lgocook = `
 - 2 Babi
 - 5 Coal
 
+*Jus Mangga 🍸*
+- 2 Mangga
+- 2 Drink
+- 1 Susu
 
+*Pisang Goreng 🍌*
+- 5 Pisang
+- 1 Minyak
+- 3 Coal
 `
 const sections = [
    {
@@ -52,6 +60,8 @@ const sections = [
 	    {title: "Ikan Bakar 🐟", rowId: ".cook ikan", description: "+ 44 Stamina ⚡"},
 	    {title: "Udang Bakar 🍤", rowId: ".cook udang", description: "+ 60 Stamina ⚡"},
 	    {title: "Babi Panggang 🥓", rowId: ".cook babi", description: "+ 58 Stamina ⚡"},
+	    {title: "Jus Mangga 🍸", rowId: ".cook jusmangga", description: "+ 60 Stamina ⚡"},
+	    {title: "Pisang Goreng 🍌", rowId: ".cook pisanggoreng", description: "+ 60 Stamina ⚡"},
 
 	]
     },
@@ -116,6 +126,24 @@ const listMessage = {
             global.db.data.users[m.sender].coal -= 5
             global.db.data.users[m.sender].babipanggang += 1
             m.reply("*_Sukses Memanggang 1 Babi Panggang 🥓_*")
+            break
+          case 'jusmangga':
+          if (user.jusmangga > 100) return m.reply('*_Kulkas Kamu Penuh_*')
+            if(user.mangga 2 <  || user.drink < 2 || user.susu < 1) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_2 Mangga 🍐_*\n*_2 Drink 🍹_*\n*_1 Susu 🥛_*`)
+            global.db.data.users[m.sender].mangga -= 2
+            global.db.data.users[m.sender].drink -= 2
+            global.db.data.users[m.sender].susu -= 1
+            global.db.data.users[m.sender].jusmangga += 1
+            m.reply("*_Sukses Membuat 1 Jus Mangga 🍸_*")
+            break
+         case 'pisanggoreng':
+          if (user.pisanggoreng > 100) return m.reply('*_Kulkas Kamu Penuh_*')
+            if(user.minyak < 1 || user.coal < 3 || user.pisang < 5) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_5 Pisang 🍌_*\n*_3 Coal ⚫_*\n*_1 Minyak 🛢️_*`)
+            global.db.data.users[m.sender].minyak -= 1
+            global.db.data.users[m.sender].coal -= 3
+            global.db.data.users[m.sender].pisang -= 5
+            global.db.data.users[m.sender].pisanggoreng += 1
+            m.reply("*_Sukses Menggoreng 1 Pisang Goreng 🍌_*")
             break
 
           default:

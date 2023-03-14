@@ -34,6 +34,12 @@ let lgoeat = `
 *Babi Panggang 🥓*
 + 58 Stamina ⚡
 
+*Jus Mangga 🍸*
++ 60 Stamina ⚡
+
+*Pisang Goreng 🍌*
++ 60 Stamina ⚡
+
 
 `
 const sections = [
@@ -46,6 +52,8 @@ const sections = [
 	    {title: "Ikan Bakar 🐟", rowId: ".eat ikan", description: "+ 44 Stamina ⚡"},
 	    {title: "Udang Bakar 🍤", rowId: ".eat udang", description: "+ 60 Stamina ⚡"},
 	    {title: "Babi Panggang 🥓", rowId: ".eat babi", description: "+ 58 Stamina ⚡"},
+	    {title: "Jus Mangga 🍸", rowId: ".eat jusmangga", description: "+ 60 Stamina ⚡"},
+	    {title: "Pisang Goreng 🍌", rowId: ".eat pisanggoreng", description: "+ 60 Stamina ⚡"},
 
 	]
     },
@@ -104,6 +112,20 @@ const listMessage = {
             global.db.data.users[m.sender].babipanggang -= 1
             global.db.data.users[m.sender].stamina += 58
             m.reply("*_Sukses Memakan 1 Babi Panggang 🥓_*\n*_Menambah 58 Stamina ⚡_*")
+            break
+          case 'jusmangga':
+          if (user.stamina > 100) return m.reply('*_Stamina Penuh_*')
+            if(user.jusmangga < 1) return m.reply(`*Makanan Tidak Cukup*\n\n*_Cari Mangga Di #adventure / #berkebun & Buat Jus Di #cook_*`)
+            global.db.data.users[m.sender].jusmangga -= 1
+            global.db.data.users[m.sender].stamina += 60
+            m.reply("*_Sukses Memakan 1 Jus Mangga 🍸_*\n*_Menambah 60 Stamina ⚡_*")
+            break
+         case 'pisanggoreng':
+          if (user.stamina > 100) return m.reply('*_Stamina Penuh_*')
+            if(user.pisanggoreng < 1) return m.reply(`*Makanan Tidak Cukup*\n\n*_Cari Pisang Di #adventure / #berkebun & Goreng Pisang Di #cook_*`)
+            global.db.data.users[m.sender].pisanggoreng -= 1
+            global.db.data.users[m.sender].stamina += 60
+            m.reply("*_Sukses Memakan 1 Pisang Goreng 🍌_*\n*_Menambah 60 Stamina ⚡_*")
             break
 
 

@@ -5,6 +5,7 @@ const cooldown = 86400000
 let handler = async (m,{ conn} ) => {
   let user = global.db.data.users[m.sender]
   if (new Date - user.lastlk < cooldown) throw `*Anda Telah Mengklaim Limit Harian Ini*\nTunggu *${((user.lastlk + cooldown) - new Date()).toTimeString()}*`
+  if (global.db.data.users[m.sender].limit > 39) throw `*Fitur Ini Hanya Untuk Pemain Miskin Limit*`
   let text = ''
   for (let reward of Object.keys(rewards)) {
     if (!(reward in user)) continue
