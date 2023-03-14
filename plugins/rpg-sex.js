@@ -12,7 +12,7 @@ let handler = async (m, { conn, participants, usedPrefix, owner }) => {
         let member = participants.map(u => u.id)
         who = member[Math.floor(Math.random() * member.length)]
     }
-        let __timers = (new Date - global.db.data.users[m.sender].lastob)
+        let __timers = (new Date - global.db.data.users[m.sender].lastsex)
 
         let _timers = (3600000 - __timers) 
 
@@ -20,30 +20,25 @@ let handler = async (m, { conn, participants, usedPrefix, owner }) => {
 
         if (global.db.data.users[m.sender].stamina > 99) {
 
-            if (new Date - global.db.data.users[m.sender].lastob > 3600000) {
+            if (new Date - global.db.data.users[m.sender].lastsex > 3600000) {
 
 
             let _stamina = `${Math.floor(Math.random() * 199)}`.trim()
             let stamina = (_stamina * 1)
-            let uang = `${Math.floor(Math.random() * 200000)}`.trim() 
-            let berlian = `${Math.floor(Math.random() * 2)}`.trim() 
             let moon = `${Math.floor(Math.random() * 2)}`.trim() 
-            let epp = `${Math.floor(Math.random() * 100000)}`.trim() 
+            let epp = `${Math.floor(Math.random() * 300000)}`.trim() 
             let star = `${Math.floor(Math.random() * 2)}`.trim() 
             let str = `
 
             
-*「 OPEN BO 」*\n\nKamu Melakukan OPEN Bo Di ${pickRandom(['Federasi Jura Tempest', 'Desa Konoha', 'Isekai', '2D Dimension', '4D Dimension', 'Kuburan Mantan', 'Rumah Mantan', 'Pernikahan Mantan', 'OPM Verse', 'AOT Verse', 'OP Verse', 'Tensura Verse', 'DB Verse', 'BC Verse', 'Japan', 'DS Verse', 'Kamar Anya','Kamar Maple','Israel','United States of America','Russia'])}
+*「 SEX 」*\n\nKamu Melakukan Sex Di ${pickRandom(['Federasi Jura Tempest', 'Desa Konoha', 'Isekai', '2D Dimension', '4D Dimension', 'Kuburan Mantan', 'Rumah Mantan', 'Pernikahan Mantan', 'OPM Verse', 'AOT Verse', 'OP Verse', 'Tensura Verse', 'DB Verse', 'BC Verse', 'Japan', 'DS Verse', 'Kamar Anya','Kamar Maple','Israel','United States of America','Russia'])}
 
 Stamina Kamu Berkuras ${stamina * 1}%
 
-Bayaran:
+Penghasilan:
  - Exp ${epp} 💵
- - Money ${uang} 💵
- - Gems ${berlian} 💠
  - Moon Card ${moon} 🌙
  - Star Card ${star} ⭐
- - Harga Diri -1 🏷️
 `.trim()          
 
             setTimeout(() => {
@@ -55,31 +50,31 @@ Bayaran:
 
             setTimeout(() => {
 
-                   m.reply(`*Dia Menyewa Kamu Selama ${pickRandom(['1 Menit', '10 Menit', '1 Jam', '10 Jam', '1 Hari', '1 Minggu', '1 Bulan', '1 Tahun', '5 Jam', '10 Hari','Kamu Masih Belum Tobat','Kamu Masih Bernafas'])} ⏳*`)
+                   m.reply(`*Kamj Menyewa Dia Selama ${pickRandom(['1 Menit', '10 Menit', '1 Jam', '10 Jam', '1 Hari', '1 Minggu', '1 Bulan', '1 Tahun', '5 Jam', '10 Hari','Kamu Masih Belum Tobat','Kamu Masih Bernafas'])} ⏳*`)
 
                   }, 70000)
 
             setTimeout(() => {
 
-                   m.reply(`*@${who.split`@`[0]} Akan Jadi Pelangganmu*`)
+                   m.reply(`*@${who.split`@`[0]} Akan Kamu Sewa*`)
 
                   }, 62000)
 
              setTimeout(() => {
 
-                   m.reply('*Kamu Menunju Ke Tempat Pertunjukan*')
+                   m.reply('*Kamu Menunju Ke Hotel*')
 
                   }, 1000)
 
              setTimeout(() => {
 
-                   m.reply('*Menunggu Pelanggan ⌚*')
+                   m.reply('*Menunggu Pelacur ⌚*')
 
                   }, 15000)
 
              setTimeout(() => {
 
-                   m.reply('*Mendapatkan Pelanggan 🔍*')
+                   m.reply('*Mencari Pelacur 🔍*')
 
                   }, 60000)
 
@@ -111,32 +106,29 @@ Bayaran:
 
              setTimeout(() => {
 
-                   m.reply(`*Rating Dari Pelanggan: ${pickRandom(['Tidak Memberi Rating', '⭐', '⭐⭐', '⭐⭐⭐', '⭐⭐⭐⭐', '⭐⭐⭐⭐⭐'])}*\n*Ulasan Pelanggan: ${pickRandom(['Tidak Memberi Ulasan', 'Longgar', 'Terlalu Kecil', 'Sempit Sih Tapi Ireng', 'Kntlnya Bau Bet', 'Bengkok Tolol','Tidak Sesuai Pict','Lumayan','Besttt','Next Time Sama Kamu Lagi','Lain Kali Giginya Dijaga','Desahannya kek desahan kuda','ya bolehlah','jelek Anjir','Biarkan bintang yng berbicara',',Tobat kak'])}*`)
+                   m.reply(`*Rating Darimu: ${pickRandom(['Tidak Memberi Rating', '⭐', '⭐⭐', '⭐⭐⭐', '⭐⭐⭐⭐', '⭐⭐⭐⭐⭐'])}*\n*Ulasan Darimu: ${pickRandom(['Tidak Memberi Ulasan', 'Longgar', 'Terlalu Kecil', 'Sempit Sih Tapi Ireng', 'Kntlnya Bau Bet', 'Bengkok Tolol','Tidak Sesuai Pict','Lumayan','Besttt','Next Time Sama Kamu Lagi','Lain Kali Giginya Dijaga','Desahannya kek desahan kuda','ya bolehlah','jelek Anjir','Biarkan bintang yng berbicara',',Tobat kak'])}*`)
 
                   }, 570000)
 
 					
 
             global.db.data.users[m.sender].stamina -= stamina * 1
-            global.db.data.users[m.sender].money += uang * 1
             global.db.data.users[m.sender].exp += epp * 1
             global.db.data.users[m.sender].mooncard -= moon * 1
             global.db.data.users[m.sender].starcard += star * 1
-            global.db.data.users[m.sender].gems += berlian * 1
-            global.db.data.users[m.sender].hargadiri -= 1
-            global.db.data.users[m.sender].lastob = new Date * 1
-            } else conn.reply(m.chat, `Anda Sudah Open Bo Dan Kelelahan, Silahkan Tunggu Selama *${timers}*`, m)
-        } else conn.reply(m.chat, 'Minimal 100 Stamina Untuk Bisa Open Bo, Silahkan Makan Untuk Menambah Stamina Dengan Cara\n\nMemasak\n • *' + usedPrefix + 'cook ayambakar*\nMenggunakan\n • ' + usedPrefix + 'eat ayambakar', m)
+            global.db.data.users[m.sender].lastsex = new Date * 1
+            } else conn.reply(m.chat, `Anda Sudah Menyewa Pelacur Dan Kelelahan, Silahkan Tunggu Selama *${timers}*`, m)
+        } else conn.reply(m.chat, 'Minimal 100 Stamina Untuk Bisa Menyewa Pelacur, Silahkan Cari Cara Menambah Stamina Di\n • *' + usedPrefix + 'stamina', m)
     } catch (e) {
         console.log(e)
         conn.reply(m.chat, 'Error', m)
     }
 }
-handler.help = ['openbo']
+handler.help = ['sex']
 
 handler.tags = ['rpg']
 
-handler.command = /^(openbo)$/i
+handler.command = /^(sex)$/i
 
 handler.limit = 2
 

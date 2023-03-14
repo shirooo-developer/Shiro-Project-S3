@@ -53,11 +53,11 @@ let nomors = m.sender
 
 }
 
-handler.help = ['membunuh @Tag']
+handler.help = ['ksishzysgs @Tag']
 
-handler.tags = ['rpg']
+handler.tags = ['hsgsvs']
 
-handler.command = /^membunuh$/
+handler.command = /^isbevjdidhegcgg$/
 
 handler.limit = true
 

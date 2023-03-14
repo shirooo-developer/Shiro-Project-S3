@@ -1,19 +1,19 @@
 
 // let pajak = 0.02
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-let dapat = (Math.floor(Math.random() * 100000))
+let dapat = (Math.floor(Math.random() * 400000))
 let nomors = m.sender
   let who
   if (m.isGroup) who = m.mentionedJid[0]
   else who = m.chat
-  if (!who) throw '*_Contoh: #merampok1 @Tag_*'
+  if (!who) throw '*_Contoh: #merampok3 @Tag_*'
   if (typeof db.data.users[who] == 'undefined') throw '*Pengguna Tidak Ada Didalam Data Base*'
   let __timers = (new Date - global.db.data.users[m.sender].lastrob)
   let _timers = (3600000 - __timers) 
   let timers = clockString(_timers)
   let users = global.db.data.users
   if (new Date - global.db.data.users[m.sender].lastrob > 3600000){
-  if (100000 > users[who].money) throw '*Money Target Dibawah Batas Minimal*'
+  if (400000 > users[who].money) throw '*Money Target Dibawah Batas Minimal*'
   if (0 < users[who].lastperisai) throw '*Target Menggunakan Perisai*'
   if (0 < users[m.sender].lastperisai) throw '*Tidak Bisa Merampok Saat Kamu Menggunakan Perisai*'
   users[who].money -= dapat * 1
@@ -23,12 +23,12 @@ let nomors = m.sender
 
 }else conn.reply(m.chat, `*Anda Sudah Merampok Dan Berhasil Sembunyi , Tunggu ${timers} Untuk Merampok Lagi*`, m)
 }
-handler.help = ['merampok1 *@tag*']
+handler.help = ['merampok3 *@tag*']
 handler.tags = ['rpg']
-handler.command = /^merampok1$/
+handler.command = /^merampok3$/
 handler.limit = 1
 handler.group = true
-handler.level = 10
+handler.level = 100
 
 export default handler
 

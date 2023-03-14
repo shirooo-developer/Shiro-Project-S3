@@ -11,15 +11,19 @@ if (user.stamina < 90) return m.reply(`
 *Dibutuhkan Setidaknya 90ST ⚡ Untuk Berpetualang*
 *Cari Cara Menambah Stamina Di #stamina*
 `.trim())
-if (user.money < 24999) return m.reply(`
-*Dibutuhkan Setidaknya 25K Money💵 Untuk Berpetualang*
+if (user.skilladventure < 1) return m.reply(`
+*Dibutuhkan Setidaknya Level 1 A-A Untuk Berpetualang*
+*Dapatkan Adventure Ability Di #library*
+`.trim())
+if (user.money < 49999) return m.reply(`
+*Dibutuhkan Setidaknya 50K Money💵 Untuk Berpetualang*
 *Dapatkan Money Di Fitur Role Playing Game*
 `.trim())
     if (new Date - user.lastadventure <= cooldown) return m.reply(`
 Fitur Berpetualang Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
 `.trim())
     const rewards = reward(user)
-    let text = `*_Anda Telah Berpetualang Ke Arah Timur Dan Sampai Di ${pickRandom(['Russia', 'China', 'Jepang', 'Korea Selatan', 'Australia', 'Selandia Baru', 'Indonesia', 'Malaysia','Filipina'])}_*`
+    let text = `*_Anda Telah Berpetualang Ke Arah Barat Dan Sampai Di ${pickRandom(['Amerika Serikat', 'Kanada', 'Meksiko', 'Brasil', 'Argentina', 'Chile', 'Kolombia', 'Peru','Ekuador','Bolivia'])}_*`
     for (const lost in rewards.lost) if (user[lost]) {
         const total = rewards.lost[lost].getRandom()
         user[lost] -= total * 1
@@ -34,9 +38,9 @@ Fitur Berpetualang Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
     m.reply(text.trim())
     user.lastadventure = new Date * 1
 }
-handler.help = ['adventure1']
+handler.help = ['adventure2']
 handler.tags = ['rpg']
-handler.command = /^(adventure1|(ber)?petualang(ang)?)$/i
+handler.command = /^(adventure2|(ber)?petualang(ang)?)$/i
 handler.register = true
 handler.limit = 1
 handler.cooldown = cooldown
@@ -47,14 +51,16 @@ export default handler
 function reward(user = {}) {
     let rewards = {
         reward: {
-            exp: 50000,
-            money: 100000,
-            coal: 10,
+            exp: 100000,
+            money: 200000,
+            iron: 15,
+            mangga: 10,
+            apel: 10,
+            anggur: 10,
+            jeruk: 10,
+            pisang: 10,
             wood: 10,
-            apel: 5,
-            paus: 5,
-            kepiting: 5,
-            gurita: 5,
+            drink: 10,
         },
         lost: {
             health: 101 - user.cat * 4,

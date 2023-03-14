@@ -1,129 +1,65 @@
-let handler = async (m, { 
-conn, usedPrefix
-}) => {
-
+const cooldown = 3600000
+let handler = async (m, { usedPrefix }) => {
     let user = global.db.data.users[m.sender]
-    let __timers = (new Date - user.lastlumber)
-    let _timers = (10800000 - __timers)
-    let timers = clockString(_timers) 
-    let penebang = await conn.getName(m.sender)
-    
-    if (user.stamina < 20) return m.reply(`*Stamina Anda Tidak Cukup*\nHarap Isi Stamina Anda Dengan *${usedPrefix}eat`)
-    if (user.lastlumber > 10800000) throw m.reply(`Kamu Masih Kelelahan\nHarap Tunggu ${timers} Lagi`)
-    
-    let rndm1 = `${Math.floor(Math.random() * 200)}`
-		let rndm2 = `${Math.floor(Math.random() * 20000)}`
-		let rndm3 = `${Math.floor(Math.random() * 200)}`
-.trim()
-
-let ran1 = (rndm1 * 10)
-let ran2 = (rndm2 * 10)
-let ran3 = (rndm3 * 10)
-
-let hmsil1 = `${ran1}`
-let hmsil2 = `${ran2}`
-let hmsil3 = `${ran3}`
-
-let jln = `
-🚶⬛⬛⬛⬛⬛⬛⬛⬛⬛
-⬛⬜⬜⬜⬛⬜⬜⬜⬛⬛
-⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
-🌳🏘️🌳🌳  🌳 🏘️ 🌳🌳🌳
-
-*${penebang} Mencari Area....*
-`
-
-let jln2 = `
-⬛⬛⬛⬛⬛⬛🚶⬛⬛⬛
-⬛⬜⬜⬜⬛⬜⬜⬜⬛⬛
-⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
-🌳🏘️🌳🌳  🌳 🏘️ 🌳🌳🌳
-
-*${penebang} Hampir Sampai....*
-`
-
-let jln3 = `
-⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
-⬛⬜⬜⬜⬛⬜⬜⬜⬛⬛
-⬛⬛⬛⬛⬛⬛⬛⬛⬛🚶
-🌳🏘️🌳🌳  🌳 🏘️ 🌳🌳🌳
-
-*${penebang} Mulai Menebang....*
-`
-
-let jln4 = `
-⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
-⬛⬜⬜⬜⬛⬜⬜⬜⬛⬛
-⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
-🏘️ 🏘️ 🚶
-
-*${penebang} Menerima Hasil....*
-`
-
-let hsl = `
-*LOGGING RESULTS ${penebang}*
-
- *${hmsil1} Kayu 🌲*
- *${hmsil2} Money 💵*
- *${hmsil3} Exp ✨*
- 
-Stamina Anda Berkurang -20
-`
-
-user.pickaxedurability -= 5
-user.stamina -= 20
-user.money += hmsil2
-user.kayu += hmsil1
-user.exp += hmsil3
-	
-setTimeout(() => {
-                     conn.sendButton(m.chat, hsl, wm, null, [
-		['Inventory', '/inv']
-	], m)
-                     }, 27000) 
-               
-                     setTimeout(() => {
-                     conn.sendHydrated(m.chat, jln4, botdate, null, null, null, null, null, [
-      [null, null]
-    ], null)
-                      }, 25000)
-                
-                     setTimeout(() => {
-                     conn.sendHydrated(m.chat, jln3, botdate, null, null, null, null, null, [
-      [null, null]
-    ], null)
-                     }, 20000) 
-                        
-                     setTimeout(() => {
-                     conn.sendHydrated(m.chat, jln2, botdate, null, null, null, null, null, [
-      [null, null]
-    ], null)
-                     }, 15000) 
-                    
-                     setTimeout(() => {
-                     conn.sendHydrated(m.chat, jln, botdate, null, null, null, null, null, [
-      [null, null]
-    ], null)
-                     }, 10000) 
-                     
-                     setTimeout(() => {
-                     conn.sendHydrated(m.chat, `*🔍 ${penebang} Mencari Area....*`, botdate, null, null, null, null, null, [
-      [null, null]
-    ], null)
-                     }, 0) 
-  user.lastlumber = new Date * 1
+    let timers = (cooldown - (new Date - user.lastnebang))
+    if (user.health < 90) return m.reply(`
+*Dibutuhkan Setidaknya 90HP ❤️ Untuk Nebang*
+Beli Potion Untuk Return HP Di: *${usedPrefix}buy potion jumlah*,
+Dan Ketik *${usedPrefix}heal jumlah* Untuk Menggunakan Potion
+`.trim())
+if (user.stamina < 90) return m.reply(`
+*Dibutuhkan Setidaknya 90ST ⚡ Untuk Nebang*
+*Cari Cara Menambah Stamina Di #stamina*
+`.trim())
+if (user.drink < 5) return m.reply(`
+*Dibutuhkan Setidaknya 5 Drink 🍹 Untuk Nebang*
+*Beli Drink Di #buy*
+`.trim())
+    if (new Date - user.lastnebang <= cooldown) return m.reply(`
+Fitur Menebang Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
+`.trim())
+    const rewards = reward(user)
+    let text = `*_Anda Telah Menebang Dihutan_*`
+    for (const lost in rewards.lost) if (user[lost]) {
+        const total = rewards.lost[lost].getRandom()
+        user[lost] -= total * 1
+        if (total) text += `\n*${global.rpg.emoticon(lost)}${lost}:* ${total}`
+    }
+    text += '\n\n*_Dan Kamu Mendapatkan_*'
+    for (const rewardItem in rewards.reward) if (rewardItem in user) {
+        const total = rewards.reward[rewardItem].getRandom()
+        user[rewardItem] += total * 1
+        if (total) text += `\n*${global.rpg.emoticon(rewardItem)}${rewardItem}:* ${total}`
+    }
+    m.reply(text.trim())
+    user.lastnebang = new Date * 1
 }
 handler.help = ['nebang']
 handler.tags = ['rpg']
-handler.command = /^(nebang|menebang)$/i
-handler.group = true
+handler.command = /^(nebang|(ber)?petualang(ang)?)$/i
+handler.register = true
 handler.limit = 1
+handler.cooldown = cooldown
+handler.disabled = false
+
 export default handler
 
-function clockString(ms) {
-  let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)
-  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
-  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
-  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return ['\n' + d, ' Days ', h, ' Hours ', m, ' Minute ', s, ' Second '].map(v => v.toString().padStart(2, 0)).join('')
+function reward(user = {}) {
+    let rewards = {
+        reward: {
+            exp: 100000,
+            wood: 30,
+        },
+        lost: {
+            health: 101 - user.cat * 4,
+            stamina: 101 - user.cat * 4
+        }
+    }
+    return rewards
+}
+
+function pickRandom(list) {
+
+    return list[Math.floor(Math.random() * list.length)]
+
 }

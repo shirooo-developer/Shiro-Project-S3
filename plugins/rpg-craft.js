@@ -16,36 +16,43 @@ let lgocraft = `
 `
 
   let caption = `
-*ITEM LIST:*
-Pickaxe ⛏️
-Sword ⚔️
-Fishingrod 🎣
-
 *MATERIALS*
 *Pickaxe ⛏️*
 *_- 40 Kayu_*
 *_- 20 Batu_*
 *_- 20 Iron_*
 *_- 80 String_*
+Level Maks 11 📊
+
+*Ax 🛶*
+*_- 40 Kayu_*
+*_- 20 Batu_*
+*_- 20 Iron_*
+*_- 80 String_*
+Level Maks 11 📊
 
 *Sword ⚔️*
 *_- 40 Kayu_*
 *_- 60 Iron_*
+Level Maks 11 📊
 
 *Fishingrod 🎣*
 *_- 40 Kayu_*
 *_- 8 Iron_*
 *_- 80 String_*
+Level Maks 4 📊
 
 *Armor 🥼*
 *_- 120 Iron_*
 *_- 4 Emerald_*
 *_- 20 Diamond_*
+Level Maks 11 📊
 
 *ATM 💳*
-*_- 12 Emerald_*
-*_- 24 Diamond_*
+*_- 5 Plastik PVC_*
+*_- 1 Semikonduktor_*
 *_- 40K Money_*
+Level Maks 10 📊
 `
 const sections = [
    {
@@ -53,6 +60,7 @@ const sections = [
 	rows: [
 	    {title: "Sword ⚔️", rowId: ".craft sword", description: "Crafting A Sword"},
 	    {title: "Pickaxe ⛏️", rowId: ".craft pickaxe", description: "Crafting A Pickaxe"},
+	    {title: "Ax 🛶", rowId: ".craft Ax", description: "Crafting A Ax"},
 	    {title: "Fishingrod 🎣", rowId: ".craft fishingrod", description: "Crafting A Fishingrod"},
 	    {title: "Armor 🥼", rowId: ".craft armor", description: "Crafting A Armor"},
 	    {title: "ATM 💳", rowId: ".craft atm", description: "Crafting A Atm"},
@@ -73,7 +81,7 @@ const listMessage = {
       const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
         switch (type) {
           case 'pickaxe':
-          if (user.pickaxe > 0) return m.reply('*_Kamu Sudah Memilik Ini_*')
+          if (user.pickaxe > 10) return m.reply('*_Kamu Sudah Memilik Ini_*')
             if(user.rock < 20 || user.wood < 40 || user.iron < 20 || user.string < 80) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_40 Kayu🪵_*\n*_20 Iron⛓_*\n*_80 String🕸️_*\n*_20 Batu🪨_*`)
             global.db.data.users[m.sender].wood -= 40
             global.db.data.users[m.sender].iron -= 20
@@ -83,8 +91,19 @@ const listMessage = {
             user.pickaxedurability = 40
             m.reply("*_Sukses Membuat 1 Pickaxe 🔨_*")
             break
+          case 'ax':
+          if (user.ax > 10) return m.reply('*_Kamu Sudah Memilik Ini_*')
+            if(user.rock < 20 || user.wood < 40 || user.iron < 20 || user.string < 80) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_40 Kayu🪵_*\n*_20 Iron⛓_*\n*_80 String🕸️_*\n*_20 Batu🪨_*`)
+            global.db.data.users[m.sender].wood -= 40
+            global.db.data.users[m.sender].iron -= 20
+            user.rock -= 20
+            global.db.data.users[m.sender].string -= 80
+            global.db.data.users[m.sender].ax += 1
+            user.axdurability = 40
+            m.reply("*_Sukses Membuat 1 Ax 🔨_*")
+            break
           case 'sword':
-          if (user.sword > 0) return m.reply('*_Kamu Sudah Memilik Ini_*')
+          if (user.sword > 10) return m.reply('*_Kamu Sudah Memilik Ini_*')
             if(user.wood < 40 || user.iron < 60) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_40 Kayu🪵_*\n*_60 Iron⛓️_*`)
             global.db.data.users[m.sender].wood -= 40
             global.db.data.users[m.sender].iron -= 60
@@ -103,7 +122,7 @@ const listMessage = {
             m.reply("*_Sukses Membuat 1 Pancingan 🎣_*")
             break
           case 'armor':
-          if (user.armor > 0) return m.reply('*_Kamu Sudah Memilik Ini_*')
+          if (user.armor > 10) return m.reply('*_Kamu Sudah Memilik Ini_*')
             if(user.iron < 120 || user.emerald < 4 || user.diamond < 20) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_120 Iron ⛓️_*\n*_4 Emerald ❇️_*\n*_20 Diamond 💎_*`)
             global.db.data.users[m.sender].emerald -= 4
             global.db.data.users[m.sender].iron -= 120
@@ -114,11 +133,11 @@ const listMessage = {
             break
             case 'atm':
           if (user.atm > 9) return m.reply('*_Level Max_*')
-            if(user.emerald < 12 * buff || user.money < 40000 * buff || user.diamond < 24 * buff) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_${40000 * buff} Money 💵_*\n*_${12 * buff} Emerald ❇️_*\n*_${24 * buff} Diamond 💎_*`)
-            global.db.data.users[m.sender].emerald -= 12 * buff
+            if(user.plastikpvc < 5 * buff || user.money < 40000 * buff || user.semikonduktor < 1 * buff) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_${40000 * buff} Money 💵_*\n*_${5 * buff} Plastik PVC ⬜_*\n*_${1 * buff} Semikonduktor 💽_*`)
+            global.db.data.users[m.sender].plastikpvc -= 5 * buff
             global.db.data.users[m.sender].money -= 40000 * buff
             global.db.data.users[m.sender].pengeluaran += 40000 * buff
-            global.db.data.users[m.sender].diamond -= 24 * buff
+            global.db.data.users[m.sender].semikonduktor -= 1 * buff
             global.db.data.users[m.sender].atm += 1
             global.db.data.users[m.sender].fullatm += 5000000
             m.reply("*_Sukses Membuat 1 ATM 💳_*")

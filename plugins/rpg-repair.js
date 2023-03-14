@@ -13,12 +13,14 @@ let lgocraft = `
 *「 R E P A I R 」*`
 
   let caption = `
-Pickaxe ⛏️
-Sword ⚔️
-Fishingrod 🎣
-
 *MATERIALS*
 *Pickaxe ⛏️*
+*_- 20 Kayu_*
+*_- 12 Batu_*
+*_- 12 Iron_*
+*_- 4 Diamond_*
+
+*Ax 🛶*
 *_- 20 Kayu_*
 *_- 12 Batu_*
 *_- 12 Iron_*
@@ -39,6 +41,7 @@ const sections = [
 	rows: [
 	    {title: "Sword ⚔️", rowId: ".repair sword", description: "Repair Sword"},
 	    {title: "Pickaxe ⛏️", rowId: ".repair pickaxe", description: "Repair Pickaxe"},
+	    {title: "Ax 🛶", rowId: ".repair ax", description: "Repair Ax"},
 	    {title: "Armor 🥼", rowId: ".repair armor", description: "Repair Armor"},
 	]
     },
@@ -65,6 +68,17 @@ const listMessage = {
              user.iron -= 12
              user.diamond -= 4
              user.pickaxedurability = 100
+            m.reply("*_Sukses Memperbaiki_*")
+            break
+          case 'ax':
+          if (user.axdurability > 99) return m.reply('*_Item Ini Belum Memiliki Kerusakan_*')
+          if (user.ax == 0) return m.reply('*_Kamu Belum Memilik Item Ini_*')
+            if(user.diamond < 4 || user.rock < 12 || user.wood < 20 || user.iron < 12 ) return m.reply(`*_Barang Tidak Cukup_*`)
+             user.rock -= 12
+             user.wood -= 20
+             user.iron -= 12
+             user.diamond -= 4
+             user.axdurability = 100
             m.reply("*_Sukses Memperbaiki_*")
             break
           case 'sword':

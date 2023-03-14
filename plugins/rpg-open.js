@@ -1,15 +1,15 @@
 const rewards = {
     common: {
-        money: 50,
-        exp: 100,
+        money: 100,
+        exp: 15,
         trash: 2,
         potion: [0, 1, 0, 1, 0, 0, 0, 0, 0],
         common: [0, 1, 0, 1, 0, 0, 0, 0, 0, 0],
         uncommon: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     },
     uncommon: {
-        money: 150,
-        exp: 100,
+        money: 200,
+        exp: 150,
         trash: 6,
         potion: [0, 1, 0, 0, 0, 0, 0],
         diamond: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -21,8 +21,8 @@ const rewards = {
         string: [0, 1, 0, 0, 0, 0]
     },
     mythic: {
-        money: 250,
-        exp: 250,
+        money: 300,
+        exp: 300,
         trash: 10,
         potion: [0, 1, 0, 0, 0, 0],
         emerald: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -39,8 +39,8 @@ const rewards = {
         string: [0, 1, 0, 0, 0]
     },
     legendary: {
-        money: 660,
-        exp: 550,
+        money: 800,
+        exp: 700,
         trash: 14,
         potion: [0, 1, 0, 0, 0],
         emerald: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0],

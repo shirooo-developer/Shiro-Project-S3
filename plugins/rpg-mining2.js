@@ -7,19 +7,19 @@ let handler = async (m, { usedPrefix }) => {
 Beli Potion Untuk Return HP Di: *${usedPrefix}buy potion jumlah*,
 Dan Ketik *${usedPrefix}heal jumlah* Untuk Menggunakan Potion
 `.trim())
-if (user.stamina < 90) return m.reply(`
-*Dibutuhkan Setidaknya 90ST ⚡ Untuk Berpetualang*
+if (user.stamina < 70) return m.reply(`
+*Dibutuhkan Setidaknya 70ST ⚡ Untuk Berpetualang*
 *Cari Cara Menambah Stamina Di #stamina*
 `.trim())
-if (user.money < 24999) return m.reply(`
-*Dibutuhkan Setidaknya 25K Money💵 Untuk Berpetualang*
-*Dapatkan Money Di Fitur Role Playing Game*
+if (user.pickaxe < 1) return m.reply(`
+*Dibutuhkan Setidaknya 1 Pickaxe Untuk Berpetualang*
+*Dapatkan Pickaxe Di #craft*
 `.trim())
     if (new Date - user.lastadventure <= cooldown) return m.reply(`
 Fitur Berpetualang Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
 `.trim())
     const rewards = reward(user)
-    let text = `*_Anda Telah Berpetualang Ke Arah Timur Dan Sampai Di ${pickRandom(['Russia', 'China', 'Jepang', 'Korea Selatan', 'Australia', 'Selandia Baru', 'Indonesia', 'Malaysia','Filipina'])}_*`
+    let text = `*_Anda Telah Mining Dikedalaman 01 - 50_*`
     for (const lost in rewards.lost) if (user[lost]) {
         const total = rewards.lost[lost].getRandom()
         user[lost] -= total * 1
@@ -34,11 +34,11 @@ Fitur Berpetualang Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
     m.reply(text.trim())
     user.lastadventure = new Date * 1
 }
-handler.help = ['adventure1']
+handler.help = ['mining2']
 handler.tags = ['rpg']
-handler.command = /^(adventure1|(ber)?petualang(ang)?)$/i
+handler.command = /^(mining2|(ber)?petualang(ang)?)$/i
 handler.register = true
-handler.limit = 1
+handler.limit = 2
 handler.cooldown = cooldown
 handler.disabled = false
 
@@ -47,14 +47,12 @@ export default handler
 function reward(user = {}) {
     let rewards = {
         reward: {
-            exp: 50000,
-            money: 100000,
-            coal: 10,
-            wood: 10,
-            apel: 5,
-            paus: 5,
-            kepiting: 5,
-            gurita: 5,
+            exp: 150000,
+            rock: 40,
+            coal: 20,
+            iron: 20,
+            emerald: 10,
+            diamond: 10,
         },
         lost: {
             health: 101 - user.cat * 4,

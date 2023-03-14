@@ -11,7 +11,6 @@ const inventory = {
     exp: true,
     limit: true,
     intelligence: true,
-    rune: true,
     os: true,
     gems: true,
     diperkosa: true,
@@ -26,6 +25,11 @@ const inventory = {
     crystal: true,
     mooncard: true,
     starcard: true
+  },
+  ability: {
+    skillsport: true,
+    skilladventure: true,
+    skillgardening: true    
   },
   items: {
     osr: true,
@@ -61,6 +65,10 @@ const inventory = {
     bibirjeruk: true,
   },
   food: {
+  	minyak: true,
+    susu: true,
+  pisanggoreng: true,
+  jusmangga: true,
     ayambakar: true,
                     gulaiayam: true,
                     rendang: true,
@@ -107,6 +115,7 @@ const inventory = {
   durabi: {
     sworddurability: true,
     pickaxedurability: true,
+    axdurability: true,
     fishingroddurability: true,
     armordurability: true,
   },
@@ -153,6 +162,20 @@ const inventory = {
       '10': 'Netherite Pickaxe',
       '11': 'Hacker Pickaxe'
     },
+    ax: {
+      '0': '❌',
+      '1': 'Wooden Ax',
+      '2': 'Stone Ax',
+      '3': 'Iron Ax',
+      '4': 'Gold Ax',
+      '5': 'Copper Ax',
+      '6': 'Diamond Ax',
+      '7': 'Emerlad Ax',
+      '8': 'Crystal Ax',
+      '9': 'Obsidian Ax',
+      '10': 'Netherite Ax',
+      '11': 'Hacker Ax'
+    },
     fishingrod: true,
 
   },
@@ -189,9 +212,8 @@ const inventory = {
 }
 let handler = async (m, { conn }) => {
   let user = global.db.data.users[m.sender]
-  if (user.rune < -300) return m.reply(`
-*Gagal Mendapatkan Data Dari Server The Worlds Greatest Forces Dikarenakan Rune Milik Kamu Terlalu Rendah Sehingga Mengakibatkan Rusaknya Data*`.trim())
   const tools = Object.keys(inventory.tools).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${typeof inventory.tools[v] === 'object' ? inventory.tools[v][user[v]?.toString()] : `Level(s) ${user[v]}`}`).filter(v => v).join('\n').trim()
+  const ability = Object.keys(inventory.ability).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
   const items = Object.keys(inventory.items).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
   const fruit = Object.keys(inventory.fruit).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
   const food = Object.keys(inventory.food).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
@@ -205,6 +227,7 @@ let handler = async (m, { conn }) => {
 *👤 Name:* ${conn.getName(m.sender)}
 *🎖️ Tier:* ${user.role}
 *👑 Title:* ${user.title}
+*🛡️ Perisai:* ${user.lastperisai == 0 ? 'Non-Aktif': 'Aktif'}
 ${Object.keys(inventory.others).map(v => user[v] && `*${global.rpg.emoticon(v)} ${v}:* ${user[v]}`).filter(v => v).join('\n')}${tools ? `
 
 *TOOLS*
@@ -212,6 +235,9 @@ ${tools}` : ''}${dura ? `
 
 ${dura}` : ''}${items ? `
 
+*ABILITY*
+${ability}
+*Total Ability:* ${Object.keys(inventory.ability).map(v => user[v]).reduce((a, b) => a + b, 0)} Level` : ''}${items ? `
 
 *ITEMS*
 ${items}
@@ -245,17 +271,15 @@ ${pets ? pets + '\n' : ''}${user.petFood ? '🍖 Peetfood: ' + user.petFood : ''
 ${cooldowns}` : ''}
 *• Dungeon:* ${user.lastdungeon == 0 ? '✅': '❌'}
 *• Mining:* ${user.lastmining == 0 ? '✅': '❌'}
-*• Begal:* ${user.lastbegal == 0 ? '✅': '❌'}
+*• Nebang:* ${user.lastnebang == 0 ? '✅': '❌'}
 *• Open Bo:* ${user.lastob == 0 ? '✅': '❌'}
 *• Hunter:* ${user.lasthunt == 0 ? '✅': '❌'}
+*• Sport: ${user.lastsport == 0 ? '✅': '❌'}
 *• Merkosa:* ${user.lastmerkosa == 0 ? '✅': '❌'}
 *• Mulung:* ${user.lastmulung == 0 ? '✅': '❌'}
-*• Ngojek:* ${user.lastngojek == 0 ? '✅': '❌'}
 *• Berkebun:* ${user.lastberkebun == 0 ? '✅': '❌'}
-*• Ngewe:* ${user.lastngewe == 0 ? '✅': '❌'}
+*• Sex:* ${user.lastsex == 0 ? '✅': '❌'}
 *• Berburu:* ${user.lastberburu == 0 ? '✅': '❌'}
-*• Korupsi:* ${user.lastbansos == 0 ? '✅': '❌'}
-*• Membunuh:* ${user.lastbunuhi == 0 ? '✅': '❌'}
 *• Merampok:* ${user.lastrob == 0 ? '✅': '❌'}
 *• Misi:* ${user.lastmisi == 0 ? '✅': '❌'}
 *• Limitku:* ${user.lastlk == 0 ? '✅': '❌'}

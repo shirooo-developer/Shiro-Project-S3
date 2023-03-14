@@ -275,7 +275,7 @@ rows: [
 title: `𝗟𝗜𝗦𝗧 𝗠𝗘𝗡𝗨 ${namebot}`,
 rows: [
 {title: `👑 • 𝗢𝘄𝗻𝗲𝗿 𝗠𝗲𝗻𝘂`, rowId: ".? owner", description: "ᴍᴇɴᴜ ᴛᴇʀᴜɴᴛᴜᴋ ᴘᴇɴɢᴇᴍʙᴀɴɢ ᴅᴀɴ ᴘᴇᴍɪʟɪᴋ"},
-{title: `⚔️ • 𝗥𝗣𝗚 𝗠𝗲𝗻𝘂`, rowId: ".? rpg", description: "ᴘᴇʀᴍᴀɪɴᴀɴ ᴘᴇʀᴀɴ ᴄʟᴏsᴇ ᴡᴏʀʟᴅ"},
+{title: `⚔️ • 𝗥𝗣𝗚 𝗠𝗲𝗻𝘂 𝗦𝟮`, rowId: ".? rpg", description: "ᴘᴇʀᴍᴀɪɴᴀɴ ᴘᴇʀᴀɴ ᴄʟᴏsᴇ ᴡᴏʀʟᴅ"},
 {title: `🤖 • 𝗢𝗣𝗘𝗡 𝗔𝗜`, rowId: ".? openaimenu", description: "ᴋᴇᴄᴇʀᴅᴀsᴀɴ ʙᴜᴀᴛᴀɴ"},
 {title: `✨ • 𝗘𝗫𝗣 𝗠𝗲𝗻𝘂`, rowId: ".? xp", description: "ᴘᴇɴᴅᴜᴋᴜɴɢ ʀᴘɢ"},
 {title: `🤴 •𝗧𝗛𝗘 𝗪𝗔𝗥: 𝗘𝗺𝗽𝗲𝗿𝗼𝗿`, rowId: ".? lm", description: "ᴍᴇᴍᴘᴇʀᴇʙᴜᴛᴋᴀɴ ᴛᴇᴍᴘᴀᴛ ᴋᴀɪsᴀʀ"},

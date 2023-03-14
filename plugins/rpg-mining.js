@@ -1,38 +1,45 @@
-const cooldown = 10800000
+const cooldown = 3600000
 let handler = async (m, { usedPrefix }) => {
     let user = global.db.data.users[m.sender]
-    let timers = (cooldown - (new Date - user.lastmining))
-    if (user.health < 80) return m.reply(`
-*Dibutuhkan Setidaknya 80HP❤️ Untuk Mening*
-Isi HP Dengan Potion Dengan Cara *${usedPrefix}buy potion jumlah*,
-Ketik *${usedPrefix}heal jumlah* Untuk Menggunakan Potion
+    let timers = (cooldown - (new Date - user.lastadventure))
+    if (user.health < 90) return m.reply(`
+*Dibutuhkan Setidaknya 90HP ❤️ Untuk Berpetualang*
+Beli Potion Untuk Return HP Di: *${usedPrefix}buy potion jumlah*,
+Dan Ketik *${usedPrefix}heal jumlah* Untuk Menggunakan Potion
 `.trim())
-    if (user.pickaxe == 0) return m.reply('*Kamu Tidak Memiliki Pickaxe*\n*_Buat Di #craft_*')
-    if (new Date - user.lastmining <= cooldown) return m.reply(`
-*Kamu Sudah Mining\nTunggu Selama *🕐${timers.toTimeString()}*
+if (user.stamina < 70) return m.reply(`
+*Dibutuhkan Setidaknya 70ST ⚡ Untuk Berpetualang*
+*Cari Cara Menambah Stamina Di #stamina*
+`.trim())
+if (user.pickaxe < 1) return m.reply(`
+*Dibutuhkan Setidaknya 1 Pickaxe Untuk Berpetualang*
+*Dapatkan Pickaxe Di #craft*
+`.trim())
+    if (new Date - user.lastadventure <= cooldown) return m.reply(`
+Fitur Berpetualang Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
 `.trim())
     const rewards = reward(user)
-    let text = '*_Kamu Sudah Mining Dan Tersesat_*'
+    let text = `*_Anda Telah Mining Dikedalaman 30 - 100_*`
     for (const lost in rewards.lost) if (user[lost]) {
         const total = rewards.lost[lost].getRandom()
         user[lost] -= total * 1
         if (total) text += `\n*${global.rpg.emoticon(lost)}${lost}:* ${total}`
     }
-    text += '\n\nTapi Kamu Mendapatkan'
+    text += '\n\n*_Dan Kamu Mendapatkan_*'
     for (const rewardItem in rewards.reward) if (rewardItem in user) {
         const total = rewards.reward[rewardItem].getRandom()
         user[rewardItem] += total * 1
         if (total) text += `\n*${global.rpg.emoticon(rewardItem)}${rewardItem}:* ${total}`
     }
     m.reply(text.trim())
-    user.lastmining= new Date * 1
+    user.lastadventure = new Date * 1
 }
-handler.help = ['mining']
+handler.help = ['mining1']
 handler.tags = ['rpg']
-handler.command = /^(mining)$/i
+handler.command = /^(mining1|(ber)?petualang(ang)?)$/i
 handler.register = true
+handler.limit = 1
 handler.cooldown = cooldown
-handler.limit = 10
 handler.disabled = false
 
 export default handler
@@ -40,45 +47,21 @@ export default handler
 function reward(user = {}) {
     let rewards = {
         reward: {
-            exp: 149999,
-            trash: 804,
-            string: 50,
-            rock: 40,
-            iron: 50,
-            starcard: 1,
-            mooncard: 2,
-            diamond: 20,
-            coal: 20,
-            emerald: 8,
-            gems: 4,
-            common: 2 * (user.dog && (user.dog > 2 ? 2 : user.dog) * 1.2 || 1),
-            uncommon: [0, 0, 0, 1, 2].concat(
-                new Array(5 - (
-                    (user.dog > 2 && user.dog < 6 && user.dog) || (user.dog > 5 && 5) || 2
-                )).fill(0)
-            ),
-            mythic: [0, 0, 0, 0, 0, 1, 0, 0, 2].concat(
-                new Array(8 - (
-                    (user.dog > 5 && user.dog < 8 && user.dog) || (user.dog > 7 && 8) || 3
-                )).fill(0)
-            ),
-            legendary: [0, 0, 0, 0, 0, 0, 0, 1, 0, 2].concat(
-                new Array(10 - (
-                    (user.dog > 8 && user.dog) || 4
-                )).fill(0)
-            ),
-            iron: [0, 0, 0, 1, 0, 2],
-            gold: [0, 0, 0, 0, 0, 1, 2],
-            diamond: [0, 0, 0, 0, 0, 0, 1, 2].concat(
-                new Array(5 - (
-                    (user.fox < 6 && user.fox) || (user.fox > 5 && 5) || 0
-                )).fill(0)
-            ),
+            exp: 100000,
+            rock: 20,
+            coal: 10,
+            iron: 10,
         },
         lost: {
-            health: 40 - user.cat * 4,
-            pickaxedurability: 10
+            health: 101 - user.cat * 4,
+            stamina: 101 - user.cat * 4
         }
     }
     return rewards
+}
+
+function pickRandom(list) {
+
+    return list[Math.floor(Math.random() * list.length)]
+
 }

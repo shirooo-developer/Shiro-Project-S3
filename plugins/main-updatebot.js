@@ -1,60 +1,10 @@
 let handler = async m => m.reply(`
-*Update 12:00 - 8/03/2023*
+*Update 21:32 - 14/03/2023*
 
-_> Sekarang Player Tidak Bisa Merampok Player Lain Jika Rune Mereka Melebihi Kapasitas Maksimal Dan Player Lain Bisa Merampok Player Yang Memiliki Sedikit Rune_
+*Reset Season Pada Tanggal*
+🗓️ 23:59 15/03/2023
 
-_> Sekarang Level Maks ATM 10, Dan Sekarang Setiap Peningkatan Level ATM Sumber Daya Dibutuhkan Sesuai Level ATM_
-
-_> Multiplier Dari 29 Ke 31 (Semakin Tinggi Multiplier Semakin Banyak Exp Dibutuhkan Untuk Naik Level)_
-
-_> Sekarang EXP Berkurang 100K Saat Gagal Hunter Dan Cooldown Hunter Naik 1 Jam_
-
-_> Fitur Korupsi Kini Menampilkan Data Yang Benar Dan Cooldown Menjadi 7 Hari_
-
-_> Misi Baru Untuk Fitur #misi Sekaligus Perbaikan Dan Dibutuhkan 10 Limit_
-
-_> Sekarang Kamu Bisa Melihat Pemain Dengan Rank Tertinggi Di #toprank_
-
-_> Event4 Sekarang Bukan Top Money Tapi Rank Dan Hadiahnya Berubah_
-
-_> Health Tidak Dibutuhkan Untuk Open Bo Tetapi Butuh Stamina_
-
-_> Keseluruhan Rank/Role Diganti, Bisa Dicek Di #role_
-
-_> Harga Jual Hewan Dipasar Naik Dari 100 Ke 250_
-
-_> Cooldown Merampok Sekarang Hanya 3 Menit_
-
-_> Inventory Sekarang Menampilkan Jumlah Coal_
-
-_> Fitur Merkosa Sekarang Hanya Butuh 2 Limit_
-
-_> Kini Leaderboard Hanya 1 Page 100 Orang_
-
-_> Jumlah Rune Ditampilkan Di Inventory_
-
-_> Fitur OSR Kini Hanya Butuh 3 Limit_
-
-_> Title Custom Baru Di #title-list_
-
-_> Penjelasan Di Firur Tomoney_
-
-_> Cooldown Mining + 2 Jam_
-
-_> Cooldown Begal +1 Jam_
-
-
-*Fitur Baru:*
-#role
-#toprank
-#toprole
-#rob-int
-#top-up
-#topup
-
-*Fitur Dihapus:*
-- Suit
-- Ojek
+*Untuk Fitur Baru Cari Sendiri.* 
 
 
 *Thanks Everyone 🤡*
