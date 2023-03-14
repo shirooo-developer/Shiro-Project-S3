@@ -46,9 +46,9 @@ const sections = [
 	title: "LIBRARY",
 	rows: [
 	    {title: "Sports Ability 🎽", rowId: ".library sa", description: "Membuka Banyak Pilihan Olahraga"},
-	    {title: "Adventure Ability 🏔️", rowId: ".library aa", description: "Membuka Banyak Pilihan Adventure"}
-	    {title: "Gardening Ability 🍒", rowId: ".library ga", description: "Membuka Banyak Pilihan Berkebun"}
-	    {title: "Fishing Ability 🎣", rowId: ".library fa", description: "Membuka Banyak Pilihan Memancing"}
+	    {title: "Adventure Ability 🏔️", rowId: ".library aa", description: "Membuka Banyak Pilihan Adventure"},
+	    {title: "Gardening Ability 🍒", rowId: ".library ga", description: "Membuka Banyak Pilihan Berkebun"},
+	    {title: "Fishing Ability 🎣", rowId: ".library fa", description: "Membuka Banyak Pilihan Memancing"},
 	]
 }
 ]

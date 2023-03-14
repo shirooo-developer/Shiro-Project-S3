@@ -72,56 +72,56 @@ const listMessage = {
       const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
         switch (type) {
           case 'ayamb':
-          if (user.stamina > 100) return m.reply('*_Stamina Penuh_*')
+          if (user.stamina > 500) return m.reply('*_Stamina Penuh_*')
             if(user.ayambakar < 1) return m.reply(`*Makanan Tidak Cukup*\n\n*_Cari Ayam Di #berburu & Masak Ayam Di #cook_*`)
             global.db.data.users[m.sender].ayambakar -= 1
             global.db.data.users[m.sender].stamina += 40
             m.reply("*_Sukses Memakan 1 Ayam Bakar 🍗_*\n*_Menambah 40 Stamina ⚡_*")
             break
           case 'ayamg':
-          if (user.stamina > 100) return m.reply('*_Stamina Penuh_*')
+          if (user.stamina > 500) return m.reply('*_Stamina Penuh_*')
             if(user.ayamgoreng < 1) return m.reply(`*Makanan Tidak Cukup*\n\n*_Cari Ayam Di #berburu & Masak Ayam Di #cook_*`)
             global.db.data.users[m.sender].ayamgoreng -= 1
             global.db.data.users[m.sender].stamina += 50
             m.reply("*_Sukses Memakan 1 Ayam Goreng 🍗_*\n*_Menambah 50 Stamina ⚡_*")
             break
           case 'steak':
-          if (user.stamina > 100) return m.reply('*_Stamina Penuh_*')
+          if (user.stamina > 500) return m.reply('*_Stamina Penuh_*')
             if(user.steak < 1) return m.reply(`*Makanan Tidak Cukup*\n\n*_Cari Sapi Di #berburu & Masak Sapi Di #cook_*`)
             global.db.data.users[m.sender].steak -= 1
             global.db.data.users[m.sender].stamina += 70
             m.reply("*_Sukses Memakan 1 Steak  🥩_*\n*_Menambah 70 Stamina ⚡_*")
             break
           case 'ikan':
-          if (user.stamina > 100) return m.reply('*_Stamina Penuh_*')
+          if (user.stamina > 500) return m.reply('*_Stamina Penuh_*')
             if(user.ikanbakar < 1) return m.reply(`*Makanan Tidak Cukup*\n\n*_Cari Ikan Di #memancing & Masak Ikan Di #cook_*`)
             global.db.data.users[m.sender].ikanbakar -= 1
             global.db.data.users[m.sender].stamina += 44
             m.reply("*_Sukses Memakan 1 Ikan Bakar 🐟_*\n*_Menambah 44 Stamina ⚡_*")
             break
           case 'udang':
-          if (user.stamina > 100) return m.reply('*_Stamina Penuh_*')
+          if (user.stamina > 500) return m.reply('*_Stamina Penuh_*')
             if(user.udangbakar < 1) return m.reply(`*Makanan Tidak Cukup*\n\n*_Cari Udang Di #memancing & Masak Ikan Di #cook_*`)
             global.db.data.users[m.sender].udangbakar -= 1
             global.db.data.users[m.sender].stamina += 60
             m.reply("*_Sukses Memakan 1 Udang Bakar 🍤_*\n*_Menambah 60 Stamina ⚡_*")
             break
           case 'babi':
-          if (user.stamina > 100) return m.reply('*_Stamina Penuh_*')
+          if (user.stamina > 500) return m.reply('*_Stamina Penuh_*')
             if(user.babipanggang < 1) return m.reply(`*Makanan Tidak Cukup*\n\n*_Cari Babi Di #berburu & Masak Babi Di #cook_*`)
             global.db.data.users[m.sender].babipanggang -= 1
             global.db.data.users[m.sender].stamina += 58
             m.reply("*_Sukses Memakan 1 Babi Panggang 🥓_*\n*_Menambah 58 Stamina ⚡_*")
             break
           case 'jusmangga':
-          if (user.stamina > 100) return m.reply('*_Stamina Penuh_*')
+          if (user.stamina > 500) return m.reply('*_Stamina Penuh_*')
             if(user.jusmangga < 1) return m.reply(`*Makanan Tidak Cukup*\n\n*_Cari Mangga Di #adventure / #berkebun & Buat Jus Di #cook_*`)
             global.db.data.users[m.sender].jusmangga -= 1
             global.db.data.users[m.sender].stamina += 60
             m.reply("*_Sukses Memakan 1 Jus Mangga 🍸_*\n*_Menambah 60 Stamina ⚡_*")
             break
          case 'pisanggoreng':
-          if (user.stamina > 100) return m.reply('*_Stamina Penuh_*')
+          if (user.stamina > 500) return m.reply('*_Stamina Penuh_*')
             if(user.pisanggoreng < 1) return m.reply(`*Makanan Tidak Cukup*\n\n*_Cari Pisang Di #adventure / #berkebun & Goreng Pisang Di #cook_*`)
             global.db.data.users[m.sender].pisanggoreng -= 1
             global.db.data.users[m.sender].stamina += 60

@@ -1,20 +1,29 @@
-import fetch from 'node-fetch'
-import { tiktokdl, tiktokdlv2, tiktokdlv3 } from '@bochilteam/scraper'
-let handler = async (m, { conn, text, usedPrefix, command, args }) => {
-let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-if (!text) return conn.reply(m.chat, `*TITLE LIST 📑*\n\n\n*_Title Didapatkan Dari Pencapaianmu Di-Bot Ini, Dan Berikut Daftar Title_*\n\n*1. GOD 🔥*\n    Pemilik: *-*\n    Syarat: Pemilu\n    Buff: Dapat Memberi Title\n\n*2. GOD RH 🌟*\n    Pemilik: *-*\n    Syarat: Lebih Sering Bermain Bot (Time 1YR)\n    Buff: Mendapatkan 99% Akses Owner\n\n*2. THE DEMON LORD 🥀*\n    Pemilik: *-*\n    Syarat: Juara 1 Event FW1\n    Buff: Ultimate Skill Player Kill Dan 10+ Skill Khusus TDL\n\n*3. HERO 🛡️*\n    Pemilik: *-*\n    Syarat: Juara 1 Event DWA \n    Buff: Ultimate Skill Player Seal Dan 10+ Skill Khusus Hero\n\n*4. ANGEL 🌷*\n    Pemilik: *-*\n    Syarat: Juara 1 Event TCA\n    Buff: Ultimate Skill Multiple Buff Dan 10+ Skill Khusus Angel\n\n*5. THE CHAMPION 🏆* \n    Pemilik: *@${tc.split`@`[0]}*\n    Syarat: *Mendapatkan Top 1 Level (1 Season)*\n    Buff: Dapat Premium Acak 1-4 Hari Setiap Minggu\n\n*6. EXPERIENCE CHAMPION ✨* \n    Pemilik: *-*\n    Syarat: *Mendapatkan Top 1 Exp (1 Season)*\n    Buff: Dapat 3% Exp Dari Total Exp Setiap Minggu\n\n*7. BOUNDARY CHAMPION🎟️* \n    Pemilik: *-*\n    Syarat: *Mendapatkan Top 1 Limit (1 Season)*\n    Buff: Dapat 0-500 Limit Setiap Minggu\n\n*8. RAPE CHAMPION 🔞* \n    Pemilik: *-*\n    Syarat: *Mendapatkan Top 1 Pemerkosa (1 Season)*\n    Buff: Dapat 10-500- O/S Setiap Minggu \n\n\n*Custom Title ✍️*\n\n1. *@${ct1.split`@`[0]}* (PEDO)\n2. *@${ct2.split`@`[0]}* (LOLI SLAYER)\n\nSyarat: *Didapatkan Dari Pemilik Title GOD*\nBuff: *Request Hadiah Setiap Akhir Season*\n\n\n*_Title Akan Didapatkan Pada Akhir Season 2_*`, fkontak,  m)
-if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?tiktok.com\/([^\s&]+)/gi.test(text)) return conn.reply(m.chat, `*TITLE LIST 📑*\n\n\n*_Title Didapatkan Dari Pencapaianmu Di-Bot Ini, Dan Berikut Daftar Title_*\n\n*1. GOD 🔥*\n    Pemilik: *-*\n    Syarat: Pemilu\n    Buff: Dapat Memberi Title\n\n*2. GOD RH 🌟*\n    Pemilik: *-*\n    Syarat: Lebih Sering Bermain Bot (Time 1YR)\n    Buff: Mendapatkan 99% Akses Owner\n\n*2. THE DEMON LORD 🥀*\n    Pemilik: *-*\n    Syarat: Juara 1 Event FW1\n    Buff: Ultimate Skill Player Kill Dan 10+ Skill Khusus TDL\n\n*3. HERO 🛡️*\n    Pemilik: *-*\n    Syarat: Juara 1 Event DWA \n    Buff: Ultimate Skill Player Seal Dan 10+ Skill Khusus Hero\n\n*4. ANGEL 🌷*\n    Pemilik: *-*\n    Syarat: Juara 1 Event TCA\n    Buff: Ultimate Skill Multiple Buff Dan 10+ Skill Khusus Angel\n\n*5. THE CHAMPION 🏆* \n    Pemilik: *@${tc.split`@`[0]}*\n    Syarat: *Mendapatkan Top 1 Level (1 Season)*\n    Buff: Dapat Premium Acak 1-4 Hari Setiap Minggu\n\n*6. EXPERIENCE CHAMPION ✨* \n    Pemilik: *-*\n    Syarat: *Mendapatkan Top 1 Exp (1 Season)*\n    Buff: Dapat 3% Exp Dari Total Exp Setiap Minggu\n\n*7. BOUNDARY CHAMPION🎟️* \n    Pemilik: *-*\n    Syarat: *Mendapatkan Top 1 Limit (1 Season)*\n    Buff: Dapat 0-500 Limit Setiap Minggu\n\n*8. RAPE CHAMPION 🔞* \n    Pemilik: *-*\n    Syarat: *Mendapatkan Top 1 Pemerkosa (1 Season)*\n    Buff: Dapat 10-500- O/S Setiap Minggu \n\n\n*Custom Title ✍️*\n\n1. *@${ct1.split`@`[0]}* (PEDO)\n2. *@${ct2.split`@`[0]}* (LOLI SLAYER)\n\nSyarat: *Didapatkan Dari Pemilik Title GOD*\nBuff: *Request Hadiah Setiap Akhir Season*\n\n\n*_Title Akan Didapatkan Pada Akhir Season 2_*`, fkontak,  m)  
-try {
-const { author: { nickname }, video, description } = await tiktokdl(args[0])
-.catch(async _ => await tiktokdlv2(args[0]))
-.catch(async _ => await tiktokdlv3(args[0]))
-const url = video.no_watermark2 || video.no_watermark || 'https://tikcdn.net' + video.no_watermark_raw || video.no_watermark_hd
-if (!url) return conn.reply(m.chat, `*TITLE LIST 📑*\n\n\n*_Title Didapatkan Dari Pencapaianmu Di-Bot Ini, Dan Berikut Daftar Title_*\n\n*1. GOD 🔥*\n    Pemilik: *-*\n    Syarat: Pemilu\n    Buff: Dapat Memberi Title\n\n*2. GOD RH 🌟*\n    Pemilik: *-*\n    Syarat: Lebih Sering Bermain Bot (Time 1YR)\n    Buff: Mendapatkan 99% Akses Owner\n\n*2. THE DEMON LORD 🥀*\n    Pemilik: *-*\n    Syarat: Juara 1 Event FW1\n    Buff: Ultimate Skill Player Kill Dan 10+ Skill Khusus TDL\n\n*3. HERO 🛡️*\n    Pemilik: *-*\n    Syarat: Juara 1 Event DWA \n    Buff: Ultimate Skill Player Seal Dan 10+ Skill Khusus Hero\n\n*4. ANGEL 🌷*\n    Pemilik: *-*\n    Syarat: Juara 1 Event TCA\n    Buff: Ultimate Skill Multiple Buff Dan 10+ Skill Khusus Angel\n\n*5. THE CHAMPION 🏆* \n    Pemilik: *@${tc.split`@`[0]}*\n    Syarat: *Mendapatkan Top 1 Level (1 Season)*\n    Buff: Dapat Premium Acak 1-4 Hari Setiap Minggu\n\n*6. EXPERIENCE CHAMPION ✨* \n    Pemilik: *-*\n    Syarat: *Mendapatkan Top 1 Exp (1 Season)*\n    Buff: Dapat 3% Exp Dari Total Exp Setiap Minggu\n\n*7. BOUNDARY CHAMPION🎟️* \n    Pemilik: *-*\n    Syarat: *Mendapatkan Top 1 Limit (1 Season)*\n    Buff: Dapat 0-500 Limit Setiap Minggu\n\n*8. RAPE CHAMPION 🔞* \n    Pemilik: *-*\n    Syarat: *Mendapatkan Top 1 Pemerkosa (1 Season)*\n    Buff: Dapat 10-500- O/S Setiap Minggu \n\n\n*Custom Title ✍️*\n\n1. *@${ct1.split`@`[0]}* (PEDO)\n2. *@${ct2.split`@`[0]}* (LOLI SLAYER)\n\nSyarat: *Didapatkan Dari Pemilik Title GOD*\nBuff: *Request Hadiah Setiap Akhir Season*\n\n\n*_Title Akan Didapatkan Pada Akhir Season 2_*`, fkontak,  m)
-await conn.reply(m.chat, `*TITLE LIST 📑*\n\n\n*_Title Didapatkan Dari Pencapaianmu Di-Bot Ini, Dan Berikut Daftar Title_*\n\n*1. GOD 🔥*\n    Pemilik: *-*\n    Syarat: Pemilu\n    Buff: Dapat Memberi Title\n\n*2. GOD RH 🌟*\n    Pemilik: *-*\n    Syarat: Lebih Sering Bermain Bot (Time 1YR)\n    Buff: Mendapatkan 99% Akses Owner\n\n*2. THE DEMON LORD 🥀*\n    Pemilik: *-*\n    Syarat: Juara 1 Event FW1\n    Buff: Ultimate Skill Player Kill Dan 10+ Skill Khusus TDL\n\n*3. HERO 🛡️*\n    Pemilik: *-*\n    Syarat: Juara 1 Event DWA \n    Buff: Ultimate Skill Player Seal Dan 10+ Skill Khusus Hero\n\n*4. ANGEL 🌷*\n    Pemilik: *-*\n    Syarat: Juara 1 Event TCA\n    Buff: Ultimate Skill Multiple Buff Dan 10+ Skill Khusus Angel\n\n*5. THE CHAMPION 🏆* \n    Pemilik: *@${tc.split`@`[0]}*\n    Syarat: *Mendapatkan Top 1 Level (1 Season)*\n    Buff: Dapat Premium Acak 1-4 Hari Setiap Minggu\n\n*6. EXPERIENCE CHAMPION ✨* \n    Pemilik: *-*\n    Syarat: *Mendapatkan Top 1 Exp (1 Season)*\n    Buff: Dapat 3% Exp Dari Total Exp Setiap Minggu\n\n*7. BOUNDARY CHAMPION🎟️* \n    Pemilik: *-*\n    Syarat: *Mendapatkan Top 1 Limit (1 Season)*\n    Buff: Dapat 0-500 Limit Setiap Minggu\n\n*8. RAPE CHAMPION 🔞* \n    Pemilik: *-*\n    Syarat: *Mendapatkan Top 1 Pemerkosa (1 Season)*\n    Buff: Dapat 10-500- O/S Setiap Minggu \n\n\n*Custom Title ✍️*\n\n1. *@${ct1.split`@`[0]}* (PEDO)\n2. *@${ct2.split`@`[0]}* (LOLI SLAYER)\n\nSyarat: *Didapatkan Dari Pemilik Title GOD*\nBuff: *Request Hadiah Setiap Akhir Season*\n\n\n*_Title Akan Didapatkan Pada Akhir Season 2_*`, fkontak,  m)    
-} catch {
-await conn.reply(m.chat, `*Please Be Patient...*`, fkontak,  m)  
-}}
-handler.help = ['title-list']
-handler.tags = ['rpg']
-handler.command = ['title-list']
+let handler = async m => m.reply(`
+*Update 21:32 - 14/03/2023*
+
+*Reset Season Pada Tanggal*
+🗓️ 23:59 15/03/2023
+
+*Untuk Fitur Baru Cari Sendiri.* 
+
+
+*Thanks Everyone 🤡*
+`.trim()) // Tambah sendiri kalo mau
+
+
+handler.help = ['updatebot']
+
+
+handler.tags = ['rpg','main']
+
+
+handler.command = /^updatebot$/i
+
+
+handler.register = true
+
+
+handler.premiun = false
+
+
 export default handler

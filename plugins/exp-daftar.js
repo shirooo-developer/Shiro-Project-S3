@@ -32,8 +32,8 @@ const listMessage = {
   if (!name) throw '*Nama Tidak Boleh Kosong (Alphanumeric)*'
   if (!age) throw '*Umur Tidak Boleh Kosong (Angka)*'
   age = parseInt(age)
-  if (age > 19) throw '*Tidak Sesuai Dengan Umur Wajar Manusia, Jangan-Jangan Kamu Bukan Manusia*'
-  if (age < 12) throw '*Tidak Sesuai Dengan Umur Wajar Manusia, Jangan-Jangan Kamu Bukan Manusia*'
+  if (age > 19) throw '*Terlalu Tua*'
+  if (age < 12) throw '*Terlalu Muda*'
   user.name = name.trim()
   user.age = age
   user.regTime = + new Date

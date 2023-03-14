@@ -27,7 +27,7 @@ let buff1 = (buf1 == 0 ? '0' : '' || buf1 == 1 ? '2' : '' || buf1 == 2 ? '3' : '
 
             let _drink = `${Math.floor(Math.random() * 10)}`.trim()
             let drink = (_drink * 1)
-            let staminaa = `${Math.floor(Math.random() * 50)}`.trim() 
+            let staminaa = `${Math.floor(Math.random() * 350)}`.trim() 
             let str = `
 
             
