@@ -55,6 +55,7 @@ global.nomorwa = '0'
 global.tc = '6287777544597'
 global.ct1 = '6287730576939'
 global.ct2 = '6289671817600'
+global.lbm = '6288247160538'
 
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ WM ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
@@ -141,7 +142,7 @@ global.dikit = "*Sedikit Lagi*"
 
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ RPG GAME ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
-global.multiplier = 28 // The higher, The harder levelup
+global.multiplier = 29 // The higher, The harder levelup
 global.rpg = {
   emoticon(string) {
     string = string.toLowerCase()

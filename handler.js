@@ -104,7 +104,7 @@ export async function handler(chatUpdate) {
 
                 if (!isNumber(user.limit))
 
-                    user.limit = 40
+                    user.limit = 50
 
                 if (!isNumber(user.lastclaim))
 
@@ -171,7 +171,7 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.skinkastil))
                     user.skinkastil = 0
                 if (!isNumber(user.stamina))
-                    user.stamina = 100
+                    user.stamina = 500
                 if (!isNumber(user.csm))
                     user.csm = 0
                 if (!isNumber(user.oc))
@@ -371,7 +371,7 @@ export async function handler(chatUpdate) {
                   if (!isNumber(user.lastmisi))
                     user.lastmisi = 0
                  if (!isNumber(user.mana))
-                    user.mana = 0
+                    user.mana = 500
                  if (!isNumber(user.intelligence))
                     user.intelligence = 100000
                  if (!isNumber(user.lastrobint))
@@ -420,7 +420,7 @@ export async function handler(chatUpdate) {
 
                 if (!isNumber(user.money))
 
-                    user.money = 0
+                    user.money = 500000
 
                 if (!isNumber(user.atm))
 
@@ -436,7 +436,7 @@ export async function handler(chatUpdate) {
 
                 if (!isNumber(user.health))
 
-                    user.health = 100
+                    user.health = 500
 
                 if (!isNumber(user.potion))
 
@@ -766,8 +766,8 @@ export async function handler(chatUpdate) {
 
                     exp: 0,
 
-                    limit: 40,
-                    stamina: 100,
+                    limit: 50,
+                    stamina: 500,
 
                     lastclaim: 0,
 
@@ -794,11 +794,11 @@ export async function handler(chatUpdate) {
 
                     level: 0,
 
-                    role: 'E',
+                    role: 'Begginer',
 
                     autolevelup: true,
 
-                    money: 0,
+                    money: 500000,
 
                     bank: 0,
 
@@ -806,7 +806,7 @@ export async function handler(chatUpdate) {
 
                     fullatm: 0,
 
-                    health: 100,
+                    health: 500,
 
                     potion: 0,
 
@@ -924,7 +924,7 @@ export async function handler(chatUpdate) {
                     lastmancingclaim: 0,     
                     lastmisi: 0,      
                     misi: "",
-                    mana: 100,      
+                    mana: 500,      
                     crystal: 0,
                     skill: "",
                     husbu: "",
