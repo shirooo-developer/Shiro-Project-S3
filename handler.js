@@ -1767,9 +1767,9 @@ export async function handler(chatUpdate) {
 
                     }
 
-                  //  if (m.limit)
+                  //if (m.limit)
 
-                    //    m.reply(+m.limit + ' 𝗟𝗶𝗺𝗶𝘁 𝗧𝗲𝗿𝗽𝗮𝗸𝗮𝗶 🎟️')
+                      //m.reply(+m.limit + ' 𝗟𝗶𝗺𝗶𝘁 𝗧𝗲𝗿𝗽𝗮𝗸𝗮𝗶 🎟️')
 
                 }
 

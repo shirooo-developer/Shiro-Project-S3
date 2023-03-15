@@ -74,7 +74,7 @@ global.titlebot = `𝗙𝗘𝗟𝗜𝗖𝗜𝗔 𝗩𝟰𝟵`
 global.stickpack = ''
 global.stickauth = `🖍️ 𝗦𝘁𝗶𝗰𝗸𝗲𝗿𝘀 𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 𝗕𝗼𝘁 ⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗\n\n• 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 么 𝗞𝗲𝗶𝘇𝗵𝗮\n• 𝗕𝗼𝘁 𝗡𝘂𝗺𝗯𝗲𝗿 𝟬𝟴𝟱𝟭-𝟲𝟯𝟬𝟴-𝟯𝟳𝟱𝟬\n• 𝗕𝗼𝘁 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 𝟰𝟵`
 global.wmpack = ''
-global.wmauth = `\n\n\n\n\n\n\n\n𝗣𝘂𝗻𝘆𝗮 ᴋᴇɪᴢʜᴀ >>>\n🪀 𝟲𝟮𝟴𝟭𝟮𝟰𝟵𝟭𝟮𝟮𝟰𝟮𝟵\n\n\n\n\n\n\n\n\n`
+global.wmauth = `\n\n\n\n\n\n\n\n\n𝗣𝘂𝗻𝘆𝗮 ᴋᴇɪᴢʜᴀ >>>\n🪀 𝟲𝟮𝟴𝟭𝟮𝟰𝟵𝟭𝟮𝟮𝟰𝟮𝟵\n\n\n\n\n\n\n\n\n`
 global.week = `${week} ${date}`
 global.wibb = `${wktuwib}`
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ OWNER INFO ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
