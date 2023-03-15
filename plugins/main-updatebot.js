@@ -1,11 +1,9 @@
 let handler = async m => m.reply(`
 *Update 21:32 - 14/03/2023*
 
-*Reset Season Pada Tanggal*
-🗓️ 23:59 15/03/2023
-
 *Untuk Fitur Baru Cari Sendiri.* 
-
+*Jika Ada Keluhan Untuk Update Ini*
+*Bisa Hubungi wa.me/6281249122429
 
 *Thanks Everyone 🤡*
 `.trim()) // Tambah sendiri kalo mau

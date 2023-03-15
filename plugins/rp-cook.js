@@ -129,7 +129,7 @@ const listMessage = {
             break
           case 'jusmangga':
           if (user.jusmangga > 100) return m.reply('*_Kulkas Kamu Penuh_*')
-            if(user.mangga 2 <  || user.drink < 2 || user.susu < 1) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_2 Mangga 🍐_*\n*_2 Drink 🍹_*\n*_1 Susu 🥛_*`)
+            if(user.mangga < 2  || user.drink < 2 || user.susu < 1) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_2 Mangga 🍐_*\n*_2 Drink 🍹_*\n*_1 Susu 🥛_*`)
             global.db.data.users[m.sender].mangga -= 2
             global.db.data.users[m.sender].drink -= 2
             global.db.data.users[m.sender].susu -= 1
