@@ -40,7 +40,11 @@ let lgoeat = `
 *Pisang Goreng 🍌*
 + 60 Stamina ⚡
 
+*Mie Ayam 🍝*
++ 110 Stamina ⚡
 
+
+*Makanan Bisa Dijual Di #jualan*
 `
 const sections = [
    {
@@ -54,6 +58,7 @@ const sections = [
 	    {title: "Babi Panggang 🥓", rowId: ".eat babi", description: "+ 58 Stamina ⚡"},
 	    {title: "Jus Mangga 🍸", rowId: ".eat jusmangga", description: "+ 60 Stamina ⚡"},
 	    {title: "Pisang Goreng 🍌", rowId: ".eat pisanggoreng", description: "+ 60 Stamina ⚡"},
+	    {title: "Mie Ayam 🍝", rowId: ".eat mieayam", description: "+ 110 Stamina ⚡"},
 
 	]
     },
@@ -126,6 +131,13 @@ const listMessage = {
             global.db.data.users[m.sender].pisanggoreng -= 1
             global.db.data.users[m.sender].stamina += 60
             m.reply("*_Sukses Memakan 1 Pisang Goreng 🍌_*\n*_Menambah 60 Stamina ⚡_*")
+            break
+          case 'mieayam':
+          if (user.stamina > 500) return m.reply('*_Stamina Penuh_*')
+            if(user.mieayam < 1) return m.reply(`*Makanan Tidak Cukup*\n\n*_Cari Bahan Di #shop / #berburu & Buat Mie Ayam Di #cook_*`)
+            global.db.data.users[m.sender].pisanggoreng -= 1
+            global.db.data.users[m.sender].stamina += 110
+            m.reply("*_Sukses Memakan 1 Mangkok Mie Ayam 🍝_*\n*_Menambah 110 Stamina ⚡_*")
             break
 
 

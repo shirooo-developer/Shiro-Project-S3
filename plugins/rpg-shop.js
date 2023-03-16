@@ -66,6 +66,36 @@ const items = {
         plastikpvc: {
             money: 16000     
             },
+        mie: {
+            money: 2500     
+            },   
+        telur: {
+            money: 3500     
+            },     
+        bawangputih: {
+            money: 2600     
+            },    
+        bawangmerah: {
+            money: 2600     
+            },
+        kecap: {
+            money: 25000     
+            },
+            saostiram: {
+            money: 15000     
+            },  
+            garam: {
+            money: 5000     
+            },   
+            merica: {
+            money: 5000     
+            },
+            air: {
+            money: 10000     
+            },
+            daunbawang: {
+            money: 20000     
+            },
         semikonduktor: {
             money: 150000     
         }

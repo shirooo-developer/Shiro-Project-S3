@@ -49,6 +49,21 @@ let lgocook = `
 - 5 Pisang
 - 1 Minyak
 - 3 Coal
+
+*Mie Ayam 🍝*
+- 2 Mie
+- 2 Telur
+- 3 Bawang Merah
+- 2 Bawang Putih
+- 1 Ayam
+- 2 Minyak
+- 2 Air
+- 1 Saos Tiram
+- 1 Kecap
+- 1 Merica
+- 4 Daun Bawang
+- 1 Garam
+- 3 Coal
 `
 const sections = [
    {
@@ -62,6 +77,7 @@ const sections = [
 	    {title: "Babi Panggang 🥓", rowId: ".cook babi", description: "+ 58 Stamina ⚡"},
 	    {title: "Jus Mangga 🍸", rowId: ".cook jusmangga", description: "+ 60 Stamina ⚡"},
 	    {title: "Pisang Goreng 🍌", rowId: ".cook pisanggoreng", description: "+ 60 Stamina ⚡"},
+	    {title: "Mie Ayam 🍝", rowId: ".cook mieayam", description: "+ 110 Stamina ⚡"},
 
 	]
     },
@@ -144,6 +160,25 @@ const listMessage = {
             global.db.data.users[m.sender].pisang -= 5
             global.db.data.users[m.sender].pisanggoreng += 1
             m.reply("*_Sukses Menggoreng 1 Pisang Goreng 🍌_*")
+            break
+        case 'mieayam':
+          if (user.mieayam > 100) return m.reply('*_Kulkas Kamu Penuh_*')
+            if(user.mie < 2 || user.telur < 2 || user.bawangputih < 2 || user.bawangmerah < 3|| user.ayam < 1|| user.minyak < 2 || user.air < 2 || user.saostiram < 1 || user.kecap < 1 || user.merica < 1|| user.daunbawang < 4|| user.garam < 1 || user.coal < 3) return m.reply(`*Bahan Tidak Cukup*`)
+            global.db.data.users[m.sender].mie -= 2
+            global.db.data.users[m.sender].telur -= 2
+            global.db.data.users[m.sender].bawangputih -= 2
+            global.db.data.users[m.sender].bawangmerah -= 3
+            global.db.data.users[m.sender].ayam -= 1
+            global.db.data.users[m.sender].minyak -= 2
+            global.db.data.users[m.sender].air -= 2
+            global.db.data.users[m.sender].saostiram -= 1
+            global.db.data.users[m.sender].merica -= 1
+            global.db.data.users[m.sender].garam -= 1
+            global.db.data.users[m.sender].coal -= 3
+            global.db.data.users[m.sender].daunbawang -= 4
+            global.db.data.users[m.sender].kecap -= 1
+            global.db.data.users[m.sender].mieayam += 6
+            m.reply("*_Sukses Membuat 6 Mie Ayam 🍝_*")
             break
 
           default:
