@@ -384,6 +384,8 @@ export async function handler(chatUpdate) {
                     user.skillsport = 0
                  if (!isNumber(user.lastsport))
                     user.lastsport = 0   
+                 if (!isNumber(user.ruko))
+                    user.ruko = 0   
                  if (!isNumber(user.skilladventure))
                     user.skilladventure = 0   
                    if (!isNumber(user.pisanggoreng))
@@ -412,8 +414,24 @@ export async function handler(chatUpdate) {
                     user.hargadiri = 0   
                if (!isNumber(user.lastsex))
                     user.lastsex = 0   
-                  
-                    
+               if (!isNumber(user.air))
+                    user.merica = 0   
+if (!isNumber(user.garam))
+                    user.garam = 0     
+                  if (!isNumber(user.merica))
+                    user.merica = 0   
+                    if (!isNumber(user.saostiram))
+                    user.saostiram = 0  
+if (!isNumber(user.kecap))
+                    user.kecap = 0  
+if (!isNumber(user.bawangmerah))
+                    user.bawangmerah = 0     
+                    if (!isNumber(user.bawangputih))
+                    user.bawangputih = 0   
+                    if (!isNumber(user.telur))
+                    user.telur = 0   
+                    if (!isNumber(user.mie))
+                    user.mie = 0   
       
                     
 
@@ -621,6 +639,13 @@ export async function handler(chatUpdate) {
                     user.sword = 0
 
                 if (!isNumber(user.sworddurability))
+
+                    user.sworddurability = 0
+                    
+                if (!isNumber(user.mieayam))
+
+                    user.daunbawang = 0
+                    if (!isNumber(user.daunbawang))
 
                     user.sworddurability = 0
 
@@ -952,6 +977,19 @@ export async function handler(chatUpdate) {
                     axdurability: 0,
                     hargadiri: 0,
                     lastsex: 0,
+                    
+                    mie :0,
+                    telur: 0,
+                    bawangmerah: 0,
+                    bawangputih: 0,
+                    kecap: 0,
+                    garam: 0,
+                    saostiram: 0,
+                    merica: 0,
+                    air: 0,
+                    mieayam: 0,
+                    ruko: 0,
+                    daunbawang: 0,
                     
                     emerald: 0,
 
