@@ -19,6 +19,9 @@ async function handler(m, { conn, args, text , usedPrefix, command }) {
     let timers = (cooldown - (new Date - user.lastmisi))
     if(new Date - user.lastmisi <= cooldown) return m.reply(`*Wait For 🕐${clockString(timers)}*`)
     if(!user.skill) return m.reply("*Anda Belum Mempunyai Skill*")
+    if(!user.waifu) return m.reply("*Anda Belum Mempunyai Waifu*")
+    if(!user.husbu) return m.reply("*Anda Belum Mempunyai Husbu*")
+    if(!user.ras) return m.reply("*Anda Belum Mempunyai Ras*")
 
     if(!(m.sender in conn.mission)) {
       conn.mission[m.sender] = {
