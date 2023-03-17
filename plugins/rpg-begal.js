@@ -25,12 +25,10 @@ let buff1 = (buf1 == 0 ? '0' : '' || buf1 == 1 ? '2' : '' || buf1 == 2 ? '3' : '
             if (new Date - global.db.data.users[m.sender].lastbegal > 7200000) {
 
 
-            let _health = `${Math.floor(Math.random() * 199)}`.trim()
+            let _health = `${Math.floor(Math.random() * 399)}`.trim()
             let health = (_health * 1)
-            let uang = `${Math.floor(Math.random() * 400000)}`.trim()
+            let uang = `${Math.floor(Math.random() * 200000)}`.trim()
             let xp = `${Math.floor(Math.random() * 200000)}`.trim()  
-            let batas = `${Math.floor(Math.random() * 20)}`.trim() 
-            let berlian = `${Math.floor(Math.random() * 4)}`.trim() 
             let str = `
 
             
@@ -41,86 +39,152 @@ Health Kamu Berkurang ${health * 1}❤️
 Rampasan:
  - Money ${uang} 💵
  - Exp ${xp} ✨
- - Limit ${batas} 🎟️
- - Gems ${berlian} 💠
 `.trim()          
 
             setTimeout(() => {
 
                   conn.sendMessage(m.chat, { text: str }, { quoted: m })
 
-                  }, 600000)
+                  }, 1320000)
 
 
             setTimeout(() => {
 
-                   m.reply(`*Kamu Dan Target Bertarung Selama ${pickRandom(['1 Menit', '10 Menit', '1 Jam', '10 Jam', '1 Hari', '1 Minggu', '1 Bulan', '1 Tahun', '5 Jam', '10 Hari','Kamu Menyerah','Target Menyerah'])} ⏳*`)
+                   m.reply('*Kamu Ingin Membegal Player Lain*')
 
-                  }, 70000)
+                  }, 6000)
 
-            setTimeout(() => {
+setTimeout(() => {
+
+                   m.reply('*Kamu Menyiapkan Diri*')
+
+                  }, 60000)
+                  
+setTimeout(() => {
+
+                   m.reply('*Melancarkan Aksi*')
+
+                  }, 120000)
+
+setTimeout(() => {
+
+                   m.reply('*Mencari Orang Yang Bisa Dibegal*')
+
+                  }, 180000)
+
+setTimeout(() => {
+
+                   m.reply('*Musuh Terlihat!*')
+
+                  }, 240000)
+                  
+ setTimeout(() => {
+
+                   m.reply('*Maju Maju Maju!*')
+
+                  }, 300000)                 
+
+setTimeout(() => {
 
                    m.reply(`*@${who.split`@`[0]} Akan Kamu Begal*`)
 
-                  }, 62000)
+                  }, 360000)
 
-             setTimeout(() => {
+setTimeout(() => {
 
-                   m.reply(`*Kamu Menggunakan ${pickRandom(['Sabit', 'Pisau', 'Katana', 'Pedang', 'Golok', 'Bambu Runcing', 'Tsar Bomba', 'Bom Termobarik','Senapan Mesin','Gas Air Mata','Zangetsu','Excalibur'])} Untuk Membegal*`)
+                   m.reply('*Kamu Mulai Membegal*')
 
-                  }, 1000)
+                  }, 420000)
 
-             setTimeout(() => {
+setTimeout(() => {
 
-                   m.reply('*Mencari Target Begal 🔎*')
-
-                  }, 15000)
-
-             setTimeout(() => {
-
-                   m.reply('*Berhasil Menemukan Target 🔍*')
-
-                  }, 60000)
-
-             setTimeout(() => {
-
-                   m.reply('*Kamu Akan Menang*')
-
-                  }, 80000)
-
-              setTimeout(() => {
-
-                   m.reply(`*Kamu Mendapatkan Bantuan Dari ${pickRandom(['Polisi', 'TNI', 'Pembegal Lain', 'Teman', 'Adik', 'Mantan', 'Kekuatan Anime', 'Wibu', 'Anak EPEP', 'Akuto','Sakura','Kobeni','Akatsuki','Nazi','PKI'])}*`)
-
-                  }, 240000)
-
-             setTimeout(() => {
-
-                   m.reply('*Target Akan Kalah...*')
-
-                  }, 300000)
-
- 
-
-             setTimeout(() => {
-
-                   m.reply('*Perbedaan Kekuatan Terlihat...*')
+                   m.reply('*Target Melakukan Perlawanan*')
 
                   }, 480000)
 
-             setTimeout(() => {
+setTimeout(() => {
 
-                   m.reply(`*Pemenangnya Adalah Kamu Karena ${pickRandom(['Lagi Hokinya', 'Dapat Bantuan', 'User Bot Felicia', '....','MC'])}*`)
+                   m.reply('*Pertarungan Terjadi*')
 
-                  }, 570000)
+                  }, 540000)
+
+setTimeout(() => {
+
+                   m.reply(`*@${who.split`@`[1]} Datang Membantumu Karena Sesama Pembegal*`)
+
+                  }, 600000)
+
+setTimeout(() => {
+
+                   m.reply(`*@${who.split`@`[2]} Membantu Targetmu Karena Dia ${pickRandom(['Sange Ke', 'Sayang Ke', 'Cinta Ke', 'Berteman Dengan', 'Sefrekuensi Dengan', 'Sejenis Dengan', 'Gak Sengaja Ngelihat'])} Target*`)
+
+                  }, 660000)
+
+setTimeout(() => {
+
+                   m.reply('*Pertarungan Tak Terelakan Terjadi*')
+
+                  }, 720000)       
+
+setTimeout(() => {
+
+                   m.reply(`*Pertarungan Menghancurkan ${pickRandom(['0', '1', '2', '3', '4', '5', '6', '7','8','9','10','11','94'])} ${pickRandom(['Rumah', 'Desa', 'Kota', 'Kabupaten', 'Kecamatan', 'Provinsi', 'Negara', 'Aliansi','Kerajaan','Kekaisaran','Planet','Bintang','Universe','Multiverse','Metaverse','Xenoverse','Hyperverse','Omniverse','Microverse','Hollowverse','Crossoververse','Paraverse','Fictionalized universe'])}*`)
+
+                  }, 780000)      
+
+setTimeout(() => {
+
+                   m.reply(`*Pertarungan Terus Berlanjut Hinggah ${pickRandom(['372', '1', '2', '3', '4', '5', '6', '7','8','9','10','11','94'])} ${pickRandom(['Milenium', 'Dekade', 'Tahun', 'Bulan', 'Minggu', 'Hari', 'Jam', 'Menit','Detik','Milidetik'])}*`)
+
+                  }, 840000)               
+                  
+setTimeout(() => {
+
+                   m.reply(`*@${who.split`@`[3]} Menonton Pertarunganmu Karena ${pickRandom(['Dia Bisa Saja Membantaimu', 'Takut', 'Lagi Santay', 'Tau Siapa Yang Menang', 'Dia Seperti Menonton Pertarungan Anak Kecil'])}*`)
+
+                  }, 900000)  
+
+setTimeout(() => {
+
+                   m.reply(`*@${who.split`@`[4]} Tiba-Tiba Datang Dan Berusaha Menghentikan Pertarungan Tapi Gagal*`)
+
+                  }, 960000)               
+
+setTimeout(() => {
+
+                   m.reply(`*@${who.split`@`[5]} : "Santay dlu gasih 😂"*`)
+
+                  }, 1020000)   
+
+setTimeout(() => {
+
+                   m.reply('*Masih Belum Ditemukan Pemenang*')
+
+                  }, 1080000)   
+
+setTimeout(() => {
+
+                   m.reply('*. . .*')
+
+                  }, 1140000)       
+
+setTimeout(() => {
+
+                   m.reply('*Diakibatkan Oleh Banyak Faktor Kamu Pun Menang*')
+
+                  }, 1200000)   
+
+setTimeout(() => {
+
+                   m.reply('*Finally*')
+
+                  }, 1260000)                                       
 
 					
 
             global.db.data.users[m.sender].health -= health * 1
             global.db.data.users[m.sender].money += uang * 1
-            global.db.data.users[m.sender].limit += batas * buff1
             global.db.data.users[m.sender].exp += xp * 1
-            global.db.data.users[m.sender].gems += berlian * 1
             global.db.data.users[m.sender].lastbegal = new Date * 1
             } else conn.reply(m.chat, `Anda Sudah Membegal Dan Kelelahan, Silahkan Tunggu Selama *${timers}*`, m)
         } else conn.reply(m.chat, 'Minimal 100 Health Untuk Bisa Membegal, Silahkan Beli Dan Gunakan Potion Untuk Menambah Health Dengan Cara\n\nMembeli\n • *' + usedPrefix + 'buy potion jumlah*\nMenggunakan\n • ' + usedPrefix + 'heal', m)
@@ -135,7 +199,7 @@ handler.tags = ['rpg']
 
 handler.command = /^(begal)$/i
 
-handler.limit = 3
+handler.limit = 2
 
 handler.group = true
 
