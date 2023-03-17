@@ -415,7 +415,7 @@ export async function handler(chatUpdate) {
                if (!isNumber(user.lastsex))
                     user.lastsex = 0   
                if (!isNumber(user.air))
-                    user.merica = 0   
+                    user.air = 0   
 if (!isNumber(user.garam))
                     user.garam = 0     
                   if (!isNumber(user.merica))
@@ -644,10 +644,10 @@ if (!isNumber(user.bawangmerah))
                     
                 if (!isNumber(user.mieayam))
 
-                    user.daunbawang = 0
+                user.mieayam = 0
                     if (!isNumber(user.daunbawang))
 
-                    user.sworddurability = 0
+                    user.daunbawang = 0
 
                 if (!isNumber(user.pickaxe))
 
