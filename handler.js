@@ -373,7 +373,7 @@ export async function handler(chatUpdate) {
                  if (!isNumber(user.mana))
                     user.mana = 500
                  if (!isNumber(user.intelligence))
-                    user.intelligence = 100000
+                    user.intelligence = 99
                  if (!isNumber(user.lastrobint))
                     user.lastrobint = 0
                  if (!isNumber(user.rune))
@@ -957,7 +957,7 @@ if (!isNumber(user.bawangmerah))
                     ras: "",
                     mooncard: 0,
                     starcard: 0,      
-                    intelligence: 100000,      
+                    intelligence: 99,      
                     lastrobint: 0,      
                     rune: 0,      
                     drink: 0,      
