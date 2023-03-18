@@ -94,6 +94,7 @@ const inventory = {
                     udangbakar: true,
                     pausbakar: true,
                     kepitingbakar: true,      
+                    mieayam: true,
   },
   animal: {
     panda: true,

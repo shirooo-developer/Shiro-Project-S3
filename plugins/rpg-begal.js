@@ -110,13 +110,13 @@ setTimeout(() => {
 
 setTimeout(() => {
 
-                   m.reply(`*@${who.split`@`[1]} Datang Membantumu Karena Sesama Pembegal*`)
+                   m.reply(`*@${who.split`@`[0]} Datang Membantumu Karena Sesama Pembegal*`)
 
                   }, 600000)
 
 setTimeout(() => {
 
-                   m.reply(`*@${who.split`@`[2]} Membantu Targetmu Karena Dia ${pickRandom(['Sange Ke', 'Sayang Ke', 'Cinta Ke', 'Berteman Dengan', 'Sefrekuensi Dengan', 'Sejenis Dengan', 'Gak Sengaja Ngelihat'])} Target*`)
+                   m.reply(`*@${who.split`@`[0]} Membantu Targetmu Karena Dia ${pickRandom(['Sange Ke', 'Sayang Ke', 'Cinta Ke', 'Berteman Dengan', 'Sefrekuensi Dengan', 'Sejenis Dengan', 'Gak Sengaja Ngelihat'])} Target*`)
 
                   }, 660000)
 
@@ -140,19 +140,19 @@ setTimeout(() => {
                   
 setTimeout(() => {
 
-                   m.reply(`*@${who.split`@`[3]} Menonton Pertarunganmu Karena ${pickRandom(['Dia Bisa Saja Membantaimu', 'Takut', 'Lagi Santay', 'Tau Siapa Yang Menang', 'Dia Seperti Menonton Pertarungan Anak Kecil'])}*`)
+                   m.reply(`*@${who.split`@`[0]} Menonton Pertarunganmu Karena ${pickRandom(['Dia Bisa Saja Membantaimu', 'Takut', 'Lagi Santay', 'Tau Siapa Yang Menang', 'Dia Seperti Menonton Pertarungan Anak Kecil'])}*`)
 
                   }, 900000)  
 
 setTimeout(() => {
 
-                   m.reply(`*@${who.split`@`[4]} Tiba-Tiba Datang Dan Berusaha Menghentikan Pertarungan Tapi Gagal*`)
+                   m.reply(`*@${who.split`@`[0]} Tiba-Tiba Datang Dan Berusaha Menghentikan Pertarungan Tapi Gagal*`)
 
                   }, 960000)               
 
 setTimeout(() => {
 
-                   m.reply(`*@${who.split`@`[5]} : "Santay dlu gasih 😂"*`)
+                   m.reply(`*@${who.split`@`[0]} : "Santay dlu gasih 😂"*`)
 
                   }, 1020000)   
 

@@ -10,7 +10,7 @@ async function handler(m, { conn, args, text , usedPrefix, command }) {
     const cooldown = 60 * (1000 * 60) //coldown timer second
     let user = global.db.data.users[m.sender] //Get db user
     
-    if (user.health == 0 || user.stamina == 0 || user.mana == 0) return m.reply(`*Minimal Stamina/Mana/Health Kamu 100*`)
+    if (user.health < 0 || user.stamina < 0 || user.mana < 0) return m.reply(`*Minimal Stamina/Mana/Health Kamu 100*`)
 
     if(typeof user.lastmisi != "number") global.db.data.users[m.sender].lastmisi = 0
     if(typeof user.exp != "number") global.db.data.users[m.sender].exp = 0

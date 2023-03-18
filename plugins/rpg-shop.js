@@ -81,7 +81,7 @@ const items = {
         kecap: {
             money: 25000     
             },
-            saostiram: {
+        saostiram: {
             money: 15000     
             },  
             garam: {
