@@ -28,7 +28,7 @@ handler.command = /^math/i
 handler.register = true
 handler.limit = 40
 handler.level = 100
-handler.intelligence = 500
+handler.intelligence = 200
 
 let modes = {
     noob: [-3, 3, -3, 3, '+-', 15000, 1000],
