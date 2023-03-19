@@ -1,20 +1,17 @@
 let handler = async m => m.reply(`
 *MONEY CONVERSION RATE*
 
-#tomoney9 - 1,10/10 
-#tomoney8 - 1,25/10
-#tomoney7 - 1,42/10
-#tomoney6 - 1,60/10
-#tomoney5 - 2,00/10
-#tomoney4 - 2,50/10
-#tomoney3 - 3,33/10
-#tomoney2 - 5,00/10
-#tomoney1 - 10,00/10
+#tomoney9 - Pajak 89,0% 
+#tomoney8 - Pajak 87,5%
+#tomoney7 - Pajak 85,8%
+#tomoney6 - Pajak 84,0%
+#tomoney5 - Pajak 80,0%
+#tomoney4 - Pajak 75,0%
+#tomoney3 - Pajak 66,7%
+#tomoney2 - Pajak 50,0%
+#tomoney1 - Pajak 00,00%
 
 *Fitur Untuk Mengkonversi/Menjadikan Exp Sebagai Money*
-
-*_Semakin Tinggi Rate_*
-*_Semakin Kecil Juga Pajak:)_*
 `.trim()) // Tambah sendiri kalo mau
 
 

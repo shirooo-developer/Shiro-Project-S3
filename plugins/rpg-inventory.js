@@ -25,7 +25,8 @@ const inventory = {
     mana: true,
     crystal: true,
     mooncard: true,
-    starcard: true
+    starcard: true,
+    hargadiri: true
   },
   ability: {
     skillsport: true,
@@ -73,7 +74,7 @@ const inventory = {
     bibitanggur: true,
     bibitapel: true,
     bibitmangga: true,
-    bibirjeruk: true,
+    bibitjeruk: true,
   },
   food: {
   	minyak: true,

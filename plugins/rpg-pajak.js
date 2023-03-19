@@ -42,11 +42,11 @@ const listMessage = {
       const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
         switch (type) {
           case 'ruko':
-          if (user.pajak < 100) return m.reply('*_Belum Bisa Membayar Pajak_*')
+          if (user.pajak > 100) return m.reply('*_Belum Bisa Membayar Pajak_*')
             if(user.money < 25000) return m.reply(`*_Uang Kurang Untuk Membayar Pajak_*`)
             global.db.data.users[m.sender].pajak -= 85
             global.db.data.users[m.sender].money -= 25000
-            m.reply("*_Sukses Membayar Pajak, Itu Yang Motornya Pajaknya Mari Dibayar Ya Kontol!_*")
+            m.reply("*_Sukses Membayar Pajak, Itu Yang Kendaraannya Pajaknya Mafi Dibayar Ya Kontol!_*")
             break        
 
 

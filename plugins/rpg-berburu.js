@@ -16,7 +16,7 @@ if (user.money < 24999) return m.reply(`
 *Dapatkan Money Di Fitur Role Playing Game*
 `.trim())
     if (new Date - user.lastadventure <= cooldown) return m.reply(`
-Fitur Berpetualang Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
+Fitur Berburu Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
 `.trim())
     const rewards = reward(user)
     let text = `*_Anda Telah Berburu_*`

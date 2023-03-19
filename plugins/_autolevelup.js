@@ -10,17 +10,18 @@ export function before(m) {
     if (before !== user.level) {
     
         m.reply(`
-*Selamat Sayangku, Kamu Naik Level*
+*Omedetou, Itoshii Hito. Anata Wa Reberu Appu Shimashita Ne*
 
-*📊 Kamu Telah Naik Level*
+*📊 Anata, Reberu Appu Shita Ne*
 *${before}* ➣ *${user.level}*
-*• Role: ${user.role}*
+*• Yakuwari: ${user.role}*
 
-*.cekrank - Untuk Lihat Progress*
-*.lb - Untuk Melihat Leaderboard*
+*.cekrank - Shinchoku O Kakunin Suru Tame Ni*
+*.toprank - Toppu Ranku O Miru Tame Ni*
+*.lb - Riidaaboodo O Miru Tame Ni*
 
-⭐ Tips:
-*"Mainkan Fitur RPG Untuk Naik Level"*`.trim())
+⭐ Hinto:
+*"Reberu Appu Suru Tame Ni RPG Kinou O Purei Suru"*`.trim())
     }
     
    /* let looh = `*${before}* -> *${user.level}*`

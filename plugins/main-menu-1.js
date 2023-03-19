@@ -35,8 +35,8 @@ let wib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
     })
     
 //==============> Menu nya
-let intro = `*_Bot Adalah Kependekan Dari “Robot” Yang Dapat Diartikan Sebagai Sistem Untuk Melakukan Tugas Tertentu Secara Otomatis Dan Repetitif. Karena Bot Beroperasi Secara Otomatis, Saya Dapat Bekerja Jauh Lebih Cepat Dibandingkan Manusia. Selain Itu, Bot Dapat Berjalan Setiap Waktu Tanpa Harus Menunggu Manusia Mengoperasikannya Secara Manual. Bot Biasanya Beroperasi Menggunakan Jaringan Internet Dan Saya Dapat Bekerja Selama 24 Jam Penuh._*\n\n*🏵️ Grup Official F-Room:*\n*https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa*\n\n*🏵️ Grup Official F-Club (NSFW Free):*\n*https://chat.whatsapp.com/EggiK9aee8JBbzBQseuSZT*`
-conn.send3ButtonDoc(m.chat, `\n\n     *Hai, Perkenalkan Aku ⌬ Felicia-MD*\n\n`, intro + `\n ‎\n\n`, '𝗔𝗟𝗟 𝗠𝗘𝗡𝗨', '.? all', '𝗟𝗜𝗦𝗧 𝗠𝗘𝗡𝗨', '.tesm', '𝗨𝗣𝗗𝗔𝗧𝗘 𝟭𝟰/𝟬𝟯 🍀', '.updatebot', m, { contextInfo: { forwardingScore: fsizedoc, externalAdReply: { body: 'Tes', containsAutoReply: true, mediaType: 1, mediaUrl: hwaifu.getRandom(),  renderLargerThumbnail: true, showAdAttribution: true, sourceId: 'Tes', sourceType: 'PDF', previewType: 'PDF', sourceUrl: sgc, thumbnail: fs.readFileSync('./thumbnail.jpg'), thumbnailUrl: sgc, title: '                 𝗜 𝗡 𝗧 𝗥 𝗢 𝗗 𝗨 𝗖 𝗘'}}})
+let intro = `*_"Hotto" Wa "robotto" No Ryaku De, Tokutei No Tasuku O Jidouteki Ni Kurikaeshi Jikkou Suru Shisutemu Toshite Kaishaku Dekimasu. Hotto Wa Jidouteki Ni Dousa Suru Tame, Ningen Yori Mo Haruka Ni Hayaku Sagyou Suru Koto Ga Dekimasu. Sarani, Hotto Wa Ningen Ga Shudou Suru No O Matsu Koto Naku, Itsudemo Dousa Suru Koto Ga Dekimasu. Hotto Wa Tsuujou, Intaanetto O Kashite Dousa Shi, Watashi Wa 24-Jikan Kadori Suru Koto Ga Dekimasu._*\n\n*🏵️ F-Room Koushiki Guruupu:*\n*https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa*\n\n*🏵️ F-Club Koushiki Guruupu (NSFW Muryou):*\n*https://chat.whatsapp.com/EggiK9aee8JBbzBQseuSZT*`
+conn.send3ButtonDoc(m.chat, `\n\n     *Hai, Perkenalkan Aku ⌬ Felicia-MD*\n\n`, intro + `\n ‎\n\n`, '𝗭𝗘𝗡 𝗠𝗘𝗡𝗬𝗨𝗨', '.? all', '𝗠𝗘𝗡𝗬𝗨𝗨 𝗜𝗖𝗛𝗜𝗥𝗔𝗡', '.tesm', '𝗞𝗢𝗨𝗦𝗛𝗜𝗡 𝟭𝟵/𝟬𝟯 🍀', '.updatebot', m, { contextInfo: { forwardingScore: fsizedoc, externalAdReply: { body: 'Tes', containsAutoReply: true, mediaType: 1, mediaUrl: hwaifu.getRandom(),  renderLargerThumbnail: true, showAdAttribution: true, sourceId: 'Tes', sourceType: 'PDF', previewType: 'PDF', sourceUrl: sgc, thumbnail: fs.readFileSync('./thumbnail.jpg'), thumbnailUrl: sgc, title: '                 𝗜 𝗡 𝗧 𝗥 𝗢 𝗗 𝗨 𝗖 𝗘'}}})
     } 
     
 handler.help = ['menu']
@@ -72,18 +72,18 @@ function clockStringP(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
-  let res = "Sudah Dini Hari Kok Belum Tidur Kak? 🥱"
+  let res = "Mada Konna Jikan Ni Netenai No?"
   if (time >= 4) {
-    res = "Pagi Kak 🌄"
+    res = "Ohayou Gozaimasu 🌄"
   }
   if (time >= 10) {
-    res = "Siang Kak ☀️"
+    res = "Konnichiwa ☀️"
   }
   if (time >= 15) {
-    res = "Sore Kak 🌇"
+    res = "Konbanwa 🌇"
   }
   if (time >= 18) {
-    res = "Malam Kak 🌙"
+    res = "Oyasumi Nasai 🌙"
   }
   return res
 }

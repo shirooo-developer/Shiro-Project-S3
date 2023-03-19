@@ -199,7 +199,7 @@ handler.tags = ['rpg']
 
 handler.command = /^(begal)$/i
 
-handler.limit = 2
+handler.limit = 1
 
 handler.group = true
 
