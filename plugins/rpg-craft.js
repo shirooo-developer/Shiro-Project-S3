@@ -8,7 +8,7 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   global.db.data.users[m.sender].pedang = global.db.data.users[m.sender].pedang || 0
   global.db.data.users[m.sender].fishingrod = global.db.data.users[m.sender].fishingrod || 0
   let buf = user.atm
-  let buff = (buf == 0 ? '1' : '' || buf == 1 ? '2' : '' || buf == 2 ? '3' : '' || buf == 3 ? '4' : '' || buf == 4 ? '5' : '' || buf == 5 ? '7' : '' || buf == 6 ? '9' : '' || buf == 7 ? '12' : '' || buf == 8 ? '14' : '' || buf == 9 ? '16' : '' || buf == 10 ? '18' : '' || buf == 11 ? '20' : '') 
+  let buff = (buf == 0 ? '1' : '' || buf == 1 ? '2' : '' || buf == 2 ? '3' : '' || buf == 3 ? '4' : '' || buf == 4 ? '5' : '' || buf == 5 ? '7' : '' || buf == 6 ? '9' : '' || buf == 7 ? '12' : '' || buf == 8 ? '14' : '' || buf == 9 ? '16' : '' || buf == 10 ? '18' : '' || buf == 11 ? '20' : '' || buf == 12 ? '23' : '' || buf == 13 ? '26' : '' || buf == 14 ? '30' : '' || buf == 15 ? '35' : '' || buf == 16 ? '40' : '' || buf == 17 ? '46' : '' || buf == 18 ? '52' : '' || buf == 19 ? '58' : '' || buf == 20 ? '70' : '') 
   let botol = global.botwm
 
 let lgocraft = `
@@ -49,21 +49,21 @@ Level Maks 4 📊
 Level Maks 11 📊
 
 *ATM 💳*
-*_- 5 Plastik PVC_*
-*_- 1 Semikonduktor_*
-*_- 40K Money_*
-Level Maks 10 📊
+*_- ${5 * buff} Plastik PVC_*
+*_- ${1 * buff} Semikonduktor_*
+*_- ${40000 * buff} Money (Biaya Admin)_*
+Level Maks 20 📊
 `
 const sections = [
    {
 	title: "𝗖𝗥𝗔𝗙𝗧 𝗔 𝗧𝗢𝗢𝗟",
 	rows: [
-	    {title: "Sword ⚔️", rowId: ".craft sword", description: "Crafting A Sword"},
-	    {title: "Pickaxe ⛏️", rowId: ".craft pickaxe", description: "Crafting A Pickaxe"},
-	    {title: "Ax 🛶", rowId: ".craft Ax", description: "Crafting A Ax"},
-	    {title: "Fishingrod 🎣", rowId: ".craft fishingrod", description: "Crafting A Fishingrod"},
-	    {title: "Armor 🥼", rowId: ".craft armor", description: "Crafting A Armor"},
-	    {title: "ATM 💳", rowId: ".craft atm", description: "Crafting A Atm"},
+	    {title: "Sword ⚔️", rowId: ".craft swordd", description: "Crafting A Sword"},
+	    {title: "Pickaxe ⛏️", rowId: ".craft pickaxee", description: "Crafting A Pickaxe"},
+	    {title: "Ax 🛶", rowId: ".craft axx", description: "Crafting A Ax"},
+	    {title: "Fishingrod 🎣", rowId: ".craft fishingrodd", description: "Crafting A Fishingrod"},
+	    {title: "Armor 🥼", rowId: ".craft armorr", description: "Crafting A Armor"},
+	    {title: "ATM 💳", rowId: ".craft atmm", description: "Crafting A Atm"},
 	]
     },
 ]
@@ -80,7 +80,7 @@ const listMessage = {
     if (/craft|Crafting/i.test(command)) {
       const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
         switch (type) {
-          case 'pickaxe':
+          case 'pickaxee':
           if (user.pickaxe > 10) return m.reply('*_Kamu Sudah Memilik Ini_*')
             if(user.rock < 20 || user.wood < 40 || user.iron < 20 || user.string < 80) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_40 Kayu🪵_*\n*_20 Iron⛓_*\n*_80 String🕸️_*\n*_20 Batu🪨_*`)
             global.db.data.users[m.sender].wood -= 40
@@ -91,7 +91,7 @@ const listMessage = {
             user.pickaxedurability = 40
             m.reply("*_Sukses Membuat 1 Pickaxe 🔨_*")
             break
-          case 'ax':
+          case 'axx':
           if (user.ax > 10) return m.reply('*_Kamu Sudah Memilik Ini_*')
             if(user.rock < 20 || user.wood < 40 || user.iron < 20 || user.string < 80) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_40 Kayu🪵_*\n*_20 Iron⛓_*\n*_80 String🕸️_*\n*_20 Batu🪨_*`)
             global.db.data.users[m.sender].wood -= 40
@@ -102,7 +102,7 @@ const listMessage = {
             user.axdurability = 40
             m.reply("*_Sukses Membuat 1 Ax 🔨_*")
             break
-          case 'sword':
+          case 'swordd':
           if (user.sword > 10) return m.reply('*_Kamu Sudah Memilik Ini_*')
             if(user.wood < 40 || user.iron < 60) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_40 Kayu🪵_*\n*_60 Iron⛓️_*`)
             global.db.data.users[m.sender].wood -= 40
@@ -111,7 +111,7 @@ const listMessage = {
             user.sworddurability = 40
             m.reply("*_Sukses membuat 1 sword 🗡️_*")
             break
-          case 'fishingrod':
+          case 'fishingrodd':
           if (user.fishingrod > 3) return m.reply('*_Kamu Sudah Memilik Ini_*')
             if(user.wood < 40 || user.iron < 8 || user.string < 80) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_40 Kayu🪵_*\n*_8 Iron⛓_*\n*_80 String🕸️_*`)
             global.db.data.users[m.sender].wood -= 40
@@ -121,7 +121,7 @@ const listMessage = {
             user.fishingroddurability = 40
             m.reply("*_Sukses Membuat 1 Pancingan 🎣_*")
             break
-          case 'armor':
+          case 'armorr':
           if (user.armor > 10) return m.reply('*_Kamu Sudah Memilik Ini_*')
             if(user.iron < 120 || user.emerald < 4 || user.diamond < 20) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_120 Iron ⛓️_*\n*_4 Emerald ❇️_*\n*_20 Diamond 💎_*`)
             global.db.data.users[m.sender].emerald -= 4
@@ -131,9 +131,9 @@ const listMessage = {
             user.armordurability = 50
             m.reply("*_Sukses Membuat 1 Armor 🥼_*")
             break
-            case 'atm':
-          if (user.atm > 9) return m.reply('*_Level Max_*')
-            if(user.plastikpvc < 5 * buff || user.money < 40000 * buff || user.semikonduktor < 1 * buff) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_${40000 * buff} Money 💵_*\n*_${5 * buff} Plastik PVC ⬜_*\n*_${1 * buff} Semikonduktor 💽_*`)
+            case 'atmm':
+          if (user.atm > 19) return m.reply('*_Level Max_*')
+            if(user.plastikpvc < 5 * buff || user.money < 40000 * buff || user.semikonduktor < 1 * buff) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_${40000 * buff} Money 💵 (Biaya Admin)_*\n*_${5 * buff} Plastik PVC ⬜_*\n*_${1 * buff} Semikonduktor 💽_*`)
             global.db.data.users[m.sender].plastikpvc -= 5 * buff
             global.db.data.users[m.sender].money -= 40000 * buff
             global.db.data.users[m.sender].pengeluaran += 40000 * buff
