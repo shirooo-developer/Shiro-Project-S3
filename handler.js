@@ -432,6 +432,49 @@ if (!isNumber(user.bawangmerah))
                     user.telur = 0   
                     if (!isNumber(user.mie))
                     user.mie = 0   
+                    if (!isNumber(user.like))
+                    user.like = 0   
+                    if (!isNumber(user.dislike))
+                    user.dislike = 0   
+                    if (!isNumber(user.subscriber))
+                    user.subscriber = 0   
+                    if (!isNumber(user.monet))
+                    user.monet = 0   
+                    if (!isNumber(user.showtime))
+                    user.showtime = 0   
+                    if (!isNumber(user.video))
+                    user.video = 0   
+                    if (!isNumber(user.tipeyt))
+                    user.tipeyt = 0  
+                    if (!isNumber(user.kamera))
+                    user.kamera = 0  
+                    if (!isNumber(user.pencahayaan))
+                    user.pencahayaan = 0  
+                    if (!isNumber(user.tripod))
+                    user.tripod = 0     
+                    if (!isNumber(user.se))
+                    user.se = 0   
+                    if (!isNumber(user.internet))
+                    user.internet = 0   
+                    if (!isNumber(user.mb))
+                    user.mb = 0   
+                    if (!isNumber(user.cpu))
+                    user.cpu = 0   
+                    if (!isNumber(user.gpu))
+                    user.gpu = 0   
+                    if (!isNumber(user.ram))
+                    user.ram = 0   
+                    if (!isNumber(user.ssds))
+                    user.ssds = 0   
+                    if (!isNumber(user.monitor))
+                    user.monitor = 0   
+                    if (!isNumber(user.hp))
+                    user.hp = 0   
+                    if (!isNumber(user.mak))
+                    user.mak = 0    
+                    if (!isNumber(user.skillyt))
+                    user.skillyt = 0    
+      
       
                     
 
@@ -783,6 +826,8 @@ if (!isNumber(user.bawangmerah))
               user.waifu = ''
               if (!('husbu' in user))
               user.husbu = ''
+              if (!('chname' in user))
+              user.chname = ''
               if (!("misi" in user)) user.misi = ""
 
             } else
@@ -955,6 +1000,7 @@ if (!isNumber(user.bawangmerah))
                     husbu: "",
                     waifu: "",
                     ras: "",
+                    chname: "",
                     mooncard: 0,
                     starcard: 0,      
                     intelligence: 99,      
@@ -977,6 +1023,7 @@ if (!isNumber(user.bawangmerah))
                     axdurability: 0,
                     hargadiri: 0,
                     lastsex: 0,
+                    skillyt: 0
                     
                     mie :0,
                     telur: 0,
@@ -990,6 +1037,26 @@ if (!isNumber(user.bawangmerah))
                     mieayam: 0,
                     ruko: 0,
                     daunbawang: 0,
+                    kamera :0,
+                    pencahayaan: 0,
+                    gpu: 0,
+                    cpu: 0,
+                    ram: 0,
+                    tripod: 0,
+                    se: 0,
+                    cahaya: 0,
+                    internet: 0,
+                    ssds: 0,
+                    mak: 0,
+                    monitor: 0,
+                    
+                    like :0,
+                    dislike: 0,
+                    monet: 0,
+                    subscriber: 0,
+                    showtime: 0,
+                    video: 0,
+                    tipeyt: 0,
                     
                     emerald: 0,
 
