@@ -65,8 +65,7 @@
         }
       }
     ],
-    "lastAccountSyncTimestamp": 1680155248,
-    "myAppStateKeyId": "AAAAABM7"
+    "lastAccountSyncTimestamp": 1680155248
   },
   "keys": {
     "preKeys": {
@@ -405,56 +404,6 @@
           }
         },
         "version": "v1"
-      }
-    },
-    "appStateSyncKeys": {
-      "AAAAABM+": {
-        "keyData": "RoQq7k8vo84nSmV7FdbRfmwWAJQ5CjVQkz5hnC/cnVM=",
-        "fingerprint": {
-          "rawId": 881960638,
-          "currentIndex": 2,
-          "deviceIndexes": [
-            0,
-            1
-          ]
-        },
-        "timestamp": "1680155226472"
-      },
-      "AAAAABM8": {
-        "keyData": "AVVmNjlpSx/q8m/lQnFoKl8tSV/3WhA5JKaXgs1NmZE=",
-        "fingerprint": {
-          "rawId": 4294967295,
-          "currentIndex": 4294967295,
-          "deviceIndexes": [
-            0,
-            1
-          ]
-        },
-        "timestamp": "1679026223410"
-      },
-      "AAAAABM9": {
-        "keyData": "7kYyedKlWiFEqfV7iumxFKAZ+1ep6AwgIFO6GciZ9+M=",
-        "fingerprint": {
-          "rawId": 881960638,
-          "currentIndex": 1,
-          "deviceIndexes": [
-            0,
-            1
-          ]
-        },
-        "timestamp": "0"
-      },
-      "AAAAABM7": {
-        "keyData": "s/xEm4ueMCQqULLw3hlDap6Xyrg97DX2vxMrDiejgAk=",
-        "fingerprint": {
-          "rawId": 1208177128,
-          "currentIndex": 1,
-          "deviceIndexes": [
-            0,
-            1
-          ]
-        },
-        "timestamp": "1678631968576"
       }
     }
   }
