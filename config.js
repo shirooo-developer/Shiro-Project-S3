@@ -296,6 +296,8 @@ global.rpg = {
                     mieayam: '🍝',
                     ruko: '🏘️',
                     pajak: '💲',
+                    subscriber: '❤️',
+                    chname: '📛',
       ras: '⚜️'
     }
     let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
