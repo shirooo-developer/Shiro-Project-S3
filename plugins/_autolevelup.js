@@ -10,15 +10,11 @@ export function before(m) {
     if (before !== user.level) {
     
         m.reply(`
-*Omedetou, Itoshii Hito. Anata Wa Reberu Appu Shimashita Ne*
+*Tahniah atas pencapaianmu yang luar biasa! Kamu telah menunjukkan keahlianmu yang mumpuni dalam bermain game dan berhasil naik level. Selamat dan teruskan semangatmu dalam mengembangkan kemampuanmu. Jangan lupa untuk selalu bersenang-senang dan menikmati setiap tantangan dalam permainanmu. Semoga sukses terus dalam perjalananmu di game ini dan ke depannya. Keep leveling up and stay awesome!*
 
-*📊 Anata, Reberu Appu Shita Ne*
+*Level Up Progress 📊*
 *${before}* ➣ *${user.level}*
-*• Yakuwari: ${user.role}*
-
-*.cekrank - Shinchoku O Kakunin Suru Tame Ni*
-*.toprank - Toppu Ranku O Miru Tame Ni*
-*.lb - Riidaaboodo O Miru Tame Ni*
+*• Tier: ${user.role}*
 
 ⭐ Hinto:
 *"Reberu Appu Suru Tame Ni RPG Kinou O Purei Suru"*`.trim())

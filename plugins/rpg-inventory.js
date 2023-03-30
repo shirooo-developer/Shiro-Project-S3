@@ -26,12 +26,17 @@ const inventory = {
     crystal: true,
     mooncard: true,
     starcard: true,
-    hargadiri: true
+    hargadiri: true,
+    chname: true,
+    subscriber, true
   },
   ability: {
     skillsport: true,
     skilladventure: true,
     skillgardening: true    
+  },
+  youtube: {
+    chname: true
   },
   items: {
     osr: true,
@@ -227,6 +232,7 @@ let handler = async (m, { conn }) => {
   let user = global.db.data.users[m.sender]
   const tools = Object.keys(inventory.tools).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${typeof inventory.tools[v] === 'object' ? inventory.tools[v][user[v]?.toString()] : `Level(s) ${user[v]}`}`).filter(v => v).join('\n').trim()
   const ability = Object.keys(inventory.ability).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
+  const youtube = Object.keys(inventory.youtube).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
   const items = Object.keys(inventory.items).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
   const fruit = Object.keys(inventory.fruit).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
   const food = Object.keys(inventory.food).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
@@ -246,11 +252,15 @@ ${Object.keys(inventory.others).map(v => user[v] && `*${global.rpg.emoticon(v)} 
 *TOOLS*
 ${tools}` : ''}${dura ? `
 
-${dura}` : ''}${items ? `
+${dura}` : ''}${ability ? `
 
 *ABILITY*
 ${ability}
-*Total Ability:* ${Object.keys(inventory.ability).map(v => user[v]).reduce((a, b) => a + b, 0)} Level` : ''}${items ? `
+*Total Ability:* ${Object.keys(inventory.ability).map(v => user[v]).reduce((a, b) => a + b, 0)} Level` : ''}${youtube ? `
+
+*YOUTUBE*
+${youtube}
+*Total Performance:* ${Object.keys(inventory.youtube).map(v => user[v]).reduce((a, b) => a + b, 0)} Performa` : ''}${items ? `
 
 *ITEMS*
 ${items}

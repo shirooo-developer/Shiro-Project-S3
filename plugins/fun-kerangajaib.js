@@ -9,7 +9,12 @@ let handler = async (m, { text, command, usedPrefix }) => {
         'Coba Tanya Lagi',
         'Malas Menjawab',
         'Tidak Tau',
-        'Tidak Ada'
+        'Tidak Ada',
+        'Jangan Mengharapkan-nya',
+        'Tentu Saja',
+        'Sudah Pasti',
+        'Kamu Nanya',
+        'Kamu Bertanya-Tanya',
     ].getRandom()}."`)
 }
 handler.help = ['kerang', 'kerangajaib'].map(v => v + ' <teks>')

@@ -22,7 +22,8 @@ const leaderboards = [
   'memperkosa',
   'rune',
   'pengeluaran',
-  'pet'
+  'pet',
+  'subscriber'
 ]
 let handler = async (m, { conn, args, participants, usedPrefix, command }) => {
   let users = Object.entries(global.db.data.users).map(([key, value]) => {
