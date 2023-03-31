@@ -63,46 +63,9 @@ Minimal 4000 Showtime Untuk Monet.
 
              setTimeout(() => {
 
-                   m.reply('*Mencari Ide Konten 🔎*')
+                   m.reply('*Membuat Dan Mengunggah Konten 📽️...*')
 
                   }, 1000)
-
-             setTimeout(() => {
-
-                   m.reply('*Menemukan Ide Dan Memulai Konten 🏁*')
-
-                  }, 15000)
-
-             setTimeout(() => {
-
-                   m.reply('*Shooting Berlangsung 📽️*')
-
-                  }, 60000)
-
-             setTimeout(() => {
-
-                   m.reply('*Sudah Dimulai...*')
-
-                  }, 80000)
-
-              setTimeout(() => {
-
-                   m.reply(`*@${who.split`@`[0]} Menjadi Asisten Pribadi Sementara*`)
-
-                  }, 240000)
-
-             setTimeout(() => {
-
-                   m.reply('*Selesai Shooting ✔️*')
-
-                  }, 300000)
- 
-
-             setTimeout(() => {
-
-                   m.reply('*Mengunggah Dan Menunggu Hasil ⌛...*')
-
-                  }, 306000)
 
 					
 

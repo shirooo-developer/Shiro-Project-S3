@@ -291,7 +291,7 @@ let handler = async (m, { conn }) => {
 ${tools}
 
 `.trim()
-  conn.sendButton(m.chat, `*${htki} CHANNEL STAT ${htka}*`, caption, null, [[`${user.stamina < 60 ? '𝗦𝗧𝗔𝗠𝗜𝗡𝗔 ⚡': '𝗬𝗢𝗨𝗧𝗨𝗕𝗘𝗥 🎮'}`,`${user.stamina < 60 ? '.heal': '.adventure'}`],['𝗧𝗢𝗣 𝗦𝗨𝗕𝗦𝗖𝗥𝗜𝗕𝗘𝗥 ❤️','.lb subscriber']],m)
+  conn.sendButton(m.chat, `*${htki} CHANNEL STAT ${htka}*`, caption, null, [[`${user.stamina < 60 ? '𝗦𝗧𝗔𝗠𝗜𝗡𝗔 ⚡': '𝗬𝗢𝗨𝗧𝗨𝗕𝗘𝗥 🎮'}`,`${user.stamina < 60 ? '.stamina': '.youtuber'}`],['𝗧𝗢𝗣 𝗦𝗨𝗕𝗦𝗖𝗥𝗜𝗕𝗘𝗥 ❤️','.lb subscriber']],m)
 }
 handler.help = ['stat']
 handler.tags = ['rpg']
