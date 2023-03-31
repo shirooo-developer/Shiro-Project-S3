@@ -278,6 +278,7 @@ let handler = async (m, { conn }) => {
   const tools = Object.keys(inventory.tools).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${typeof inventory.tools[v] === 'object' ? inventory.tools[v][user[v]?.toString()] : `Level(s) ${user[v]}`}`).filter(v => v).join('\n').trim()
   const caption = `
 *📺 Channel: ${user.chname}*
+*▶️ Tipe YT: ${user.tipeyt}
 *👁️ Viewer: ${user.viewer}*
 *👍 Like: ${user.like}*
 *👎 Dislike: ${user.dislike}*

@@ -28,7 +28,8 @@ const inventory = {
     starcard: true,
     hargadiri: true,
     chname: true,
-    subscriber, true
+    tipeyt: true,
+    subscriber: true
   },
   ability: {
     skillsport: true,
