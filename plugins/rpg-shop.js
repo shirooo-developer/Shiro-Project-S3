@@ -19,10 +19,10 @@ const items = {
             money: 3600
         },
         string: {
-            money: 2250
+            money: 10000
         },
         iron: { 
-        	money: 3600
+        	money: 10000
         },
         common: {
             money: 5000
