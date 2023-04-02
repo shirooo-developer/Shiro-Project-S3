@@ -8,7 +8,7 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   global.db.data.users[m.sender].pedang = global.db.data.users[m.sender].pedang || 0
   global.db.data.users[m.sender].fishingrod = global.db.data.users[m.sender].fishingrod || 0
   let buf = user.atm
-  let buff = (buf == 0 ? '1' : '' || buf == 1 ? '2' : '' || buf == 2 ? '3' : '' || buf == 3 ? '4' : '' || buf == 4 ? '5' : '' || buf == 5 ? '7' : '' || buf == 6 ? '9' : '' || buf == 7 ? '12' : '' || buf == 8 ? '14' : '' || buf == 9 ? '16' : '' || buf == 10 ? '18' : '' || buf == 11 ? '20' : '' || buf == 12 ? '23' : '' || buf == 13 ? '26' : '' || buf == 14 ? '30' : '' || buf == 15 ? '35' : '' || buf == 16 ? '40' : '' || buf == 17 ? '46' : '' || buf == 18 ? '52' : '' || buf == 19 ? '58' : '' || buf == 20 ? '70' : '') 
+  let buff = (buf < 10 ? '5' : '' || buf < 20 ? '10' : '')
   let botol = global.botwm
 
 let lgocraft = `
