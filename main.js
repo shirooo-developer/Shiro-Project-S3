@@ -1,6 +1,7 @@
-import './config.js'
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
+import './config.js';
 
-import { createRequire } from "module" // Bring in the ability to create the 'require' method
+import { createRequire } from "module"; // Bring in the ability to create the 'require' method
 import path, { join } from 'path'
 import { fileURLToPath, pathToFileURL } from 'url'
 import { platform } from 'process'
@@ -15,40 +16,42 @@ import {
   readFileSync,
   watch
 } from 'fs';
-import yargs from 'yargs'
-import { spawn } from 'child_process'
-import lodash from 'lodash'
-import syntaxerror from 'syntax-error'
-import { tmpdir } from 'os'
-import { format } from 'util'
-import { makeWASocket, protoType, serialize } from './lib/simple.js'
-import { Low, JSONFile } from 'lowdb'
+import yargs from 'yargs';
+import { spawn } from 'child_process';
+import lodash from 'lodash';
+import syntaxerror from 'syntax-error';
+import { tmpdir } from 'os';
+import { format } from 'util';
+import { makeWASocket, protoType, serialize } from './lib/simple.js';
+import { Low, JSONFile } from 'lowdb';
+import pino from 'pino';
 import {
   mongoDB,
   mongoDBV2
-} from './lib/mongoDB.js'
-import store from './lib/store.js'
-
+} from './lib/mongoDB.js';
+import store from './lib/storee.js'
 const {
-  useSingleFileAuthState,
+  // useSingleFileAuthState,
   DisconnectReason
-} = (await import('@adiwajshing/baileys')).default
+} = await import('@adiwajshing/baileys');
 
 const { CONNECTING } = ws
 const { chain } = lodash
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
-
 protoType()
 serialize()
 
 global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
+// global.Fn = function functionCallBack(fn, ...args) { return fn.call(global.conn, ...args) }
 global.timestamp = {
   start: new Date
 }
 
 const __dirname = global.__dirname(import.meta.url)
+
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
-global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
+global.prefix = new RegExp('^[' + (opts['prefix'] || '‎\/!#.\\').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
+
 global.db = new Low(
   /https?:\/\//.test(opts['db'] || '') ?
     new cloudDBAdapter(opts['db']) : /mongodb(\+srv)?:\/\//i.test(opts['db']) ?
@@ -81,13 +84,15 @@ global.loadDatabase = async function loadDatabase() {
   global.db.chain = chain(global.db.data)
 }
 loadDatabase()
+
 global.authFile = `${opts._[0] || 'session'}.data.json`
-const { state, saveState } = useSingleFileAuthState(global.authFile)
+const { state, saveState } = store.useSingleFileAuthState(global.authFile)
 
 const connectionOptions = {
   printQRInTerminal: true,
   auth: state,
   // logger: pino({ level: 'trace' })
+  logger: pino({ level: 'silent' })
 }
 
 global.conn = makeWASocket(connectionOptions)
@@ -116,6 +121,8 @@ function clearTmp() {
   })
 }
 
+
+
 async function connectionUpdate(update) {
   const { connection, lastDisconnect, isNewLogin } = update
   if (isNewLogin) conn.isInit = true
@@ -123,17 +130,9 @@ async function connectionUpdate(update) {
   if (code && code !== DisconnectReason.loggedOut && conn?.ws.readyState !== CONNECTING) {
     console.log(await global.reloadHandler(true).catch(console.error))
     global.timestamp.connect = new Date
+    
   }
   if (global.db.data == null) loadDatabase()
-   if (update.receivedPendingNotifications) conn.sendButtonDoc(`6281361281833@s.whatsapp.net`, 
-`┏═══════════════════
-┃╴◈ Bᴏᴛ Tᴇʟᴀʜ Tᴇʀsᴀᴍʙᴜɴɢ
-┣═══════════════════
-┃╴▶ Nᴏᴍᴏʀ : ${global.nomorbot}
-┃╴▶ Nᴀᴍᴇ Bᴏᴛ : ${global.namebot}
-┖┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬
-`, wm, 'Oᴡɴᴇʀ', '.owner', null
-)
 }
 
 
@@ -164,32 +163,15 @@ global.reloadHandler = async function (restatConn) {
     conn.ev.off('connection.update', conn.connectionUpdate)
     conn.ev.off('creds.update', conn.credsUpdate)
   }
-  
-let welc = `
-𝗥 𝗘 𝗖 𝗘 𝗣 𝗧 𝗜 𝗢 𝗡 👋
 
-*Welcome @user*
-*In @subject*
-
-*Dont Forget To Introduce Yourself*
-
-*Bot Official Group*
-*https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa*
-
-*Description:*
-@desc`
-let lef = 
-`𝗥 𝗘 𝗟 𝗔 𝗫 👋
-*Goodbye @user*`
-
-  conn.welcome = welc
-  conn.bye = lef
-  conn.spromote = '*_@user Naik Pangkat Menjadi Admin_*'
-  conn.sdemote = '*_@user Turun Pangkat Menjadi Member_*'
-  conn.sDesc = '*Deskripsi Telah Diubah Ke:*\n*@desc*'
-  conn.sSubject = '*Judul Grup Telah Diubah Ke:*\n*@subject*'
-  conn.sIcon = '*_Ikon Grup Telah Diubah_*'
-  conn.sRevoke = '*_Tautan Grup Telah Diacak_*'
+  conn.welcome = '✧━━━━━━[ *WELCOME* ]━━━━━━✧\n\n┏––––––━━━━━━━━•\n│⫹⫺ @subject\n┣━━━━━━━━┅┅┅\n│( 👋 Hallo @user)\n├[ *INTRO* ]—\n│ *Nama:* \n│ *Umur:* \n│ *Gender:*\n┗––––––━━┅┅┅\n\n––––––┅┅ *DESCRIPTION* ┅┅––––––\n@desc'
+  conn.bye = '✧━━━━━━[ *GOOD BYE* ]━━━━━━✧\nSayonara *@user* 👋( ╹▽╹ )'
+  conn.spromote = '@user sekarang admin!'
+  conn.sdemote = '@user sekarang bukan admin!'
+  conn.sDesc = 'Deskripsi telah diubah ke \n@desc'
+  conn.sSubject = 'Judul grup telah diubah ke \n@subject'
+  conn.sIcon = 'Icon grup telah diubah!'
+  conn.sRevoke = 'Link group telah diubah ke \n@revoke'
   conn.handler = handler.handler.bind(global.conn)
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
   conn.groupsUpdate = handler.groupsUpdate.bind(global.conn)
