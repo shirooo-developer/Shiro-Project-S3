@@ -86,12 +86,6 @@ loadDatabase()
 
 global.authFile = `${opts._[0] || 'session'}.data.json`
 
-const connectionOptions = {
-  printQRInTerminal: true,
-  auth: state,
-  // logger: pino({ level: 'trace' })
-  logger: pino({ level: 'silent' })
-}
 
 global.conn = makeWASocket(connectionOptions)
 conn.isInit = false
