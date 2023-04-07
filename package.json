@@ -92,6 +92,7 @@
          "api-dylux": "^1.2.2",
         "url-regex-safe": "^3.0.0",
         "wa-sticker-formatter": "^4.3.2", 
+        "whatsapp-web.js": "^1.19.5", 
         "xfarr-api": "github:xfar05/xfarr-api",
         "yargs": "^17.5.1", 
         "zs-extract": "^1.4.1"
