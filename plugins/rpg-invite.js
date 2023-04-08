@@ -19,7 +19,7 @@ let handler = async (m, { args }) => {
 
   let guild = leader.guild
 
-  if (guild.members.length >= 4) {
+  if (guild.member.length >= 4) {
     return m.reply(`*Maaf, Guild Sudah Mencapai Batas Maksimal Anggota.*`)
   }
 

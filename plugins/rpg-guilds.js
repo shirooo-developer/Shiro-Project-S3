@@ -1,27 +1,26 @@
-let handler = async (m) => {
-  let guilds = Object.entries(global.db.data.guilds).map(([id, guild]) => {
-    return {
-      id,
-      name: guild.name,
-      leader: global.db.data.users[guild.leader].name,
-      memberCount: Object.keys(guild.members).length,
-      members: Object.values(guild.members).map(member => global.db.data.users[member].name)
-    }
-  })
+let handler = async (m, { conn }) => {
+  let guild = Object.values(global.db.data.guild)
 
-  if (guilds.length === 0) {
-    return m.reply(`Tidak ada guild yang terdaftar.`)
+  if (guild.length === 0) {
+    return m.reply(`Tidak ada guild yang terdaftar saat ini.`)
   }
 
-  let message = "Daftar Seluruh Guild:\n\n"
-  for (let guild of guilds) {
-    message += `ID: ${guild.id}\nNama Guild: ${guild.name}\nLeader: ${guild.leader}\nJumlah Anggota: ${guild.memberCount}\nAnggota: ${guild.members.join(", ")}\n\n`
+  let message = `Daftar semua guild:\n\n`
+
+  for (let guild of guild) {
+    let leaderName = global.db.data.users[guild.leader]?.name || 'Tidak diketahui'
+    let membersCount = guild.members.length
+    let guildName = guild.name || 'Tanpa Nama'
+
+    message += `Nama: ${guildName}\nLeader: ${leaderName}\nAnggota: ${membersCount}\n\n`
   }
 
-  m.reply(message)
+  await conn.sendMessage(m.chat, message, MessageType.text)
 }
 
-handler.command = /^guilds?$/i
+handler.help = ['daftarguild']
+handler.tags = ['guild']
+handler.command = /^(daftarguild)$/i
 handler.register = true
 handler.group = true
 

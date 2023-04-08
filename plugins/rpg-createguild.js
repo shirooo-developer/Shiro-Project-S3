@@ -8,7 +8,7 @@ let handler = async (m, { args }) => {
   }
 
   if (!args[0]) {
-    return m.reply(`*Silakan Masukkan Nama Guild Yang Ingin Dibuat. Contoh: ${usedPrefix}createguild NamaGuild*`)
+    return m.reply(`*Silakan Masukkan Nama Guild Yang Ingin Dibuat. Contoh: !createguild NamaGuild*`)
   }
 
   let guildName = args.join(' ')
@@ -20,7 +20,7 @@ let handler = async (m, { args }) => {
   let guild = {
     name: guildName,
     leader: m.sender,
-    members: [m.sender]
+    member: [m.sender]
   }
 
   user.guild = guild
