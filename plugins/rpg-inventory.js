@@ -314,7 +314,7 @@ ${cooldowns}` : ''}
 
 *🌙 Nickname:* ${user.nickname}
 `.trim()
-  conn.sendButton(m.chat, `*${htki} INVENTORY ${htka}*`, caption, null, [[`${user.health < 60 ? '𝗥𝗘𝗖𝗔𝗟 ♥️': '𝗔𝗗𝗩𝗘𝗡𝗧𝗨𝗥𝗘 👣'}`,`${user.health < 60 ? '.heal': '.adventure'}`],['𝗖𝗘𝗞 𝗥𝗔𝗡𝗞 🏅','.cekrank']],m)
+  m.reply(`*${htki} INVENTORY ${htka}*\n${caption}\n`);
 }
 handler.help = ['inventory', 'inv']
 handler.tags = ['rpg']

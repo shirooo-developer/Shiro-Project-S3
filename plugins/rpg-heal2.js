@@ -1,33 +1,62 @@
-let handler = async (m, { args, usedPrefix }) => {
-    let user = global.db.data.users[m.sender]
-    if (user.health >= 400) return m.reply(`
-*_Health Poin ❤️_*
-*_Sudah Penuh.._.*
-`.trim())
-let buf = user.cat
-let buff = (buf == 0 ? '5' : '' || buf == 1 ? '10' : '' || buf == 2 ? '15' : '' || buf == 3 ? '20' : '' || buf == 4 ? '25' : '' || buf == 5 ? '30' : '' || buf == 6 ? '35' : '' || buf == 7 ? '40' : '' || buf == 8 ? '45' : '' || buf == 9 ? '50' : '' || buf == 10 ? '100' : '' || buf == 11 ? '100' : '') 
-    const heal = 15 + (buff * 4)
-    let count = Math.max(1, Math.min(Number.MAX_SAFE_INTEGER, (isNumber(args[0]) && parseInt(args[0]) || Math.round((100 - user.health) / heal)))) * 1
-    if (user.potion < count) return m.reply(`
-Tersisa *${user.potion}* Potion 🍻
-Ketik *${usedPrefix}buy potion ${count - user.potion}* Untuk Membeli Potion 🍻
-`.trim())
-    user.potion -= count * 1
-    user.health += heal * count
-    m.reply(`
-Sukses Meminum *${count}* Potion 🍻
-`.trim())
+const healthMax = 200; // jumlah maksimum health player
+const healthRegen = 10; // jumlah health yang di-regen setiap 5 detik
+const healthCooldown = 5; // waktu cooldown regen health dalam detik
+const potionRegen = 50; // jumlah health yang di-regen oleh Potion
+
+let handler = async (m, { usedPrefix }) => {
+  let user = global.db.data.users[m.sender]
+
+  let now = new Date().getTime()
+  let healthCooldownEnd = user.lastmana + (healthCooldown * 1000)
+  let timeLeft = (healthCooldownEnd - now) / 1000
+
+  if (!user.potion || user.potion < 1) {
+    return m.reply(`
+*${user.name}*, Anda Tidak Memiliki Potion Untuk Mengembalikan Health!
+  `.trim())
+  }
+
+  if (user.health >= healthMax) {
+    return m.reply(`
+*${user.name}* Sudah Memiliki Health Maksimum!
+  `.trim())
+  }
+
+  if (now < healthCooldownEnd) {
+    return m.reply(`
+Harap Tunggu *${timeLeft.toFixed(0)} detik* Untuk Mendapatkan Health Kembali!
+  `.trim())
+  }
+
+  user.health = Math.min(user.health + potionRegen, healthMax)
+  user.lastmana = now
+  user.potion -= 1
+
+  let healthBar = getHealthBar(user.health, healthMax)
+
+  m.reply(`
+${healthBar}
+*${user.name}* Telah Mendapatkan *${potionRegen} Health ❤️* Dengan Menggunakan Potion!
+  `.trim())
 }
 
-handler.help = ['heal']
+handler.help = ['potion']
 handler.tags = ['rpg']
-handler.command = /^(heal)$/i
+handler.command = /^(potion)$/i
 handler.register = true
-handler.limit = 1
-export default handler
-
-function isNumber(number) {
-    if (!number) return number
-    number = parseInt(number)
-    return typeof number == 'number' && !isNaN(number)
+function getHealthBar(health, maxHealth) {
+  let healthBar = ''
+  let healthPerHeart = maxHealth / 10
+  let hearts = Math.ceil(health / healthPerHeart)
+  for (let i = 1; i <= 10; i++) {
+    if (i <= hearts) {
+      healthBar += '❤️'
+    } else {
+      healthBar += '🖤'
+    }
+  }
+  healthBar += `\n[${health}/${maxHealth}]`
+  return healthBar
 }
+
+export default handler

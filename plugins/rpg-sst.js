@@ -278,7 +278,7 @@ let handler = async (m, { conn }) => {
   const tools = Object.keys(inventory.tools).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${typeof inventory.tools[v] === 'object' ? inventory.tools[v][user[v]?.toString()] : `Level(s) ${user[v]}`}`).filter(v => v).join('\n').trim()
   const caption = `
 *📺 Channel: ${user.chname}*
-*▶️ Tipe YT: ${user.tipeyt}
+*▶️ Tipe YT: ${user.tipeyt}*
 *👁️ Viewer: ${user.viewer}*
 *👍 Like: ${user.like}*
 *👎 Dislike: ${user.dislike}*
@@ -291,7 +291,7 @@ let handler = async (m, { conn }) => {
 ${tools}
 
 `.trim()
-  conn.sendButton(m.chat, `*${htki} CHANNEL STAT ${htka}*`, caption, null, [[`${user.stamina < 60 ? '𝗦𝗧𝗔𝗠𝗜𝗡𝗔 ⚡': '𝗬𝗢𝗨𝗧𝗨𝗕𝗘𝗥 🎮'}`,`${user.stamina < 60 ? '.stamina': '.youtuber'}`],['𝗧𝗢𝗣 𝗦𝗨𝗕𝗦𝗖𝗥𝗜𝗕𝗘𝗥 ❤️','.lb subscriber']],m)
+  m.reply(`*${htki} CHANNEL ${htka}*\n${caption}\n`);
 }
 handler.help = ['stat']
 handler.tags = ['rpg']

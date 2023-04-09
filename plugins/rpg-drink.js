@@ -1,32 +1,62 @@
-let handler = async (m, { args, usedPrefix }) => {
-    let user = global.db.data.users[m.sender]
-    if (user.stamina >= 500) return m.reply(`
-*_Stamina ⚡_*
-*_Sudah Penuh.._.*
-`.trim())
-let buf = user.cat
-let buff = (buf == 0 ? '5' : '' || buf == 1 ? '10' : '' || buf == 2 ? '15' : '' || buf == 3 ? '20' : '' || buf == 4 ? '25' : '' || buf == 5 ? '30' : '' || buf == 6 ? '35' : '' || buf == 7 ? '40' : '' || buf == 8 ? '45' : '' || buf == 9 ? '50' : '' || buf == 10 ? '100' : '' || buf == 11 ? '100' : '') 
-    const heal = 10 + (buff * 4)
-    let count = Math.max(1, Math.min(Number.MAX_SAFE_INTEGER, (isNumber(args[0]) && parseInt(args[0]) || Math.round((100 - user.stamina) / heal)))) * 1
-    if (user.drink < count) return m.reply(`
-Tersisa *${user.drink}* Drink 🍹
-Ketik *${usedPrefix}buy drink ${count - user.drink}* Untuk Membeli Drink 🍹
-`.trim())
-    user.drink -= count * 1
-    user.stamina += heal * count
-    m.reply(`
-Sukses Meminum *${count}* Drink 🍹
-`.trim())
+const staminaMax = 200; // jumlah maksimum stamina player
+const staminaRegen = 10; // jumlah stamina yang di-regen setiap 5 detik
+const staminaCooldown = 5; // waktu cooldown regen stamina dalam detik
+const drinkRegen = 50; // jumlah stamina yang di-regen oleh Drink
+
+let handler = async (m, { usedPrefix }) => {
+  let user = global.db.data.users[m.sender]
+
+  let now = new Date().getTime()
+  let staminaCooldownEnd = user.lastmana + (staminaCooldown * 1000)
+  let timeLeft = (staminaCooldownEnd - now) / 1000
+
+  if (!user.drink || user.drink < 1) {
+    return m.reply(`
+*${user.name}*, Anda Tidak Memiliki Drink Untuk Mengembalikan Stamina!
+  `.trim())
+  }
+
+  if (user.stamina >= staminaMax) {
+    return m.reply(`
+*${user.name}* Sudah Memiliki Stamina Maksimum!
+  `.trim())
+  }
+
+  if (now < staminaCooldownEnd) {
+    return m.reply(`
+Harap Tunggu *${timeLeft.toFixed(0)} detik* Untuk Mendapatkan Stamina Kembali!
+  `.trim())
+  }
+
+  user.stamina = Math.min(user.stamina + drinkRegen, staminaMax)
+  user.lastmana = now
+  user.drink -= 1
+
+  let staminaBar = getStaminaBar(user.stamina, staminaMax)
+
+  m.reply(`
+${staminaBar}
+*${user.name}* Telah Mendapatkan *${drinkRegen} Stamina ⚡* Dengan Menggunakan Drink!
+  `.trim())
 }
 
 handler.help = ['drink']
 handler.tags = ['rpg']
 handler.command = /^(drink)$/i
 handler.register = true
-export default handler
-
-function isNumber(number) {
-    if (!number) return number
-    number = parseInt(number)
-    return typeof number == 'number' && !isNaN(number)
+function getStaminaBar(stamina, maxStamina) {
+  let staminaBar = ''
+  let staminaPerHeart = maxStamina / 10
+  let hearts = Math.ceil(stamina / staminaPerHeart)
+  for (let i = 1; i <= 10; i++) {
+    if (i <= hearts) {
+      staminaBar += '❤️'
+    } else {
+      staminaBar += '🖤'
+    }
+  }
+  staminaBar += `\n[${stamina}/${maxStamina}]`
+  return staminaBar
 }
+
+export default handler
