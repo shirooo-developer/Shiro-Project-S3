@@ -1140,12 +1140,63 @@ sourceUrl: sgc
 
  
 let msgg = {
-  unreg: '*Hai Kak 👋*\n\n*_Anda Harus Daftar Terlebih Dahulu_*\n*_Tekan Button Dibawah Untuk Melihat Cara Daftar_*'
+	unreg: '*Hai Kak 👋*\n\n*_Anda Harus Daftar Terlebih Dahulu_*\n*_Tekan Button Dibawah Untuk Melihat Cara Daftar_*'
+
+
+
 }[type]
 
-if (msgg) {
-  const message = `${ucapan()} ${tag}\n\n${msgg}\n\n\n\n`;
-  return conn.sendMessage(m.chat, message, 'text', { quoted: m });
+
+
+if (msgg) return conn.sendButtonDocAccess(m.chat, `${ucapan()} ` + tag, msgg + '\n\n\n\n', '𝗥 𝗘 𝗚 𝗜 𝗦 𝗧 𝗘 𝗥', '.daftar', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+mediaUrl: 'https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa',
+mediaType: 2, 
+description: sgc,
+title: "ᴊᴏɪɴ ᴛʜᴇ ᴏғғɪᴄɪᴀʟ ɢʀᴏᴜᴘ",
+body: wm,
+thumbnail: fs.readFileSync('./thumbnail.jpg'),
+sourceUrl: sgc
+}}
+
+ })
+
+
+
+}
+
+The code you provided appears to be a part of a JavaScript program. From the code, it seems that there is a message object msgg that has a property unreg. If the type parameter matches the unreg property, then the button will be removed from the message.
+
+The code also includes a sendButtonDocAccess() function that sends a message with a document button that provides access to external content. The function takes in several parameters, including a message object m, context information, and a media URL.
+
+Without more context about the program's purpose and functionality, it is difficult to provide a more detailed explanation.
+
+
+
+
+
+let msgg = {
+	unreg: '*Hai Kak 👋*\n\n*_Anda Harus Daftar Terlebih Dahulu_*\n*_Tekan Button Dibawah Untuk Melihat Cara Daftar_*'
+
+
+
+}[type]
+
+
+
+if (msgg) return conn.sendButtonDocAccess(m.chat, `${ucapan()} ` + tag, msgg + '\n\n\n\n', '𝗥 𝗘 𝗚 𝗜 𝗦 𝗧 𝗘 𝗥', '.daftar', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+mediaUrl: 'https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa',
+mediaType: 2, 
+description: sgc,
+title: "ᴊᴏɪɴ ᴛʜᴇ ᴏғғɪᴄɪᴀʟ ɢʀᴏᴜᴘ",
+body: wm,
+thumbnail: fs.readFileSync('./thumbnail.jpg'),
+sourceUrl: sgc
+}}
+
+ })
+
+
+
 }
 
 
