@@ -12,45 +12,45 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   let botol = global.botwm
 
 let lgocook = `
-*「 C O O K 」*
+「 C O O K 」
 `
 
   let caption = `
-*Ayam Bakar 🍗*
+Ayam Bakar 🍗
 - 2 Ayam
 - 4 Coal
 
-*Ayam Goreng 🍗*
+Ayam Goreng 🍗
 - 2 Ayam
 - 4 Coal
 
-*Steak 🥩*
+Steak 🥩
 - 2 Sapi
 - 6 Coal
 
-*Ikan Bakar 🐟*
+Ikan Bakar 🐟
 - 3 Ikan
 - 4 Coal
 
-*Udang Bakar  🍤*
+Udang Bakar  🍤
 - 10 Udang
 - 20 Coal
 
-*Babi Panggang 🥓*
+Babi Panggang 🥓
 - 2 Babi
 - 5 Coal
 
-*Jus Mangga 🍸*
+Jus Mangga 🍸
 - 2 Mangga
 - 2 Drink
 - 1 Susu
 
-*Pisang Goreng 🍌*
+Pisang Goreng 🍌
 - 5 Pisang
 - 1 Minyak
 - 3 Coal
 
-*Mie Ayam 🍝*
+Mie Ayam 🍝
 - 2 Mie
 - 2 Telur
 - 3 Bawang Merah
@@ -96,74 +96,74 @@ const listMessage = {
       const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
         switch (type) {
           case 'ayamb':
-          if (user.ayambakar > 100) return m.reply('*_Kulkas Kamu Penuh_*')
-            if(user.ayam < 2 || user.coal < 4) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_2 Ayam 🐔_*\n*_4 Coal ⚫_*`)
+          if (user.ayambakar > 100) return m.reply('Kulkas Kamu Penuh')
+            if(user.ayam < 2 || user.coal < 4) return m.reply(`Bahan Tidak Cukup\n\n*Kamu Memerlukan:\n2 Ayam 🐔\n4 Coal ⚫*`)
             global.db.data.users[m.sender].ayam -= 2
             global.db.data.users[m.sender].coal -= 4
             global.db.data.users[m.sender].ayambakar += 1
-            m.reply("*_Sukses Memanggang 1 Ayam Bakar 🍗_*")
+            m.reply("Sukses Memanggang 1 Ayam Bakar 🍗")
             break
           case 'ayamg':
-          if (user.ayamgoreng > 100) return m.reply('*_Kulkas Kamu Penuh_*')
-            if(user.ayam < 2 || user.coal < 4) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_2 Ayam 🐔_*\n*_4 Coal ⚫_*`)
+          if (user.ayamgoreng > 100) return m.reply('Kulkas Kamu Penuh')
+            if(user.ayam < 2 || user.coal < 4) return m.reply(`Bahan Tidak Cukup\n\n*Kamu Memerlukan:\n2 Ayam 🐔\n4 Coal ⚫*`)
             global.db.data.users[m.sender].ayam -= 2
             global.db.data.users[m.sender].coal -= 4
             global.db.data.users[m.sender].ayamgoreng += 1
-            m.reply("*_Sukses Menggoreng 1 Ayam Goreng 🍗_*")
+            m.reply("Sukses Menggoreng 1 Ayam Goreng 🍗")
             break
           case 'steak':
-          if (user.steak > 100) return m.reply('*_Kulkas Kamu Penuh_*')
-            if(user.sapi < 2 || user.coal < 6) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_2 Sapi 🐄_*\n*_6 Coal ⚫_*`)
+          if (user.steak > 100) return m.reply('Kulkas Kamu Penuh')
+            if(user.sapi < 2 || user.coal < 6) return m.reply(`Bahan Tidak Cukup\n\n*Kamu Memerlukan:\n2 Sapi 🐄\n6 Coal ⚫*`)
             global.db.data.users[m.sender].sapi -= 2
             global.db.data.users[m.sender].coal -= 6
             global.db.data.users[m.sender].steak += 1
-            m.reply("*_Sukses Memanggang 1 Steak 🥩_*")
+            m.reply("Sukses Memanggang 1 Steak 🥩")
             break
          case 'ikan':
-          if (user.ikanbakar > 100) return m.reply('*_Kulkas Kamu Penuh_*')
-            if(user.ikan < 3 || user.coal < 4) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_3 Ikan 🐟_*\n*_4 Coal ⚫_*`)
+          if (user.ikanbakar > 100) return m.reply('Kulkas Kamu Penuh')
+            if(user.ikan < 3 || user.coal < 4) return m.reply(`Bahan Tidak Cukup\n\n*Kamu Memerlukan:\n3 Ikan 🐟\n4 Coal ⚫*`)
             global.db.data.users[m.sender].ikan -= 3
             global.db.data.users[m.sender].coal -= 4
             global.db.data.users[m.sender].ikanbakar += 1
-            m.reply("*_Sukses Memanggang 1 Ikan Bakar 🐟_*")
+            m.reply("Sukses Memanggang 1 Ikan Bakar 🐟")
             break
          case 'udang':
-          if (user.udangbakar > 100) return m.reply('*_Kulkas Kamu Penuh_*')
-            if(user.udang < 10 || user.coal < 20) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_10 Udang 🦐_*\n*_20 Coal ⚫_*`)
+          if (user.udangbakar > 100) return m.reply('Kulkas Kamu Penuh')
+            if(user.udang < 10 || user.coal < 20) return m.reply(`Bahan Tidak Cukup\n\n*Kamu Memerlukan:\n10 Udang 🦐\n20 Coal ⚫*`)
             global.db.data.users[m.sender].udang -= 10
             global.db.data.users[m.sender].coal -= 20
             global.db.data.users[m.sender].udangbakar += 1
-            m.reply("*_Sukses Memanggang 1 Udang Bakar 🍤_*")
+            m.reply("Sukses Memanggang 1 Udang Bakar 🍤")
             break
          case 'babi':
-          if (user.babipanggang > 100) return m.reply('*_Kulkas Kamu Penuh_*')
-            if(user.babi < 2 || user.coal < 5) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_2 Babi 🐖_*\n*_5 Coal ⚫_*`)
+          if (user.babipanggang > 100) return m.reply('Kulkas Kamu Penuh')
+            if(user.babi < 2 || user.coal < 5) return m.reply(`Bahan Tidak Cukup\n\n*Kamu Memerlukan:\n2 Babi 🐖\n5 Coal ⚫*`)
             global.db.data.users[m.sender].babi -= 2
             global.db.data.users[m.sender].coal -= 5
             global.db.data.users[m.sender].babipanggang += 1
-            m.reply("*_Sukses Memanggang 1 Babi Panggang 🥓_*")
+            m.reply("Sukses Memanggang 1 Babi Panggang 🥓")
             break
           case 'jusmangga':
-          if (user.jusmangga > 100) return m.reply('*_Kulkas Kamu Penuh_*')
-            if(user.mangga < 2  || user.drink < 2 || user.susu < 1) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_2 Mangga 🍐_*\n*_2 Drink 🍹_*\n*_1 Susu 🥛_*`)
+          if (user.jusmangga > 100) return m.reply('Kulkas Kamu Penuh')
+            if(user.mangga < 2  || user.drink < 2 || user.susu < 1) return m.reply(`Bahan Tidak Cukup\n\n*Kamu Memerlukan:\n2 Mangga 🍐\n2 Drink 🍹\n1 Susu 🥛*`)
             global.db.data.users[m.sender].mangga -= 2
             global.db.data.users[m.sender].drink -= 2
             global.db.data.users[m.sender].susu -= 1
             global.db.data.users[m.sender].jusmangga += 1
-            m.reply("*_Sukses Membuat 1 Jus Mangga 🍸_*")
+            m.reply("Sukses Membuat 1 Jus Mangga 🍸")
             break
          case 'pisanggoreng':
-          if (user.pisanggoreng > 100) return m.reply('*_Kulkas Kamu Penuh_*')
-            if(user.minyak < 1 || user.coal < 3 || user.pisang < 5) return m.reply(`*Bahan Tidak Cukup*\n\n*Kamu Memerlukan:*\n*_5 Pisang 🍌_*\n*_3 Coal ⚫_*\n*_1 Minyak 🛢️_*`)
+          if (user.pisanggoreng > 100) return m.reply('Kulkas Kamu Penuh')
+            if(user.minyak < 1 || user.coal < 3 || user.pisang < 5) return m.reply(`Bahan Tidak Cukup\n\n*Kamu Memerlukan:\n5 Pisang 🍌\n3 Coal ⚫\n1 Minyak 🛢️*`)
             global.db.data.users[m.sender].minyak -= 1
             global.db.data.users[m.sender].coal -= 3
             global.db.data.users[m.sender].pisang -= 5
             global.db.data.users[m.sender].pisanggoreng += 1
-            m.reply("*_Sukses Menggoreng 1 Pisang Goreng 🍌_*")
+            m.reply("Sukses Menggoreng 1 Pisang Goreng 🍌")
             break
         case 'mieayam':
-          if (user.mieayam > 100) return m.reply('*_Kulkas Kamu Penuh_*')
-            if(user.mie < 2 || user.telur < 2 || user.bawangputih < 2 || user.bawangmerah < 3|| user.ayam < 1|| user.minyak < 2 || user.air < 2 || user.saostiram < 1 || user.kecap < 1 || user.merica < 1|| user.daunbawang < 4|| user.garam < 1 || user.coal < 3) return m.reply(`*Bahan Tidak Cukup*`)
+          if (user.mieayam > 100) return m.reply('Kulkas Kamu Penuh')
+            if(user.mie < 2 || user.telur < 2 || user.bawangputih < 2 || user.bawangmerah < 3|| user.ayam < 1|| user.minyak < 2 || user.air < 2 || user.saostiram < 1 || user.kecap < 1 || user.merica < 1|| user.daunbawang < 4|| user.garam < 1 || user.coal < 3) return m.reply(`Bahan Tidak Cukup`)
             global.db.data.users[m.sender].mie -= 2
             global.db.data.users[m.sender].telur -= 2
             global.db.data.users[m.sender].bawangputih -= 2
@@ -178,7 +178,7 @@ const listMessage = {
             global.db.data.users[m.sender].daunbawang -= 4
             global.db.data.users[m.sender].kecap -= 1
             global.db.data.users[m.sender].mieayam += 6
-            m.reply("*_Sukses Membuat 6 Mie Ayam 🍝_*")
+            m.reply("Sukses Membuat 6 Mie Ayam 🍝")
             break
 
           default:

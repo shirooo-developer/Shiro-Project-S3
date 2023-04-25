@@ -1,41 +1,56 @@
-let handler = async m => m.reply(`
-*ANIME WEBSITE COLLECTION 📁*
+const animeLegalLinks = [
+  '• https://www.crunchyroll.com/',
+  '• https://wetv.vip/id',
+  '• https://www.iq.com/?lang=id_id',
+  '• https://id.e-muse.com.tw/',
+  '• https://youtube.com/c/AniOneAsia',
+  '• https://www.netflix.com/id/',
+  '• https://www.funimation.com/',
+  '• https://m.vidio.com/',
+  '• https://genflix.co.id/',
+  '• https://www.bilibili.tv/id',
+  '• https://otakudesu.bid/'
+];
 
-*LEGAL*
-• *_https://www.crunchyroll.com/_*
-• *_https://wetv.vip/id_*
-• *_https://www.iq.com/?lang=id_id_*
-• *_https://id.e-muse.com.tw/_*
-• *_https://youtube.com/c/AniOneAsia_*
-• *_https://www.netflix.com/id/_*
-• *_https://www.funimation.com/_*
-• *_https://m.vidio.com/_*
-• *_https://genflix.co.id/_*
-• *_https://www.bilibili.tv/id_*
-• *_https://otakudesu.bid/_*
+const animeIllegalLinks = [
+  '• https://185.224.82.193/',
+  '• https://neonime.is/',
+  '• https://riie.one/',
+  '• https://animeisme.online/',
+  '• https://65.108.132.145/#',
+  '• https://m.imdb.com/list/ls021260570/',
+  '• https://194.163.183.129/',
+  '• https://anibatch.anibatch.moe/',
+  '• https://185.224.82.193/',
+  '• https://anoboy.lol/',
+  '• https://mangaku.vip/',
+  '• https://lk21official.art/',
+  '• https://animepos.com.cutestat.com/',
+  '• https://kotakanimeid.com/',
+  '• https://nontonanimeid.click/animenonton-tv/',
+  '• https://awsubs.sbs/'
+];
 
-*ILEGAL*
-• *_https://185.224.82.193/_*
-• *_https://neonime.is/_*
-• *_https://riie.one/_*
-• *_https://animeisme.online/_*
-• *_https://65.108.132.145/#_*
-• *_https://m.imdb.com/list/ls021260570/_*
-• *_https://194.163.183.129/_*
-• *_https://anibatch.anibatch.moe/_*
-• *_https://185.224.82.193/_*
-• *_https://anoboy.lol/_*
-• *_https://mangaku.vip/_*
-• *_https://lk21official.art/_*
-• *_https://animepos.com.cutestat.com/_*
-• *_https://kotakanimeid.com/_*
-• *_https://nontonanimeid.click/animenonton-tv/_*
-• *_https://awsubs.sbs/_*
+const animeLinks = [
+  '*ANIME WEBSITE COLLECTION 📁*',
+  '',
+  '*LEGAL*',
+  ...animeLegalLinks,
+  '',
+  '*ILEGAL*',
+  ...animeIllegalLinks,
+  '',
+  'Keizha'
+];
 
-`.trim()) // Tambah sendiri kalo mau
-handler.help = ['animelink']
-handler.tags = ['anime']
-handler.command = /^animelink$/i
-handler.register = true
-handler.limit = 1
-export default handler 
+const handler = async (m) => {
+  m.reply(animeLinks.join('\n'));
+};
+
+handler.help = ['animelink'];
+handler.tags = ['anime'];
+handler.command = /^animelink$/i;
+handler.register = true;
+handler.limit = 1;
+
+export default handler;

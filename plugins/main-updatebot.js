@@ -1,7 +1,7 @@
 let handler = async m => m.reply(`
-*Update 21:32 - 14/03/2023*
+*Update 22:34 - 24/04/2023*
 
-*Untuk Fitur Baru Cari Sendiri.* 
+*Delete Button & List*
 *Jika Ada Keluhan Untuk Update Ini*
 *Bisa Hubungi wa.me/6281249122429
 

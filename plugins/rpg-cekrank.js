@@ -250,7 +250,7 @@ Stallion V > ${user.level > 1850 ? '*Done ✅*': '*Not finished yet*'}
 VOYAGER > ${user.level > 2000 ? '*Done ✅*': '*Not finished yet*'}
 
 `.trim()
-  conn.sendButton(m.chat, `*${htki} RANK PROGRESS ${htka}*`, caption, null, [[`${user.health < 60 ? '𝗥𝗘𝗖𝗔𝗟': '𝗔𝗗𝗩𝗘𝗡𝗧𝗨𝗥𝗘'}`,`${user.health < 60 ? '.heal': '.adventure'}`],['𝗣𝗥𝗢𝗙𝗜𝗟𝗘','.pp']],m)
+ m.reply(`*${htki} CEK RANK ${htka}*\n${caption}\n`);
 }
 handler.help = ['cekrank', 'inv']
 handler.tags = ['rpg']

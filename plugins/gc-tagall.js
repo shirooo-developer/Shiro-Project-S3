@@ -1,11 +1,15 @@
 import moment from 'moment-timezone'
-let handler = async (m, { conn, text, participants, isAdmin, isOwner }) => {
-    let users = participants.map(u => u.id).filter(v => v !== conn.user.jid)
-    let bcbg = 'https://telegra.ph/file/6726375e0308e920330d5.jpg'
-    conn.send3ButtonLoc(m.chat, bcbg, wm, `*TAG-ALL*\n\n${text ? `${text}\n` : ''}\n` + users.map(v => '@' + v.replace(/@.+/, '')).join`\n` + '\n','𝗠𝗘𝗡𝗨', '.menu', '𝗢𝗪𝗡𝗘𝗥', '.owner', `\nAq suka ma owner botny`, '.huuu', null,
- /*let m.reply(`${text ? `${text}\n` : ''}┌─「 Tag All 」\n` + users.map(v => '│◦❒ @' + v.replace(/@.+/, '')).join`\n` + '\n└────', null, */{
-        mentions: users
-    })
+import fetch from 'node-fetch'
+let handler = async (m, { conn, participants }) => {
+  let users = participants.map(u => u.jid).filter(jid => jid.endsWith('@s.whatsapp.net') && !jid.startsWith(conn.user.jid))
+  let bcbg = 'https://telegra.ph/file/6726375e0308e920330d5.jpg'
+  let text = `*TAG-ALL*\n\n` + users.map(v => '@' + v.replace(/@.+/, '')).join`\n` + '\n'
+  conn.sendMessage(m.chat, text, 'conversation', {
+    contextInfo: {
+      mentionedJid: users
+    },
+    thumbnail: await (await fetch(bcbg)).buffer()
+  })
 }
 
 handler.help = ['tagall']
@@ -13,5 +17,8 @@ handler.tags = ['group']
 handler.command = ['tagall']
 handler.admin = true
 handler.group = true
-handler.register = true
+handler.botAdmin = true
+handler.register = false
+handler.fail = null
+
 export default handler

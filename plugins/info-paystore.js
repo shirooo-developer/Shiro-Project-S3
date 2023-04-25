@@ -1,10 +1,5 @@
-import fs from 'fs'
-import fetch from 'node-fetch'
- let handler = async(m, { conn }) => { 
-
-         let pp = fs.readFileSync('./thumbnail.jpg')
-         let gc1 = 'https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa'
-         let caption = `PREMIUM PRICE LIST & RENT
+let handler = async m => m.reply(`
+PREMIUM PRICE LIST & RENT
 
 ╭━━━━━━━━━━━━━⎔
 ┃
@@ -73,17 +68,12 @@ Ingin Sewa Bot / Premium? Hub.
 
 
 *_#TrustedButNotFamous_*
-`
-         await conn.sendButtonDoc(m.chat, caption, wm, '𝗢𝗪𝗡𝗘𝗥', '.owner', m, { contextInfo: { 
-             externalAdReply: {
-               sourceUrl: `${gc1}`,
-               title: '𝗠𝘆 𝗚𝗿𝗼𝘂𝗽 𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹', 
-               body: '⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗',
-               thumbnail: pp
-             } 
-         }})
-         }
- handler.help = ['sewa','sewagc','sewapremium','sewagrup','sewabot']
-handler.tags = ['info','main']
-handler.command = /^sewabot|sewa|sewapremium|sewagrup|sewagc$/i
+`.trim()) // Tambah sendiri kalo mau
+
+
+handler.help = ['sewa']
+handler.tags = ['main']
+handler.command = /^sewa$/i
+handler.register = true
+handler.premiun = false
 export default handler

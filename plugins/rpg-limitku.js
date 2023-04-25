@@ -12,7 +12,7 @@ let handler = async (m,{ conn} ) => {
     user[reward] += rewards[reward]
     text += `*+${rewards[reward]}* ${global.rpg.emoticon(reward)}${reward}\n`
   }
-  conn.sendButton(m.chat,'*CLAIM DAILY LIMIT*', text.trim(), null, [['𝗜𝗡𝗩𝗘𝗡𝗧𝗢𝗥𝗬', '.inv'], ['𝗪𝗘𝗘𝗞𝗟𝗬', '.weekly']],m)
+  conn.sendMessage(m.chat, `*CLAIM DAILY LIMIT*\n${text.trim()}`)
   user.lastlk = new Date * 1
 }
 handler.help = ['limitku']

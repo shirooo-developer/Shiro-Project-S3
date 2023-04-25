@@ -1,8 +1,8 @@
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, command }) => {
-	let url = 'https://api.lolhuman.xyz/api/random/exo?apikey=Shirooo'
-	conn.sendButton(m.chat, '*Results From EXO*', wm, await(await fetch(url)).buffer(), [['𝗡𝗘𝗫𝗧',`.${command}`]],m)
+  let url = 'https://api.lolhuman.xyz/api/random/exo?apikey=Shirooo'
+  conn.sendFile(m.chat, await(await fetch(url)).buffer(), 'exos.png', '*Results From EXO*', m)
 }
 handler.command = /^(exo)$/i
 handler.tags = ['internet']

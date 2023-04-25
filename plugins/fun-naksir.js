@@ -1,18 +1,38 @@
-let toM = a => '@' + a.split('@')[0]
-function handler(m, { groupMetadata }) {
-    let ps = groupMetadata.participants.map(v => v.id)
-    let a = ps.getRandom()
-    let b
-    do b = ps.getRandom()
-    while (b === a)
-    m.reply(`*${toM(a)} Naksir Sama ${toM(b)}*`, null, {
-        mentions: [a, b]
-    })
-}
-handler.help = ['naksir']
-handler.tags = ['fun']
-handler.command = ['naksir']
-handler.register = true
-handler.group = true
+const getMention = (id) => `@${id.split('@')[0]}`;
 
-export default handler
+const handler = (m, { groupMetadata }) => {
+  const participants = groupMetadata.participants;
+  const participantIds = participants.map((participant) => participant.id);
+  
+  let suitorId = participantIds.getRandom();
+  let crushId;
+  
+  do {
+    crushId = participantIds.getRandom();
+  } while (crushId === suitorId);
+  
+  const suitorMention = getMention(suitorId);
+  const crushMention = getMention(crushId);
+  
+  const messages = [
+    `Pssst... ${suitorMention} diam-diam naksir ${crushMention} nih! 😍`,
+    `Wah, kabar burung berkicau kalau ${suitorMention} suka sama ${crushMention} nih. 😘`,
+    `Ssstt... jangan bilang-bilang ya, katanya ${suitorMention} naksir sama ${crushMention}. 🥰`,
+    `Mendengar kabar yang beredar, sepertinya ${suitorMention} sedang mengidolakan ${crushMention}. ❤️`,
+    `Jangan lewatkan momen ini! ${suitorMention} sedang mengumbar perasaan kepada ${crushMention}. 🌹`
+  ];
+  
+  const message = messages[Math.floor(Math.random() * messages.length)];
+  
+  m.reply(message, null, {
+    mentions: [suitorId, crushId]
+  });
+};
+
+handler.help = ['naksir'];
+handler.tags = ['fun'];
+handler.command = ['naksir'];
+handler.register = true;
+handler.group = true;
+
+export default handler;

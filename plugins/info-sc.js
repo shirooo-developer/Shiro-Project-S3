@@ -1,9 +1,9 @@
-
 import fs from 'fs'
 import fetch from 'node-fetch'
 import moment from 'moment-timezone'
+
 let handler = async (m, { conn, args, command }) => {
-	let _muptime
+    let _muptime
     if (process.send) {
       process.send('uptime')
       _muptime = await new Promise(resolve => {
@@ -29,20 +29,10 @@ let handler = async (m, { conn, args, command }) => {
                }
            }
        }
-       let tag = `@${m.sender.replace(/@.+/, '')}`
-  let mentionedJid = [m.sender]
-let scnya = `*SCRIPT LANGUAGE*`
+       
+    let scnya = `*SCRIPT LANGUAGE*`
     let footerny = `\n*_https://github.com/KeizhaOfficial/Felicia-MD-V48_*`
- conn.send3ButtonImg(m.chat, `https://telegra.ph/file/2f45a18efc09676dffe95.jpg`, scnya, footerny, '𝗠𝗘𝗡𝗨', '.menu', '𝗢𝗪𝗡𝗘𝗥', '.owner', '𝗖𝗥𝗘𝗗𝗜𝗧', '.credit', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: 'bit.ly/3tqDwMO',
-    mediaType: 2, 
-    description: sgc,
-    title: "𝗕𝗼𝘁 𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹 𝗚𝗿𝗼𝘂𝗽",
-    body: wm,
-    thumbnail: fs.readFileSync('./thumbnail.jpg'),
-    sourceUrl: sgc
-     }}
-  })
+    conn.sendMessage(m.chat, ` ${ucapan()} @${m.sender.replace(/@.+/, '')}\n\n*Source Code:* ${scnya}${footerny}`, 'text', { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: 'bit.ly/3tqDwMO', mediaType: 2, description: sgc, title: "𝗕𝗼𝘁 𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹 𝗚𝗿𝗼𝘂𝗽", body: wm, thumbnail: fs.readFileSync('./thumbnail.jpg'), sourceUrl: sgc } } })
 }
 handler.help = ['sc']
 handler.tags = ['info']

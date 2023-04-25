@@ -1,10 +1,4 @@
-import fs from 'fs'
-import fetch from 'node-fetch'
- let handler = async(m, { conn }) => { 
-
-         let pp = fs.readFileSync('./thumbnail.jpg')
-         let gc1 = 'https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa'
-         let caption = `TOP-UP PRICE LIST
+let handler = async m => m.reply(`TOP-UP PRICE LIST
 
 ╭━━━━━━━━━━━━━⎔
 ┃
@@ -35,17 +29,12 @@ Ingin Top-Up? Hub.
 
 
 *_#TrustedButNotFamous_*
-`
-         await conn.sendButtonDoc(m.chat, caption, wm, '𝗢𝗪𝗡𝗘𝗥', '.owner', m, { contextInfo: { 
-             externalAdReply: {
-               sourceUrl: `${gc1}`,
-               title: '𝗠𝘆 𝗚𝗿𝗼𝘂𝗽 𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹', 
-               body: '⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗',
-               thumbnail: pp
-             } 
-         }})
-         }
- handler.help = ['topup','top-up']
-handler.tags = ['info','main']
-handler.command = /^topup|top-up$/i
+`.trim()) // Tambah sendiri kalo mau
+
+
+handler.help = ['topup']
+handler.tags = ['main','rpg']
+handler.command = /^topup$/i
+handler.register = true
+handler.premium = false
 export default handler

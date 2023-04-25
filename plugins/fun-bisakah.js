@@ -1,26 +1,41 @@
 let handler = async (m, { conn, command, text }) => {
+  let answer = pickRandom([
+    'Iya, tentu saja!',
+    'Bisa banget!',
+    'Pasti bisa!',
+    'Tentu saja bisa!',
+    'Tentu bisa!',
+    'Sudah pasti!',
+    'Sudah pasti bisa!',
+    'Tidak, maaf.',
+    'Tidak bisa.',
+    'Tentu tidak.',
+    'Maaf, tentu tidak bisa.',
+    'Sudah pasti tidak.'
+  ]);
+
   conn.reply(m.chat, `
 *Pertanyaan:* ${command} ${text}
-*Jawaban:* ${pickRandom(['Iya','Bisa','Tentu saja bisa','Tentu bisa','Sudah pasti','Sudah pasti bisa','Tidak','Tidak bisa','Tentu tidak','tentu tidak bisa','Sudah pasti tidak'])}
-`.trim(), m)
+*Jawaban:* ${answer}
+`.trim(), m);
 }
-handler.help = ['bisakah <pertanyaan>']
-handler.tags = ['kerang','fun']
-handler.command = /^bisakah/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
-handler.register = true
-handler.admin = false
-handler.botAdmin = false
 
-handler.fail = null
+handler.help = ['bisakah <pertanyaan>'];
+handler.tags = ['kerang', 'fun'];
+handler.command = /^bisakah/i;
+handler.owner = false;
+handler.mods = false;
+handler.premium = false;
+handler.group = false;
+handler.private = false;
+handler.register = true;
+handler.admin = false;
+handler.botAdmin = false;
 
-export default handler 
+handler.fail = null;
+
+export default handler;
 
 function pickRandom(list) {
-  return list[Math.floor(Math.random() * list.length)]
+  return list[Math.floor(Math.random() * list.length)];
 }
-

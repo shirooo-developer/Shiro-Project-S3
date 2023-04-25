@@ -5,7 +5,7 @@ import fetch from 'node-fetch'
 import PhoneNumber from 'awesome-phonenumber'
 let { MessageType } = (await import('@adiwajshing/baileys')).default
 
-let handler = async (m, { conn, usedPrefix: _p, __dirname, text, command }) => {
+const handler = async (m, { conn, usedPrefix: _p, __dirname, text, command }) => {
 let tag = `@${m.sender.replace(/@.+/, '')}`
   let mentionedJid = [m.sender]
 let ucpn = `${ucapan()}`
@@ -34,17 +34,15 @@ let wib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
       year: 'numeric'
     })
     
-//==============> Menu nya
-let intro = `*_"Hotto" Wa "robotto" No Ryaku De, Tokutei No Tasuku O Jidouteki Ni Kurikaeshi Jikkou Suru Shisutemu Toshite Kaishaku Dekimasu. Hotto Wa Jidouteki Ni Dousa Suru Tame, Ningen Yori Mo Haruka Ni Hayaku Sagyou Suru Koto Ga Dekimasu. Sarani, Hotto Wa Ningen Ga Shudou Suru No O Matsu Koto Naku, Itsudemo Dousa Suru Koto Ga Dekimasu. Hotto Wa Tsuujou, Intaanetto O Kashite Dousa Shi, Watashi Wa 24-Jikan Kadori Suru Koto Ga Dekimasu._*\n\n*🏵️ F-Room Koushiki Guruupu:*\n*https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa*\n\n*🏵️ F-Club Koushiki Guruupu (NSFW Muryou):*\n*https://chat.whatsapp.com/EggiK9aee8JBbzBQseuSZT*`
-conn.send3ButtonDoc(m.chat, `\n\n*Hai, Watashi Wa ⌬ Felicia-MD Desu. Yoroshiku Ne*\n\n`, intro + `\n ‎\n\n`, '𝗭𝗘𝗡 𝗠𝗘𝗡𝗬𝗨𝗨', '.? all', '𝗠𝗘𝗡𝗬𝗨𝗨 𝗜𝗖𝗛𝗜𝗥𝗔𝗡', '.tesm', '𝗬𝗢𝗨𝗧𝗨𝗕𝗘𝗥 ▶️', '.youtuber', m, { contextInfo: { forwardingScore: fsizedoc, externalAdReply: { body: 'Tes', containsAutoReply: true, mediaType: 1, mediaUrl: hwaifu.getRandom(),  renderLargerThumbnail: true, showAdAttribution: true, sourceId: 'Tes', sourceType: 'PDF', previewType: 'PDF', sourceUrl: sgc, thumbnail: fs.readFileSync('./thumbnail.jpg'), thumbnailUrl: sgc, title: '                 𝗜 𝗡 𝗧 𝗥 𝗢 𝗗 𝗨 𝗖 𝗘'}}})
-    } 
-    
+  //==============> Menu nya
+  let intro = `*_"Hotto"/EggiK9aee8JBbzBQseuSZT*`
+  m.reply(`*${htki} I N T R O D U C E ${htka}*\n${intro}\n`);
 handler.help = ['menu']
 handler.tags = ['main']
 handler.command = /^(menu|help)$/i
 handler.register = true
 
-export default handler
+module.export = handler
 
 //----------- FUNCTION -------
 
@@ -86,26 +84,4 @@ function ucapan() {
     res = "Oyasumi Nasai 🌙"
   }
   return res
-}
 
-function wish() {
-    let wishloc = ''
-  const time = moment.tz('Asia/Kolkata').format('HH')
-  wishloc = ('Hi')
-  if (time >= 0) {
-    wishloc = ('Night Rider')
-  }
-  if (time >= 4) {
-    wishloc = ('Good Morning')
-  }
-  if (time >= 12) {
-    wishloc = ('Good Afternoon')
-  }
-  if (time >= 16) {
-    wishloc = ('️Good Evening')
-  }
-  if (time >= 23) {
-    wishloc = ('Night Rider')
-  }
-  return wishloc
-}

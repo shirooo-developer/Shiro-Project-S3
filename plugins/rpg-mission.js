@@ -40,7 +40,7 @@ Select Option
 *- Accept*
 *- Cancel*
 `
-      return conn.sendButton(m.chat, caption, author, null, [['Accept','accept'], ['Cancel','cancel']], m) //SendMessage
+      return conn.sendMessage(m.chat, caption, 'conversation', { quoted: m })
     }
   } catch (e) {
     console.error(e)
