@@ -1,28 +1,29 @@
 import fetch from 'node-fetch'
 import fs from 'fs'
-let handler = async (m, { conn, generateWAMessageFromContent, }) => {
+
+let handler = async (m, { conn, generateWAMessageFromContent }) => {
     let { anon, anticall, antispam, antitroli, backup, jadibot, groupOnly, nsfw, statusupdate, autogetmsg, antivirus, publicjoin } = global.db.data.settings[conn.user.jid]
     const chats = Object.keys(await conn.chats)
     const groups = Object.keys(await conn.groupFetchAllParticipating())
     const block = await conn.fetchBlocklist()
     const fgclink = {
-           "key": {
-               "fromMe": false,
-               "participant": "0@s.whatsapp.net",
-               "remoteJid": "0@s.whatsapp.net"
-           },
-           "message": {
-               "groupInviteMessage": {
-                   "groupJid": "6282127487538-1625305606@g.us",
-                   "inviteCode": "null",
-                   "groupName": "Halo", 
-                   "caption": namebot, 
-                   'jpegThumbnail': fs.readFileSync('./media/ok.jpg')
-               }
-           }
-       }
-       let tag = `@${m.sender.replace(/@.+/, '')}`
-  let mentionedJid = [m.sender]
+        "key": {
+            "fromMe": false,
+            "participant": "0@s.whatsapp.net",
+            "remoteJid": "0@s.whatsapp.net"
+        },
+        "message": {
+            "groupInviteMessage": {
+                "groupJid": "6282127487538-1625305606@g.us",
+                "inviteCode": "null",
+                "groupName": "Halo",
+                "caption": namebot,
+                'jpegThumbnail': fs.readFileSync('./media/ok.jpg')
+            }
+        }
+    }
+    let tag = `@${m.sender.replace(/@.+/, '')}`
+    let mentionedJid = [m.sender]
     let _uptime = process.uptime() * 1000
     let uptime = clockString(_uptime)
     let sts = `
@@ -46,22 +47,27 @@ ${jadibot ? '*On' : '*Off'} Jadi Bot*
 ${nsfw ? '*On' : '*Off'} Mode Nsfw*
 `
 
-conn.sendButtonDoc(m.chat, '⌬ Felicia-MD', sts, '𝗢𝗪𝗡𝗘𝗥', '.owner', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: 'https//wa.me/6281347927862',
-    mediaType: 2, 
-    description: 'wa.me/6281347927862',
-    title: "𝗦𝗧𝗔𝗧𝗦 𝗠𝗬 𝗕𝗢𝗧",
-    body: namebot,
-    thumbnail: fs.readFileSync('./thumbnail.jpg'),
-    sourceUrl: 'https://facebook.com/sadtime098'
-     }}
-  })
-
+    conn.sendMessage(m.chat, sts, 'conversation', {
+        contextInfo: {
+            externalAdReply: {
+                showAdAttribution: true,
+                mediaUrl: 'https//wa.me/6281347927862',
+                mediaType: 2,
+                description: 'wa.me/6281347927862',
+                title: "𝗦𝗧𝗔𝗧𝗦 𝗠𝗬 𝗕𝗢𝗧",
+                body: namebot,
+                thumbnail: fs.readFileSync('./thumbnail.jpg'),
+                sourceUrl: 'https://facebook.com/sadtime098'
+            }
+        }
+    })
 }
+
 handler.help = ['botstatus']
 handler.tags = ['info']
 handler.command = /^botstat(us)?$/i
 handler.register = true
+
 export default handler
 
 function clockString(ms) {

@@ -9,9 +9,8 @@ let handler = async (m, { conn }) => {
 🤖 Robo: *${user.robo > 0 ? 'Level ' + user.robo : '✖️'}*
 🌟 Status: *${user.premiumTime > 0 ? 'Premium' : 'Free'}*
 📑 Registered: *${user.registered ? 'Yes':'No'}*
-
 `.trim()
-  conn.sendButton(m.chat, caption, global.wm, 'https://telegra.ph/file/14c3aa9857b7e2d8dbff6.jpg', [`𝗜𝗡𝗩𝗘𝗡𝗧𝗢𝗥𝗬`, '.inv'],m)
+  conn.reply(m.chat, caption, m)
 }
 handler.help = ['bank']
 handler.tags = ['rpg']

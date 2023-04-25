@@ -23,6 +23,6 @@ handler.tags = ['group']
 handler.command = /^(o-hidetag|oh|ohidetag)$/i
 handler.register = true
 handler.group = true
-handler.rowner = true
+handler.owner = true
 
 export default handler

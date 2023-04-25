@@ -13,7 +13,7 @@ let handler = async (m, { conn, text }) => {
 		if (!res.length) throw `*Query "${text}" Tidak Ditemukan*`
 		res = res.map((v) => `*SFILE DOWNLOADER*\n\n*💬 Title:* ${v.title}\n*📊 Size:* ${v.size}\n*🌐 Link:* ${v.link}`).join`\n\n`
 		m.reply(res)
-	} else throw '*Fitur Untuk Unduh Search*\n\n*_Contoh: .sifle url_*'
+	} else throw '*Fitur Untuk Unduh Search*\n\n*_Contoh: .sfile url_*'
 }
 handler.help = handler.alias = ['sfile']
 handler.tags = ['downloader']
