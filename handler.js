@@ -340,10 +340,7 @@ export async function handler(chatUpdate) {
 
                 if (!isNumber(user.skinkastil))
 
-                    user.skinkastil = 0
-		    
-                if (!('character.name' in user))
-                    user.character.name = ''
+                    user.skinkastil = 0		  
 
                 if (!isNumber(user.stamina))
 
@@ -1754,7 +1751,6 @@ if (!isNumber(user.mak))
 
                     autolevelup: true,
 			
-		    character.name: ''
 
 
 
