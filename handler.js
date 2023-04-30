@@ -2678,19 +2678,19 @@ if (!isNumber(user.mak))
 				global.db.data.users[m.sender].character = {}
 			if (character) {
 				if (!('name' in character))
-			        	character.name = ''
+			        	character.name = 
 				if (!('ability' in character))
-					character.ability = ''
+					character.ability = 
 				if (!('attribute' in character))
-					character.attribute = ''
+					character.attribute = 
 				if (!('appearance' in character))
-					character.appearance = ''
+					character.appearance = 
 			} else
 				global.db.data.users[m.sender].character = {
-					name: '',
-		           		ability: '',
-					attribute: '',
-					appearance: ''
+					name: ,
+		           		ability: ,
+					attribute: ,
+					appearance:
 				}
 		
 		
