@@ -2673,25 +2673,33 @@ if (!isNumber(user.mak))
 
 				}
 		
-                let character = global.db.data.users[m.sender].character
-			if (typeof character !== 'object')
-				global.db.data.users[m.sender].character = {}
-			if (character) {
-				if (!('name' in character))
-			        	character.name = 
-				if (!('ability' in character))
-					character.ability = 
-				if (!('attribute' in character))
-					character.attribute = 
-				if (!('appearance' in character))
-					character.appearance = 
-			} else
-				global.db.data.users[m.sender].character = {
-					name: ,
-		           		ability: ,
-					attribute: ,
-					appearance:
-				}
+let character = global.db.data.users[m.sender].character;
+
+if (typeof character !== 'object') {
+	global.db.data.users[m.sender].character = {};
+}
+
+if (character) {
+	if (!('name' in character)) {
+		character.name = '';
+	}
+	if (!('ability' in character)) {
+		character.ability = '';
+	}
+	if (!('attribute' in character)) {
+		character.attribute = '';
+	}
+	if (!('appearance' in character)) {
+		character.appearance = '';
+	}
+} else {
+	global.db.data.users[m.sender].character = {
+		name: '',
+		ability: '',
+		attribute: '',
+		appearance: ''
+	};
+}
 		
 		
 
