@@ -2673,22 +2673,25 @@ if (!isNumber(user.mak))
 
 				}
 		
-	let character = global.db.data.users[m.sender]?.character ?? {};
-
-if (typeof character !== 'object') {
-  global.db.data.users[m.sender] = {
-    ...global.db.data.users[m.sender],
-    character: {}
-  };
-}
-
-if (!character?.name) {
-  global.db.data.users[m.sender].character = {
-    ...global.db.data.users[m.sender].character,
-    name: ''
-  };
-}
-
+                let character = global.db.data.users[m.sender].character
+			if (typeof character !== 'object')
+				global.db.data.users[m.sender].character = {}
+			if (character) {
+				if (!('name' in character))
+			        	character.name = null
+				if (!('ability' in character))
+					character.ability = null
+				if (!('attribute' in character))
+					character.attribute = null
+				if (!('appearance' in character))
+					character.appearance = null
+			} else
+				global.db.data.users[m.sender].character = {
+					name: null,
+		           		ability: null,
+					attribute: null,
+					appearance: null
+				}
 		
 		
 
