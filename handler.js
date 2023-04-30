@@ -2673,24 +2673,21 @@ if (!isNumber(user.mak))
 
 				}
 		
-                        let character = global.db.data.users[m.sender].character
-			if (typeof character !== 'object')
-				global.db.data.users[m.sender].character = {}
-			if (character) {
-				if (!('name' in character))
-			        	character.name = false
-				if (!('ability' in character))
-					character.ability = false
-				if (!('attribute' in character))
-					character.attribute = false
-				if (!('appearance' in character))
-					character.appearance = false
+                        let guild = global.db.data.users[m.sender].guild
+			if (typeof guild !== 'object')
+				global.db.data.users[m.sender].guild = {}
+			if (guild) {
+				if (!('name' in guild))
+			        	guild.name = ''
+				if (!('leader' in guild))
+					guild.leader = ''
+				if (!('member' in guild))
+					guild.member = []
 			} else
-				global.db.data.users[m.sender].character = {
+				global.db.data.users[m.sender].guild = {
 					name: false,
-		           		ability: false,
-					attribute: false,
-					appearance: false
+		           		leader: false,
+					member: false
 				}
 		
 		
