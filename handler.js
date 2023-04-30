@@ -2672,6 +2672,25 @@ if (!isNumber(user.mak))
 					soal: null
 
 				}
+		
+	let character = global.db.data.users[m.sender]?.character ?? {};
+
+if (typeof character !== 'object') {
+  global.db.data.users[m.sender] = {
+    ...global.db.data.users[m.sender],
+    character: {}
+  };
+}
+
+if (!character?.name) {
+  global.db.data.users[m.sender].character = {
+    ...global.db.data.users[m.sender].character,
+    name: ''
+  };
+}
+
+		
+		
 
             let settings = global.db.data.settings[this.user.jid]
 
