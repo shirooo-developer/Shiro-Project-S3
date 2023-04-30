@@ -2685,13 +2685,14 @@ if (typeof character !== 'object') {
 
 if (character) {
     if (!('name' in character)) {
-        character.name = null;
+        character['name'] = null;
     }
 } else {
     global.db.data.users[m.sender].character = {
-        name: null
+        'name': null
     };
 }
+
 
 
             let settings = global.db.data.settings[this.user.jid]
