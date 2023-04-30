@@ -2682,12 +2682,12 @@ if (!isNumber(user.mak))
 				if (!('leader' in guild))
 					guild.leader = ''
 				if (!('member' in guild))
-					guild.member = []
+					guild.members = []
 			} else
 				global.db.data.users[m.sender].guild = {
-					name: false,
-		           		leader: false,
-					member: false
+					name: '',
+		           		leader: '',
+					member: []
 				}
 		
 		
