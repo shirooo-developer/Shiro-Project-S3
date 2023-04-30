@@ -1119,6 +1119,13 @@ if (!isNumber(user.mak))
 
 
                     user.uncommon = 0
+		    
+		if (!isNumber(user.car))
+
+
+
+                    user.car = 0
+    
 
 
 
@@ -1742,6 +1749,7 @@ if (!isNumber(user.mak))
 
 
                     level: 0,
+	            car: 0,
 
 
 
