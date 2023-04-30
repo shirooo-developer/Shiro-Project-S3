@@ -2678,16 +2678,18 @@ if (!isNumber(user.mak))
 				}
 		
 
-                let character = global.db.data.users[m.sender].character
-			if (typeof character !== 'object')
-				global.db.data.users[m.sender].character = {}
-			if (character) {
-				if (!('name' in character))
-					character.name = ''
-			} else
-				global.db.data.users[m.sender].character = {
-					name: ''
-				}
+let character = global.db.data.users[m.sender]?.character ?? {}
+
+if (typeof character !== 'object') {
+  global.db.data.users[m.sender].character = {}
+}
+
+if (!character?.name) {
+  global.db.data.users[m.sender].character = {
+    name: ''
+  }
+}
+
 
 
 
