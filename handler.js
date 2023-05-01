@@ -340,7 +340,7 @@ export async function handler(chatUpdate) {
 
                 if (!isNumber(user.skinkastil))
 
-                    user.skinkastil = 0		  
+                    user.skinkastil = 0
 
                 if (!isNumber(user.stamina))
 
@@ -1119,13 +1119,6 @@ if (!isNumber(user.mak))
 
 
                     user.uncommon = 0
-		    
-		if (!isNumber(user.car))
-
-
-
-                    user.car = 0
-    
 
 
 
@@ -1501,7 +1494,8 @@ if (!isNumber(user.mak))
 
 
 
-                if (!isNumber(user.lasthunt))
+					
+					if (!isNumber(user.lasthunt))
 
 
 
@@ -1574,14 +1568,30 @@ if (!isNumber(user.mak))
 
 
                     user.note = 0
+					
+					
+					if (!isNumber(user.c1))
+                    user.c1 = 0   
+               if (!isNumber(user.c2))
+                    user.c2 = 0
+               if (!isNumber(user.c3))
+                    user.c3 = 0   
+               if (!isNumber(user.c4))
+                    user.c4 = 0   
+               if (!isNumber(user.c5))
+                    user.c5 = 0   
+               if (!isNumber(user.c6))
+                    user.c6 = 0   
+               if (!isNumber(user.c7))
+                    user.c7 = 0   
+               if (!isNumber(user.c8))
+                    user.c8 = 0   
+               if (!isNumber(user.c9))
+                    user.c9 = 0   
+              if (!isNumber(user.c10))
+                    user.c10 = 0
 
                     
-
-                 if (!isNumber(user.lasthunt))
-
-
-
-                    user.lasthunt = 0
 
                     
 
@@ -1749,7 +1759,6 @@ if (!isNumber(user.mak))
 
 
                     level: 0,
-	            car: 0,
 
 
 
@@ -1758,7 +1767,6 @@ if (!isNumber(user.mak))
 
 
                     autolevelup: true,
-			
 
 
 
@@ -2071,6 +2079,17 @@ if (!isNumber(user.mak))
                     hargadiri: 0,
 
                     lastsex: 0,
+					
+					c1: 0,
+                    c2 :0,
+                    c3 :0,
+                    c4: 0,
+                    c5: 0,
+                    c6: 0,
+                    c7: 0,
+                    c8: 0,
+                    c9: 0,
+                    c10: 0,
 
 
                     hp: 0,
@@ -2298,6 +2317,8 @@ if (!isNumber(user.mak))
                     premium1hari: 0,
 
                     lastlumber: 0,
+					
+					
 
 
 
@@ -2352,8 +2373,6 @@ if (!isNumber(user.mak))
                     note: 0,
 
                     
-
-                    lasthunt: 0,
 
                     
 
@@ -2680,25 +2699,6 @@ if (!isNumber(user.mak))
 					soal: null
 
 				}
-		
-                        let guild = global.db.data.users[m.sender].guild
-			if (typeof guild !== 'object')
-				global.db.data.users[m.sender].guild = {}
-			if (guild) {
-				if (!('name' in guild))
-			        	guild.name = ''
-				if (!('leader' in guild))
-					guild.leader = ''
-				if (!('member' in guild))
-					guild.members = []
-			} else
-				global.db.data.users[m.sender].guild = {
-					name: '',
-		           		leader: '',
-					member: []
-				}
-		
-		
 
             let settings = global.db.data.settings[this.user.jid]
 
