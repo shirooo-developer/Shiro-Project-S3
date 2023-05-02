@@ -323,11 +323,17 @@ export async function handler(chatUpdate) {
 
 
                 if (!('role' in user))
+                    user.role = 'Begginer'
+				
+					    if (!('rank' in user))
+                    user.rank = 'Begginer'
+				
+                if (!isNumber(user.levelhunter))
 
+                    user.levelhunter = 0
 
-
-                    user.role = 'E'
-
+					    if (!('previousRank' in user))
+                    user.previousRank = 'Begginer'
 
 
                 if (!('autolevelup' in user))
@@ -389,6 +395,23 @@ export async function handler(chatUpdate) {
                if (!('cnama' in user))
 
                     user.cnama = ''
+					
+					
+               if (!('partner' in user))
+
+                    user.partner = ''
+					
+		        if (!isNumber(user.invest))
+
+                    user.invest = 0
+
+                if (!isNumber(user.investExpiration))
+
+                    user.investExpiration = 0
+
+                if (!isNumber(user.investProfit))
+
+                    user.investProfit = 0
 
                if (!isNumber(user.padi))
 
@@ -1434,8 +1457,20 @@ if (!isNumber(user.mak))
 
                     user.premium1hari = 0
 
-
-
+                if (!isNumber(user.advenaglory))
+                    user.advenaglory = 0
+                if (!isNumber(user.slayerglory))
+                    user.slayerglory = 0
+                if (!isNumber(user.ravennaglory))
+                    user.ravennaglory = 0
+                if (!isNumber(user.apocalypseglory))
+                    user.apocalypseglory = 0
+                if (!isNumber(user.horizonglory))
+                    user.horizonglory = 0
+                if (!isNumber(user.sakanaglory))
+                    user.sakanaglory = 0
+                if (!isNumber(user.kazariteglory))
+                    user.kazariteglory = 0
 
 
 
@@ -1763,6 +1798,8 @@ if (!isNumber(user.mak))
 
 
                     role: 'Begginer',
+					rank: 'Begginer',
+					levelhunter: 0,
 
 
 
@@ -2307,6 +2344,8 @@ if (!isNumber(user.mak))
 
 
                     fishingrod: 0,
+					previousRank: 'Begginer',
+					partner: '',
 
 
 
@@ -2393,6 +2432,14 @@ if (!isNumber(user.mak))
                     
 
                     lastbegal: 0,
+					
+					advenaglory: 0,
+	                slayerglory: 0,
+					horizonglory: 0,
+					ravennaglory: 0,
+					apocalypseglory: 0,
+					sakanaglory: 0,
+					kazariteglory: 0,
 
 
 
@@ -2700,30 +2747,6 @@ if (!isNumber(user.mak))
 
 				}
 
-let company = global.db.data.users[m.sender].company
-if (typeof company !== 'object' || Object.keys(company).length === 0) {
-  global.db.data.users[m.sender].company = {
-    name: null,
-    founder: null,
-    employees: [],
-    profit: null,
-    modal: null
-  }
-  company = global.db.data.users[m.sender].company
-}
-if (!('name' in company))
-  company.name = null
-if (!('founder' in company))
-  company.founder = null
-if (!('employees' in company))
-  company.employees = null
-if (!('profit' in company))
-  company.profit = null
-if (!('modal' in company))
-  company.modal = null
-
-		
-		
             let settings = global.db.data.settings[this.user.jid]
 
 

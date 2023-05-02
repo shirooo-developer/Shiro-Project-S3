@@ -70,9 +70,9 @@ global.wm2 = '⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗 '
 global.botdate = `𝗗𝗔𝗧𝗘: ${week} ${date}\n𝗧𝗜𝗠𝗘: ${wktuwib}`
 global.packname = wm
 global.bottime = `𝗧 𝗜 𝗠 𝗘: ${wktuwib}`
-global.titlebot = `𝗙𝗘𝗟𝗜𝗖𝗜𝗔 𝗩𝟰𝟵`
+global.titlebot = `𝗙𝗘𝗟𝗜𝗖𝗜𝗔 𝗩𝟱𝟬`
 global.stickpack = ''
-global.stickauth = `🖍️ 𝗦𝘁𝗶𝗰𝗸𝗲𝗿𝘀 𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 𝗕𝗼𝘁 ⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗\n\n• 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 么 𝗞𝗲𝗶𝘇𝗵𝗮\n• 𝗕𝗼𝘁 𝗡𝘂𝗺𝗯𝗲𝗿 𝟬𝟴𝟱𝟭-𝟲𝟯𝟬𝟴-𝟯𝟳𝟱𝟬\n• 𝗕𝗼𝘁 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 𝟰𝟵`
+global.stickauth = `🖍️ 𝗦𝘁𝗶𝗰𝗸𝗲𝗿𝘀 𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 𝗕𝗼𝘁 ⌬ 𝗙𝗲𝗹𝗶𝗰𝗶𝗮-𝗠𝗗\n\n• 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 么 𝗞𝗲𝗶𝘇𝗵𝗮\n• 𝗕𝗼𝘁 𝗡𝘂𝗺𝗯𝗲𝗿 𝟬𝟴𝟱𝟭-𝟲𝟯𝟬𝟴-𝟯𝟳𝟱𝟬\n• 𝗕𝗼𝘁 𝗩𝗲𝗿𝘀𝗶𝗼𝗻 𝟱𝟬`
 global.wmpack = ''
 global.wmauth = `\n\n\n\n\n\n\n\n\n𝗣𝘂𝗻𝘆𝗮 ᴋᴇɪᴢʜᴀ >>>\n🪀 𝟲𝟮𝟴𝟭𝟮𝟰𝟵𝟭𝟮𝟮𝟰𝟮𝟵\n\n\n\n\n\n\n\n\n`
 global.week = `${week} ${date}`
@@ -142,7 +142,7 @@ global.dikit = "*Sedikit Lagi*"
 
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ RPG GAME ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
-global.multiplier = 27 // The higher, The harder levelup
+global.multiplier = 29 // The higher, The harder levelup
 global.rpg = {
   emoticon(string) {
     string = string.toLowerCase()
@@ -298,6 +298,14 @@ global.rpg = {
                     pajak: '💲',
                     subscriber: '❤️',
                     chname: '📛',
+					levelhunter: '🧬',				
+					advenaglory: '🔅',
+					slayerglory: '🔅',
+					horizonglory: '🔅',
+					ravennaglory: '🔅',
+					apocalypseglory: '🔅',
+					sakanaglory: '🔅',
+					kazariteglory: '🔅',
       ras: '⚜️'
     }
     let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
@@ -310,6 +318,7 @@ global.rpg = {
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ WEBSITE APIKEY ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 global.zenzkey = 'b8040941f7'
 global.lolkey = 'Shirooo' // PUNYA WAHID 357d3c85079c4e0818731e6b
+global.openaikey = "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"
 global.APIs = { // API Prefix
   // name: 'https://website'
   bear: 'https://saipulanuar.ga',
