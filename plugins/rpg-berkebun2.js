@@ -49,7 +49,7 @@ handler.tags = ['rpg']
 handler.command = /^(kebun2)/i
 handler.group = true
 handler.limit = 1
-handler.register = true
+handler.register = false
 
 export default handler
 

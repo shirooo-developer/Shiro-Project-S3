@@ -128,5 +128,5 @@ const listMessage = {
 handler.help = ['boost']
 handler.tags = ['rpg']
 handler.command = /^(boost)/i
-handler.register = true
+handler.register = false
 export default handler

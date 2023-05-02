@@ -27,6 +27,6 @@ let handler = async m => m.reply(`
 handler.help = ['infoadventure']
 handler.tags = ['rpg']
 handler.command = /^infoadventure$/i
-handler.register = true
+handler.register = false
 handler.premium = false
 export default handler

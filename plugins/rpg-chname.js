@@ -10,5 +10,5 @@ let handler = async (m, { conn, args, text}) => {
 handler.help = ['chname [nama]']
 handler.tags = ['rpg']
 handler.command = /^chname$/i
-handler.register = true
+handler.register = false
 export default handler

@@ -1,16 +1,17 @@
 let handler = async (m, { conn }) => {
-  let guild = Object.values(global.db.data.guild)
-
-  if (guild.length === 0) {
+  let guild = global.db.data.guild || {}
+  if (Object.keys(guild).length === 0) {
     return m.reply(`Tidak ada guild yang terdaftar saat ini.`)
   }
 
+  guild = Object.values(guild)
+
   let message = `Daftar semua guild:\n\n`
 
-  for (let guild of guild) {
-    let leaderName = global.db.data.users[guild.leader]?.name || 'Tidak diketahui'
-    let membersCount = guild.members.length
-    let guildName = guild.name || 'Tanpa Nama'
+  for (let g of guild) {
+    let leaderName = global.db.data.users[g.leader]?.name || 'Tidak diketahui'
+    let membersCount = g.members.length
+    let guildName = g.name || 'Tanpa Nama'
 
     message += `Nama: ${guildName}\nLeader: ${leaderName}\nAnggota: ${membersCount}\n\n`
   }
@@ -21,7 +22,7 @@ let handler = async (m, { conn }) => {
 handler.help = ['daftarguild']
 handler.tags = ['guild']
 handler.command = /^(daftarguild)$/i
-handler.register = true
+handler.register = false
 handler.group = true
 
 export default handler

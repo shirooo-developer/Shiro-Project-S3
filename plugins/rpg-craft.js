@@ -166,5 +166,5 @@ const listMessage = {
 handler.help = ['craft']
 handler.tags = ['rpg']
 handler.command = /^(craft|crafting|chant)/i
-handler.register = true
+handler.register = false
 export default handler

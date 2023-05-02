@@ -117,7 +117,7 @@ let pesan = pickRandom(['*Nyummm~*', '*Thanks*', '*Terimakasih ^-^*', '...', '*T
 handler.help = ['feed [pet type]']
 handler.tags = ['rpg']
 handler.command = /^(feed(ing)?)$/i
-handler.register = true
+handler.register = false
 export default handler
 
 function clockString(ms) {

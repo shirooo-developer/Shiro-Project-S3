@@ -48,6 +48,7 @@ function reward(user = {}) {
     let rewards = {
         reward: {
             exp: 100000,
+			kazariteglory: 10000,
             rock: 20,
             coal: 10,
             iron: 10,
@@ -65,3 +66,6 @@ function pickRandom(list) {
     return list[Math.floor(Math.random() * list.length)]
 
 }
+
+082159013620
+087827646771

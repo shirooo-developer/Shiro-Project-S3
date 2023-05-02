@@ -10,14 +10,16 @@ export function before(m) {
     if (before !== user.level) {
     
         m.reply(`
-*Tahniah atas pencapaianmu yang luar biasa! Kamu telah menunjukkan keahlianmu yang mumpuni dalam bermain game dan berhasil naik level. Selamat dan teruskan semangatmu dalam mengembangkan kemampuanmu. Jangan lupa untuk selalu bersenang-senang dan menikmati setiap tantangan dalam permainanmu. Semoga sukses terus dalam perjalananmu di game ini dan ke depannya. Keep leveling up and stay awesome!*
+Selamat! Kamu telah mengalami kenaikan level yang luar biasa di game ini. Keahlianmu dalam bermain semakin terasah dan kamu telah melewati banyak tantangan yang berat. Teruslah mengembangkan kemampuanmu dan jangan pernah berhenti untuk menikmati setiap permainan. Kami harap kamu akan terus sukses dalam perjalananmu di game ini dan masa depan yang akan datang. Keep leveling up dan jadilah yang terbaik!
 
-*Level Up Progress 📊*
-*${before}* ➣ *${user.level}*
-*• Tier: ${user.role}*
+Progress Level Kamu 📊
+${before} ➣ ${user.level}
+• Tier: ${user.role}
 
+- .lb Untuk Melihat Rank
+- .lbglory Untuk Melihat Glory
 ⭐ Hinto:
-*"Reberu Appu Suru Tame Ni RPG Kinou O Purei Suru"*`.trim())
+"Bermainlah RPG untuk meningkatkan kemampuanmu dalam memetakan rencana kehidupanmu!"`.trim())
     }
     
    /* let looh = `*${before}* -> *${user.level}*`

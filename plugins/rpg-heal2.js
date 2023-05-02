@@ -1,34 +1,42 @@
-let handler = async (m, { args, usedPrefix }) => {
+//
+}let handler = async (m, { args, usedPrefix }) => {
     let user = global.db.data.users[m.sender]
-    if (user.health >= 400) return m.reply(`
-*_Health Poin ❤️_*
-*_Sudah Penuh.._.*
-`.trim())
-    let buf = user.cat
-    let buff = (buf == 0 ? '5' : (buf == 1 ? '10' : (buf == 2 ? '15' : (buf == 3 ? '20' : (buf == 4 ? '25' : (buf == 5 ? '30' : (buf == 6 ? '35' : (buf == 7 ? '40' : (buf == 8 ? '45' : (buf == 9 ? '50' : (buf == 10 ? '100' : (buf == 11 ? '100' : ''))))))))))))
-    const heal = 15 + (buff * 4)
-    let count = Math.max(1, Math.min(Number.MAX_SAFE_INTEGER, (isNumber(args[0]) && parseInt(args[0]) || Math.round((100 - user.health) / heal))))
-    if (user.potion < count) return
- m.reply(`
-Tersisa *${user.potion}* Potion 🍻
-Ketik *${usedPrefix}buy potion ${count - user.potion}* Untuk Membeli Potion 🍻
-`.trim())
-    user.potion -= count * 1
-    user.health += heal * count
+    const maxStamina = 200 // maksimum stamina yang bisa dimiliki
+    const healPerdrink = 40 // jumlah stamina yang diisi per satu drink
+
+    if (user.stamina >= maxStamina) {
+        return m.reply(`
+            Stamina kamu sudah maksimum.
+        `.trim())
+    }
+
+    const drinksNeeded = Math.ceil((maxStamina - user.stamina) / healPerdrink) // jumlah drink yang dibutuhkan
+    const drinksAvailable = user.drink // jumlah drink yang tersedia
+
+    if (drinksAvailable < drinksNeeded) {
+        return m.reply(`
+            Tersisa *${drinksAvailable}* drink 🍹
+            Kamu membutuhkan *${drinksNeeded}* drink 🍹
+            Ketik *${usedPrefix}buy drink ${drinksNeeded - drinksAvailable}* Untuk Membeli drink 🍹
+        `.trim())
+    }
+
+    user.drink -= drinksNeeded // kurangi jumlah drink yang tersedia
+    user.stamina += drinksNeeded * healPerdrink // tambahkan jumlah stamina sesuai dengan jumlah drink yang dikonsumsi
+
+    // pastikan stamina tidak melebihi maksimum
+    if (user.stamina > maxStamina) {
+        user.stamina = maxStamina
+    }
+
     m.reply(`
-Sukses Meminum *${count}* Potion 🍻
-`.trim())
+        Kamu berhasil menggunakan *${drinksNeeded}* drink 🍹
+        Stamina kamu sekarang adalah *${user.stamina}* / ${maxStamina}
+    `.trim())
 }
 
-handler.help = ['heal']
+handler.help = ['drink']
 handler.tags = ['rpg']
-handler.command = /^(heal)$/i
-handler.register = true
-handler.limit = 1
+handler.command = /^(drink)$/i
+handler.register = false
 export default handler
-
-function isNumber(number) {
-    if (!number) return number
-    number = parseInt(number)
-    return typeof number == 'number' && !isNaN(number)
-}

@@ -28,7 +28,7 @@ Fitur Memancing Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
         user[lost] -= total * 1
         if (total) text += `\n*${global.rpg.emoticon(lost)}${lost}:* ${total}`
     }
-    text += '\n\n*_Dan Kamu Mendapatkan_*'
+    text += '\n\n*_Dan Kamu Mendapatkan Hadiah Serta Sakana Glory_*'
     for (const rewardItem in rewards.reward) if (rewardItem in user) {
         const total = rewards.reward[rewardItem].getRandom()
         user[rewardItem] += total * 1
@@ -40,7 +40,7 @@ Fitur Memancing Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
 handler.help = ['mancing3']
 handler.tags = ['rpg']
 handler.command = /^(mancing3|(ber)?petualang(ang)?)$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 handler.cooldown = cooldown
 handler.disabled = false
@@ -51,6 +51,7 @@ function reward(user = {}) {
     let rewards = {
         reward: {
         	exp: 100000,
+			sakanaglory: 10000,
             lobster: 30,
             lumba: 30,
             orca: 30,

@@ -20,7 +20,7 @@ let handler = async (m, { args }) => {
   let guild = {
     name: guildName,
     leader: m.sender,
-    member: [m.sender]
+    members: [m.sender]
   }
 
   user.guild = guild
@@ -34,7 +34,7 @@ handler.help = ['createguild <nama>', 'makeguild <nama>']
 handler.tags = ['guild']
 handler.command = /^(create|make)guild$/i
 handler.limit = true
-handler.register = true
+handler.register = false
 handler.group = true
 
 export default handler

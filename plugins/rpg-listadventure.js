@@ -1,76 +1,41 @@
-import fetch from 'node-fetch' 
-import moment from 'moment-timezone'
- let handler = async(m, { conn, usedPrefix, args, command }) => { 
-     let name = db.data.users[m.sender].name 
- let fload = {
-    key : {
-    remoteJid: 'status@broadcast',
-    participant : '0@s.whatsapp.net'
-    },
-    message: {
-    orderMessage: {
-    itemCount : 9998282719181899999,
-    status: 404,
-    surface : 404,
-    message: `${ucapan()}`,
-    orderTitle: `${ucapan()}`,
-    thumbnail:   await (await fetch(`https://i.ibb.co/jfZVKmC/babi2.jpg`)).buffer(),
-    sellerJid: '0@s.whatsapp.net' 
-    }
-    }
-    }
- let judul = ''
-  const sections = [ 
-                 { 
-                   "rows": [{ 
-                     "title": `Adventure To The East`, 
-                     "rowId": `${usedPrefix}adventure1` 
-                   }, { 
-                     "title": "Adventure To The West",  
-                     "rowId": `${usedPrefix}adventure2` 
-                   }, { 
-                     "title": `Adventure to the South`, 
-                     "rowId": `${usedPrefix}adventure3` 
-                   }, { 
-                     "title": `Adventure North`, 
-                     "rowId": `${usedPrefix}adventure4` 
-                    }, { 
-                     "title": `Natural Resources`, 
-                     "rowId": `${usedPrefix}infoadventure` 
-                   }] 
-                  }
-               ]
-         const listMessage = {
-      text: `*List of Adventure Destinations 🏔️*
+let handler = async m => m.reply(`List of Adventure Destinations 🏔️
 
 
 Setiap Tempat Memiliki SDA Berbeda.
 
-*Towards the East / Timur*
+Towards the East / Timur
+.adventure1
 • Coal
 • Wood
 • Fruit
 • Sea Animal
 • Experience
 • Money
+• Advena Glory
 
-*To the west / Barat*
+
+To the west / Barat
+.adventure2
 • Iron
 • Fruit 
 • Forest
 • Drink
 • Experience
 • Money
+• Advena Glory
 
-*To the South / Selatan*
+To the South / Selatan
+.adventure3
 • Fruit
 • Wood
 • Sea Animal
 • Coal
 • Experience
 • Money
+• Advena Glory
 
-*Towards the North / Utara*
+Towards the North / Utara
+.adventure4
 • Wood 
 • Fruit
 • Sea Animal
@@ -78,47 +43,15 @@ Setiap Tempat Memiliki SDA Berbeda.
 • Drink
 • Experience
 • Money
+• Advena Glory
 
-`,
-      footer: wm,
-      mentions: await conn.parseMention(judul),
-      title: judul.trim(),
-      buttonText: "Click Here",
-      sections
-    }
-    return conn.sendMessage(m.chat, listMessage, { quoted: fload, mentions: await conn.parseMention(judul), contextInfo: { externalAdReply :{ 
-     showAdAttribution: true, 
-      }} 
-   })
-    
-    }
+Natural Resources
+.infoadventure
+`.trim()) // Tambah sendiri kalo mau
+
+
 handler.help = ['adventure']
 handler.tags = ['rpg']
 handler.command = /^adventure$/i
-
-handler.fail = null
-handler.register = true
-handler.limit = 1
-export default handler 
-
-function ucapan() {
-    let res = ''
-  const time = moment.tz('Asia/Jakarta').format('HH')
-  res = ('Hi')
-  if (time >= 0) {
-    res = ('Selamat Malam🌃')
-  }
-  if (time >= 4) {
-    res = ('Selamat Pagi🌄')
-  }
-  if (time >= 12) {
-    res = ('Selamat Siang☀️')
-  }
-  if (time >= 16) {
-    res = ('️ Selamat Malam🌇')
-  }
-  if (time >= 23) {
-    res = ('Selamat Malam🌙')
-  }
-  return res
-}
+handler.premium = false
+export default handler

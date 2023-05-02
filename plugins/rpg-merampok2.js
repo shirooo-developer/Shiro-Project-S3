@@ -18,8 +18,9 @@ let nomors = m.sender
   if (0 < users[m.sender].lastperisai) throw '*Tidak Bisa Merampok Saat Kamu Menggunakan Perisai*'
   users[who].money -= dapat * 1
   users[m.sender].money += dapat * 1
+  users[m.sender].hoizonglory += 20000
   global.db.data.users[m.sender].lastrob = new Date * 1
-  conn.reply(m.chat, `*Berhasil Merampok Money Target Sebesar ${dapat}*`, m)
+  conn.reply(m.chat, `*Berhasil Merampok Money Target Sebesar ${dapat} dan kamu mendapatkan Horizon Glory.*`, m)
 
 }else conn.reply(m.chat, `*Anda Sudah Merampok Dan Berhasil Sembunyi , Tunggu ${timers} Untuk Merampok Lagi*`, m)
 }

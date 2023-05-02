@@ -25,7 +25,7 @@ Fitur Berburu Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
         user[lost] -= total * 1
         if (total) text += `\n*${global.rpg.emoticon(lost)}${lost}:* ${total}`
     }
-    text += '\n\n*_Dan Kamu Mendapatkan_*'
+    text += '\n\n*_Dan Kamu Mendapatkan Hadiah Serta Slayer Glory_*'
     for (const rewardItem in rewards.reward) if (rewardItem in user) {
         const total = rewards.reward[rewardItem].getRandom()
         user[rewardItem] += total * 1
@@ -36,8 +36,8 @@ Fitur Berburu Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
 }
 handler.help = ['berburu']
 handler.tags = ['rpg']
-handler.command = /^(berburu|(ber)?petualang(ang)?)$/i
-handler.register = true
+handler.command = /^berburu$/i
+handler.register = false
 handler.limit = 1
 handler.cooldown = cooldown
 handler.disabled = false
@@ -48,6 +48,7 @@ function reward(user = {}) {
     let rewards = {
         reward: {
         	exp: 100000,
+			slayerglory: 10000
             panda: 10,
             kambing: 10,
             harimau: 10,

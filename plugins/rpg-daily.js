@@ -21,7 +21,7 @@ let handler = async (m,{ conn} ) => {
 handler.help = ['daily', 'claim']
 handler.tags = ['xp','rpg']
 handler.command = /^(daily|claim)$/i
-handler.register = true
+handler.register = false
 handler.cooldown = cooldown
 
 export default handler

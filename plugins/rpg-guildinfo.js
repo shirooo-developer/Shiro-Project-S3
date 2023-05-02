@@ -27,7 +27,7 @@ Leader Guild: *@${leader[0]}*
 handler.help = ['guildinfo']
 handler.tags = ['rpg']
 handler.command = /^guildinfo$/i
-handler.register = true
+handler.register = false
 handler.group = true
 
 export default handler

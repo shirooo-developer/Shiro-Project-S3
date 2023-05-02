@@ -1,62 +1,41 @@
-const staminaMax = 200; // jumlah maksimum stamina player
-const staminaRegen = 10; // jumlah stamina yang di-regen setiap 5 detik
-const staminaCooldown = 5; // waktu cooldown regen stamina dalam detik
-const drinkRegen = 50; // jumlah stamina yang di-regen oleh Drink
+let handler = async (m, { args, usedPrefix }) => {
+    let user = global.db.data.users[m.sender]
+    const maxHealth = 200 // maksimum health yang bisa dimiliki
+    const healPerpotion = 40 // jumlah health yang diisi per satu potion
 
-let handler = async (m, { usedPrefix }) => {
-  let user = global.db.data.users[m.sender]
-
-  let now = new Date().getTime()
-  let staminaCooldownEnd = user.lastmana + (staminaCooldown * 1000)
-  let timeLeft = (staminaCooldownEnd - now) / 1000
-
-  if (!user.drink || user.drink < 1) {
-    return m.reply(`
-*${user.name}*, Anda Tidak Memiliki Drink Untuk Mengembalikan Stamina!
-  `.trim())
-  }
-
-  if (user.stamina >= staminaMax) {
-    return m.reply(`
-*${user.name}* Sudah Memiliki Stamina Maksimum!
-  `.trim())
-  }
-
-  if (now < staminaCooldownEnd) {
-    return m.reply(`
-Harap Tunggu *${timeLeft.toFixed(0)} detik* Untuk Mendapatkan Stamina Kembali!
-  `.trim())
-  }
-
-  user.stamina = Math.min(user.stamina + drinkRegen, staminaMax)
-  user.lastmana = now
-  user.drink -= 1
-
-  let staminaBar = getStaminaBar(user.stamina, staminaMax)
-
-  m.reply(`
-${staminaBar}
-*${user.name}* Telah Mendapatkan *${drinkRegen} Stamina ⚡* Dengan Menggunakan Drink!
-  `.trim())
-}
-
-handler.help = ['drink']
-handler.tags = ['rpg']
-handler.command = /^(drink)$/i
-handler.register = true
-function getStaminaBar(stamina, maxStamina) {
-  let staminaBar = ''
-  let staminaPerHeart = maxStamina / 10
-  let hearts = Math.ceil(stamina / staminaPerHeart)
-  for (let i = 1; i <= 10; i++) {
-    if (i <= hearts) {
-      staminaBar += '❤️'
-    } else {
-      staminaBar += '🖤'
+    if (user.health >= maxHealth) {
+        return m.reply(`
+            Health kamu sudah maksimum.
+        `.trim())
     }
-  }
-  staminaBar += `\n[${stamina}/${maxStamina}]`
-  return staminaBar
+
+    const potionsNeeded = Math.ceil((maxHealth - user.health) / healPerpotion) // jumlah potion yang dibutuhkan
+    const potionsAvailable = user.potion // jumlah potion yang tersedia
+
+    if (potionsAvailable < potionsNeeded) {
+        return m.reply(`
+            Tersisa *${potionsAvailable}* potion 🍹
+            Kamu membutuhkan *${potionsNeeded}* potion 🍹
+            Ketik *${usedPrefix}buy potion ${potionsNeeded - potionsAvailable}* Untuk Membeli potion 🍹
+        `.trim())
+    }
+
+    user.potion -= potionsNeeded // kurangi jumlah potion yang tersedia
+    user.health += potionsNeeded * healPerpotion // tambahkan jumlah health sesuai dengan jumlah potion yang dikonsumsi
+
+    // pastikan health tidak melebihi maksimum
+    if (user.health > maxHealth) {
+        user.health = maxHealth
+    }
+
+    m.reply(`
+        Kamu berhasil menggunakan *${potionsNeeded}* potion 🍹
+        Health kamu sekarang adalah *${user.health}* / ${maxHealth}
+    `.trim())
 }
 
+handler.help = ['potion']
+handler.tags = ['rpg']
+handler.command = /^(potion)$/i
+handler.register = false
 export default handler

@@ -42,7 +42,7 @@ handler.help = ['kickg @user', 'kickg <nomorHP>']
 handler.tags = ['guild']
 handler.command = /^kickg$/i
 handler.limit = true
-handler.register = true
+handler.register = false
 handler.group = true
 
 export default handler

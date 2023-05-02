@@ -17,7 +17,7 @@ let handler = async (m, { usedPrefix, text }) => {
 handler.help = ['disband']
 handler.tags = ['guild']
 handler.command = /^disband$/i
-handler.register = true
+handler.register = false
 handler.admin = true
 handler.limit = 1
 

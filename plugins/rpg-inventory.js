@@ -17,6 +17,7 @@ const inventory = {
     diperkosa: true,
     memperkosa: true,
     level: true,
+	levelhunter: true
     skill: true,
     ras: true,
     husbu: true,
@@ -27,6 +28,13 @@ const inventory = {
     mooncard: true,
     starcard: true,
     hargadiri: true,
+    advenaglory: true,
+	slayerglory: true,
+	horizonglory: true,
+	ravennaglory: true,
+	apocalypseglory: true,
+	sakanaglory: true,
+	kazariteglory: true,
     chname: true,
     tipeyt: true,
     subscriber: true
@@ -242,83 +250,84 @@ let handler = async (m, { conn }) => {
   const dura = Object.keys(inventory.durabi).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
   const crates = Object.keys(inventory.crates).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()
   const pets = Object.keys(inventory.pets).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v] >= inventory.pets[v] ? 'Max Levels' : `Level(s) ${user[v]}`}`).filter(v => v).join('\n').trim()
-  const cooldowns = Object.entries(inventory.cooldowns).map(([cd, { name, time }]) => cd in user && `*• ${name}*: ${new Date() - user[cd] >= time ? '✅' : '❌'}`).filter(v => v).join('\n').trim()
+  const cooldowns = Object.entries(inventory.cooldowns).map(([cd, { name, time }]) => cd in user && `• ${name}: ${new Date() - user[cd] >= time ? '✅' : '❌'}`).filter(v => v).join('\n').trim()
   const caption = `
-*👤 Name:* ${conn.getName(m.sender)}
-*🎖️ Tier:* ${user.role}
-*👑 Title:* ${user.title}
-*🛡️ Perisai:* ${user.lastperisai == 0 ? 'Non-Aktif': 'Aktif'}
-${Object.keys(inventory.others).map(v => user[v] && `*${global.rpg.emoticon(v)} ${v}:* ${user[v]}`).filter(v => v).join('\n')}${tools ? `
-
-*TOOLS*
+👤 Name: ${conn.getName(m.sender)}
+🎖️ Tier: ${user.role}
+🎖️ Rank Hunter: ${user.rank}
+👑 Title: ${user.title}
+🛡️ Perisai: ${user.lastperisai == 0 ? 'Non-Aktif': 'Aktif'}
+🚗 Mobil: Beli Di .buycar
+${Object.keys(inventory.others).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n')}${tools ? `
+TOOLS
 ${tools}` : ''}${dura ? `
 
 ${dura}` : ''}${ability ? `
 
-*ABILITY*
+ABILITY
 ${ability}
-*Total Ability:* ${Object.keys(inventory.ability).map(v => user[v]).reduce((a, b) => a + b, 0)} Level` : ''}${youtube ? `
+Total Ability: ${Object.keys(inventory.ability).map(v => user[v]).reduce((a, b) => a + b, 0)} Level` : ''}${youtube ? `
 
-*YOUTUBE*
+YOUTUBE
 ${youtube}
-*Total Performance:* ${Object.keys(inventory.youtube).map(v => user[v]).reduce((a, b) => a + b, 0)} Performa` : ''}${items ? `
+Total Performance: ${Object.keys(inventory.youtube).map(v => user[v]).reduce((a, b) => a + b, 0)} Performa` : ''}${items ? `
 
-*ITEMS*
+ITEMS
 ${items}
-*Total Items:* ${Object.keys(inventory.items).map(v => user[v]).reduce((a, b) => a + b, 0)} Items` : ''}${fruit ? `
+Total Items: ${Object.keys(inventory.items).map(v => user[v]).reduce((a, b) => a + b, 0)} Items` : ''}${fruit ? `
 
-*FRUIT*
+FRUIT
 ${fruit}
-*Total Fruit:* ${Object.keys(inventory.fruit).map(v => user[v]).reduce((a, b) => a + b, 0)} Fruit` : ''}${food ? `
+Total Fruit: ${Object.keys(inventory.fruit).map(v => user[v]).reduce((a, b) => a + b, 0)} Fruit` : ''}${food ? `
 
-*FOOD*
+FOOD
 ${food}
-*Total Food:* ${Object.keys(inventory.food).map(v => user[v]).reduce((a, b) => a + b, 0)} Food` : ''}${animal ? `
+Total Food: ${Object.keys(inventory.food).map(v => user[v]).reduce((a, b) => a + b, 0)} Food` : ''}${animal ? `
 
-*ANIMAL*
+ANIMAL
 ${animal}
-*Total Animal:* ${Object.keys(inventory.animal).map(v => user[v]).reduce((a, b) => a + b, 0)} Tail` : ''}${fish ? `
+Total Animal: ${Object.keys(inventory.animal).map(v => user[v]).reduce((a, b) => a + b, 0)} Tail` : ''}${fish ? `
 
-*FISH*
+FISH
 ${fish}
-*Total Fish:* ${Object.keys(inventory.fish).map(v => user[v]).reduce((a, b) => a + b, 0)} Fish` : ''}${crates ? `
+Total Fish: ${Object.keys(inventory.fish).map(v => user[v]).reduce((a, b) => a + b, 0)} Fish` : ''}${crates ? `
 
-*CRATES*
+CRATES
 ${crates}
-*Total Crates:* ${Object.keys(inventory.crates).map(v => user[v]).reduce((a, b) => a + b, 0)} Crates` : ''}${pets || user.petFood ? `
+Total Crates: ${Object.keys(inventory.crates).map(v => user[v]).reduce((a, b) => a + b, 0)} Crates` : ''}${pets || user.petFood ? `
 
 
-*PETS*
+PETS
 ${pets ? pets + '\n' : ''}${user.petFood ? '🍖 Peetfood: ' + user.petFood : ''}` : ''}${cooldowns ? `
 
-*COOLDOWN*
+COOLDOWN
 ${cooldowns}` : ''}
-*• Dungeon:* ${user.lastdungeon == 0 ? '✅': '❌'}
-*• Mining:* ${user.lastmining == 0 ? '✅': '❌'}
-*• Nebang:* ${user.lastnebang == 0 ? '✅': '❌'}
-*• Open Bo:* ${user.lastob == 0 ? '✅': '❌'}
-*• Hunter:* ${user.lasthunt == 0 ? '✅': '❌'}
-*• Sport: ${user.lastsport == 0 ? '✅': '❌'}
-*• Merkosa:* ${user.lastmerkosa == 0 ? '✅': '❌'}
-*• Mulung:* ${user.lastmulung == 0 ? '✅': '❌'}
-*• Berkebun:* ${user.lastberkebun == 0 ? '✅': '❌'}
-*• Sex:* ${user.lastsex == 0 ? '✅': '❌'}
-*• Berburu:* ${user.lastberburu == 0 ? '✅': '❌'}
-*• Merampok:* ${user.lastrob == 0 ? '✅': '❌'}
-*• Misi:* ${user.lastmisi == 0 ? '✅': '❌'}
-*• Limitku:* ${user.lastlk == 0 ? '✅': '❌'}
+• Dungeon: ${user.lastdungeon == 0 ? '✅': '❌'}
+• Mining: ${user.lastmining == 0 ? '✅': '❌'}
+• Nebang: ${user.lastnebang == 0 ? '✅': '❌'}
+• Open Bo: ${user.lastob == 0 ? '✅': '❌'}
+• Hunter: ${user.lasthunt == 0 ? '✅': '❌'}
+• Sport: ${user.lastsport == 0 ? '✅': '❌'}
+• Merkosa: ${user.lastmerkosa == 0 ? '✅': '❌'}
+• Mulung: ${user.lastmulung == 0 ? '✅': '❌'}
+• Berkebun: ${user.lastberkebun == 0 ? '✅': '❌'}
+• Sex: ${user.lastsex == 0 ? '✅': '❌'}
+• Berburu: ${user.lastberburu == 0 ? '✅': '❌'}
+• Merampok: ${user.lastrob == 0 ? '✅': '❌'}
+• Misi: ${user.lastmisi == 0 ? '✅': '❌'}
+• Limitku: ${user.lastlk == 0 ? '✅': '❌'}
 
-*Indicator:*
+Indicator:
 ✅ - Tidak Cooldown
 ❌ - Sedang Cooldown
 
-*🌙 Nickname:* ${user.nickname}
+🌙 Nickname: ${user.nickname}
 `.trim()
-  m.reply(`*${htki} INVENTORY ${htka}*\n${caption}\n`);
+  m.reply(`${htki} INVENTORY ${htka}\n${caption}\n`);
 }
 handler.help = ['inventory', 'inv']
 handler.tags = ['rpg']
 handler.command = /^(inv(entory)?|bal(ance)?|money|e?xp)$/i
 
-handler.register = true
+handler.register = false
 export default handler

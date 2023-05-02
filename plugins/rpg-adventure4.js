@@ -29,7 +29,7 @@ Fitur Berpetualang Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
         user[lost] -= total * 1
         if (total) text += `\n*${global.rpg.emoticon(lost)}${lost}:* ${total}`
     }
-    text += '\n\n*_Dan Kamu Mendapatkan_*'
+    text += '\n\n*_Dan Kamu Mendapatkan Hadiah Serta Advena Glory_*'
     for (const rewardItem in rewards.reward) if (rewardItem in user) {
         const total = rewards.reward[rewardItem].getRandom()
         user[rewardItem] += total * 1
@@ -41,7 +41,7 @@ Fitur Berpetualang Sedang CD\nSelama *🕐 ${timers.toTimeString()}*
 handler.help = ['adventure4']
 handler.tags = ['rpg']
 handler.command = /^(adventure4|(ber)?petualang(ang)?)$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 handler.cooldown = cooldown
 handler.disabled = false
@@ -52,6 +52,7 @@ function reward(user = {}) {
     let rewards = {
         reward: {
             exp: 400000,
+			advenaglory: 40000,
             money: 400000,
             wood: 25,
             mangga: 20,

@@ -256,5 +256,5 @@ handler.help = ['cekrank', 'inv']
 handler.tags = ['rpg']
 handler.command = /^cekrank$/i
 
-handler.register = true
+handler.register = false
 export default handler

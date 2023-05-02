@@ -23,6 +23,7 @@ const leaderboards = [
   'rune',
   'subscriber',
   'pengeluaran',
+  'levelhunter',
   'pet'
 ]
 let handler = async (m, { conn, args, participants, usedPrefix, command }) => {
@@ -64,7 +65,7 @@ ${sortedItem.slice(page * 100, page * 100 + 100).map((user, i) => '╭───�
 handler.help = ['leaderboard [jumlah user]', 'lb [jumlah user]']
 handler.tags = ['xp','rpg']
 handler.command = /^(leaderboard|lb)$/i
-handler.register = true
+handler.register = false
 export default handler
 
 function sort(property, ascending = true) {

@@ -44,6 +44,7 @@ Bayaran:
  - Moon Card ${moon} 🌙
  - Star Card ${star} ⭐
  - Harga Diri -1 🏷️
+ - Ravenna Glory
 `.trim()          
 
             setTimeout(() => {
@@ -118,6 +119,7 @@ Bayaran:
 					
 
             global.db.data.users[m.sender].stamina -= stamina * 1
+			global.db.data.users[m.sender].ravennaglory += 10000
             global.db.data.users[m.sender].money += uang * 1
             global.db.data.users[m.sender].exp += epp * 1
             global.db.data.users[m.sender].mooncard -= moon * 1
