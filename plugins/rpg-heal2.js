@@ -1,5 +1,4 @@
-//
-}let handler = async (m, { args, usedPrefix }) => {
+let handler = async (m, { args, usedPrefix }) => {
     let user = global.db.data.users[m.sender]
     const maxStamina = 200 // maksimum stamina yang bisa dimiliki
     const healPerdrink = 40 // jumlah stamina yang diisi per satu drink

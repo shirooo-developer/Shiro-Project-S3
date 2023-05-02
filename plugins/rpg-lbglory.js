@@ -18,6 +18,14 @@ let handler = async (m, { conn, args, participants, usedPrefix, command }) => {
   let wrong = `
 *VIEWING THE LEADERBOARD GLORY S1*
 
+Advena Glory
+Slayer Glory
+Horizon Glory
+Ravenna Glory
+Apocalypse Glory
+Sakana Glory
+Kazarite Glory
+
 *_Format: ${usedPrefix}${command} <type>_*
 *_Contoh: ${usedPrefix}${command} money_*
 

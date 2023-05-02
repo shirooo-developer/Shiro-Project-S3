@@ -17,7 +17,7 @@ const inventory = {
     diperkosa: true,
     memperkosa: true,
     level: true,
-	levelhunter: true
+	levelhunter: true,
     skill: true,
     ras: true,
     husbu: true,

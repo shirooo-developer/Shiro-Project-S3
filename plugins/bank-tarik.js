@@ -1,5 +1,3 @@
-const savingsLimit = 1; // batas maksimal menabung dalam satu kali transaksi
-
 let handler = async (m, { conn, command, args }) => {
   let user = global.db.data.users[m.sender];
   
@@ -20,9 +18,9 @@ let handler = async (m, { conn, command, args }) => {
   
   // tarik uang dari bank dan tambahkan ke dompet
   user.bank -= count;
-  user.money += count * savingsLimit;
+  user.money += count
   
-  conn.reply(m.chat, `*TARIK UANG 💸*\n\n📡 Status: *Sukses*\n💱 Menarik: *${count * savingsLimit} Money 💵*\n🏧 Total di Bank: *${user.bank} Money 💵*\n📝 Catatan: *Terima kasih telah menarik uang dari bank*\n\n*${global.bottime}*`, m);
+  conn.reply(m.chat, `*TARIK UANG 💸*\n\n📡 Status: *Sukses*\n💱 Menarik: *${count} Money 💵*\n🏧 Total di Bank: *${user.bank} Money 💵*\n📝 Catatan: *Terima kasih telah menarik uang dari bank*\n\n*${global.bottime}*`, m);
 };
 
 handler.help = ['tarik <jumlah>', 'tarikall'];

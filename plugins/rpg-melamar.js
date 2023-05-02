@@ -23,6 +23,9 @@ handler.command = /^melamar$/i
 
 handler.fail = null
 
+export default handler
+
+
 handler.all = async (m, { conn, usedPrefix }) => {
   let user = db.data.users[m.sender]
   let targetUser = db.data.users[m.quoted.sender || m.mentionedJid[0]]

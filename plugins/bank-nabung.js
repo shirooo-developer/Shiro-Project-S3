@@ -1,11 +1,10 @@
-const savingsLimit = 1; // batas maksimal menabung dalam satu kali transaksi
 
 let handler = async (m, { conn, command, args }) => {
   let user = global.db.data.users[m.sender];
   
   // mendapatkan jumlah uang yang akan ditabungkan
   let count = command.replace(/^nabung/i, '');
-  count = count ? /all/i.test(count) ? Math.floor(user.money / savingsLimit) : parseInt(count) : args[0] ? parseInt(args[0]) : 1;
+  count = count ? /all/i.test(count) ? Math.floor(user.money) : parseInt(count) : args[0] ? parseInt(args[0]) : 1;
   count = Math.max(1, count);
   
   // pengecekan apakah pengguna memiliki ATM dan apakah ATM telah mencapai batas maksimum
@@ -22,15 +21,15 @@ let handler = async (m, { conn, command, args }) => {
   }
   
   // pengecekan apakah pengguna memiliki uang yang cukup untuk ditabungkan
-  if (user.money < savingsLimit * count) {
-    return conn.reply(m.chat, `*Uang kamu tidak cukup*\n\nJumlah yang ingin kamu tabungkan adalah ${count * savingsLimit} Money 💵`, m);
+  if (user.money < count) {
+    return conn.reply(m.chat, `*Uang kamu tidak cukup*\n\nJumlah yang ingin kamu tabungkan adalah ${count} Money 💵`, m);
   }
   
   // jika semua pengecekan berhasil, tabungkan uang ke bank dan kurangi uang di dompet
-  user.money -= savingsLimit * count;
+  user.money -= count;
   user.bank += count;
   
-  conn.reply(m.chat, `*MENABUNG 🏦*\n\n📡 Status: *Sukses*\n💱 Menabung: *${count * savingsLimit} Money 💵*\n🏧 Total di Bank: *${user.bank} Money 💵*\n📝 Catatan: *Terima kasih sudah menabung*\n\n*${global.bottime}*`, m);
+  conn.reply(m.chat, `*MENABUNG 🏦*\n\n📡 Status: *Sukses*\n💱 Menabung: *${count} Money 💵*\n🏧 Total di Bank: *${user.bank} Money 💵*\n📝 Catatan: *Terima kasih sudah menabung*\n\n*${global.bottime}*`, m);
 };
 
 handler.help = ['nabung <jumlah>', 'nabungall'];

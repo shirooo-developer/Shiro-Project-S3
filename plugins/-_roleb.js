@@ -82,8 +82,8 @@ const ranks = {
 
 export function before(m) {
   let user = db.data.users[m.sender]
-  let level = user.level
-  let rank = (Object.entries(ranks).sort((a, b) => b[1] - a[1]).find(([, minLevel]) => level >= minLevel) || Object.entries(ranks)[0])[0]
+  let levelhunter = user.levelhunter
+  let rank = (Object.entries(ranks).sort((a, b) => b[1] - a[1]).find(([, minLevel]) => levelhunter >= minLevel) || Object.entries(ranks)[0])[0]
   user.rank = rank
   return !0
 }
