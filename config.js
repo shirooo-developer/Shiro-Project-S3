@@ -310,7 +310,7 @@ global.rpg = {
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ WEBSITE APIKEY ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 global.zenzkey = 'b8040941f7'
 global.lolkey = 'Shirooo' // PUNYA WAHID 357d3c85079c4e0818731e6b
-global.openaikey = "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"
+global.API_TOKENS.OPENAI = "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"
 global.APIs = { // API Prefix
   // name: 'https://website'
   bear: 'https://saipulanuar.ga',
