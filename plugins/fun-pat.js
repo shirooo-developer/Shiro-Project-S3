@@ -14,6 +14,5 @@ conn.sendFile(m.chat, stiker, null, { asSticker: true })
 handler.command = /^(pat)$/i
 handler.tags = ['anime']
 handler.help = ['pat']
-handler.register = true
 handler.limit = 1
 export default handler

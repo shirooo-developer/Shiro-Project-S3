@@ -5,18 +5,14 @@ import { URL_REGEX } from '@adiwajshing/baileys'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 	text = text.endsWith('SMH') ? text.replace('SMH', '') : text 
-	if (!text) throw '*Fitur Untuk Search Foto Pinterest*\n\n*_Contoh: ${usedPrefix}${command} Ikon Anime_*'
+	if (!text) throw '*Example: .pin Anime*'
 	let res = await pinterest(text)
-	// if (!res) throw res
 	let mime = await lookup(res)
-	text.match(URL_REGEX) ?
-		await conn.sendMessage(m.chat, { [mime.split('/')[0]]: { url: res }, caption: `🌐 Succes Download: *${await shortUrl(res)}*` }, { quoted: m }) :
-	await conn.sendButton(m.chat, `*PINTEREST SEARCH*\n\n🔍 Result From: *${text.capitalize()}*`, await shortUrl(res), res, [['𝗡𝗘𝗫𝗧', `${usedPrefix + command} ${text}`]], m)
+	await conn.sendFile(m.chat, res, 'pinterest.jpg', `🌐 Succes Download: *${await shortUrl(res)}*`, m)
 }
-handler.help = handler.alias = ['pinterest','pin']
+handler.help = ['pinterest','pin']
 handler.tags = ['downloader']
 handler.command = /^(pinterest|pin)$/i
-handler.register = true
 handler.limit = 1
 export default handler
 

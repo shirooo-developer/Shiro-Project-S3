@@ -36,7 +36,6 @@ function handler(m, { groupMetadata }) {
 handler.help = ['hamil'];
 handler.tags = ['fun'];
 handler.command = ['hamil'];
-handler.register = true;
 handler.group = true;
 
 // Export the function

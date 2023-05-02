@@ -9,7 +9,6 @@ handler.tags = ['anime']
 handler.help = ['simpown']
 export default handler
 handler.limit = 1
-handler.register = true
 
 global.gamanaufal = [
 	'https://telegra.ph/file/f34d76df4a2065af1a5ba.jpg',

@@ -12,7 +12,6 @@ handler.private = false
 handler.limit = 1
 handler.admin = false
 handler.botAdmin = false
-handler.register = true
 handler.fail = null
 
 export default handler 

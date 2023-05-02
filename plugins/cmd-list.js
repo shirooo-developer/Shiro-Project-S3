@@ -15,5 +15,4 @@ handler.help = ['listcmd']
 handler.tags = ['database', 'premium']
 handler.command = ['listcmd']
 handler.premium = true
-handler.register = true
 export default handler

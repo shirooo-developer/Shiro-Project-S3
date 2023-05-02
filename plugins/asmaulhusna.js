@@ -31,7 +31,6 @@ English 🇬🇧
 handler.help = ['asmaulhusna [1-99]']
 handler.tags = ['quran']
 handler.command = /^(asmaul(husna)?)$/i
-handler.register = true
 handler.limit = 1
 export default handler
 

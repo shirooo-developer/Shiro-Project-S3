@@ -45,7 +45,6 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
 }
 handler.help = ['cocofun'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.register = true
 handler.limit = 1
 handler.command = /^c(oco(fun(d(own(load(er)?)?|l))?|d(own(load(er)?)?|l))|cfun(d(own(load(er)?)?|l))?)$/i
 

@@ -19,6 +19,5 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 handler.help = ['sharechat'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 handler.command = /^(sharechat(d(l|ownl(oad|oder))))$/i
-handler.register = true
 handler.limit = 1
 export default handler

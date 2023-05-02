@@ -12,7 +12,6 @@ handler.help = ['dimanakah <pertanyaan>']
 handler.tags = ['kerang','fun']
 handler.command = /^dimanakah$/i
 handler.owner = false
-handler.register = true
 export default handler
 
 function pickRandom(list) {

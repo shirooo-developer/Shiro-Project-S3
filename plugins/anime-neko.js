@@ -12,6 +12,5 @@ handler.command = /^(neko)$/i
 handler.tags = ['anime']
 handler.help = ['neko']
 handler.limit = true
-handler.register = true
 
 export default handler

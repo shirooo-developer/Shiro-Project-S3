@@ -22,7 +22,6 @@ sourceUrl: sgc
 handler.help = ['gitclone'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 handler.command = /gitclone/i
-handler.register = true
 handler.limit = 1
 
 export default handler

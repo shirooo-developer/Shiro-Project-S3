@@ -35,7 +35,6 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 handler.help = ['otaku-desu <title>']
 handler.tags = ['anime']
 handler.command = /^(otaku-desu|od)$/i
-handler.register = true
 handler.limit = 1
 
 export default handler

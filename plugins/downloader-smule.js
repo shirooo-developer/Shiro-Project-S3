@@ -41,7 +41,6 @@ let handler = async (m, { conn, command, args, usedPrefix, DevMode }) => {
 handler.help = ['smule'].map(v => v + ' <url> <tipe>')
 handler.tags = ['downloader']
 handler.command = /^((smule)(downloader|dl)?)$/i
-handler.register = true
 handler.limit = 1
 
 export default handler

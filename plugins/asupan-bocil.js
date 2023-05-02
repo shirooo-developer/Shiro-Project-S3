@@ -16,7 +16,6 @@ const handler = async (m, { conn, usedPrefix, command }) => {
 handler.help = ['asupan-bocil'];
 handler.tags = ['nsfw'];
 handler.limit = 1;
-handler.register = true;
 handler.command = /^(asupan-bocil)$/i;
 
 export default handler;

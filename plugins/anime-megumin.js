@@ -12,6 +12,5 @@ handler.command = /^(megumin)$/i
 handler.tags = ['anime']
 handler.help = ['megumin']
 handler.limit = true
-handler.register = true
 
 export default handler

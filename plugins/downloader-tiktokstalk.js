@@ -19,5 +19,4 @@ handler.help = ['tiktokstalk']
 handler.tags = ['downloader']
 handler.command = /^t(tstalk|iktokstalk)$/i
 handler.limit = 1
-handler.registet = true
 export default handler

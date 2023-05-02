@@ -13,7 +13,6 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
 
 handler.command = handler.help = ['nenen2'];
 handler.tags = ['fun', 'quotes'];
-handler.register = true;
 handler.limit = true;
 
 export default handler;

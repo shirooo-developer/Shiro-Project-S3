@@ -18,6 +18,5 @@ Allah mengetahui apa-apa yang di hadapan mereka dan di belakang mereka, dan mere
 handler.help = ['ayatkursi']
 handler.tags = ['quran']
 handler.command = /^(ayatkursi)$/i
-handler.register = true
 handler.limit = 1
 export default handler

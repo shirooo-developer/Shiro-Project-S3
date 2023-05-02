@@ -59,6 +59,5 @@ handler.tags = ['rpg']
 
 handler.command = ['ref']
 handler.limit = 2
-handler.register = true
 
 export default handler

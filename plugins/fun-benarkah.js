@@ -11,7 +11,6 @@ handler.help = ['benarkah'].map(v => v + ' <text>')
 handler.tags = ['kerang','fun']
 handler.command = /^benarkah/i
 handler.owner = false
-handler.register = true
 export default handler
 
 function pickRandom(list) {

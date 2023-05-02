@@ -5,6 +5,5 @@ function handler(m, { text }) {
 handler.help = ['purba <teks>']
 handler.tags = ['fun']
 handler.command =  /^(purba)$/i
-handler.register = true
 handler.limit = 1
 export default handler

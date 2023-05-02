@@ -122,7 +122,6 @@ handler.help = ['my']
 handler.tags = ['xp']
 handler.command = /^(my)$/i
 
-handler.register = true
 export default handler
 
 function clockString(ms) {

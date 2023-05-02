@@ -12,6 +12,5 @@ handler.command = /^(husbu)$/i
 handler.tags = ['anime']
 handler.help = ['husbu']
 handler.limit = true
-handler.register = true
 
 export default handler

@@ -48,7 +48,6 @@ handler.help = ['soundcloud'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 handler.command = /^s(oundcloud(d(own|l))?|cd(own|l))$/i
 handler.exp = 0
-handler.register = true
 handler.limit = 1
 
 export default handler

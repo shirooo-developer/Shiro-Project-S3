@@ -32,7 +32,6 @@ const handler = (m, { groupMetadata }) => {
 handler.help = ['naksir'];
 handler.tags = ['fun'];
 handler.command = ['naksir'];
-handler.register = true;
 handler.group = true;
 
 export default handler;

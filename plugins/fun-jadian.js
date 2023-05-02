@@ -12,7 +12,6 @@ function handler(m, { groupMetadata }) {
 handler.help = ['jadian']
 handler.tags = ['fun']
 handler.command = ['jadian']
-handler.register = true
 handler.group = true
 
 export default handler

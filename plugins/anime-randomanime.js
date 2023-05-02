@@ -13,7 +13,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 handler.tags = ['anime']
 handler.help = ['randomanime']
 handler.command = /^(randomanime|animerandom)$/i
-handler.register = true
 handler.limit = 1
 
 export default handler

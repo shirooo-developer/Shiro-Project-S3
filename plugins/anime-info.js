@@ -41,7 +41,6 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 handler.help = ['anime <judul>'];
 handler.tags = ['anime'];
 handler.command = /^((cari|search)?anime(cari|search)?)$/i;
-handler.register = true;
 handler.limit = 1
 
 export default handler

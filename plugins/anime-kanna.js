@@ -12,6 +12,5 @@ handler.command = /^(kanna)$/i
 handler.tags = ['anime']
 handler.help = ['kanna']
 handler.limit = true
-handler.register = true
 
 export default handler

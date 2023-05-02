@@ -21,5 +21,4 @@ handler.help = ['cmd'].map(v => 'set' + v + ' <teks>')
 handler.tags = ['database', 'premium']
 handler.command = ['setcmd']
 handler.premium = true
-handler.register = true
 export default handler

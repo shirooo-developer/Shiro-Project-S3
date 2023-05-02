@@ -11,5 +11,4 @@ handler.help = ['un', ''].map(v => v + 'lockcmd')
 handler.tags = ['database', 'owner']
 handler.command = /^(un)?lockcmd$/i
 handler.rowner = true
-handler.register = true
 export default handler

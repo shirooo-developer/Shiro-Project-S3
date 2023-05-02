@@ -15,6 +15,5 @@ m.reply(`${json.success.replace('simsimi', 'simsimi').replace('Simsimi', 'Simsim
 handler.help = ['cia <text>?']
 handler.tags = ['kerang']
 handler.command = /^cia$/i
-handler.register = true
 export default handler
 

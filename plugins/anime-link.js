@@ -50,7 +50,6 @@ const handler = async (m) => {
 handler.help = ['animelink'];
 handler.tags = ['anime'];
 handler.command = /^animelink$/i;
-handler.register = true;
 handler.limit = 1;
 
 export default handler;

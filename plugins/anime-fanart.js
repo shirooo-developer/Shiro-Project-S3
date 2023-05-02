@@ -13,6 +13,5 @@ handler.tags = ['premium','anime']
 handler.help = ['fanart']
 handler.limit = true
 handler.premium = true
-handler.register = true
 
 export default handler

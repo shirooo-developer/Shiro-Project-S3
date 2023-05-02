@@ -32,6 +32,5 @@ const handler = async (m, { text, command, usedPrefix }) => {
 handler.help = ['kerang', 'kerangajaib'].map((v) => `${v} <teks>`);
 handler.tags = ['kerang', 'fun'];
 handler.command = /^(kulit)?kerang(ajaib)?$/i;
-handler.register = true;
 
 export default handler;

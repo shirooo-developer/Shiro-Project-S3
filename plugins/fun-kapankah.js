@@ -10,6 +10,5 @@ handler.help = ['', 'kah'].map(v => `kapan${v} <pertanyaan>`)
 handler.tags = ['kerang', 'fun']
 handler.customPrefix = /(\?$)/
 handler.command = /^kapan(kah)?$/i
-handler.register = true
 
 export default handler

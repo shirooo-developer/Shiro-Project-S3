@@ -28,5 +28,4 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 handler.help = personalityTraits.map(v => `how${v} siapa?`)
 handler.tags = ['kerang', 'fun']
 handler.command = /^how(gay|pintar|cantik|ganteng|gabut|gila|lesbi|stress?|bucin|jones|sadboy|jelek|bijaksana|mandiri|supel|sabar|humoris|kreatif|integritas|kritis|idealis|kejujuran|dermawan|hormat|setia|adil|murah hati|sopan|optimis|tekun|rajin|bisa diandalkan|penyayang|disiplin|bertanggung jawab|berani|percaya diri|tawakal|bersyukur|ceria|sombong|labil|minder|caper|pendendam|perfeksionis|sulit dipuaskan|sensitif|penyendiri|moody|egois|pesimis|bosan|pembangkang|pelit|ambisius)$/i
-handler.register = true
 export default handler

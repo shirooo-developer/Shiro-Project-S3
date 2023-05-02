@@ -19,5 +19,4 @@ handler.help = ['apakah <teks>?'];
 handler.tags = ['kerang', 'fun'];
 handler.customPrefix = /(\?$)/;
 handler.command = /^apakah$/i;
-handler.register = true;
 export default handler;
