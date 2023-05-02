@@ -498,7 +498,7 @@ handler.command = /^(kodenuklir)$/i
 
 handler.fail = null
 handler.limit = 1
-handler.register = true
+handler.register = false
 handler.premium = true
 
 export default handler

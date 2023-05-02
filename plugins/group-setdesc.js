@@ -9,7 +9,7 @@ if(!text) throw '*_Masukkan Desc Baru_*'
   handler.help = ['setdesc', 'sdesc']
 handler.tags = ['group']
 handler.command = /^(setdesc|sdesc|setdesk|sdesk)$/i
-handler.register = true
+handler.register = false
 handler.group = true
 handler.admin = true
 

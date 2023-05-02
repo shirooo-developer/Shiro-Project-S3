@@ -62,7 +62,7 @@ Tier *${user.role}*
 
 handler.help = ['levelup']
 handler.tags = ['xp','rpg']
-handler.register = true
+handler.register = false
 handler.command = /^level(|up)$/i
 
 export default handler

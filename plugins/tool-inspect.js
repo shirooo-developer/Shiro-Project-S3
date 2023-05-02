@@ -45,7 +45,7 @@ ${res.desc}` : '*Tidak ada Deskripsi*'}
 handler.command = ['inspect', 'inspect2']
 handler.tags = ['tools']
 handler.help = ['inspect', 'inspect2']
-handler.register = true
+handler.register = false
 handler.limit = 1
 export default handler
 

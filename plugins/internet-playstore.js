@@ -27,6 +27,6 @@ console.log(e)
 handler.help = ['playstore <aplicacion>']
 handler.tags = ['internet']
 handler.command = /^(playstore)$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 export default handler 

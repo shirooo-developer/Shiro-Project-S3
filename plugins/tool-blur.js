@@ -19,6 +19,6 @@ let handler = async (m, { conn, text }) => {
 handler.command = /^(blur)$/i
 handler.tags = ['tools']
 handler.help = ['blur']
-handler.register = true
+handler.register = false
 handler.limit = 2
 export default handler

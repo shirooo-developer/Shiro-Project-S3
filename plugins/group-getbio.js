@@ -20,5 +20,5 @@ handler.help = ['getbio <@tag/reply>']
 handler.tags = ['group']
 handler.command = /^(getb?io)$/i
 handler.limit = 1
-handler.register = true
+handler.register = false
 export default handler

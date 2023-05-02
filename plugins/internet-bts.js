@@ -8,5 +8,5 @@ handler.command = /^(bts)$/i
 handler.tags = ['internet']
 handler.help = ['bts']
 handler.limit = 1
-handler.register = true
+handler.register = false
 export default handler

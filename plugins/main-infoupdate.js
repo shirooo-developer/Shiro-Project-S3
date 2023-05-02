@@ -19,6 +19,6 @@ Masing Masing 5 Tingkatan Kecuali *VOYAGER*
 handler.help = ['role']
 handler.tags = ['main','rpg']
 handler.command = /^role$/i
-handler.register = true
+handler.register = false
 handler.premium = false
 export default handler

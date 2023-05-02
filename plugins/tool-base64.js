@@ -5,6 +5,6 @@ let handler = async (m, { command, text }) => {
 handler.help = ['base64']
 handler.tags = ['tools']
 handler.command = /^base64$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 export default handler

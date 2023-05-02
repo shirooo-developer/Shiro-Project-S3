@@ -11,7 +11,7 @@ let handler = async (m, { conn, args }) => {
 handler.help = ["coffee", "kopi"]
 handler.tags = ["internet"]
 handler.limit = 1
-handler.register = true
+handler.register = false
 handler.command = /^(kopi|coffee)$/i
 
 export default handler

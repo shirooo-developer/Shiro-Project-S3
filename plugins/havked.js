@@ -9,6 +9,6 @@ handler.help = ['hacker']
 handler.tags = ['internet']
 handler.command = /^hacker$/i
 handler.limit = 1
-handler.register = true
+handler.register = false
 
 export default handler

@@ -16,5 +16,5 @@ handler.tags = ['group']
 handler.command = /^(del|delete|unsend?)$/i
 handler.limit = 1
 handler.admin = true
-handler.register = true
+handler.register = false
 export default handler

@@ -41,7 +41,6 @@ handler.help = ['stickertag (caption|reply media)', 'sticktag <url>']
 handler.tags = ['tag']
 handler.command = /^(stickertag|sticktag)$/i
 export default handler
-handler.register = true
 handler.limit = 2
 
 const isUrl = (text) => {

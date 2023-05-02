@@ -8,6 +8,6 @@ ${txt}
 handler.help = ['groups', 'grouplist']
 handler.tags = ['info']
 handler.command = /^(group(s|list))$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 export default handler

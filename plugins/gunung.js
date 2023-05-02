@@ -8,5 +8,5 @@ handler.help = ['gunung']
 handler.tags = ['internet']
 handler.command = /^gunung$/i
 handler.limit = 1
-handler.register = true
+handler.register = false
 export default handler

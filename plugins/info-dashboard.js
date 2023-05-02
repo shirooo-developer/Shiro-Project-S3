@@ -14,7 +14,7 @@ let handler = async (m, { conn }) => {
 handler.help = ['dashboard']
 handler.tags = ['main','info']
 handler.command = /^dashboard$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 export default handler
 

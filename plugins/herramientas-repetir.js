@@ -1019,5 +1019,5 @@ handler.botAdmin = false
 
 handler.fail = null
 handler.limit = 1
- handler.register = true
+ handler.register = false
 export default handler

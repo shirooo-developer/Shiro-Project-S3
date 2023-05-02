@@ -16,5 +16,5 @@ handler.help = ['rate']
 handler.tags = ['kerang','fun']
 
 handler.command = /^rate$/i
-handler.register = true
+handler.register = false
 export default handler

@@ -10,6 +10,6 @@ m.reply(`*${indo}*\n\n*Character:* ${character}\n*Anime:* ${anime}`)
 handler.help = ['katanime']
 handler.tags = ['anime']
 handler.command = /^(katanime|kataanime)$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 export default handler

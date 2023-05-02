@@ -11,6 +11,6 @@ handler.command = /^(meme)$/i
 handler.tags = ['internet']
 handler.help = ['meme']
 handler.limit = 1
-handler.register = true
+handler.register = false
 
 export default handler

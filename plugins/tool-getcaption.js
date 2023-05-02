@@ -10,5 +10,5 @@ let handler = async (m, { conn }) => {
 handler.help = ['getcaption']
 handler.tags = ['tools']
 handler.command = /^(getcaption)$/i
-handler.register = true
+handler.register = false
 export default handler

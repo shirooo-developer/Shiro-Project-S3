@@ -44,6 +44,6 @@ Unknown = Tidak Diketahui/Kosong
 handler.help = ['historical1']
 handler.tags = ['main','rpg']
 handler.command = /^historical1$/i
-handler.register = true
+handler.register = false
 handler.premiun = false
 export default handler

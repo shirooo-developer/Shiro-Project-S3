@@ -74,6 +74,6 @@ Ingin Sewa Bot / Premium? Hub.
 handler.help = ['sewa']
 handler.tags = ['main']
 handler.command = /^sewa$/i
-handler.register = true
+handler.register = false
 handler.premiun = false
 export default handler

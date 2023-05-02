@@ -10,7 +10,7 @@ let handler = async (m, { conn, participants }) => {
 handler.help = ['demote @tag']
 handler.tags = ['group']
 handler.command = /^(demote)$/i
-handler.register = true
+handler.register = false
 handler.admin = true
 handler.group = true
 handler.botAdmin = true

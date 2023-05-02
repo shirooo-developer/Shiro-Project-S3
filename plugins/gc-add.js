@@ -47,7 +47,7 @@ let handler = async (m, { conn, text, command, usedPrefix, participants }) => {
 handler.help = ['add', '+'].map(v => v + ' @user')
 handler.tags = ['group']
 handler.command = /^(add|\+)$/i
-handler.register = true
+handler.register = false
 handler.admin = true
 handler.group = true
 handler.botAdmin = true

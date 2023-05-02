@@ -37,7 +37,7 @@ Demote: ${sDemote}
 handler.help = ['infogrup']
 handler.tags = ['group']
 handler.command = /^(gro?upinfo|info(gro?up|gc))$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 handler.group = true
 

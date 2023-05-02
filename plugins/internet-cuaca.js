@@ -26,6 +26,6 @@ let handler = async (m, { text, usedPrefix, command }) => {
 handler.help = ['cuaca']
 handler.tags = ['internet']
 handler.command = /^(cuaca|weather)$/i
-handler.register = true
+handler.register = false
 handler.limit = 2
 export default handler
