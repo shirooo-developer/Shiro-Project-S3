@@ -2701,20 +2701,7 @@ if (!isNumber(user.mak))
 				}
 
 let company = global.db.data.users[m.sender].company
-if (typeof company !== 'object')
-  global.db.data.users[m.sender].company = {}
-if (company) {
-  if (!('name' in company))
-    company.name = ''
-  if (!('founder' in company))
-    company.founder = ''
-  if (!('employees' in company))
-    company.employees = []
-  if (!('profit' in company))
-    company.profit = 0
-  if (!('modal' in company))
-    company.modal = 0
-} else {
+if (typeof company !== 'object' || Object.keys(company).length === 0) {
   global.db.data.users[m.sender].company = {
     name: '',
     founder: '',
@@ -2722,7 +2709,19 @@ if (company) {
     profit: 0,
     modal: 0
   }
+  company = global.db.data.users[m.sender].company
 }
+if (!('name' in company))
+  company.name = ''
+if (!('founder' in company))
+  company.founder = ''
+if (!('employees' in company))
+  company.employees = []
+if (!('profit' in company))
+  company.profit = 0
+if (!('modal' in company))
+  company.modal = 0
+
 		
 		
             let settings = global.db.data.settings[this.user.jid]
