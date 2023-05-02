@@ -28,22 +28,26 @@ Harap Tunggu *${timeLeft.toFixed(0)} detik* Untuk Mendapatkan Mana Kembali!
   `.trim())
   }
 
-  user.mana = Math.min(user.mana + manarRegen, manaMax)
+  let manarUsed = Math.min(user.manar, Math.ceil((manaMax - user.mana) / manarRegen))
+  let manaGained = manarUsed * manarRegen
+
+  user.mana += manaGained
   user.lastmana = now
-  user.manar -= 1
+  user.manar -= manarUsed
 
   let manaBar = getManaBar(user.mana, manaMax)
 
   m.reply(`
 ${manaBar}
-*${user.name}* Telah Mendapatkan *${manarRegen} Mana ⚡* Dengan Menggunakan Manar!
+*${user.name}* Telah Mendapatkan *${manaGained} Mana ⚡* Dengan Menggunakan *${manarUsed} Manar*!
   `.trim())
 }
 
 handler.help = ['manar']
 handler.tags = ['rpg']
 handler.command = /^(manar)$/i
-handler.register = true
+handler.register = false
+
 function getManaBar(mana, maxMana) {
   let manaBar = ''
   let manaPerHeart = maxMana / 10

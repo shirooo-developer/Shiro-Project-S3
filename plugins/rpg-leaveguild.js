@@ -20,7 +20,7 @@ let handler = async (m, { conn }) => {
 handler.help = ['leaveguild']
 handler.tags = ['rpg']
 handler.command = /^leave(guild|g)$/i
-handler.register = true
+handler.register = false
 handler.group = true
 
 export default handler

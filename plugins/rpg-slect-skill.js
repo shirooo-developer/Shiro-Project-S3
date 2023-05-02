@@ -42,5 +42,5 @@ handler.help = ['selectskill <type>']
 handler.tags = ['rpg']
 handler.command = /^(slectskill|selectskill)$/i
 handler.limit = 1
-handler.register = true
+handler.register = false
 export default handler

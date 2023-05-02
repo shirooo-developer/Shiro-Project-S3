@@ -265,5 +265,5 @@ const listMessage = {
 handler.help = ['equipment']
 handler.tags = ['rpg']
 handler.command = /^(equipment)/i
-handler.register = true
+handler.register = false
 export default handler

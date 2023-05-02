@@ -164,5 +164,5 @@ const listMessage = {
 handler.help = ['eat']
 handler.tags = ['rpg']
 handler.command = /^(eat|eating)/i
-handler.register = true
+handler.register = false
 export default handler

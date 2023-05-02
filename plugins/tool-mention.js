@@ -9,5 +9,5 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['mention <teks>']
 handler.tags = ['tools']
 handler.command = /^mention$/i
-handler.register = true
+handler.register = false
 export default handler 

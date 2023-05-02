@@ -42,7 +42,7 @@ handler.help = ['changeleader @user', 'ubahleader @user']
 handler.tags = ['rpg']
 handler.command = /^(change|ubah)leader$/i
 handler.limit = true
-handler.register = true
+handler.register = false
 handler.group = true
 
 export default handler
