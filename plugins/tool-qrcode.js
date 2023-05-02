@@ -6,7 +6,7 @@ let handler = async (m, { conn, text }) => conn.sendFile(m.chat, await toDataURL
 handler.help = ['', 'code'].map(v => 'qr' + v + ' <teks>')
 handler.tags = ['tools']
 handler.command = /^qr(code)?$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 
 export default handler

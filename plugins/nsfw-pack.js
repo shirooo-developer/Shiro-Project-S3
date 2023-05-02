@@ -1,34 +1,47 @@
-import fetch from 'node-fetch'
+import fetch from 'node-fetch';
+
 let handler = async (m, { conn, command, usedPrefix }) => {
-if (!db.data.chats[m.chat].nsfw && m.isGroup) throw '*Fitur NSFW Belum Diaktifkan Digrup Ini*'
-await delay(5000)
-switch (command) {
-case "pack": 
-let url = await pack[Math.floor(Math.random() * pack.length)]
-conn.sendButton(m.chat, `*Done*`, author, url, [['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]], m)
-break
-case "pack2":  
-let url2 = await packgirl[Math.floor(Math.random() * packgirl.length)]
-conn.sendButton(m.chat, `*Done*`, author, url2, [['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]], m) 
-break
-case "pack3":
-let url3 = await packmen[Math.floor(Math.random() * packmen.length)]
-conn.sendButton(m.chat, `*Done*`, author, url3, [['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]], m) 
-break
-case "videoxxx": case "vídeoxxx":    
-let url4 = await videosxxxc[Math.floor(Math.random() * videosxxxc.length)] 
-await conn.sendButton(m.chat, `*Done*`, author, url4, [['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]], m)  
-break  
-case "videoxxxlesbi": case "videolesbixxx": case "pornolesbivid": case "pornolesbianavid": case "pornolesbiv": case "pornolesbianav": case "pornolesv":       
-let url5 = await videosxxxc2[Math.floor(Math.random() * videosxxxc2.length)] 
-await conn.sendButton(m.chat, `*Done*`, author, url5, [['𝗡𝗘𝗫𝗧', `${usedPrefix + command}`]], m)    
-break    
-}}
+  if (!db.data.chats[m.chat].nsfw && m.isGroup) throw '*Fitur NSFW Belum Diaktifkan Digrup Ini*';
+  await delay(5000);
+  switch (command) {
+    case "pack":
+      let url = await pack[Math.floor(Math.random() * pack.length)];
+      let buffer = await fetch(url).then(res => res.buffer());
+      await conn.sendFile(m.chat, buffer, 'image.jpg', `*Done*`, m);
+      break;
+    case "pack2":
+      let url2 = await packgirl[Math.floor(Math.random() * packgirl.length)];
+      let buffer2 = await fetch(url2).then(res => res.buffer());
+      await conn.sendFile(m.chat, buffer2, 'image.jpg', `*Done*`, m);
+      break;
+    case "pack3":
+      let url3 = await packmen[Math.floor(Math.random() * packmen.length)];
+      let buffer3 = await fetch(url3).then(res => res.buffer());
+      await conn.sendFile(m.chat, buffer3, 'image.jpg', `*Done*`, m);
+      break;
+    case "videoxxx":
+    case "vídeoxxx":
+      let url4 = await videosxxxc[Math.floor(Math.random() * videosxxxc.length)];
+      await conn.sendFile(m.chat, url4, 'video.mp4', `*Done*`, m);
+      break;
+    case "videoxxxlesbi":
+    case "videolesbixxx":
+    case "pornolesbivid":
+    case "pornolesbianavid":
+    case "pornolesbiv":
+    case "pornolesbianav":
+    case "pornolesv":
+      let url5 = await videosxxxc2[Math.floor(Math.random() * videosxxxc2.length)];
+      await conn.sendFile(m.chat, url5, 'video.mp4', `*Done*`, m);
+      break;
+  }
+};
+
 handler.command = /^(pack|pack2|pack3|videoxxx|vídeoxxx|videoxxxlesbi|videolesbixxx|pornolesbivid|pornolesbianavid|pornolesbiv|pornolesbianav|pornolesv)$/i
 handler.tags = ['nsfw','premium']
 handler.help = ['pack','pack2','pack3','videoxxx','videoxxxlesbi']
 export default handler
-handler.register = true
+handler.register = false
 handler.premium = true
 const delay = time => new Promise(res => setTimeout(res, time))
 

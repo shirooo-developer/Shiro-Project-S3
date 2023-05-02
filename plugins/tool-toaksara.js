@@ -14,6 +14,6 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 handler.help = ['toaksara <teks>']
 handler.tags = ['tools']
 handler.command = /^((latin)?toaksara)$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 export default handler

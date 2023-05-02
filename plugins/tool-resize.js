@@ -51,6 +51,6 @@ conn.sendFile(m.chat, compres, null, `*${htki} RESIZE PHOTOS ${htka}*
 handler.help = ['resize <width> <height> (reply|caption)']
 handler.tags = ['tools']
 handler.command = /^(resize)$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 export default handler

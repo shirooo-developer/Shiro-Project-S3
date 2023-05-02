@@ -9,7 +9,7 @@ let response = args.join(' ').split('|')
 handler.help = ['pornhub'].map(v => v + ' <text1>|<teks2>')
 handler.tags = ['maker','premium']
 handler.command = /^(pornhub)$/i
-handler.register = true
+handler.register = false
 
 handler.limit = true
 handler.premium = true

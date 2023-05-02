@@ -26,6 +26,6 @@ handler.help = ['cekvote']
 handler.tags = ['vote']
 handler.command = /^cekvote$/i
 handler.group = true
-handler.register = true
+handler.register = false
 handler.limit = 1
 export default handler 

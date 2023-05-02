@@ -29,7 +29,7 @@ handler.command = /^play2?$/i
 
 handler.exp = 0
 handler.limit = true
-handler.register = true
+handler.register = false
 
 export default handler */
 // ---------------------------new------------------------------------------------
@@ -85,7 +85,7 @@ if (!text) throw '*_Masukkan Pencarian_*'
 handler.help = ['play', 'play2'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader', 'limitmenu']
 handler.command = /^play2?$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 handler.exp = 0
 

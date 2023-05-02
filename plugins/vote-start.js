@@ -95,7 +95,7 @@ handler.tags = ['main']
 handler.group = true
 handler.admin = true
 handler.command = /^(mulaivote|startvote)$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 export default handler
 

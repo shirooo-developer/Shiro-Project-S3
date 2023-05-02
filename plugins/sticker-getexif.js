@@ -11,7 +11,7 @@ let handler = async (m) => {
 }
 handler.help = ['getexif']
 handler.tags = ['sticker']
-handler.register = true
+handler.register = false
 handler.limit = 1
 handler.command = ['getexif']
 

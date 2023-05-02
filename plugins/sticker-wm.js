@@ -24,6 +24,6 @@ handler.help = ['wm <packname>|<author>']
 handler.tags = ['sticker','premium']
 handler.command = /^wm|stickerwm|stickerwatermark|swm$/i
 handler.premium = true
-handler.register = true
+handler.register = false
 handler.limit = 1
 export default handler

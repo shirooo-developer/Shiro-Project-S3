@@ -14,5 +14,5 @@ key: {
  handler.help = ['react <emoji>']
 handler.tags = ['tools']
 handler.command = /^(react)$/i
-handler.register = true
+handler.register = false
 export default handler

@@ -16,12 +16,12 @@ let handler = async (m, { text }) => {
 
 ${resulw}`)
 } catch (e) {
-  m.reply('*Tidak Ditemukan, Pastikan Kata Kunci Benar')
+  m.reply('*Tidak Ditemukan, Pastikan Kata Kunci Benar*')
 }
 }
 handler.help = ['wikipedia']
 handler.tags = ['tools']
 handler.command = ['wiki','wikipedia'] 
-handler.register = true
+handler.register = false
 
 export default handler

@@ -26,7 +26,16 @@ ${readMore}
 ${clockString(user.premiumTime)}
 📑 *Registered:* ${registered ? '✅': '❌'}
 `.trim()
-    conn.sendButton(m.chat, str, botdate, pp, [[`${registered ? '𝗠𝗘𝗡𝗨':'𝗗𝗔𝗙𝗧𝗔𝗥'}`, `${user.registered ? '.menu':'.verify'}`]], fkon, { contextInfo: { mentionedJid: [who], forwardingScore: 999, isForwarded: true}})
+conn.reply(m.chat, str, m, { 
+    thumbnail: pp, 
+    contextInfo: { 
+        mentionedJid: [who], 
+        forwardingScore: 999, 
+        isForwarded: true 
+    },
+    footerText: fkon
+});
+
 }
 handler.help = ['profile [@user]']
 handler.tags = ['exp']

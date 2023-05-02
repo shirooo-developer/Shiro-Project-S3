@@ -6,7 +6,7 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['style'].map(v => v + ' <text>')
 handler.tags = ['tools']
 handler.command = /^(style(text)?)$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 handler.exp = 0
 

@@ -15,7 +15,7 @@ throw '*Error!*'
 handler.help = ['cat']
 handler.tags = ['internet']
 handler.command = /^cat$/i
-handler.register = true
+handler.register = false
 handler.fail = null
 export default handler
 const delay = time => new Promise(res => setTimeout(res, time))

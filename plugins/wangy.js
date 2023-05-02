@@ -37,6 +37,6 @@ if (!text) throw `*_Contoh: .perkosa Clara_*`
 }
 handler.command = handler.help = ['genjot', 'nenen', 'wangy', 'curhat', 'perkosa']
 handler.tags = ['fun']
-handler.register = true
+handler.register = false
 handler.limit = 1
 export default handler

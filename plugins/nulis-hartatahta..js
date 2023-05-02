@@ -13,7 +13,7 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['tahta <teks>']
 handler.tags = ['maker']
 handler.command = /^((harta)?tahta)$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 
 export default handler

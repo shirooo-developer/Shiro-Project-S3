@@ -17,6 +17,6 @@ handler.help = ['ocr', 'totext']
 handler.tags = ['tools']
 handler.command = /^(ocr|totext)$/i
 handler.limit = 1
-handler.register = true
+handler.register = false
 
 export default handler

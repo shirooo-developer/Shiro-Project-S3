@@ -18,7 +18,7 @@ let motivasii = pickRandom(global.motivasi)
 handler.help = ['motivasi']
 handler.tags = ['quotes']
 handler.command = /^(motivasi)$/i
-handler.register = true
+handler.register = false
 export default handler
 
 function pickRandom(list) {

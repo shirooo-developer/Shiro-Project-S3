@@ -18,6 +18,6 @@ handler.command = /^stickerpack$/i
 handler.help = ['stickerpack <link>']
 handler.tags = ['sticker']
 handler.limit = 1
-handler.register = true
+handler.register = false
 export default handler
 const delay = time => new Promise(res => setTimeout(res, time))

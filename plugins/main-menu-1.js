@@ -40,7 +40,7 @@ let wib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
 handler.help = ['menu']
 handler.tags = ['main']
 handler.command = /^(menu|help)$/i
-handler.register = true
+handler.register = false
 
 module.export = handler
 

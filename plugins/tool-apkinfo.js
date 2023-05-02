@@ -3,7 +3,7 @@ import gplay from 'google-play-scraper'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 	let [url, appId] = text.match(/([a-zA-Z]+(\.[a-zA-Z]+)+)/g) || []
-	if (url !== 'play.google.com') throw `*Fitur Mencari Info Apk Dari Play Store*\n\n*_Contoh: ${usedPrefix + command} https://play.google.com/store/apps/details?id=com.whatsapp_*`
+	if (url !== 'play.google.com') throw `*Fitur Mencari Info Apk Dari Play Store*\n\n*_Contoh: ${usedPrefix + command} https://play.google.com/store/apps/details?id=com.whatsapp_*\n\nDapatkan link apk di .apksearch`
 	// if (!appId) throw 'App ID not found'
 	let res = await gplay.app({ appId })
 	let { title, summary, installs, scoreText, priceText, size, androidVersionText, developer, icon, screenshots, released, updated, version } = res
@@ -14,6 +14,6 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 	conn.sendMessage(m.chat, { image: { url: screenshots.getRandom() }, caption: str, ...opt }, { quoted: m })
 }
 handler.command = /^(apk(info|detail))$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 export default handler

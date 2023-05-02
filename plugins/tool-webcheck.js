@@ -8,7 +8,7 @@ let handler = async (m, { args, usedPrefix, command }) => {
 }
 handler.command = /^web(check|cek)|(check|cek)web$/i
 handler.limit = 1
-handler.register = true
+handler.register = false
 export default handler
 
 async function checkWeb(url) {

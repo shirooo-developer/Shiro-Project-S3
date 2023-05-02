@@ -80,7 +80,7 @@ let name = await conn.getName(who)
 handler.help = ['textpro'].map(v => v + ' <effect> <text>')
 handler.tags = ['maker']
 handler.command = /^(textpro)$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 export default handler
 

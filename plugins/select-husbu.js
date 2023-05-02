@@ -42,5 +42,5 @@ handler.help = ['selecthusbu <type>']
 handler.tags = ['rpg']
 handler.command = /^(slecthusbu|selecthusbu)$/i
 handler.limit = 1
-handler.register = true
+handler.register = false
 export default handler

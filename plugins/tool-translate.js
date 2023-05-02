@@ -14,5 +14,5 @@ let handler = async (m, { args, usedPrefix, command }) => {
 handler.help = ['translate']
 handler.tags = ['tools']
 handler.command = /^(tr(anslate)?)$/i
-handler.register = true
+handler.register = false
 export default handler

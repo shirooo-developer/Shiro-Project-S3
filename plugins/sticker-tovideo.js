@@ -21,7 +21,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 }
 handler.help = ['tovideo']
 handler.tags = ['sticker']
-handler.register = true
+handler.register = false
 handler.limit = 1
 handler.command = ['tovideo','tovid','tovidio']
 

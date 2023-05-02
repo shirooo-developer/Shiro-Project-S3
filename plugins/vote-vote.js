@@ -20,5 +20,5 @@ handler.help = ['vote']
 handler.tags = ['vote']
 handler.command = /^(up|de)?vote$/i
 handler.group = true
-handler.register = true
+handler.register = false
 export default handler 

@@ -7,5 +7,5 @@ async function handler(m) {
 handler.command = /^q$/i
 handler.tags = ['tools']
 handler.help = ['q']
-handler.register = true
+handler.register = false
 export default handler

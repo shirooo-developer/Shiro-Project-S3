@@ -27,7 +27,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 handler.help = ['tts <lang> <teks>']
 handler.tags = ['tools']
 handler.command = /^g?tts$/i
-handler.register = true
+handler.register = false
 handler.limit = 1
 export default handler
 

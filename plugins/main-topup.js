@@ -35,6 +35,6 @@ Ingin Top-Up? Hub.
 handler.help = ['topup']
 handler.tags = ['main','rpg']
 handler.command = /^topup$/i
-handler.register = true
+handler.register = false
 handler.premium = false
 export default handler
