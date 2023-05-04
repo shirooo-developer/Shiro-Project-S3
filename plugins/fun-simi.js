@@ -12,8 +12,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 m.reply(`${json.success.replace('simsimi', 'simsimi').replace('Simsimi', 'Simsimi').replace('sim simi', 'sim simi')}`) 
 }
 
-handler.help = ['cia <text>?']
+handler.help = ['cia2 <text>?']
 handler.tags = ['kerang']
-handler.command = /^cia$/i
+handler.command = /^cia2$/i
 export default handler
 

@@ -34,8 +34,8 @@ let handler = async (m, { args, usedPrefix }) => {
     `.trim())
 }
 
-handler.help = ['potion']
+handler.help = ['potion','heal']
 handler.tags = ['rpg']
-handler.command = /^(potion)$/i
+handler.command = /^(potion|heal)$/i
 handler.register = false
 export default handler
