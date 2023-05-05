@@ -3,6 +3,9 @@ import weekly from './rpg-weekly.js'
 import monthly from './rpg-monthly.js'
 import adventure from './rpg-adventure.js'
 
+  // list grup yang diizinkan menggunakan perintah
+  allowedGroups: ['120363055892639534@g.us']
+
 const inventory = {
   others: {
     health: true,
@@ -11,6 +14,7 @@ const inventory = {
     pajak: true,
     exp: true,
     limit: true,
+    intelligence: true,
     os: true,
     gems: true,
     diperkosa: true,
@@ -237,6 +241,10 @@ const inventory = {
   }
 }
 let handler = async (m, { conn }) => {
+  // hanya merespon jika pesan diterima dari grup yang diizinkan
+  if (!inventory.allowedGroups.includes(m.chat)) {
+    return
+  }
   let user = global.db.data.users[m.sender]
   const tools = Object.keys(inventory.tools).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${typeof inventory.tools[v] === 'object' ? inventory.tools[v][user[v]?.toString()] : `Level(s) ${user[v]}`}`).filter(v => v).join('\n').trim()
   const ability = Object.keys(inventory.ability).map(v => user[v] && `${global.rpg.emoticon(v)} ${v}: ${user[v]}`).filter(v => v).join('\n').trim()

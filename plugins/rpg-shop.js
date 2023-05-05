@@ -7,7 +7,7 @@ const items = {
             money: 54000
         },
         potion: {
-            money: 10000
+            money: 5000
         },
         trash: {
             money: 102
@@ -52,7 +52,7 @@ const items = {
             money: 99          
         },
         drink: {
-            money: 10000          
+            money: 5000          
         },
         manar: {
             money: 19000     
