@@ -142,7 +142,7 @@ global.dikit = "*Sedikit Lagi*"
 
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ RPG GAME ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
-global.multiplier = 29 // The higher, The harder levelup
+global.multiplier = 19 // The higher, The harder levelup
 global.rpg = {
   emoticon(string) {
     string = string.toLowerCase()
