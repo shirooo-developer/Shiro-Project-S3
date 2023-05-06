@@ -18,7 +18,7 @@ let handler = async (m, { conn, command, args }) => {
   
   // menentukan apakah terjadi korupsi atau tidak
   let probability = Math.random();
-  if (probability < 0.2) {
+  if (probability < 0.01) {
     // jika terjadi korupsi
     let corruption = Math.ceil(count * 0.01); // besar korupsi adalah 1%
     user.bank -= corruption;

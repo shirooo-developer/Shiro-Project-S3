@@ -1,7 +1,7 @@
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   let pajak = 0.02
   let minBank = 10000
-  let maxPct = 0.05
+  let maxPct = 0.01
   let berhasil = Math.random() < 0.6 // 60% chance of success
   let kerugian = 0
 
