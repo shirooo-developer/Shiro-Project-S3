@@ -1,21 +1,30 @@
 import { areJidsSameUser } from '@adiwajshing/baileys'
+
 const leaderboardglorys = [
     'advenaglory',
-	'slayerglory',
-	'horizonglory',
-	'ravennaglory',
-	'apocalypseglory',
-	'sakanaglory',
-	'kazariteglory'
+    'slayerglory',
+    'horizonglory',
+    'ravennaglory',
+    'apocalypseglory',
+    'sakanaglory',
+    'kazariteglory'
 ]
+
+// Tambahkan nomor WhatsApp yang ingin dihindari pada leaderboard glory
+const excludedNumber = '6281229153877'
+
 let handler = async (m, { conn, args, participants, usedPrefix, command }) => {
-  let users = Object.entries(global.db.data.users).map(([key, value]) => {
-    return { ...value, jid: key }
-  })
-  let leaderboardglory = leaderboardglorys.filter(v => v && users.filter(user => user && user[v]).length)
-  let type = (args[0] || '').toLowerCase()
-  const getPage = (item) => Math.ceil((users.filter(user => user && user[item]).length) / 100)
-  let wrong = `
+    let users = Object.entries(global.db.data.users).map(([key, value]) => {
+        return { ...value, jid: key }
+    })
+
+    // Filter pengguna dengan nomor WhatsApp yang tidak diinginkan
+    users = users.filter(user => !user.jid.includes(excludedNumber))
+
+    let leaderboardglory = leaderboardglorys.filter(v => v && users.filter(user => user && user[v]).length)
+    let type = (args[0] || '').toLowerCase()
+    const getPage = (item) => Math.ceil((users.filter(user => user && user[item]).length) / 100)
+    let wrong = `
 *VIEWING THE LEADERBOARD GLORY S1*
 
 Advena Glory

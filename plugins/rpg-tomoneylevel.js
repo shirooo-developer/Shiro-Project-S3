@@ -1,23 +1,24 @@
-let handler = async m => m.reply(`
-*MONEY CONVERSION RATE*
+let handler = async (m, { args }) => {
+  let user = global.db.data.users[m.sender]
+  let expToConvert = parseInt(args[0])
+  if (isNaN(expToConvert) || expToConvert < 1 || expToConvert > user.exp) {
+    return m.reply(`Masukkan angka yang valid. EXP kamu saat ini adalah ${user.exp}.`)
+  }
+  let taxRate = 0.5 // default tax rate for high-level users
+  if (user.level < 3000) {
+    taxRate = Math.random() * (0.5 - 0) + 0 // generate random tax rate between 0% and 90%
+  }
+  let moneyToReceive = Math.floor(expToConvert * (1 - taxRate))
+  user.money += moneyToReceive
+  user.exp -= expToConvert
+  m.reply(`Berhasil mengkonversi ${expToConvert} EXP menjadi ${moneyToReceive} uang (pajak ${Math.floor(taxRate * 100)}%)`)
+}
 
-#tomoney9 - Pajak 89,0% 
-#tomoney8 - Pajak 87,5%
-#tomoney7 - Pajak 85,8%
-#tomoney6 - Pajak 84,0%
-#tomoney5 - Pajak 80,0%
-#tomoney4 - Pajak 75,0%
-#tomoney3 - Pajak 66,7%
-#tomoney2 - Pajak 50,0%
-#tomoney1 - Pajak 00,00%
+handler.help = ['cv <jumlah exp>']
+handler.tags = ['economy']
+handler.command = /^cv$/i
+handler.mods = false
+handler.group = false
+handler.private = false
 
-*Fitur Untuk Mengkonversi/Menjadikan Exp Sebagai Money*
-`.trim()) // Tambah sendiri kalo mau
-
-
-handler.help = ['tomoney']
-handler.tags = ['main','rpg']
-handler.command = /^tomoney$/i
-handler.register = false
-handler.premiun = false
 export default handler

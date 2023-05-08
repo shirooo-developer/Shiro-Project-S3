@@ -22,7 +22,6 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 
   users[target].bank -= stolen
   users[m.sender].bank += stolen * (1 - pajak)
-  users['bot'].bank += stolen * pajak
   users[m.sender].lastrob = new Date() * 1
   users[m.sender].horizonglory += 50000
 

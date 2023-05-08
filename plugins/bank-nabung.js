@@ -3,7 +3,7 @@ let allowedGroups = ['120363046165499857@g.us']; // daftar grup yang diizinkan
 let handler = async (m, { conn, command, args }) => {
   // pengecekan apakah grup tempat pesan dikirimkan termasuk dalam grup yang diizinkan
   if (!allowedGroups.includes(m.chat)) {
-    return conn.reply(m.chat, 'Setiap orang pasti pernah membicarakan orang lain, atau melakukan kejahatan dibelakang orang lain. Wajar saja kalau dia menganggap manusia itu makhluk yang menjijikan. Kalau dia menyukai tokoh 2D artinya dia hanya membuka hati pada sosok yang takkan mengkhianatinya kan?', m);
+    return conn.reply(m.chat, 'Gomennne oneechan, fitur ini hanya dapat diakses di Negara Utama', m);
   }
 
   let user = global.db.data.users[m.sender];

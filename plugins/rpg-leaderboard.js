@@ -29,7 +29,7 @@ const leaderboards = [
 let handler = async (m, { conn, args, participants, usedPrefix, command }) => {
   let users = Object.entries(global.db.data.users).map(([key, value]) => {
     return { ...value, jid: key }
-  })
+  }).filter(user => user.jid !== '6281229153877@s.whatsapp.net') // filter user dengan nomor WhatsApp tertentu
   let leaderboard = leaderboards.filter(v => v && users.filter(user => user && user[v]).length)
   let type = (args[0] || '').toLowerCase()
   const getPage = (item) => Math.ceil((users.filter(user => user && user[item]).length) / 100)
@@ -62,6 +62,7 @@ ${sortedItem.slice(page * 100, page * 100 + 100).map((user, i) => '╭───�
     mentions: [...userItem.slice(page * 100, page * 100 + 100)].filter(v => !participants.some(p => areJidsSameUser(v, p.id)))
   })
 }
+
 handler.help = ['leaderboard [jumlah user]', 'lb [jumlah user]']
 handler.tags = ['xp','rpg']
 handler.command = /^(leaderboard|lb)$/i

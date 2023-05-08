@@ -6,6 +6,10 @@ const items = [
 ]
 let confirmation = {}
 async function handler(m, { conn, args, usedPrefix, command }) {
+    // Cek nomor WhatsApp
+    if (m.sender.endsWith('6281229153877@s.whatsapp.net')) {
+        return m.reply('*116 105 100 97 107 32 100 105 105 122 105 110 107 97 110*')
+    }
     if (confirmation[m.sender]) return m.reply('*_Kamu Sedang Melakukan Transaksi_*')
     let user = global.db.data.users[m.sender]
     const item = items.filter(v => v in user && typeof user[v] == 'number')
